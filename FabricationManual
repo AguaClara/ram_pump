@@ -1,8 +1,6 @@
 # Manual
 
 ## Fabrication Details
-
-<<<<<<< HEAD
 The ram pump consists of two 1.5" threaded metal check valves connected by a custom PVC fitting. The upper check valve connects to the PVC drive pipe which provides the influent flow. The connection is made by a PVC male to male connector that screws into a male metal nipple and into the top check valve. See Figure 1 for exterior setup.
 
 The interior of the ram pump consists of a threaded metal rod with two metal standoffs screwed on, and a hole in one end that has been tapped to accommodate a threaded metal plate. The spring fits into the interior by fitting concentrically over the end of the metal rod below the standoff. See Figure 2 for interior setup.
@@ -14,11 +12,13 @@ The CEE machine shop is equipped to fabricate inverted valve. The inverted check
 3. Screw in the pressure test valve and the effluent valve.
 4. Apply acrylic flex sealant tape around connection between threads and valve in order to ensure water tightness.
 
+Figure 1 
+
 ### PVC Fitting Fabrication
 
 1. Purchase two 1" male connectors for which one side is threaded and the other is smooth.
-2. Depending on length of rod and spring on interior of pump, use band saw to cut one connector so that both connectors together equal the length of the interior drive rod. 
-3. Weld smooth sides together using PVC welder.
+2. Depending on length of rod and spring on interior of pump, use band saw to cut one connector so that both connectors together
+
 
 ## Special Components
 If your subteam uses a particular part that is unique and you could foresee a future subteam needing to order it or learn more about it, please include basic information like the vendor where it was purchased, catalog/item number, and a link to any documentation.
@@ -31,13 +31,16 @@ If your subteam uses a particular part that is unique and you could foresee a fu
 3. Springs
   * The team purchased spring of desired k constants from Home Depot in Ithaca, but most testing can be accomplished with springs purchased in previous semesters.
 
->>>>>>> 6dda98eb494fb21d6976ae90ed0fc0233bc84022
 
 ## Experimental Methods
+### Set-up
+Step 1.
+* Put tasks in a sequential order.
+* It is okay to have sub-lists.
+  - Like this.
 
 ### Experiment
 Step 1.
-<<<<<<< HEAD
 Assemble ram pump in the ordinary configuration as shown in the figure below.
 
 Step 2.
@@ -86,14 +89,6 @@ Repeat steps 1-8 using the inverted configuration of the ram pump.
 7. Check that there are no obstructions in the tubing connected to the pressure sensor
 
 
-=======
-
-### Cleaning Procedure
-Step 1.
-
-## Experimental Checklist
-Another potential section could include a list of things that you need to check before running an experiment.
->>>>>>> 6dda98eb494fb21d6976ae90ed0fc0233bc84022
 
 ## ProCoDA Method File
 Use this section to explain your method file. This could be broken up into several components as shown below:
@@ -107,29 +102,17 @@ Here, you should describe the function of each state in your method file, both i
 ### Set Points
 Here, you should list the set points used in your method file and explain their use as well as how each was calculated.
 
-<<<<<<< HEAD
 
 
 ### Variables
 $g$: gravity
 $t$: time
-=======
-## Python Code
-
-### Variables
-$g$: gravity
-$\sigma$: dispersion
->>>>>>> 6dda98eb494fb21d6976ae90ed0fc0233bc84022
+$P$: pressure
 $a$: amplitude
 $h$: water depth
-$H$: distance from wave crest to trough (2$a$)
-$T$: wave period
-$\lambda$: wavelength
-$k$: wavenumber
-$c_p$: celerity (wave phase speed)
-$P$: pressure
+$H$: distance from tank to pump (2$a$)
 $F$: force
-$u$, $w$: x-velocity, z-velocity components
+
 
 ```python
 # Comment
