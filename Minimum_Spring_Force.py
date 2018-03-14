@@ -6,7 +6,7 @@
 # A_drive = Area of drive pipe
 # x_max = maximum spring compression distance
 # h_eff = Necessary pumping height
-h1=
+# A_eff = Area of effluent flow
 
 # Minimum force balance
 # k_min = minimum k value needed to open from closed position

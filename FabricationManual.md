@@ -111,10 +111,10 @@ Calculate energy efficiency using the equation below.
 
 The Ram Pump requires no specific ProCoDA testing, however ProCoDA can be used to measure the pressure in the effluent valve in order to determine the head of the effluent valve when efficiency testing. In order to determine the max height that the effluent would achieve, measure the pressure and use equation
 
-$P=\rho\times g\times h$
+$P=\rho * g * h$
 
 and rearranging to obtain
 
-$h = \frac{P}{\rho \times g}$
+$h = \frac{P}{\rho * g}$
 
 To accomplish this, attach a short (no longer than 12 in) 1/4 inch plastic flex tube into the pressure test valve. Plug the pressure sensor into a port on the PC where ProCoDA will be accessed. Run the pump as explained in experimental procedures, this time recording pressure readings. After 30 seconds, stop the data file and examine the points of highes pressure. This will be the pressure when the plate just opened and effluent was being pumped. Average the highest pressure values in the pressure oscillation to obtain your average effluent pressure.
