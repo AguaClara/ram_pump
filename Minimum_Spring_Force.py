@@ -10,9 +10,14 @@
 
 # Minimum force balance
 # k_min = minimum k value needed to open from closed position
+x_max = .06
+rho = 1000
+g = 9.81
 h_drive = .51 m
-A_drive = (pi*(.995/2)^2)*.0254
-k_min = rho*g*h_drive*A_drive/x_max
+d_drive = 0.025273
+A_drive = pi*(d_drive/2) ^ 2
+P_hydrostatic = rho*g*h_drive
+k_min = P_hydrostatic*A_drive/x_max
 
 # Equation for k value
 # k = EA/L
