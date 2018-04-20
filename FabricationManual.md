@@ -134,7 +134,7 @@ This needs to be expanded. Why is this important? What data are you collecting? 
 1. Assemble ram pump in the standard configuration as shown in the figure below.
 
 ###### Figure 4: Standard Configuration
-![Standard Configuration](https://github.com/WillLopez/Personal/blob/master/Images/pump%20setup.jpeg)
+![Standard Configuration](https://github.com/AguaClara/ram_pump/blob/master/Ram%20pump%20setup.jpeg)
 
 2. Fill the waste water bucket roughly half way to the brim.
 
