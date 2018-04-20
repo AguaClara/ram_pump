@@ -6,7 +6,7 @@
 Please do not delete my comments. On the next submission I will use them to see if the issues were addressed and then I will delete them. If you disagree with a comment, just add your own underneath it.
 </div>
 
-*The goal of the Ram Pump subteam is to optimize the hydraulic ram pump in order to pump clean water into electricity- free plumbing of a water treatment plant, for use in the chemical dosing system as well as sinks and toilets.*
+*The goal of the Ram Pump subteam is to optimize the hydraulic ram pump, which pumps clean water through the plumbing system of an AguaClara water treatment plant. The plumbing system provides treated water for use in the chemical dosing system as well as sinks and toilets, and would save operators time and energy transporting treated water up by hand. The ram pump system is entirely electricity- free.*
 
 <div class="alert alert-block alert-danger">
 Potentially a run-on sentence? Consider a phrase other than "electricity-free plumbing"
@@ -15,16 +15,20 @@ Potentially a run-on sentence? Consider a phrase other than "electricity-free pl
 *This manual outlines procurement, fabrication, testing, and cleaning of the current hydraulic ram pump model as of Spring 2018.*
 
 ## Fabrication Details
-The ram pump consists of two 1.5" threaded metal check valves connected by a custom PVC fitting. The upper check valve connects to the PVC drive pipe which provides the influent flow. The connection is made by a PVC male to male connector that screws into a male metal nipple and into the top check valve. See Figure 1 for exterior setup.
+The ram pump itself consists of two 1.5" threaded metal check valves connected by a custom PVC fitting. The upper check valve contains the functional interior of the ram pump. The interior of the ram pump consists of a threaded metal rod with two metal standoffs screwed on, and a hole in one end that has been tapped to accommodate a threaded metal plate. The spring fits into the interior by fitting concentrically over the end of the metal rod below the standoff. The purpose of the standoffs is to determine the maximum oscillatory period of the pump.
 
-The interior of the ram pump consists of a threaded metal rod with two metal standoffs screwed on, and a hole in one end that has been tapped to accommodate a threaded metal plate. The spring fits into the interior by fitting concentrically over the end of the metal rod below the standoff. See Figure 2 for interior setup in the inverted configuration.
+The threaded standoffs can screw up or down to accommodate a larger or smaller distance of oscillation. The metal plate is able to screw into the stop of the metal rod. The rod drives the oscillation of the metal plate through the check valve via the spring force. The metal rod is able to slip inside the bottom check valve, holding it in place horizontally but allowing vertical oscillation. The spring, with a larger radius than the rod, does not fit through the bottom check valve opening, and instead compresses when, on a downward drive, the metal drive rod encounters the bottom check valve. The compression of the spring causes an upward spring force that subsequently drives the metal plate back upward. See Figure 2 for interior setup in the inverted configuration.
+
+The driving force of the ram pump is provided not by the force of the plate, however, but the pressure gradient created by the oscillation of the upper check valve. When the plate slams shut, the pressure above the upper check valve exceeds the pressure external to the effluent tube, thud driving flow through the effluent. When pressure has been released, the spring is able to overcome the sole hydrostatic force on the metal plate, and thus the plate oscillates open. When the hydrodynamic force of the drive flow hits a maximum, the drag on the plate closes the plate again, reinitiating the pressure gradient.
+
+The upper check valve connects to the PVC drive pipe which provides the influent flow, or the treated water exiting the AguaClara plant. The connection is made by a PVC male to male connector that screws into a male metal nipple and into the top check valve. For lab testing purposes, previous subteams have established system to simulate flow from the plant. A sump pump carries water to a raised tank, and the water from this tank flows the drive pipe which initiates the pumping process.  The elevation of the head tank creates the energy input in order to drive the pressure oscillation in the ram pump. See Figure 1 for exterior setup.
 
 <div class="alert alert-block alert-danger">
 Consider lengthening this section to provide some context as to what each part does.
 </div>
 
-###### Figure 1: Exterior Ram Pump Set Up
 ![Exterior Ram Pump Set Up](https://github.com/mailemccann/Personal/blob/master/Exterior%20Set%20up%20Pump.jpg)
+###### Figure 1: Exterior Ram Pump Set Up. This is the schematic of the ram pump fittings from an exterior view, showing how each piece threads to the next.
 
 <div class="alert alert-block alert-danger">
 I cannot see Figure 1 as it is referenced to Maile's private repository. Put the image into the team repository and call it from there. I looked at the photos in Maile's repository to grade themthis time. Label your figures to illustrate what is what.
@@ -32,16 +36,17 @@ I cannot see Figure 1 as it is referenced to Maile's private repository. Put the
 Put figure numbers and captions below figures.
 </div>
 
-Listed below are the components that the team custom fabricated.
-
 <div class="alert alert-block alert-danger">
 This sentence may not be necessary.
 </div>
 
 ### Check Valve Inverted Configuration
-The CEE machine shop is equipped to fabricate inverted valve. The inverted check valve consists of a standard metal check valve with the following modifications.
-2. Drill a .25" diameter hole 2.4" up from the bottom of the valve and another .5" hole at the same elevation at the opposite side of the valve.
-2. Both holes must then be tapped in order to accommodate threaded pipe fittings for the pressure test valve and the effluent valve.
+The purpose of the inverted check valve configuration is to reverse the force balance in the ram pump. The configuration involves reversing the upper valve so that the upward spring force pushes the plate into the closed position, and the hydrostatic force of water opens the valve. The effect is that the spring force has to only resist the hydrostatic force in the closed position, thus potentially lengthening the time in the closed position and increasing pumping efficiency.
+
+The CEE machine shop is equipped to fabricate the inverted valve. The inverted check valve consists of a standard metal check valve with the following modifications. Contact Tim or Paul of the CEE Machine Shop (in the basement of Hollister next to the AguaClara lab) to assist with the modifications to the unaltered metal check valve. They are both equipped to operate the drill and tap for this modification. Additionally, Tim or Paul are both resources to assist in follow- up alterations or fabrication questions.
+
+1. Drill a .25" diameter hole 2.4" up from the bottom of the valve and another .5" hole at the same elevation at the opposite side of the valve, as visually represented in Figure 2: Interior Ram Pump Set Up below.
+2. Tap both holes in order to accommodate threaded pipe fittings for the pressure test valve and the effluent valve, as shown in Figure 2.
 3. Screw in the pressure test valve and the effluent valve.
 4. Apply acrylic flex sealant tape around connection between threads and valve in order to ensure water tightness.
 
@@ -67,9 +72,10 @@ The figure in Maile's repository only had the effluent valve visible? Where is t
 </div>
 
 ### PVC Fitting Fabrication
-This component connects the two metal check valves to hold the inner metal rod in place.
+This component connects the two metal check valves to hold the inner metal rod in place. This fitting was fabricated by this semester's subteam and can be reused until water tightness fails or the fitting undergoes significant internal pitting, however this section will outline how to fabricate a new piece.
+
 1. Purchase two 1" male connectors for which one side is threaded and the other is smooth.
-2. Depending on length of rod and spring on interior of pump, use band saw to cut one connector so that both connectors together allow the inner rod to rest on spring inside valves without compression initially.
+2. Depending on length of rod and spring on interior of pump, use band saw to cut one connector so that both connectors together allow the inner rod to rest on spring inside valves without compression initially. The spring will be approximately 2.5" in length, but make measurements and mark male connectors to appropriate size for current configuration being tested.
 3. Weld smooth ends together using PVC welder.
 4. Allow to cool completely before attaching to ram pump. This is crucial to ensure that the weld sets correctly and the piece doesn't break during testing.
 
@@ -80,6 +86,8 @@ This component connects the two metal check valves to hold the inner metal rod i
 Do you have a ballpark value for length of the spring?
 
 Are these your team's fabrication methods or are they just the standard ones. If you are using another team's fab methods (previous semesters) make sure to refer to their report and give them credit.
+
+In response to above comment, This is a piece that our team made specifically this semester.
 </div>
 
 ## Special Components
@@ -103,46 +111,49 @@ The ram pump consists of multiple components that are not easily accessible in t
   </div>
 
 ## Experimental Methods
-The following instruction details how energy efficiency testing of the ram pump is conducted.
+The following instruction details how energy efficiency testing of the ram pump is conducted. The energy efficiency percentage determines the efficacy of the ram pump in pumping effluent compared to the amount of volumetric flow entering the pump from of the drive pipe. Energy of both the effluent pumped as well as the incoming drive flow is the product of flow  rate  and  hydraulic  head. The energy pumped is the product of volumetric effluent flow and effluent head, or the equivalent pressure that the ram pump is pumping against to pump the water to a higher elevation. The pressure head can be measured using a 7 kPa pressure sensor linked to ProCoDA. Volumetric flow rate is determined by recording the amount of time it takes to pump a certain volume, as shown in the following equation:
+
+ $Q=V / t$
+
+ The overall equation for energy efficiency of the ram pump is as follows:
+
+ $E = Q_eff*h_eff/Q_waste*h_drive
+
+ where
+
+ Q_eff = volumetric flow rate of effluent
+ h_eff = pressure head of effluent being pumped, eg: how high the effluent is theoretically being pumped
+ Q_waste = volumetric flow rate of the wasted water during the same time interval measured for the effluent flow rate
+ h_drive = height of the drive pipe, representative of the incoming energy to the ram pump
 
 <div class="alert alert-block alert-danger">
 This needs to be expanded. Why is this important? What data are you collecting? How do you determine this?
 </div>
 
 ### Experiment
-Step 1.
-Assemble ram pump in the standard configuration as shown in the figure below.
+1. Assemble ram pump in the standard configuration as shown in the figure below.
 
 ###### Figure 4: Standard Configuration
 ![Standard Configuration](https://github.com/WillLopez/Personal/blob/master/Images/pump%20setup.jpeg)
 
-Step 2.
-Fill the waste water bucket roughly half way to the brim.
+2. Fill the waste water bucket roughly half way to the brim.
 
-Step 3.
-Connect a pressure sensor to the effluent outlet to measure the effluent pressure of the system using ProCoDA
+3. Connect a pressure sensor to the effluent outlet to measure the effluent pressure of the system using ProCoDA
 
-Step 4.
-Open the bucket connector valve and close the drive pipe valve.
+4. Open the bucket connector valve and close the drive pipe valve.
 
-Step 5.
-Plug in the electric sum pump and allow it to run until all water is removed from the collection bucket and into the head tank.  Then close the bucket connector valve and unplug the pump.
+5. Plug in the electric sum pump and allow it to run until all water is removed from the collection bucket and into the head tank.  Then close the bucket connector valve and unplug the pump.
 
-Step 6.
-Direct the effluent pipe into a separate container.  Open the drive pipe valve while starting a stopwatch at the same time.
+6. Direct the effluent pipe into a separate container.  Open the drive pipe valve while starting a stopwatch at the same time.
 Run the ram pump until roughly 30 seconds elapse.  Stop the timer and close the drive pipe valve simultaneously.
 
-Step 7.
-Measure the volume of water in the effluent and collection bucket underneath the drive pipe.  Divide each by the time measured to compute the flow rate of the effluent and waste streams.
+7. Measure the volume of water in the effluent and collection bucket underneath the drive pipe.  Divide each by the time measured to compute the flow rate of the effluent and waste streams.
 
-Step 8.
-Measure the length of the drive pipe and compute the effluent head by dividing the pressure measured from the sensor using ProCoDA by the density of water multiplied by the gravitational acceleration constant.
+8. Measure the length of the drive pipe and compute the effluent head by dividing the pressure measured from the sensor using ProCoDA by the density of water multiplied by the gravitational acceleration constant.
 
-Step 9.
-Repeat steps 1-8 using the inverted configuration of the ram pump.
+9. Repeat steps 1-8 using the inverted configuration of the ram pump.
 
-Step 10.
-Calculate energy efficiency using the equation below.
+10. Calculate energy efficiency using the equation below.
 
 <div class="alert alert-block alert-danger">
 Try not to interrupt lists with figures.

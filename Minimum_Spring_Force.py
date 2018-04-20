@@ -18,7 +18,7 @@ from aide_design import utility as ut
 # k_min = minimum k value needed to open from closed position
 temp = u.Quantity(22, u.degC)
 # Assume room temperature.
-rho = pc.density_water(temp)x_max = .06
+rho = pc.density_water(temp)
 g = pc.gravity
 x_max = .045*u.m
 h_drive = .51*u.m
@@ -33,4 +33,4 @@ k_min = P_hydrostatic*A_drive/x_max
 # A_spring = Area of spring
 
 # Spring force = rho*g*h_drive*A_drive = E*A_spring*x/L
-L_opt = E*A_spring*x/(rho*g*h_drive*A_drive)
+# L_opt = E*A_spring*x/(rho*g*h_drive*A_drive)
