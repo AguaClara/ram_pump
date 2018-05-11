@@ -274,15 +274,17 @@ The governing equations for water pumped in both the deceleration and accelerati
 
 While the plate is open, the velocity is accelerating and is governed by the following equation:
 
-![Velocity Equation](https://github.com/AguaClara/ram_pump/blob/master/Vf%20eqn.jpg)
+![Extended Velocity Equation](https://github.com/AguaClara/ram_pump/blob/master/Longer%20V.jpg)
 
 In order to determine headloss coefficients experimentally, the team measured the terminal velocity of water flowing through the drive pipe and used the following relationship to back calculate the headloss term:
 
-After the plate closes, water begins to decelerate and the velocity during deceleration is governed by F=ma, with the force on the water caused by the pressure gradient from the drive pipe to the effluent. The full equation is as follows:
+![Velocity Equation](https://github.com/AguaClara/ram_pump/blob/master/Vf%20eqn.jpg)
 
-![Extended Velocity Equation](https://github.com/AguaClara/ram_pump/blob/master/Longer%20V.jpg)
+After the plate closes, water begins to decelerate and the velocity during deceleration is governed by F=ma, with the force on the water caused by the pressure gradient from the drive pipe to the effluent. 
 
 In order to determine energy, the code takes the integral of each part of the equation. The bound of integration for acceleration are from 0 to the time when the plate closes. The bounds of integration for deceleration are from the time the plate closes to the time velocity goes to 0 (x intercept of deceleration). This is represented graphically below:
+
+![Ideal Velocity Graph](https://github.com/AguaClara/ram_pump/blob/master/Ideal%20Velocity%20graph.png)
 
 The final step in calculating efficiency is to multiply the integral of acceleration by the height of the drive pipe to obtain energy input; then multiply deceleration by the height of the effluent by the effluent pipe to obtain energy pumped. The full code is included below.
 
