@@ -1,26 +1,12 @@
 # Ram Pump Operation and Testing Manual
 # Spring 2018
-## Maile McCann, Will Lopez, and Steven López
+## Maile McCann, Will Lopez, and Steven Lopez
 
-<div class="alert alert-block alert-danger">
-Please do not delete my comments. On the next submission I will use them to see if the issues were addressed and then I will delete them. If you disagree with a comment, just add your own underneath it.
-</div>
+*The goal of the Ram Pump subteam is to optimize the pumping efficiency of the hydraulic ram pump, where efficiency is measured in energy of water entering the pump over the energy of the water pumped. The hydraulic ram pump pumps clean water through the plumbing system of an AguaClara water treatment plant, which provides treated water for use in the chemical dosing system as well as sinks and toilets, and saves operators time and energy transporting treated water up by hand. The ram pump system is entirely electricity-free.*
 
-*The goal of the Ram Pump subteam is to optimize the pumping efficiency of the hydraulic ram pump, where efficiency is measured in energy of water entering the pump over the energy of the water pumped. The hydraulic ram pump pumps clean water through the plumbing system of an AguaClara water treatment plant, which provides treated water for use in the chemical dosing system as well as sinks and toilets, and saves operators time and energy transporting treated water up by hand. The ram pump system is entirely electricity-free.
-
-A major goal of Spring 2018 was to examine maximum energy efficiency. The value of calculating  experimental energy efficiency is that the team is then able to compare the values to calculated theoretical energy efficiency. From there, we can exclude terms in the theoretical calculations to determine the main contributors to inefficiency.*
+*A major goal of Spring 2018 was to examine maximum energy efficiency. The value of calculating  experimental energy efficiency is that the team is then able to compare the values to calculated theoretical energy efficiency. From there, we can exclude terms in the theoretical calculations to determine the main contributors to inefficiency.*
 
 *This manual outlines procurement, fabrication, testing, and cleaning of the current hydraulic ram pump model as of Spring 2018.*
-
-<div class="alert alert-block alert-danger">
-Maile fixed
-
-Be consistent with verb use.
-
-Consider "saves operators time" rather than "would save" to match "provides earlier in the sentence.
-
-What do you mean optimize? Specify what exactly you are working on i.e. are you trying to increase the amount of water that is pumped up per amount of water used (decrease waste) or decrease the amount of head needed to pump water back up.
-</div>
 
 ## Background and Fabrication Details
 The ram pump itself consists of two 1.5" threaded metal check valves connected by a custom PVC fitting. The upper check valve contains the functional interior of the ram pump. The interior of the ram pump consists of a threaded metal rod with two metal standoffs screwed on, and a hole in one end that has been tapped to accommodate a threaded metal plate. The spring fits into the interior by fitting concentrically over the end of the metal rod below the standoff. The purpose of the standoffs is to determine the maximum oscillatory period of the pump.
@@ -31,17 +17,9 @@ The driving force of the ram pump is provided not by the force of the plate, how
 
 The upper check valve connects to the PVC drive pipe which provides the influent flow, or the treated water exiting the AguaClara plant. The connection is made by a PVC male to male connector that screws into a male metal nipple and into the top check valve. For lab testing purposes, previous subteams have established system to simulate flow from the plant. A sump pump carries water to a raised tank, and the water from this tank flows the drive pipe which initiates the pumping process.  The elevation of the head tank creates the energy input in order to drive the pressure oscillation in the ram pump. See Figure 1 for exterior setup.
 
-<div class="alert alert-block alert-danger">
-Maile fixed
-Look over for minor spelling/grammar
-</div>
+<img src="https://github.com/AguaClara/ram_pump/blob/master/Exterior%20Set%20up%20Pump.jpg?raw=true" size = 400px >
 
-![Exterior Ram Pump Set Up](https://github.com/AguaClara/ram_pump/blob/master/Exterior%20Set%20up%20Pump.jpg)
 ###### Figure 1: Exterior Ram Pump Set Up. This is the schematic of the ram pump fittings from an exterior view, showing how each piece threads to the next.
-
-<div class="alert alert-block alert-danger">
-I still cannot see the figure but am not sure what the issue is. Does it appear on all of your copies? I think the issue might be in the path.
-</div>
 
 ### Calculating Minimum Spring Force
 
@@ -84,22 +62,7 @@ For the Spring 2018 semester, the team calculated a minimum k constant of .38. T
 ### Check Valve Inverted Configuration
 A possible modification to the current set up to increase efficiency was the inverted configuration. The purpose of the inverted check valve configuration is to reverse the force balance in the ram pump. The configuration involves reversing the upper valve so that the upward spring force pushes the plate into the closed position, and the hydrostatic force of water opens the valve. The effect is that the spring force has to only resist the hydrostatic force in the closed position, thus potentially lengthening the time in the closed position. Due to the increase in time for the closed position, more water flows through the effluent therein increasing the efficiency.
 
-<div class="alert alert-block alert-danger">
-Why does lengthening the time in the closed position increase pump efficiency?
-Steven Resolved
-</div>
-
 The CEE machine shop is equipped to fabricate the inverted valve. The inverted check valve consists of a standard metal check valve with the following modifications. Contact Tim or Paul of the CEE Machine Shop (in the basement of Hollister next to the AguaClara lab) to assist with the modifications to the unaltered metal check valve. They are both equipped to operate the drill and tap for this modification. Additionally, Tim or Paul are both resources to assist in follow-up alterations or fabrication questions.
-
-<div class="alert alert-block alert-danger">
-Fix spaces in hyphenated words throughout manual.
-Steven - Resolved
-</div>
-
-<div class="alert alert-block alert-danger">
-Privde a header/title for the following steps
-Stevie - Resolved
-</div>
 
 ### Check Valve Modification
 1. Drill a .25" diameter hole 2.4" up from the bottom of the valve and another .5" hole at the same elevation at the opposite side of the valve, as visually represented in Figure 2: Interior Ram Pump Set Up below.
@@ -107,12 +70,9 @@ Stevie - Resolved
 3. Screw in the pressure test valve and the effluent valve.
 4. Apply acrylic flex sealant tape around connection between threads and valve in order to ensure water tightness.
 
-![Interior Ram Pump Set Up](https://github.com/AguaClara/ram_pump/blob/master/Inverted%20Config%20Pump.png)
-###### Figure 2: Interior Ram Pump Set Up. From this image, you can see how the metal plate fits into the upper check valve and attaches to the metal rod. The spring, as shown, inserts concentrically around the drive rod and it held in place by the bottom check valve.
+<img src="https://github.com/AguaClara/ram_pump/blob/master/Inverted%20Config%20Pump.png?raw=true" size = 400px >
 
-<div class="alert alert-block alert-danger">
-Same issue for all figures.
-</div>
+###### Figure 2: Interior Ram Pump Set Up After Modification. From this image, you can see how the metal plate fits into the upper check valve and attaches to the metal rod. The spring, as shown, inserts concentrically around the drive rod and it held in place by the bottom check valve.
 
 ### PVC Fitting Fabrication
 This component connects the two metal check valves to hold the inner metal rod in place. This fitting was fabricated by this semester's subteam and can be reused until water tightness fails or the fitting undergoes significant internal pitting, however this section will outline how to fabricate a new piece.
@@ -122,21 +82,9 @@ This component connects the two metal check valves to hold the inner metal rod i
 3. Weld the smooth ends together using PVC welder.
 4. Allow the apparatus to cool completely before attaching to ram pump. This is crucial to ensure that the weld sets correctly and the piece doesn't break during testing.
 
-<div class="alert alert-block alert-danger">
-Maile fixed
-Fix sentence structure. If you use full sentences in one bullet, use full sentences in all bullets.
-</div>
+<img src="https://github.com/AguaClara/ram_pump/blob/master/Male%20to%20male%20connector.jpg?raw=true" size = 400px >
 
-![PVC Male to Male Fitting](https://github.com/AguaClara/ram_pump/blob/master/Male%20to%20male%20connector.jpg)
 ###### Figure 3: Spring 2018 Fabricated Male to Male PVC fitting. This is the current team's fitting fabricated in Spring 2018, where you can see the welds done with the hand held PVC welder.
-
-<div class="alert alert-block alert-danger">
-Are these your team's fabrication methods or are they just the standard ones. If you are using another team's fab methods (previous semesters) make sure to refer to their report and give them credit.
-
-In response to above comment, This is a piece that our team made specifically this semester.
-
-NM - leaving this comment as a reminder to myself for final submission.
-</div>
 
 ## Special Components
 The ram pump consists of multiple components that are not easily accessible in the AguaClara research lab or on campus. These pieces must be specially ordered, and are listed below.
@@ -157,27 +105,16 @@ The ram pump consists of multiple components that are not easily accessible in t
   * The unit consists of an 1/4 inch threaded metal rod and two metal standoffs that thread onto the rod.
   * Generally, this piece does not have to be replaced unless lost. The rod does not experience excessive wear.
 
-  <div class="alert alert-block alert-danger">
-  Consider making this into a table and including links to where to purchase certain items.
-
-  Natalie- I see why a table would be useful for organization but I wanted to leave long comments on each piece to order so I left it as bullets. If you still think it would be better as a table I will change it.
-
-  NM - This works for me. I will leave this comment to remind me when grading the final.
-  </div>
-
 ## Experimental Methods
 The following instruction details how to conduct energy efficiency testing of the ram pump. This determines how efficiently the system pumps effluent for the amount of volumetric flow entering the pump from of the drive pipe. Energy of both the effluent pumped as well as the incoming drive flow is the product of flow  rate  and  hydraulic  head. The energy pumped is the product of volumetric effluent flow and effluent head, or the equivalent pressure that the ram pump is pumping against to pump the water to a higher elevation. The pressure head can be measured using a 7 kPa pressure sensor linked to ProCoDA. Volumetric flow rate is determined by recording the amount of time it takes to pump a certain volume, as shown in the following equation:
 
-<div class="alert alert-block alert-danger">
-Maile fixed
-Good overall but first two sentences are wordy and require several readings to get full understanding.
-</div>
+ $Q= \frac{V}{t}$
 
- $Q= frac{V}{t}$
 
  The overall equation for energy efficiency of the ram pump is as follows:
 
- ![Energy Efficiency Eqn](https://github.com/AguaClara/ram_pump/blob/master/equations.png)
+ <img src="https://github.com/AguaClara/ram_pump/blob/master/equations.png?raw=true" size = 400px >
+
   ###### Figure 5: Energy Efficiency Equation, where
   ###### $Q_{eff}$ = volumetric flow rate of effluent
   ###### $h_{eff}$ = pressure head of effluent being pumped, eg: how high the effluent is theoretically being pumped
@@ -186,16 +123,11 @@ Good overall but first two sentences are wordy and require several readings to g
 
 Energy efficiency will become very useful in the final phase of Spring 2018's semester goals. The value of calculating experimental energy efficiency is that the team is then able to compare the values to calculated theoretical energy efficiency. From there, we can exclude terms in the theoretical calculations to determine the main contributors to inefficiency. For example, we can exclude the minor headloss term in the theotrical efficiency calculation to see how much minor headloss reduces effiency and if this is an issue to address as well as spring force. This analysis will be the focus of the last third of the semester, and will be further detailed in the final manual.
 
-<div class="alert alert-block alert-danger">
-Maile fixed
-
-Much better explanation - add some of this to the intro section!
-</div>
-
 ### Experiment
 
-![Standard Configuration](https://github.com/AguaClara/ram_pump/blob/master/Labeled%20Ram%20Pump%20Setup.png)
-###### Figure 4: Standard Configuration-this is the setup of the apparatus that the team uses in the laboratory to conduct all experimentation
+<img src="https://github.com/AguaClara/ram_pump/blob/master/Labeled%20Ram%20Pump%20Setup.png?raw=true" size = 400px >
+
+###### Figure 4: Standard Configuration: the setup of the apparatus that the team uses in the laboratory to conduct all experimentation
 
 1. Assemble ram pump in the configuration shown in the figure above, with the air chamber connected from the effluent pipe with a push to connect T fitting.
 
@@ -224,18 +156,6 @@ $ P_{1} * V_{1} = P_{2}* V_{2} $
 
 Writing the Python code for this data analysis is part of the team's focus for the last third of the semester, and will be included in the final research report.
 
-<div class="alert alert-block alert-danger">
-I cannot see Fig 4 here. Consider a close up of how ram pump connects to the rest of the apparatus. Otherwise good figure.
-NM - I still cannot see the figures so I don't know if these things are fixed or not.
-
-The list has two 9's.
-
-Consider labeling your figure 4 with all of the parts referenced here i.e. drive pipe valve and bucket connector valve. Otherwise provide more context as to what that is.
-NM - Cannot check to see if this is done because I can not see the photo.
-
-Step 7 - Accidentally pressed enter there I think?
-</div>
-
 ### Cleaning Procedure
 1. Run DI Water through the system
 2. Close the valve to the sum pump while the water is running through to accumulate the water in the waste bucket
@@ -262,7 +182,7 @@ $P=\rho * g * h$
 
 and rearranging to obtain
 
-$h = \frac{P}{\rho * g}$
+$h =\frac{P}{\rho*g}$
 
 This height is then plotted using every pressure obtained to determine how height varies with pressure. To accomplish this, attach a short (no longer than 12 in) 1/4 inch plastic flex tube into the pressure test valve. Plug the pressure sensor into a port on the PC where ProCoDA will be accessed. Run the pump as explained in experimental procedures, this time recording pressure readings. After 30 seconds, stop the data file and examine the points of highest pressure. This will be the pressure when the plate just opened and effluent was being pumped. Average the highest pressure values in the pressure oscillation to obtain your average effluent pressure.
 
@@ -274,17 +194,23 @@ The governing equations for water pumped in both the deceleration and accelerati
 
 While the plate is open, the velocity is accelerating and is governed by the following equation:
 
-![Extended Velocity Equation](https://github.com/AguaClara/ram_pump/blob/master/Longer%20V.jpg)
+<img src="https://github.com/AguaClara/ram_pump/blob/master/Longer%20V.jpg?raw=true" size = 400px >
+
+###### Figure 5: Full equation for velocity of a hydraulic transient during the acceleration phase
 
 In order to determine headloss coefficients experimentally, the team measured the terminal velocity of water flowing through the drive pipe and used the following relationship to back calculate the headloss term:
 
-![Velocity Equation](https://github.com/AguaClara/ram_pump/blob/master/Vf%20eqn.jpg)
+<img src="https://github.com/AguaClara/ram_pump/blob/master/Vf%20eqn.jpg?raw=true" size = 300px >
 
-After the plate closes, water begins to decelerate and the velocity during deceleration is governed by F=ma, with the force on the water caused by the pressure gradient from the drive pipe to the effluent. 
+###### Figure 6: Equation for verminal velocity, from which the team extracted a constant for head loss
+
+After the plate closes, water begins to decelerate and the velocity during deceleration is governed by F=ma, with the force on the water caused by the pressure gradient from the drive pipe to the effluent. The full equation can be found in the Python code at the bottom of this manual.
 
 In order to determine energy, the code takes the integral of each part of the equation. The bound of integration for acceleration are from 0 to the time when the plate closes. The bounds of integration for deceleration are from the time the plate closes to the time velocity goes to 0 (x intercept of deceleration). This is represented graphically below:
 
-![Ideal Velocity Graph](https://github.com/AguaClara/ram_pump/blob/master/Ideal%20Velocity%20graph.png)
+<img src="https://github.com/AguaClara/ram_pump/blob/master/Ideal%20Velocity%20graph.png?raw=true" size = 400px >
+
+###### Figure 7: Graph produced by Python Code of ideal velocity cycle; before intersection is when the water is accelerating, after the intersection is deceleration
 
 The final step in calculating efficiency is to multiply the integral of acceleration by the height of the drive pipe to obtain energy input; then multiply deceleration by the height of the effluent by the effluent pipe to obtain energy pumped. The full code is included below.
 
