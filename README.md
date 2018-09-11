@@ -1,6 +1,6 @@
 # Ram_Pump
 
-## The purpose of the Ram Pump team is to design and develop a properly functioning hydraulic ram pump, or hydram, for implementation in AguaClara plants. The hydram can be used to deliver water from below the facility back to the top for utilization in chemical stock tanks or to collect water at higher elevations for alternative uses. 
+## The purpose of the Ram Pump team is to design and develop an efficient hydraulic ram pump for implementation in AguaClara plants. The Ram Pump can be used to deliver water from below the facility to higher elevations for utilization in chemical stock tanks or electricty- free plant plumbing.
 
 ### Team Members
 
