@@ -11,7 +11,7 @@ The ram pump is a gravity power pump that will provide a convenient automatic mo
 ## Literature Review and Previous Work
 The team began the semester by reviewing the manuals, presentations, and other documentation from previous semesters. During the previous semester, Spring 2018, work on the Ram Pump was mainly centered around creating a mathematical model to find the ideal spring constant that will allow for the most efficient pump. The Spring 2018 team used python code to model the ideal velocity of the water in the drive pipe of the pump and used this model along with force balances to create a code that returns the minimum spring force and spring constant needed.
 
-<img src="https://github.com/AguaClara/ram_pump/blob/master/Ideal%20Velocity%20graph.png?raw=true" size = 400px >
+<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ideal%20Velocity%20graph.png" size = 400px >
 
 ###### Figure 7: Graph produced by Python Code of ideal velocity cycle; before intersection is when the water is accelerating, after the intersection is deceleration
 ```python
@@ -61,10 +61,10 @@ In the past, it has been determined that the main problem to be addressed is tha
 The magnitude of the force exerted by the spring is equal to the spring constant times the total compression (or elongation) of the spring.
 $$F_{spring}= -kx $$
 In order to find the compression of the spring, the team measured the original length of the spring, and used dimensions of the check valve, rod, and plate to find the original compression of the spring when the plate is open and the additional compression it experiences when the plate is closed. In order to find the original compression, the team had to find the distance between the bottom of the threads on the rod (which is what constrains the spring on the top end) and the plate stopper in the bottom check valve (which is what constrains the spring on the bottom end). To find this distance, the team measured the thickness of the plate stopper, the length of the bottom of the rod below the plate stopper, and the total distance of the rod below the threads. The measured values are shown below.
-<center><img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/spring%20compression.png"></center>
+<center><img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/spring%20compression.png"></center>
 Using these measurements the team found that the distance the spring had when the plate was open, labeled original compressed length above, was
 10 cm - 1 cm - 1.5 cm = 7.5 cm. The original, free length of the spring we were using is 10.16 cm so the original compression of the spring when the plate is open is is the free length minus the compressed length which is 2.66 cm. To find the total compression, the team added the distance the plate moves to this value. The distance the plate moves was found by measuring from the bottom of the plate (top of the rod it is attached to) to the top of the threads on the rod that is attached to the plate. This value was 1.3 cm making the total compression of the spring 3.96 cm.
-<center><img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/plate%20diagram.png"></center>
+<center><img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/plate%20diagram.png"></center>
 
 ####Minimum K Value
 The minimum K value needed for the spring in any Ram Pump system is related to the weight of the water in the water column when the water is completely stopped. The team found this by taking the measurements of the water column on the Ram Pump in the lab. We found that the height of the water column was approximately 2 meters. Additionally, the inner radius of the pipe is .0127 m. The team determined that when the water is not moving and the plate is completely closed, the force on the plate is the weight of the water column (W_{wc}). This can be found by using

@@ -17,7 +17,7 @@ The driving force of the ram pump is provided not by the force of the plate, how
 
 The upper check valve connects to the PVC drive pipe which provides the influent flow, or the treated water exiting the AguaClara plant. The connection is made by a PVC male to male connector that screws into a male metal nipple and into the top check valve. For lab testing purposes, previous subteams have established system to simulate flow from the plant. A sump pump carries water to a raised tank, and the water from this tank flows the drive pipe which initiates the pumping process.  The elevation of the head tank creates the energy input in order to drive the pressure oscillation in the ram pump. See Figure 1 for exterior setup.
 
-<img src="https://github.com/AguaClara/ram_pump/blob/master/Exterior%20Set%20up%20Pump.jpg?raw=true" size = 400px >
+<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Exterior%20Set%20up%20Pump.jpg" size = 400px >
 
 ###### Figure 1: Exterior Ram Pump Set Up. This is the schematic of the ram pump fittings from an exterior view, showing how each piece threads to the next.
 
@@ -70,7 +70,7 @@ The CEE machine shop is equipped to fabricate the inverted valve. The inverted c
 3. Screw in the pressure test valve and the effluent valve.
 4. Apply acrylic flex sealant tape around connection between threads and valve in order to ensure water tightness.
 
-<img src="https://github.com/AguaClara/ram_pump/blob/master/Inverted%20Config%20Pump.png?raw=true" size = 400px >
+<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Inverted%20Config%20Pump.png" size = 400px >
 
 ###### Figure 2: Interior Ram Pump Set Up After Modification. From this image, you can see how the metal plate fits into the upper check valve and attaches to the metal rod. The spring, as shown, inserts concentrically around the drive rod and it held in place by the bottom check valve.
 
@@ -82,7 +82,7 @@ This component connects the two metal check valves to hold the inner metal rod i
 3. Weld the smooth ends together using PVC welder.
 4. Allow the apparatus to cool completely before attaching to ram pump. This is crucial to ensure that the weld sets correctly and the piece doesn't break during testing.
 
-<img src="https://github.com/AguaClara/ram_pump/blob/master/Male%20to%20male%20connector.jpg?raw=true" size = 400px >
+<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Male%20to%20male%20connector.jpg" size = 400px >
 
 ###### Figure 3: Spring 2018 Fabricated Male to Male PVC fitting. This is the current team's fitting fabricated in Spring 2018, where you can see the welds done with the hand held PVC welder.
 
@@ -113,7 +113,7 @@ The following instruction details how to conduct energy efficiency testing of th
 
  The overall equation for energy efficiency of the ram pump is as follows:
 
- <img src="https://github.com/AguaClara/ram_pump/blob/master/equations.png?raw=true" size = 400px >
+ <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/equations.png" size = 400px >
 
   ###### Figure 5: Energy Efficiency Equation, where
   ###### $Q_{eff}$ = volumetric flow rate of effluent
@@ -125,7 +125,7 @@ Energy efficiency will become very useful in the final phase of Spring 2018's se
 
 ### Experiment
 
-<img src="https://github.com/AguaClara/ram_pump/blob/master/Labeled%20Ram%20Pump%20Setup.png?raw=true" size = 400px >
+<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ram%20pump%20setup.jpeg" size = 400px >
 
 ###### Figure 4: Standard Configuration: the setup of the apparatus that the team uses in the laboratory to conduct all experimentation
 
@@ -194,7 +194,7 @@ The governing equations for water pumped in both the deceleration and accelerati
 
 While the plate is open, the velocity is accelerating and is governed by the following equation:
 
-<img src="https://github.com/AguaClara/ram_pump/blob/master/Longer%20V.jpg?raw=true" size = 400px >
+<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Longer%20V.jpg" size = 400px >
 
 ###### Figure 5: Full equation for velocity of a hydraulic transient during the acceleration phase
 
@@ -208,7 +208,7 @@ After the plate closes, water begins to decelerate and the velocity during decel
 
 In order to determine energy, the code takes the integral of each part of the equation. The bound of integration for acceleration are from 0 to the time when the plate closes. The bounds of integration for deceleration are from the time the plate closes to the time velocity goes to 0 (x intercept of deceleration). This is represented graphically below:
 
-<img src="https://github.com/AguaClara/ram_pump/blob/master/Ideal%20Velocity%20graph.png?raw=true" size = 400px >
+<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ideal%20Velocity%20graph.png" size = 400px >
 
 ###### Figure 7: Graph produced by Python Code of ideal velocity cycle; before intersection is when the water is accelerating, after the intersection is deceleration
 
