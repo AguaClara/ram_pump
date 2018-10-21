@@ -1,5 +1,5 @@
 #Ram Pump, Fall 2018
-####Alycia Storch, Matthew Snyder, Paul Joo
+####Alycia Storch, Matthew Snyder
 #### September 28, 2018
 
 ## Abstract
@@ -8,7 +8,7 @@ The goal of the Ram Pump is to provide the AguaClara plant with treated water wi
 ## Introduction
 The ram pump is a gravity power pump that will provide a convenient automatic movement of water around AguaClara plants from low to high elevations in order to provide clean, treated water to the plumbing system of the plant which provides water for chemical dosage systems as well as sinks and toilets. This tool will alleviate the burden of manually having to carry water from the plant effluent up to other parts of the plant. The problem with the current prototype however is its inefficiency which can be attributed to a variety of factors ranging from head loss to an inefficient spring constant. Previously during Spring 2018, the AguaClara team focused on creating a mathematical model to find the optimal spring constant for the ram pump. During the Fall 2018 semester, the ram pump subteam will build on these previously proposed models so that a more accurate value for the spring constant can be found. This analysis will allow for an efficient way to finding the optimal springs in a variety of different cases.
 
-## Literature Review and Previous Work
+## Previous Work
 The team began the semester by reviewing the manuals, presentations, and other documentation from previous semesters. During the previous semester, Spring 2018, work on the Ram Pump was mainly centered around creating a mathematical model to find the ideal spring constant that will allow for the most efficient pump. The Spring 2018 team used python code to model the ideal velocity of the water in the drive pipe of the pump and used this model along with force balances to create a code that returns the minimum spring force and spring constant needed.
 
 <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ideal%20Velocity%20graph.png" size = 400px >
