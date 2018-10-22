@@ -67,15 +67,22 @@ Using these measurements the team found that the distance the spring had when th
 <center><img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/plate%20diagram.png"></center>
 
 ####Minimum K Value
-The minimum K value needed for the spring in any Ram Pump system is related to the weight of the water in the water column when the water is completely stopped. The team found this by taking the measurements of the water column on the Ram Pump in the lab. We found that the height of the water column was approximately 2 meters. Additionally, the inner radius of the pipe is .0127 m. The team determined that when the water is not moving and the plate is completely closed, the force on the plate is the weight of the water column (W_{wc}). This can be found by using
+The minimum K value needed for the spring in any Ram Pump system is related to the weight of the water in the water column when the water is completely stopped. The team found this by taking the measurements of the water column on the Ram Pump in the lab. We found that the height of the water column was approximately 2 meters. Additionally, the inner radius of the pipe is .0127 m. The team determined that when the water is not moving and the plate is completely closed, the force opposing the spring force is the sum of the force on the plate from the water column $$(W_{wc})$$ and the weight of the plate and rod in water. The force on the plate from the water is equal to the weight of the water column which is given by:
 $$W_{wc}=\rho_{water}gV $$
 $$\text{where } \rho_{water} \text{ is the density of water in } kg/m^{3}$$ $$\text{g is gravity}$$ $$\text{and V is the volume of the water column in }m^{3}$$
 $$W_{wc}= \rho_{water}g\pi*r^{2}h $$
 $$W_{wc}= 1000kg/m^{3}9.81m/s^{2}\pi*.0127^{2}2m^{3} $$
 $$W_{wc}= 9.9416N $$
-The spring force must be at least this value or else it will never be able to open the plate when the water column is full. Since the force of the spring is related to its compression and K value, the team used the total compression of the spring to find the K value associated with this minimum force required. The team measured the total compression of the spring to be 3.96cm or .0396m. The team then plugged in the values for the minimum force needed and compression of the spring into
+
+The team found the weight of the plate and rod in water by finding the volume. The team did this by submerging the plate and rod in a known volume of water and measuring the change in volume of the system. This change in volume is the volume of the plate and the rod. The weight of this component is given by:
+$$W_{rod}=\rho_{water}*g*V_{rod}$$
+$$V_{rod}= 2*10^{-5} m^3$$
+$$W_{rod}= 0.1962 N$$ 
+
+The spring force must be at least the sum of these two values or else it will never be able to open the plate when the water column is full. Since the force of the spring is related to its compression and K value, the team used the total compression of the spring to find the K value associated with this minimum force required. The team measured the total compression of the spring to be 3.96cm or .0396m. The team then plugged in the values for the minimum force needed and compression of the spring into
 $$F_{spring}= -kx $$
 giving us the equation
+$$W_{wc}+W_{rod}=F_{spring}$$
 $$9.9416N= -k.0396m $$
 $$k= 251N/m $$
 The team found the minimum spring constant (k) to be 251 N/m.
