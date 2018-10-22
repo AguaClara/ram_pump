@@ -77,15 +77,15 @@ $$W_{wc}= 9.9416N $$
 The team found the weight of the plate and rod in water by finding the volume. The team did this by submerging the plate and rod in a known volume of water and measuring the change in volume of the system. This change in volume is the volume of the plate and the rod. The weight of this component is given by:
 $$W_{rod}=\rho_{water}*g*V_{rod}$$
 $$V_{rod}= 2*10^{-5} m^3$$
-$$W_{rod}= 0.1962 N$$ 
+$$W_{rod}= 0.1962 N$$
 
 The spring force must be at least the sum of these two values or else it will never be able to open the plate when the water column is full. Since the force of the spring is related to its compression and K value, the team used the total compression of the spring to find the K value associated with this minimum force required. The team measured the total compression of the spring to be 3.96cm or .0396m. The team then plugged in the values for the minimum force needed and compression of the spring into
 $$F_{spring}= -kx $$
 giving us the equation
 $$W_{wc}+W_{rod}=F_{spring}$$
-$$9.9416N= -k.0396m $$
-$$k= 251N/m $$
-The team found the minimum spring constant (k) to be 251 N/m.
+$$9.9416N + 0.1962N= -k.0396m $$
+$$k= 256N/m $$
+The team found the minimum spring constant (k) to be 256 N/m.
 
 ####Maximum K Value
 The team determined that the spring cannot be stronger than the force of the water in the water column moving at its final velocity. The team then used this force to find the maximum K value a spring can have. The team determined the force of the water in the water column moving at its final velocity can be found by finding the weight of the water and adding the force associated to the velocity of the water. The weight of the moving water is the same as the weight of the stopped water in the water column so the team used the value of 9.9416 N we found when determining the minimum spring constant. The team used the equation
