@@ -135,6 +135,15 @@ $$V_f= \sqrt{\frac{2gH}{\sum_{}^{}K+\frac{fl}{d}}}$$
 $$\sqrt{\frac{2gh}{\sum_{}^{}K+\frac{fl}{d}}}=\frac{1}{2}\sqrt{\frac{2gH}{\sum_{}^{}K+\frac{fl}{d}}}$$
 While the $\frac{fl}{d}$ term is different for the two different systems, in both cases this value is very small compared to $\sum_{}^{}K$ and can be neglected. This leads to:
 $$h=\frac{1}{4}H$$
-Since this is a theoretical value and headlosses and other real world factors could affect where the actual correct outlet height is, the team decided to measure the final velocity of the normal system without the flexible tubing and then measure the final velocity with the flexible tubing outlet at the calculated height to see if the velocity at this height is close enough to $\frac{1}{2}V_f$.
+Since this is a theoretical value and headlosses and other real world factors could affect where the actual correct outlet height is, the team decided to measure the final velocity of the normal system with the normal outlet and then measure the final velocity with the flexible tubing outlet at the calculated height to see if the velocity at this height is close enough to $\frac{1}{2}V_f$.
 
 #### Finding Final Velocity
+In order to find the final velocity of the system with the normal outlet, the team connected flexible tubing to the end of the ram pump and had the outlet at the same level as the end of the ram pump but in another bucket that was on a scale. The team ran the pump for approximately 10 second trials and measured the change in weight of the bucket with the scale. The team executed this by having one person turn on the pump while the valve on the drive pipe was closed and then hold the flexible tubing in place. The other person started a timer and opened the valve at a certain time. That same person then closed the valve when the timer read 10 seconds later. The final velocity was found by the following calculations:
+$$\Delta W = \rho_{water}gV$$
+$$V= \frac{\Delta W}{\rho_{water}g}$$
+$$Q= \frac{V}{t} $$
+$$V_f= \frac{Q}{A}$$
+$$V_f= \frac{V}{\rho_{water}gtA}$$
+The team found the final velocity to be approximately 1.55 m/s.
+
+In order to find the final velocity at the new height, the team attached the flexible tubing to the 80/20 framing using a hose clamp to have its outlet at the correct height. A bucket was then placed below the tubing on a ladder. A similar procedure was followed, the only difference being that the bucket was weighed before and after instead of staying on the scale. From this testing, the team found the flowrate to be approximately .8 m/s which is only 3% error from exactly .5. The team felt this was close enough to continue with our experimentation.
