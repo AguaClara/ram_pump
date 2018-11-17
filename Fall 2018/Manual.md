@@ -160,6 +160,17 @@ In order to find the final velocity at the new height, the team attached the fle
 #####Purpose and Experimental Setup
 The purpose of this experiment is to find the force from the moving water exerted on the plate when it is open. In order to find this, the team decided to tie string to the plate, run the string up the drive pipe and out through a pulley system above the head tank. The other end of the string is attached to a mass which is on a scale. The difference in the reading of the scale will indicate the amount of force on the plate. For this experiment there is no spring in the ram pump because the team would not be able to get an accurate reading of the force from the water if the spring force were opposing it.
 
+
 The team glued a hook to the top of the plate to attach the string. The pulley system is a tee-shape made out of 8020 aluminum. There are pulleys on either end of the tee. This piece was attached to the top, front bar of the already existing setup in the lab. The team used a bottle filled with water as a mass and tied the string around the neck of the bottle.
+
+<center>
+<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/IMG_6992.jpg">
+Figure 6: Modified plate with hook for experiment
+</br>
+</br>
+<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/IMG_6993.jpg">
+Figure 7: Pulley system
+</center>
+</br>
 
 #####Execution and Results
