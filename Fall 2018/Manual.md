@@ -120,15 +120,17 @@ Using these measurements the team found that the distance the spring had when th
 Figure 5: The plate in the Ram Pump
 </center>
 </br>
-#### Minimum K Value
+####K Values
+##### Original Approach
 The minimum K value needed for the spring in any Ram Pump system is related to the weight of the water in the water column when the water is completely stopped. The team found this by taking the measurements of the water column on the Ram Pump in the lab. We found that the height of the water column was approximately 2 meters. Additionally, the inner radius of the pipe is .0127 m. The team determined that when the water is not moving and the plate is completely closed, the force opposing the spring force is the sum of the force on the plate from the water column, $W_{wc}$, and the weight of the plate and rod in water. The force on the plate from the water is equal to the weight of the water column which is given by: $$W_{wc}=\rho_{water}gV $$ where $\rho_{water}$ is the density of water in $kg/{m^3}$,  g is gravity and V is the volume of the water column $$W_{wc}= \rho_{water}g\pi*r^{2}h $$ $$W_{wc}= 1000kg/m^{3}9.81m/s^{2}\pi*.0127^{2}2m^{3} $$ $$W_{wc}= 9.9416N $$
 
 The team found the weight of the plate and rod in water by finding the volume. The team did this by submerging the plate and rod in a known volume of water and measuring the change in volume of the system. This change in volume is the volume of the plate and the rod. The weight of this component is given by: $$W_{rod}=\rho_{water}* g * V_{rod}$$ $$V_{rod}= 2*10^{-5} m^3$$ $$W_{rod}= 0.1962 N$$
 
 The spring force must be at least the sum of these two values or else it will never be able to open the plate when the water column is full. Since the force of the spring is related to its compression and K value, the team used the total compression of the spring to find the K value associated with this minimum force required. The team measured the total compression of the spring to be 3.96cm or .0396m. The team then plugged in the values for the minimum force needed and compression of the spring into $$F_{spring}= -kx $$ giving us the equation $$W_{wc}+W_{rod}=F_{spring}$$ $$9.9416N + 0.1962N= -k.0396m $$ $$k= 256N/m $$ The team found the minimum spring constant (k) to be 256 N/m.
 
-#### Maximum K Value
 The team determined that the spring cannot be stronger than the force of the water in the water column moving at its final velocity. The team then used this force to find the maximum K value a spring can have. The team decided that the drag force across the plate is not a sufficient enough force to explain the plate movement. The team determined that we must find this force experimentally. The team has comprised an experiment to measure the force on the plate just as it moves. The team ran a string from the top of the head tank and connect it to the plate on one end and a weight on a balance on the other. The team will then produce one-half the final velocity of the system. The team will run the system and watch the initial change in the force on the balance.
+
+#####New Approach
 
 #### Running the Pump
 When running the pump with a spring that has a k value within the calculated range, the team found that it needed enough water for full flow in the pipe for the whole system to work. This makes sense because the calculations on the pump were done assuming a constant full flow. Making sure there is constant full flow is something to be aware of and make sure of when running the pump. Once there was full flow, it would take a few seconds for the plate to close and start pumping. It would pump for a few cycles and then stop. A few seconds later it would do this again. The team observed that right before the ram pump would start pumping, there was a gurgling sound coming from the bucket on top of the drive pipe and that the water that exited the pipe after the first cycle seemed to have a higher flowrate than the water exiting when it wasn't pumping. This led the team to the theory that as the pump is running, it is pumping air bubbles into the drive pipe, decreasing the amount of water. Eventually, the amount of water is decreased to the point of not having enough to force the plate back down, which is why it stops pumping. Then, as the water is flowing but the pump is not moving, the air gets forced out by incoming water and the force from the water becomes strong enough to push down the plate again and start the pump. However, after further observation the team learned that what was actually happening was that the sump pump that pumps water up to the overhead bucket was pumping in bursts instead of continuously. This was causing there to be a rush of water when these bursts would occur and much less flow at all other times. These bursts were what was initiating the ram pump to start pumping. This was fixed by adding more water to the system so that the sump pump was never running dry and would be continuously pumping water up to the over head bucket. **This is extremely important. There should always be enough water for the sump pump to pump water continuously. If there isn't, there will be bursts of water and at all other times there will not be full flow in the drive pipe.**
@@ -173,4 +175,10 @@ Figure 7: Pulley system
 </center>
 </br>
 
+#####Failed Experiments
+
 #####Execution and Results
+
+#####Pressure Sensor Data (??)
+
+####Future Work
