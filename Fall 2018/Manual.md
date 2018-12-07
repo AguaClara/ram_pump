@@ -140,11 +140,7 @@ The spring force must be at least the sum of these two values or else it will ne
 
 Using these findings, the team determined that the spring cannot be stronger than the force of the water in the water column moving at its final velocity. They then used this force to find the maximum K value a spring can have. The team determined that the drag force across the plate is not a sufficient enough force to explain the plate movement. The team decided that the force must be computed experimentally. They created an experiment to measure the force on the plate just as it moves.
 
-<<<<<<< HEAD
 In the proposed experiment, the team ran a string from the top of the head tank and connect it to the plate on one end and a weight on a balance on the other. The experiment produced one-half the final velocity of the system. The team's experiment ran the system and watch the initial change in the force on the balance.
-=======
- The proposed experiment ran a string from the top of the head tank and connect it to the plate on one end and a weight on a balance on the other. The experiment produced one-half the final velocity of the system. The team's experiment ran the system and watch the initial change in the force on the balance
->>>>>>> 969472184c0f8b1d91590e07d64a99f53d5c5356
 
 **Do you have pictures? List the steps in the experimental setup more comprehensively**
 
