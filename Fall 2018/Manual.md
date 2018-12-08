@@ -9,7 +9,7 @@ The goal of the Ram Pump is to provide the AguaClara plant with treated water wi
 The ram pump is a gravity powered pump that will provide a convenient movement of water around AguaClara plants from low to high elevations in order to provide clean, treated water to the plumbing system of the plant. The plumbing system of AguaClara plants provide water for chemical dosage systems as well as sinks and toilets. This tool will alleviate the burden on operators to manually carry treated water from the plant effluent up to other parts of the plant. The problem with the current prototype is that it is highly inefficient, which can be attributed to a variety of factors ranging from head loss to an inefficient spring. Previously during Spring 2018, the AguaClara team focused on creating a mathematical model to find the optimal spring constant for the ram pump. During the Fall 2018 semester, the Ram Pump subteam will build on these previously proposed models so that a more accurate value for the spring constant can be found. This analysis will allow for an efficient way to  find the optimal spring for any given system.
 
 ## Previous Work
-During the previous semester, Spring 2018, work on the Ram Pump was mainly centered around creating a mathematical model to find the ideal spring constant that will allow for the most efficient pump. **maybe rephrase, a bit wordy; make the spring 2018 team the subject of the sentence**. The Spring 2018 team used python code to model the ideal velocity of the water in the drive pipe of the pump and used this model along with force balances to create a code that returns the minimum spring force and spring constant needed. The graph below was created by the team last semester. The red line represents the equation for the velocity of water in the drive pipe when the plate is open and the blue line is the velocity of the water when the plate is closed. The intersection is where the plate closes. The area under the blue line when the plate is closed is the amount of water pumped.
+During the previous semester, the Spring 2018 team worked on creating a mathematical model to find the ideal spring constant that will allow for the most efficient pump. The Spring 2018 team used python code to model the ideal velocity of the water in the drive pipe of the pump and used this model along with force balances to create a code that returns the minimum spring force and spring constant needed. The graph below was created by the team last semester. The red line represents the equation for the velocity of water in the drive pipe when the plate is open and the blue line is the velocity of the water when the plate is closed. The intersection is where the plate closes. The area under the blue line when the plate is closed is the amount of water pumped.
 <center>
 <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ideal%20Velocity%20graph.png" size = 400px >
 
@@ -51,7 +51,12 @@ For the Spring 2018 semester, the team calculated a minimum k constant of .38. T
 
 The Spring 2018 team also tried to use the ideal velocity to find the theoretical efficiency of the pump and compared this to the measured efficiency which was obtained through experimentation and data collection using ProCoda. However they were unable to obtain accurate data from ProCoda and could not calculate a feasible efficiency, so one of the main goals this semester was to calculate the efficiency of the ram pump. Then, the team could determine how to best optimize the efficiency to create a working pump for the AguaClara plants. The team's code for calculating the efficiency can be found here: https://github.com/AguaClara/ram_pump/blob/master/Spring%202018/IdealEfficiency.py
 
-In the past, teams have determined that the primary inefficiency is that the plate of the ram pump in the upper check valve is not staying closed long enough. This problem can be seen in the above graph of ideal velocity; the area under the blue line is equal to the volume of water pumped so if the blue line (water decelerating) had a shallower slope and extended for a longer time the amount of water pumped would be greater. There are three potential causes for this: the spring force is too large and overcomes the force downward on the plate too quickly, the spring force is too weak and the water reaches a small fraction of its maximum possible value and decelerates quickly, or the force on the plate from the water causes the plate to close quickly and just bounce back up. **Consider making this into a numbered list** All of these scenarios are strongly related to the spring used in the pump, so this will be the team's main focus this semester. The team plans to use ProCoda to collect data on the pressure in the pump to be able to get an idea of what forces the plate is experiencing. The team hopes to determine the main contributor to the small closure time and move forward first with mathematical modeling and code ~and then with real-world implementation and experimentation to address said problem.~ **Sentence is wordy! Somehow change the phrase "main contributor"** The team hopes to obtain values for head losses throughout the system to use in conjunction with the ideal models to  model the ram pump more accurately. The team plans to write a code whose inputs are the parameters of a plant (including available head, pipe diameter, head losses, etc) and outputs the specifications of the required spring.
+In the past, teams have determined that the primary inefficiency is that the plate of the ram pump in the upper check valve is not staying closed long enough. This problem can be seen in the above graph of ideal velocity; the area under the blue line is equal to the volume of water pumped so if the blue line (water decelerating) had a shallower slope and extended for a longer time the amount of water pumped would be greater. There are three potential causes for this:
+1. The spring force is too large and overcomes the force downward on the plate too quickly
+2. The spring force is too weak and the water reaches a small fraction of its maximum possible value and decelerates quickly
+3. The force on the plate from the water causes the plate to close quickly and just bounce back up.  
+
+All of these scenarios are strongly related to the spring used in the pump, so this will be the team's main focus this semester. The team had originally planned to use ProCoda to collect data on the pressure in the pump to be able to get an idea of what forces the plate is experiencing. The team hoped to determine the main contributor to the small closure time and move forward with mathematical modeling and then with real-world implementation and experimentation. The team hoped to obtain values for head losses throughout the system to use in conjunction with the ideal models to  model the ram pump more accurately. The team hopes that in the future the team can write a code whose inputs are the parameters of a plant (including available head, pipe diameter, head losses, etc) and outputs the specifications of the required spring.
 
 ## Background and Fabrication Details
 The ram pump itself is composed of two 1.5" metal check valves connected by a 4" female-female metal fitting. The upper check valve houses the functional interior components of the ram pump. The interior components of the ram pump are composed of a threaded metal rod with two metal standoffs screwed on. Additionally, one end of the rod has been tapped to encase the threaded metal plate. The spring fits into the interior of the pump by fitting over the end of the metal rod below the bottom standoff. The standoffs are there to change the length of the oscillations for the pump.
@@ -62,7 +67,7 @@ Figure 2: Components of the Ram Pump
 </br>
 The metal plate is is screwed into the top of the metal rod. The rod drives the oscillation of the metal plate through the top check valve under the power of the spring force. The metal rod slides freely into the bottom check valve, which holds the spring in place while not hindering the vertical oscillation. The spring is unable to fit through the bottom check valve because the check valve is fit precisely for the rod's diameter. When the spring compresses, the force from the spring increases. The force from the spring is the main component behind the oscillations of the spring.
 
-The main force component of the ram pump is not the force over the plate, but the pressure differential created by the movement of the upper check valve. When the plate is shut, the pressure above the check valve increases. This increase eventually exceeds the pressure in the effluent tube, thus forcing the water into the effluent. Once this occurs, the pressure above the plate is relived and thus allows the spring to force open the plate. Then once the hydrodynamic force hits a maximum, the increased velocity around the pump creates a "suction force," which reinitiates the pressure differential. **Explain what you mean by suction force since you have it in parenthases**
+The main force component of the ram pump is not the force over the plate, but the pressure differential created by the movement of the upper check valve. When the plate is shut, the pressure above the check valve increases. This increase eventually exceeds the pressure in the effluent tube, thus forcing the water into the effluent. Once this occurs, the pressure above the plate is relived and thus allows the spring to force open the plate. Then once the hydrodynamic force hits a maximum, the increased velocity around the pump creates a suction force, or a lower pressure below the plate and a higher pressure above, which reinitiates the pressure differential.
 
 The upper check valve connects to the drive pipe carrying the treated water from the AguaClara plant. This connection is produced by a male-to-male connector made of PVC and screwed into a nipple then into the top check valve. For lab testing purposes, previous Ram Pump subteams have established a system to simulate flow from a plant. A sump pump circulates water into a raised head tank. The water in the bucket, which now contains an elevation head, then flows into the drive pipe, this initiating the pumping process.
 
@@ -93,19 +98,15 @@ https://www.centuryspring.com/?matchtype=e&network=g&device=c&adposition=1t1&key
 The unit consists of an 1/4 inch threaded metal rod and two metal standoffs that thread onto the rod.
 Generally, this piece does not have to be replaced unless lost. The rod does not experience excessive wear.
 
-[**What is the thread measurement for the rod? Is there somewhere to get a new one?**]
-
-**tbh I don't know**
 
 **Brass Connector**
 The team ordered a new, brass connector to connect the two check valves because the PVC connector threads were getting worn by the metal threads of the check valves. The team ordered a 4" long piece but there are other lengths available on McMaster-Carr as well. https://www.mcmaster.com/4568k226
 
-**This might read better in a table**
 
 ## Running the Pump
-When running the pump with a spring that has a k value within the calculated range, the team found that it needed enough water for full flow in the pipe for the whole system to work. This makes sense because the calculations on the pump were done assuming a constant full flow. Making sure there is constant full flow is something to be aware of and make sure of when running the pump. **This sentence is confusingly worded** Once there was full flow, it would take a few seconds for the plate to close and start pumping. It would pump for a few cycles and then stop. A few seconds later it would do this again. The team observed that right before the ram pump would start pumping, there was a gurgling sound coming from the bucket on top of the drive pipe and that the water that exited the pipe after the first cycle seemed to have a higher flowrate than the water exiting when it wasn't pumping. This led the team to the theory that as the pump is running, it is pumping air bubbles into the drive pipe, decreasing the amount of water. Eventually, the amount of water is decreased to the point of not having enough to force the plate back down, which is why it stops pumping. Then, as the water is flowing but the pump is not moving, the air gets forced out by incoming water and the force from the water becomes strong enough to push down the plate again and start the pump. However, after further observation the team learned that what was actually happening was that the sump pump that pumps water up to the overhead bucket was pumping in bursts instead of continuously. This was causing there to be a rush of water when these bursts would occur and much less flow at all other times. These bursts were what was initiating the ram pump to start pumping. This was fixed by adding more water to the system so that the sump pump was never running dry and would be continuously pumping water up to the over head bucket. **This is extremely important. There should always be enough water for the sump pump to pump water continuously. If there isn't, there will be bursts of water and at all other times there will not be full flow in the drive pipe.**
+When running the pump with a spring that has a k value within the calculated range, the team found that it needed enough water for full flow in the pipe for the whole system to work. This makes sense because the calculations on the pump were done assuming a constant full flow. It is important to make sure there is enough water for constant full flow.
 
-**Consider making this into multiple paragraphs, it was a bit hard to follow**
+When running the pump, the team observed that it would take a few seconds for the plate to close and start pumping. It would pump for a few cycles and then stop. A few seconds later it would do this again. The team observed that right before the ram pump would start pumping, there was a gurgling sound coming from the bucket on top of the drive pipe and that the water that exited the pipe after the first cycle seemed to have a higher flowrate than the water exiting when it wasn't pumping. After further observation the team learned that what was happening was that the sump pump that pumps water up to the overhead bucket was pumping in bursts instead of continuously. This was causing there to be a rush of water when these bursts would occur and much less flow at all other times. These bursts were what was initiating the ram pump to start pumping. This was fixed by adding more water to the system so that the sump pump was never running dry and would be continuously pumping water up to the over head bucket. **This is extremely important. There should always be enough water for the sump pump to pump water continuously. If there isn't, there will be bursts of water and at all other times there will not be full flow in the drive pipe.**
 
 The team also found that sometimes the plate would be stuck in the closed position and manually jarring the rod would loosen it up and allow it to run. This is an issue to look into because in a plant there won't be access to the rod nor will there be someone to wiggle it every time it gets stuck. Additionally, any particles in the water could lead to the rod getting stuck so a method of cleaning these particles out of the ram pump would be necessary.
 
@@ -120,13 +121,10 @@ Figure 4: Interior rod between the check valves
 </center>
 </br>
 
-Using these measurements the team found that the distance the spring ~had when the plate was open, labeled original compressed length above, was~ **rephrase this, I had a hard time understanding what was being communicated**
-10 cm - 1 cm - 1.5 cm = 7.5 cm. The original, free length of the spring we were using is 10.16 cm so the original compression of the spring when the plate is open is the free length minus the compressed length which is 2.66 cm. To find the total compression, the team added the distance the plate moves to this value. The distance the plate moves was found by measuring from the bottom of the plate (top of the rod it is attached to) to the top of the threads on the rod that is attached to the plate. This value was 1.3 cm making the total compression of the spring 3.96 cm.
+Using these measurements the team found that the distance the spring had available when the plate was open, labeled original compressed length above, was 10 cm - 1 cm - 1.5 cm = 7.5 cm. The original, free length of the spring we were using is 10.16 cm so the original compression of the spring when the plate is open is the free length minus the compressed length which is 2.66 cm. To find the total compression, the team added the distance the plate moves to this value. The distance the plate moves was found by measuring from the bottom of the plate (top of the rod it is attached to) to the top of the threads on the rod that is attached to the plate. This value was 1.3 cm making the total compression of the spring 3.96 cm.
 <center><img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/plate%20diagram.png">
 
 Figure 5: The plate in the Ram Pump
-
-**A numbered list could ve helpful for your paragraphs explaining steps in arriving to a outcome**
 
 </center>
 </br>
@@ -142,13 +140,21 @@ Using these findings, the team determined that the spring cannot be stronger tha
 
 In the proposed experiment, the team ran a string from the top of the head tank and connect it to the plate on one end and a weight on a balance on the other. The experiment produced one-half the final velocity of the system. The team's experiment ran the system and watch the initial change in the force on the balance.
 
-**Do you have pictures? List the steps in the experimental setup more comprehensively**
 
 #####New Approach to K values
 
-The team came to the realization that the opening and closing states cannot be looked at separately for finding a k value and fixing the length of the spring is not the best way to find a k value. The team came up with this equation,$$k=\frac{|F_{opening}-F_{closing}|}{\Delta x}.$$ In this equation, $F_{opening}$ is the force at which the plate opens and $F_{closing}$ is the force at which the plate closes. The team currently assumes that $F_{opening}$ is the hydrostatic force from the water column above the plate. $F_{closing}$ is the force on the plate when the plate is open from water moving at the ideal closing velocity. The closing velocity is the velocity at which the plate should close at. Since the velocity of the water in the drive pipe has an asymptote, it may take a long time for the velocity to become very close to $V_f$ so there may be a more efficient velocity for the plate to close at. More information on how to find this closing velocity is detailed in the Future Work section.
+The team came to the realization that the opening and closing states cannot be looked at separately for finding a k value and fixing the length of the spring is not the best way to find a k value. The team came up with this equation,$$k=\frac{|F_{opening}-F_{closing}|}{\Delta x}.$$ In this equation, $F_{opening}$ is the force at which the plate opens and $F_{closing}$ is the force at which the plate closes. The team currently assumes that $F_{opening}$ is the hydrostatic force from the water column above the plate. $F_{closing}$ is the force on the plate when the plate is open from water moving at the ideal closing velocity. The closing velocity is the velocity at which the plate should close at. Since the velocity of the water in the drive pipe has an asymptote, it may take a long time for the velocity to become very close to $V_f$ (see Figure 6 for equation) so there may be a more efficient velocity for the plate to close at. More information on how to find this closing velocity is detailed in the Future Work section.
 
-To begin to find the values in this equation, the team started looking at $F_{closing}$. While a general equation to find this value based on velocity or Reynolds Number would be ideal, the unique geometry of the valve made this difficult so the team decided to begin with an experiment to find the force on the plate from the water in the system in the lab.
+<center>
+<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Longer%20V.jpg">
+Figure 6: Equation for velocity in drive pipe
+
+<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Vf%20eqn.jpg">
+
+Figure 7: The equation for V simplifies to this equation after a very long time. This is the equation for the final velocity in the drive pipe when it reaches steady state.
+</center>
+
+To begin to find the values in this equation for k, the team started looking at $F_{closing}$. While a general equation to find this value based on velocity or Reynolds Number would be ideal, the unique geometry of the valve made this difficult so the team decided to begin with an experiment to find the force on the plate from the water in the system in the lab.
 
 ### Finding Force on Plate
 In order to find the maximum k value that the pump can function with, it is necessary to know the maximum force that would be exerted on the plate at the target closing velocity in order to complete a force balance. In the past, the target velocity of $\frac{1}{2}V_f$ was arbitrarily chosen. The team has not yet looked into the ideal target velocity but continued with the choice of $\frac{1}{2}V_f$. Everything that the team did using $\frac{1}{2}V_f$ can be replicated for any other target velocity.
@@ -161,7 +167,6 @@ $$h=\frac{1}{4}H$$
 Since this is a theoretical value and head losses and other real world factors could affect where the actual correct outlet height is, the team decided to measure the final velocity of the normal system with the normal outlet and then measure the final velocity with the flexible tubing outlet at the calculated height to see if the velocity at this height is close enough to $\frac{1}{2}V_f$.
 
 #### Finding Final Velocity
-**Explain which final velocity this is, I got a little confused with terminal velocity**
 In order to find the final velocity of the system with the normal outlet, the team connected flexible tubing to the end of the ram pump and had the outlet at the same level as the end of the ram pump but in another bucket that was on a scale. The team ran the pump for approximately 10 second trials and measured the change in weight of the bucket with the scale. The team executed this by having one person turn on the pump while the valve on the drive pipe was closed and then hold the flexible tubing in place. The other person started a timer and opened the valve at a certain time. That same person then closed the valve when the timer read 10 seconds later. The final velocity was found by the following calculations:
 $$\Delta W = \rho_{water}gV$$
 $$V= \frac{\Delta W}{\rho_{water}g}$$
@@ -183,7 +188,7 @@ The team then comprised a second experiment to find this force. First, the team 
 
 <center>
 <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/IMG_6993.jpg">
-Figure 6: Pulley system
+Figure 8: Pulley system
 </center>
 </br>
 
@@ -195,7 +200,7 @@ $$F_{water}=W_{bottle}-W_{rod}$$
 where $W_{rod}$ is the weight of the plate and rod in water.
 <center>
 <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/Screen%20Shot%202018-11-27%20at%205.30.14%20PM.png">
-Figure 7: Diagram showing the important forces in the system and how they balance
+Figure 9: Diagram showing the important forces in the system and how they balance
 </center>
 </br>
 The team got the following results for the weight of the bottle :
@@ -206,11 +211,11 @@ These results yielded an average weight of 7.619 N. As detailed above, the weigh
 
 <center>
 <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/Screen%20Shot%202018-11-30%20at%205.48.19%20PM.png">
-Figure 7: Plate with hook screwed in
+Figure 10: Plate with hook screwed in
 </br>
 </br>
 <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/Screen%20Shot%202018-11-27%20at%205.37.48%20PM.png">
-Figure 8: Experimental Setup of final experiment
+Figure 11: Experimental Setup of final experiment
 </center>
 
 
