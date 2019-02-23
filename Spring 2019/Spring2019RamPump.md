@@ -32,6 +32,11 @@ experiments ran last semester
 
 During last Spring 2018 semester, the ram pump team worked on a mathematical model to find the spring constant that will provide the most efficient pump.
 
+
+*END OF DRAFT*
+
+---
+
 ## Methods
 Explain the techniques you have used to acquire additional data and insights. Reserve fine detail for the Manual at the end of the report, but use this section to give an overview with enough detail for the reader to understand your Results and Analysis. Describe your apparatus, and have a justification for every decision you made and every parameter you chose in the design of the apparatus. Be especially careful to detail the conditions your experiments were conducted under, as this information is especially important for interpreting your results
 
