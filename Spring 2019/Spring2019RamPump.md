@@ -11,10 +11,15 @@ The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water 
 
 The purpose of a hydraulic ram pump is to pump water from a lower elevation to a higher elevation using only the energy of the falling water to drive the water up ([bin Mohammad Ali, 2011](https://www.scribd.com/doc/76535229/Hydraulic-Ramp-Pump-Hydram)). In an AguaClara plant, flow through a plant is driven solely by gravity, so treated water exits the plant at the lowest point of the plant. Thus, in order to fill chemical stock tanks with treated water at earlier stages, operators must carry up buckets of water from the outlet at the lowest point of the plant to manually fill tanks. The AguaClara Vertical Ram Pump (ACVRP) solves this issue by allowing treated water to be pumped from the outlet of the plant to where it is needed at higher elevations in the plant, all without using electricity ([Aggarwal & Guzman, 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view?usp=sharing)). In addition, this allows the treated water to be pumped for utilization in the plant's plumbing system, which includes the plant's sinks and toilets.
 
-<img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images:Diagrams/AC_plant.png?raw=True" height=300>
+<p align="center">
+  <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images:Diagrams/AC_plant.png?raw=True" height=300>
+</p>
+<p align="center">
 
 **Figure 1:** The treated water exits the stacked rapid sand filters in the basement ([Adelman et al., 2013](https://ascelibrary.org/doi/10.1061/%28ASCE%29EE.1943-7870.0000700)) and flows down to the ram pump.
 The ram pump then pumps the treated water upwards to the chemical stock tanks. Image from [Aggarwal & Guzman, 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view?usp=sharing).
+ 
+</p>
 
 
 The ACVRP is an innovation that improves upon the conventional ram pump by making it easier to fabricate and more cost efficient. Conventional ram pumps that were used in previous AguaClara plants required an additional tank to be built to collect the water discharged from the ram pump and return it to the distribution tank, adding to the capital cost of the plant. The tank was cumbersome, and it was difficult to incorporate the tank in the pipe gallery at the basement of the plant ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).  
