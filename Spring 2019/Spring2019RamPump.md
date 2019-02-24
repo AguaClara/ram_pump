@@ -5,7 +5,7 @@
 **Abstract, Intro, Lit review, previous work**
 
 ## Abstract
-The goal of Ram Pump is to provide
+The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water to be pumped from lower elevations to higher elevations using the driving force of falling water. The ACVRP improves on a conventional ram pump design by increasing its space efficiency and decreasing its capital cost. Although a prototype has been built, it does not reach the target pumping efficiency. The goal of this semester is to optimize the ram pump efficiency by finding the necessary forces to open and close the valve at the ideal times. 
 
 ## Introduction
 
@@ -17,13 +17,14 @@ The purpose of a hydraulic ram pump is to pump water from a lower elevation to a
 The ram pump then pumps the treated water upwards to the chemical stock tanks. Image from [Aggarwal & Guzman, 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view?usp=sharing).
 
 
+The ACVRP is an innovation that improves upon the conventional ram pump by making it easier to fabricate and more cost efficient. Conventional ram pumps that were used in previous AguaClara plants required an additional tank to be built to collect the water discharged from the ram pump and return it to the distribution tank, adding to the capital cost of the plant. The tank was cumbersome, and it was difficult to incorporate the tank in the pipe gallery at the basement of the plant ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).  
 
-benefits of ram pump
+The ACVRP is an inline ram pump, which eliminates the need for a collection tank. The ideal design will be able to be easily installed in new plants as well as easily incorporated in previously built AguaClara plants. The simple design will also make it easy to fabricate and repair, which will empower the community and advance sustainability. The hope is that the ACVRP will relieve some of the burden of the plant operators, which will further increase their pride in their role of providing safe water to their communities ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
 
 ## Literature Review
 Discuss what is already known about your research area based on both external work and that of past AguaClara Teams. Connect your objectives with what is already known and explain what additional contribution you intend to make. Make sure to add APA formatted in-text citations. If you mention the author(s) in your sentence, you can simply give the year of publication. [(Logan et. al. 1987)](http://www.jstor.org/stable/pdf/25043431.pdf?acceptTC=true)
 
-mechanics of a ram pump
+mechanics of ram pump
 how it works
 
 ## Previous Work
