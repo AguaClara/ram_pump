@@ -13,7 +13,7 @@ The purpose of a hydraulic ram pump is to pump water from a lower elevation to a
 
 <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images:Diagrams/AC_plant.png?raw=True" height=300>
 
-**Figure 1:** The treated water exits the stacked rapid sand filters in the basement (Adelman et al., 2013) and flows down to the ram pump.
+**Figure 1:** The treated water exits the stacked rapid sand filters in the basement ([Adelman et al., 2013](https://ascelibrary.org/doi/10.1061/%28ASCE%29EE.1943-7870.0000700)) and flows down to the ram pump.
 The ram pump then pumps the treated water upwards to the chemical stock tanks. Image from [Aggarwal & Guzman, 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view?usp=sharing).
 
 
