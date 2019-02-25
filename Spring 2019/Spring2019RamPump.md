@@ -5,7 +5,7 @@
 **Abstract, Intro, Lit review, previous work**
 
 ## Abstract
-The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water to be pumped from lower elevations to higher elevations using the driving force of falling water. The ACVRP improves on a conventional ram pump design by increasing its space efficiency and decreasing its capital cost. Although a prototype has been built, it does not reach the target pumping efficiency. The goal of this semester is to optimize the ram pump efficiency by finding the necessary forces to open and close the valve at the ideal times. 
+The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water to be pumped from lower elevations to higher elevations using the driving force of falling water. The ACVRP improves on a conventional ram pump design by increasing its space efficiency and decreasing its capital cost. Although a prototype has been built, it does not reach the target pumping efficiency. The goal of this semester is to optimize the ram pump efficiency by finding the necessary forces to open and close the valve at the ideal times.
 
 ## Introduction
 
@@ -18,7 +18,7 @@ The purpose of a hydraulic ram pump is to pump water from a lower elevation to a
 
 **Figure 1:** The treated water exits the stacked rapid sand filters in the basement ([Adelman et al., 2013](https://ascelibrary.org/doi/10.1061/%28ASCE%29EE.1943-7870.0000700)) and flows down to the ram pump.
 The ram pump then pumps the treated water upwards to the chemical stock tanks. Image from [Aggarwal & Guzman, 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view?usp=sharing).
- 
+
 </p>
 
 
@@ -37,11 +37,44 @@ Currently, many water supply plants use electrically-powered ram pumps to redire
 
 
 ## Previous Work
-background of pulley system setup
-experiments ran last semester
+Previous teams worked on creating a mathematical model to calculate the necessary forces to open and close the check valve. These forces dictate whether water entering the drive pipe exits at the bottom as waste or if it is driven through the effluent pipe. Once these forces are calculated, they can be used to design a toggle mechanism to open and close the check valve at optimal times that will maximize the efficiency of the pump. The current mechanism for doing this is by using a spring. 
 
-During last Spring 2018 semester, the ram pump team worked on a mathematical model to find the spring constant that will provide the most efficient pump.
+find the ideal spring constant, which could be used to design the most efficient pump.
 
+last semester, tried to find forces empirically
+
+### Lab Setup
+
+A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 1, Figure 2). The electric sump pump, in red, provides a continuous source of water for the head tank. The drive pump is where falling water enters the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber will allow for headloss measurements, which will indicate the efficiency of the ram pump. The headloss indicates how high the ram pump can pump water up. Water that exits the ram pump as "waste" is the treated water that would be returned to the distribution tank.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ram%20pump%20setup.jpeg" height=400>
+</p>
+<p align="center">
+
+**Figure 2:** Schematic of ram pump lab setup from [Galantino et al., 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view).
+
+</p>
+
+### Water Velocity in Drive Pipe
+
+
+### Force Analysis
+
+
+### Finding Forces Empirically
+
+
+
+
+During the previous semester, the ram pump team work on the creation of a mathematical model to find the most optimum spring constant. It is important to say here that trying to make the longest cycle does not imply the best efficiency of the machine. Short cycles could reach a higher maximum velocity (more volume of water pumped) and the sum of all the cycles that you can do as the same as the time as the long-term one may improve the volume of water pumped. So, Python makes our life is easier to try to achieve the best solution in these experiments. The Spring 2018 team created a Python model that shows their ideal velocity and period of time (as I will shown in the next figure). With the data of the optimum cycle, the Spring 2018 team was able to develop a model that gives them the minimum spring constant (K) and minimum spring force (F or T). The K value obtained by Spring 2018 team was 0.38. The team tested many springs with different features to see which fits on the range.
+
+# Manual
+The goal of this section is to provide all of the guidance that would be necessary for a future team to pick up your work where you left off. Please try to be thorough and put yourselves in the shoes of a newcomer to the project. Below are some recommended sections, but the manual will likely take a slightly different form for each team.
+
+## Fabrication Details
+Metal Plate and Metal Rod:
+[OnShape Drawing](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/b1fce2711ababb74de1425e3)
 
 *END OF DRAFT*
 
@@ -159,6 +192,8 @@ Adelman, M. J., Weber-Shirk, M. L., Will, J. C., Cordero, A. N., Maher, W. J., L
 Aggarwal, P. & Guzman, J. (2016). Ram Pump, Spring 2016. Retrieved from https://confluence.cornell.edu/download/attachments/152026512/Ram%20Pump%20Final%20Report.pdf?version=1&modificationDate=1481833262000&api=v2.
 
 bin Mohammad Ali, M. D., bin Che Azih, M. K. bin Ali, M. B., bin Jasni, M. F., bin Zarmani, M.F. (2011). Hydraulic Ramp Pump (Hydram). Retrieved from www.scribd.com/doc/76535229/Hydraulic-Ramp-Pump-Hydram.
+
+Galantino, C., Paternain Martinez, J., Oiwa, L. (2016). Ram Pump, Fall 2016. Retrieved from https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view.
 
 Young, B. W. (1995). Design of Hydraulic Ram Pump Systems. Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy, 209(4), 313–322. Retreived from https://doi.org/10.1243/PIME_PROC_1995_209_010_01.
 
