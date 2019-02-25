@@ -32,6 +32,10 @@ Discuss what is already known about your research area based on both external wo
 mechanics of ram pump
 how it works
 
+Currently, many water supply plants use electrically-powered ram pumps to redirect water from a lower to higher elevation. Common ram pump systems include “(a) the header tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” as shown in the figure below.
+
+
+
 ## Previous Work
 background of pulley system setup
 experiments ran last semester
@@ -156,7 +160,7 @@ Aggarwal, P. & Guzman, J. (2016). Ram Pump, Spring 2016. Retrieved from https://
 
 bin Mohammad Ali, M. D., bin Che Azih, M. K. bin Ali, M. B., bin Jasni, M. F., bin Zarmani, M.F. (2011). Hydraulic Ramp Pump (Hydram). Retrieved from www.scribd.com/doc/76535229/Hydraulic-Ramp-Pump-Hydram.
 
-
+Young, B. W. (1995). Design of Hydraulic Ram Pump Systems. Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy, 209(4), 313–322. Retreived from https://doi.org/10.1243/PIME_PROC_1995_209_010_01.
 
 # Manual
 The goal of this section is to provide all of the guidance that would be necessary for a future team to pick up your work where you left off. Please try to be thorough and put yourselves in the shoes of a newcomer to the project. Below are some recommended sections, but the manual will likely take a slightly different form for each team.
