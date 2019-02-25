@@ -55,6 +55,9 @@ A lab apparatus was constructed to simulate conditions in an AguaClara plant (Fi
 </p>
 
 ### Water Velocity in Drive Pipe
+
+The opening and closing of the check valve should be timed precisely so that
+
 terminal velocity of water in drive pipe was 0.35 m/s
 The target maximum velocity that should trigger the valve to close must be less than the terminal velocity ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)). This will ensure that the valve triggers and closes.  In addition, the acceleration of the water in the vertical drive pipe decreases as head loss becomes more significant and head loss is wasted energy. Thus the optimal maximum velocity is expected to be a fraction of the terminal velocity. The team has chosen half of the terminal velocity and a quarter of the terminal velocity as our current bounds to test.[Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)
 
@@ -63,7 +66,7 @@ The target maximum velocity that should trigger the valve to close must be less 
 </p>
 <p align="center">
 
-**Figure 3:** Graph of ideal velocity cycle from [McCann et. al, 2018](https://github.com/AguaClara/ram_pump/blob/master/Spring%202018/FinalFabricationManualRamPump.md#figure-6-equation-for-verminal-velocity-from-which-the-team-extracted-a-constant-for-head-loss). The red line shows the velocity of the water in the drive pipe increasing until it reaches its terminal velocity. The intersection of the red and blue lines indicate the point in time when the check valve closes, causing the water to decelerate rapidly. 
+**Figure 3:** Graph of ideal velocity cycle from [McCann et. al, 2018](https://github.com/AguaClara/ram_pump/blob/master/Spring%202018/FinalFabricationManualRamPump.md#figure-6-equation-for-verminal-velocity-from-which-the-team-extracted-a-constant-for-head-loss). The red line shows the velocity of the water in the drive pipe increasing until it reaches its terminal velocity. The intersection of the red and blue lines indicate the point in time when the check valve closes, causing the water to decelerate rapidly.
 
 </p>
 
@@ -77,6 +80,18 @@ finding initial compression of spring
 
 last semester experiments
 pulley system
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/Screen%20Shot%202018-11-27%20at%205.30.14%20PM.png" height=400>
+</p>
+<p align="center">
+
+**Figure 4:** Free body diagram of forces acting on the check valve in the ram pump from [Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md).
+
+- $W_{bottle}$ is the weight of the bottle, which is used to experimentally determine the force required to lift and open the check valve.
+- T is the tension 
+
+</p>
 
 # Manual
 The goal of this section is to provide all of the guidance that would be necessary for a future team to pick up your work where you left off. Please try to be thorough and put yourselves in the shoes of a newcomer to the project. Below are some recommended sections, but the manual will likely take a slightly different form for each team.
