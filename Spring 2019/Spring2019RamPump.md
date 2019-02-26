@@ -4,7 +4,7 @@
 
 
 ## Abstract
-The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water to be pumped from lower elevations to higher elevations using the driving force of falling water. The ACVRP improves on a conventional ram pump design by increasing its space efficiency and decreasing its capital cost. Although a prototype has been built, it does not reach the target pumping efficiency. The goal of this semester is to optimize the ram pump efficiency by finding the necessary forces to open and close the valve at the ideal times.
+The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water to be pumped from lower elevations to higher elevations using the driving force of falling water. The ACVRP improves on a conventional ram pump design by increasing its space efficiency and decreasing its capital cost. Although a prototype has been built, it has not reached the target pumping efficiency. The goal of this semester is to optimize the ram pump efficiency by finding the necessary forces to open and close the valve at the ideal times.
 
 ## Introduction
 
@@ -26,7 +26,7 @@ The ACVRP is an innovation that improves upon the conventional ram pump by makin
 The ACVRP is an inline ram pump, which eliminates the need for a collection tank. The ideal design will be able to be easily installed in new plants as well as easily incorporated in previously built AguaClara plants. The simple design will also make it easy to fabricate and repair, which will empower the community and advance sustainability. The hope is that the ACVRP will relieve some of the burden of the plant operators, which will further increase their pride in their role of providing safe water to their communities ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
 
 ## Literature Review
-Currently, many water supply plants use electrically-powered ram pumps to redirect water from a lower to higher elevation (Figure 2).
+Many water supply plants use electrically-powered ram pumps to redirect water from a lower to higher elevation (Figure 2).
 
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images:Diagrams/rampumpsyselements.PNG?raw=True" height=300>
@@ -37,18 +37,18 @@ Currently, many water supply plants use electrically-powered ram pumps to redire
 
 </p>
 
-The past teams have adopted many of these elements of a traditional ram pump system and have been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consists of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allows for the water that flows down through the drive pipe to pass by the effluent pipe and into waste. When enough force from the water flowing through the drive pipe overcomes the spring force and the plate closes, the water is redirected up through the effluent pipe. Constantly alternating between these two states, open and closed, allows for the water to be pumped up (Figure 3).
+The past teams have adopted many of these elements of a traditional ram pump system and have been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consists of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allows for the water that flows down through the drive pipe to pass by the effluent pipe and goes into waste. When enough force from the water flowing through the drive pipe overcomes the spring force and the plate closes, the water is redirected up through the effluent pipe. Constantly alternating between these two states, open and closed, allows for the water to be pumped up (Figure 3).
 
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images:Diagrams/valve_cycle.png?raw=True" height=300>
 </p>
 <p align="center">
 
-**Figure 3:** Diagram of valve cycle from [Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view).
+**Figure 3:** Diagram of valve cycle from [Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view). When the valve is open, the driving force of falling water pushes the valve closed. When the valve is closed, the spring force pushes the valve to open again.
 
 </p>
 
-The main concern of the ACVRP is prolonging the time that the plate is closed to allow more volumes of water to travel up through the effluent valve. The Spring 2018 team worked on optimizing the output of water through the effluent pump by experimenting with the spring that controls the opening and closing of the plate. The energy efficiency of the ram pump was tested with a pulley system designed to calculate the minimum spring constant for the spring inside the pump. The current team is continuing the data collection of the force of water on the plate using a modified version of the pulley system from Spring 2018 in order to find the most efficient spring constant. With the calculation of the most efficient spring constant, we hope to extend the time that the plate is closed in order to maximize the water flow up through the effluent valve.
+The main concern of ACVRP is prolonging the time that the plate is closed to allow a higher volume of water to travel up through the effluent valve. The Spring 2018 team worked on optimizing the output of water through the effluent pump by experimenting with springs that control the opening and closing of the plate. The energy efficiency of the ram pump was tested with a pulley system designed to calculate the minimum spring constant for the spring inside the pump. The current team is continuing the data collection of the force of water on the plate using a modified version of the pulley system from Fall 2019 to find the most efficient spring constant. With the calculation of the most efficient spring constant, the team hopes to extend the time that the plate is closed throughout a long period in order to maximize the water flow up through the effluent valve.
 
 ## Previous Work
 Previous teams worked on creating a mathematical model to calculate the necessary forces to open and close the check valve. These forces dictate whether water entering the drive pipe exits at the bottom as waste or if it is driven through the effluent pipe. Once these forces are calculated, they can be used to design a toggle mechanism to open and close the check valve at optimal times that will maximize the efficiency of the pump. The current mechanism for doing this is by using a spring. Thus, by finding a spring with an ideal spring constant, a more efficient ram pump can be designed.
@@ -70,51 +70,55 @@ A lab apparatus was constructed to simulate conditions in an AguaClara plant (Fi
 
 ### Water Velocity in Drive Pipe
 
-The opening and closing of the check valve should be timed precisely so that
-
-terminal velocity of water in drive pipe was 0.35 m/s
-The target maximum velocity that should trigger the valve to close must be less than the terminal velocity ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)). This will ensure that the valve triggers and closes.  In addition, the acceleration of the water in the vertical drive pipe decreases as head loss becomes more significant and head loss is wasted energy. Thus the optimal maximum velocity is expected to be a fraction of the terminal velocity. The team has chosen half of the terminal velocity and a quarter of the terminal velocity as our current bounds to test.[Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)
+The opening and closing of the check valve should be timed precisely so that the maximum amount of water is pumped in each cycle, maximizing the area under the curve in the graph below (Figure 5). Previous research found under ideal conditions, the "terminal velocity of water in the drive pipe was 0.35 m/s" ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)). Thus, using this benchmark, the target maximum velocity to trigger the valve to close should be less than the terminal velocity because the water accelerates towards terminal velocity asymptotically. An arbitrary velocity of 1/2 the terminal velocity was chosen as the target ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ideal%20Velocity%20graph.png" height=400>
 </p>
 <p align="center">
 
-**Figure 3:** Graph of ideal velocity cycle from [McCann et. al, 2018](https://github.com/AguaClara/ram_pump/blob/master/Spring%202018/FinalFabricationManualRamPump.md#figure-6-equation-for-verminal-velocity-from-which-the-team-extracted-a-constant-for-head-loss). The red line shows the velocity of the water in the drive pipe increasing until it reaches its terminal velocity. The intersection of the red and blue lines indicate the point in time when the check valve closes, causing the water to decelerate rapidly.
+**Figure 5:** Graph of ideal velocity cycle from [McCann et. al, 2018](https://github.com/AguaClara/ram_pump/blob/master/Spring%202018/FinalFabricationManualRamPump.md#figure-6-equation-for-verminal-velocity-from-which-the-team-extracted-a-constant-for-head-loss). The red line shows the increasing velocity of the water in the drive pipe until it reaches its terminal velocity. The intersection of the red and blue lines indicate the point in time when the check valve closes, causing the water to decelerate rapidly.
 
 </p>
 
 
 
 ### Force Analysis
-finding initial compression of spring
+
+The main forces to design for are: 1) the force to close the check valve and 2) the force to open the check valve.
+
+The force to close the check valve is supplied by the force of the falling water in the drive pipe. The force to open the check valve is supplied by a spring. The spring force must be greater than the combined downward forces of the weight of the water in the drive pipe and the weight of the check valve plate.
+
+The formula for spring force is given by:
+
+$$F = -kx$$
+
+where k is the spring constant, a material property of the spring, and x is the compression/elongation displacement of the spring. To find this x, the distance that the spring was compressed when the valve is closed, the Fall 2018 team measured the distance the plate moved. They found this to be 1.3 cm ([Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md)).
 
 
 ### Finding Forces Empirically
 
-last semester experiments
-pulley system
+The Fall 2019 team ran experiments to find the force that the moving water in the drive pipe exerted on the plate when it was open. The team implemented a pulley system to find the force empirically. Since the valve has a unique geometry, the team found that it was easier to find the force through experimentation, and so the team threaded a string through the drive pipe and a pulley system as shown in figure 6. One end of the string was attached to the metal plate in the valve, while the other end was attached to a water bottle suspended in air on the other end of the pulley as a counterweight. The bottle was filled with water initially to keep the plate opened with the pump running, and after that, the water in the bottle was emptied gradually until the plate was not longer held opened. Since the point that the team would like to obtain was right before the plate was closed, the team then used a pipette to gradually add water back until the plate was held opened again. The weight of the bottle at this point was taken, and a simple force balance was applied to find the force:  $$F_{water}+W_{rod}=W_{bottle}$$ $$F_{water}=W_{bottle}-W_{rod}$$ where $W_{rod}$ is the weight of the plate and rod in water.
+
+
+
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/Screen%20Shot%202018-11-27%20at%205.30.14%20PM.png" height=400>
 </p>
 <p align="center">
 
-**Figure 4:** Free body diagram of forces acting on the check valve in the ram pump from [Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md).
+**Figure 6:** Free body diagram of forces acting on the check valve in the ram pump from [Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md).
 
 - $W_{bottle}$ is the weight of the bottle, which is used to experimentally determine the force required to lift and open the check valve.
-- T is the tension
+- T is the tension force of the pulley string
+- $F_{water}$ is the force of falling water in the drive pipe
 
-</p>
-
-During the previous semester, the ram pump team work on the creation of a mathematical model to find the most optimum spring constant. It is important to say here that trying to make the longest cycle does not imply the best efficiency of the machine. Short cycles could reach a higher maximum velocity (more volume of water pumped) and the sum of all the cycles that you can do as the same as the time as the long-term one may improve the volume of water pumped. So, Python makes our life is easier to try to achieve the best solution in these experiments. The Spring 2018 team created a Python model that shows their ideal velocity and period of time (as I will shown in the next figure). With the data of the optimum cycle, the Spring 2018 team was able to develop a model that gives them the minimum spring constant (K) and minimum spring force (F or T). The K value obtained by Spring 2018 team was 0.38. The team tested many springs with different features to see which fits on the range.
-
-The Spring 2018 team also tried to use the ideal velocity to find the theoretical efficiency of the pump and compared this to the measured efficiency which was obtained through experimentation and data collection using ProCoda. However, they were unable to obtain accurate data from ProCoda and could not calculate a feasible efficiency. The code for calculating the efficiency can be found here: https://github.com/AguaClara/ram_pump/blob/master/Spring%202018/IdealEfficiency.py
-Try to find the efficiency of the pump was the goal of last Fall 2018 team. They started with the original approach, with the height and diameter of pipe the were able to know  the force of the water coming through the upper tank. The force produce by the spring should be equal to the sum of the weight of the water, the plate and the rod. With the displacement of the spring the team was able to obtain the minimum value of K. F=-K*displacement. The team found the minimum spring constant (k) to be 256 N/m.
+Thus, by finding the mass needed to keep the check valve open, $F_{water}$ can be solved for. This can be set equal to the spring force, $F = -kx$, which will allow the spring constant, k, to be solved for. This will give the optimal spring constant needed to keep the valve open. The Fall 2018 team found that the minimum spring constant (k) was 256 N/m.
 
 
 # Manual
-The goal of this section is to provide all of the guidance that would be necessary for a future team to pick up your work where you left off. Please try to be thorough and put yourselves in the shoes of a newcomer to the project. Below are some recommended sections, but the manual will likely take a slightly different form for each team.
+
 
 ## Fabrication Details
 Metal Plate and Metal Rod:
