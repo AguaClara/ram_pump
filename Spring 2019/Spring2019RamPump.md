@@ -2,7 +2,6 @@
 #### Ching Pang, Cheer Tsang, Alyssa Ju, Iñigo Cabrera
 #### February 22, 2019
 
-**Abstract, Intro, Lit review, previous work**
 
 ## Abstract
 The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water to be pumped from lower elevations to higher elevations using the driving force of falling water. The ACVRP improves on a conventional ram pump design by increasing its space efficiency and decreasing its capital cost. Although a prototype has been built, it does not reach the target pumping efficiency. The goal of this semester is to optimize the ram pump efficiency by finding the necessary forces to open and close the valve at the ideal times.
@@ -89,9 +88,15 @@ pulley system
 **Figure 4:** Free body diagram of forces acting on the check valve in the ram pump from [Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md).
 
 - $W_{bottle}$ is the weight of the bottle, which is used to experimentally determine the force required to lift and open the check valve.
-- T is the tension 
+- T is the tension
 
 </p>
+
+During the previous semester, the ram pump team work on the creation of a mathematical model to find the most optimum spring constant. It is important to say here that trying to make the longest cycle does not imply the best efficiency of the machine. Short cycles could reach a higher maximum velocity (more volume of water pumped) and the sum of all the cycles that you can do as the same as the time as the long-term one may improve the volume of water pumped. So, Python makes our life is easier to try to achieve the best solution in these experiments. The Spring 2018 team created a Python model that shows their ideal velocity and period of time (as I will shown in the next figure). With the data of the optimum cycle, the Spring 2018 team was able to develop a model that gives them the minimum spring constant (K) and minimum spring force (F or T). The K value obtained by Spring 2018 team was 0.38. The team tested many springs with different features to see which fits on the range.
+
+The Spring 2018 team also tried to use the ideal velocity to find the theoretical efficiency of the pump and compared this to the measured efficiency which was obtained through experimentation and data collection using ProCoda. However, they were unable to obtain accurate data from ProCoda and could not calculate a feasible efficiency. The code for calculating the efficiency can be found here: https://github.com/AguaClara/ram_pump/blob/master/Spring%202018/IdealEfficiency.py
+Try to find the efficiency of the pump was the goal of last Fall 2018 team. They started with the original approach, with the height and diameter of pipe the were able to know  the force of the water coming through the upper tank. The force produce by the spring should be equal to the sum of the weight of the water, the plate and the rod. With the displacement of the spring the team was able to obtain the minimum value of K. F=-K*displacement. The team found the minimum spring constant (k) to be 256 N/m.
+
 
 # Manual
 The goal of this section is to provide all of the guidance that would be necessary for a future team to pick up your work where you left off. Please try to be thorough and put yourselves in the shoes of a newcomer to the project. Below are some recommended sections, but the manual will likely take a slightly different form for each team.
