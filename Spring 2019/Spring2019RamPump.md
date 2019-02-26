@@ -38,7 +38,7 @@ Currently, many water supply plants use electrically-powered ram pumps to redire
 ## Previous Work
 Previous teams worked on creating a mathematical model to calculate the necessary forces to open and close the check valve. These forces dictate whether water entering the drive pipe exits at the bottom as waste or if it is driven through the effluent pipe. Once these forces are calculated, they can be used to design a toggle mechanism to open and close the check valve at optimal times that will maximize the efficiency of the pump. The current mechanism for doing this is by using a spring. Thus, by finding a spring with an ideal spring constant, a more efficient ram pump can be designed.
 
-During the Spring 2018 semester, the team set up a system to find the forces empirically using a pulley system.
+During the Spring 2018 semester, the team set up a system to find the forces empirically using a mass on a pulley to lift the valve open.
 
 ### Lab Setup
 
