@@ -26,14 +26,29 @@ The ACVRP is an innovation that improves upon the conventional ram pump by makin
 The ACVRP is an inline ram pump, which eliminates the need for a collection tank. The ideal design will be able to be easily installed in new plants as well as easily incorporated in previously built AguaClara plants. The simple design will also make it easy to fabricate and repair, which will empower the community and advance sustainability. The hope is that the ACVRP will relieve some of the burden of the plant operators, which will further increase their pride in their role of providing safe water to their communities ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
 
 ## Literature Review
-Discuss what is already known about your research area based on both external work and that of past AguaClara Teams. Connect your objectives with what is already known and explain what additional contribution you intend to make. Make sure to add APA formatted in-text citations. If you mention the author(s) in your sentence, you can simply give the year of publication. [(Logan et. al. 1987)](http://www.jstor.org/stable/pdf/25043431.pdf?acceptTC=true)
+Currently, many water supply plants use electrically-powered ram pumps to redirect water from a lower to higher elevation (Figure 2).
 
-mechanics of ram pump
-how it works
+<p align="center">
+  <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images:Diagrams/rampumpsyselements.PNG?raw=True" height=300>
+</p>
+<p align="center">
 
-Currently, many water supply plants use electrically-powered ram pumps to redirect water from a lower to higher elevation. Common ram pump systems include “(a) the header tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” as shown in the figure below.
+**Figure 2:** Common ram pump systems include “(a) the header tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” (Young, 1995, p. 313).
 
+</p>
 
+The past teams have adopted many of these elements of a traditional ram pump system and have been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consists of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allows for the water that flows down through the drive pipe to pass by the effluent pipe and into waste. When enough force from the water flowing through the drive pipe overcomes the spring force and the plate closes, the water is redirected up through the effluent pipe. Constantly alternating between these two states, open and closed, allows for the water to be pumped up (Figure 3).
+
+<p align="center">
+  <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images:Diagrams/valve_cycle.png?raw=True" height=300>
+</p>
+<p align="center">
+
+**Figure 3:** Diagram of valve cycle from [Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view).
+
+</p>
+
+The main concern of the ACVRP is prolonging the time that the plate is closed to allow more volumes of water to travel up through the effluent valve. The Spring 2018 team worked on optimizing the output of water through the effluent pump by experimenting with the spring that controls the opening and closing of the plate. The energy efficiency of the ram pump was tested with a pulley system designed to calculate the minimum spring constant for the spring inside the pump. The current team is continuing the data collection of the force of water on the plate using a modified version of the pulley system from Spring 2018 in order to find the most efficient spring constant. With the calculation of the most efficient spring constant, we hope to extend the time that the plate is closed in order to maximize the water flow up through the effluent valve.
 
 ## Previous Work
 Previous teams worked on creating a mathematical model to calculate the necessary forces to open and close the check valve. These forces dictate whether water entering the drive pipe exits at the bottom as waste or if it is driven through the effluent pipe. Once these forces are calculated, they can be used to design a toggle mechanism to open and close the check valve at optimal times that will maximize the efficiency of the pump. The current mechanism for doing this is by using a spring. Thus, by finding a spring with an ideal spring constant, a more efficient ram pump can be designed.
@@ -42,14 +57,14 @@ During the Spring 2018 semester, the team set up a system to find the forces emp
 
 ### Lab Setup
 
-A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 1, Figure 2). The electric sump pump, in red, provides a continuous source of water for the head tank. The drive pump is where falling water enters the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber will allow for headloss measurements, which will indicate the efficiency of the ram pump. The headloss indicates how high the ram pump can pump water up. Water that exits the ram pump as "waste" is the treated water that would be returned to the distribution tank.
+A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 1, Figure 4). The electric sump pump, in red, provides a continuous source of water for the head tank. The drive pump is where falling water enters the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber will allow for headloss measurements, which will indicate the efficiency of the ram pump. The headloss indicates how high the ram pump can pump water up. Water that exits the ram pump as "waste" is the treated water that would be returned to the distribution tank.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ram%20pump%20setup.jpeg" height=400>
 </p>
 <p align="center">
 
-**Figure 2:** Schematic of ram pump lab setup from [Galantino et al., 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view).
+**Figure 4:** Schematic of ram pump lab setup from [Galantino et al., 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view).
 
 </p>
 
