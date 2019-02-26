@@ -7,7 +7,7 @@
 ## Abstract
 The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water to be pumped from lower elevations to higher elevations using the driving force of falling water. The ACVRP improves on a conventional ram pump design by increasing its space efficiency and decreasing its capital cost. Although a prototype has been built, it has not reached the target pumping efficiency. The goal of this semester is to optimize the ram pump efficiency by finding the necessary forces to open and close the valve at the ideal times.
 
-**[Nice work! This is a very succinct abstract.]**
+**[Nice work! This is a very succinct abstract. An overall comment for the manual: Please remember to write in past tense as it would be someone in the ~future~ reading your final manual. Refer to Will's Technical Writing Presentation or our team's Grammar Guidelines on Confluence.]**
 
 ## Introduction
 
