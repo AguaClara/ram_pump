@@ -10,10 +10,10 @@ x = (pp.ftime(url,start,end)).to(u.s)
 pressure = pp.column_of_data(url, start, 1, end, 'cm')
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
-data = pp.get_data_by_time(path=url, columns=[0, 1, 2],start_date="3-7-2018",start_time="0.7877316143",end_time="0.7882413528")
-time = data[0]
-influent_turbidity = data[1]
-effluent_turbidity = data[2]
+#data = pp.get_data_by_time(path=url, columns=[0, 1, 2],start_date=None,start_time=none, end_time=none)
+#time = data[0]
+#influent_turbidity = data[1]
+#effluent_turbidity = data[2]
 
 
 plt.plot(x,pressure,'-')
