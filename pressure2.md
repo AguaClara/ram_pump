@@ -16,7 +16,7 @@ airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
 plt.plot(x,pressure,'-')
 plt.plot(x,airchamber,'-')
-plt.show()
-#plt.savefig('pressure_trace.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+#plt.show()
+plt.savefig('pressure_trace.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
 ```
