@@ -11,8 +11,10 @@ x = (pp.ftime(url,start,end)).to(u.s)
 pressure = pp.column_of_data(url, start, 1, end, 'cm')
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
-plt.plot(x,pressure,'-')
-plt.plot(x,airchamber,'-')
+plt.plot(x,pressure,'-', label = 'Effluent')
+plt.plot(x,airchamber,'-', label='Air Chamber')
+plt.xlabel('time')
+plt.ylabel('pressure (kPa)')
 plt.show()
 plt.savefig('pressure_trace_initialpressure.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 ```
