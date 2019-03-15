@@ -40,7 +40,7 @@ Many water supply plants use electrically-powered ram pumps to redirect water fr
 
 **Figure 2:** Common ram pump systems include “(a) the header tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” (Young, 1995, p. 313).
 
-In conventional ram pump systems, the header tank (a) that is placed higher than the ram pump provides potential energy to power the pump. Unfortunately, as the water is directed down from the header tank to the pump (c) through the drive pipe (b), there are considerable head losses.This driving head experiences
+In conventional ram pump systems, the header tank (a) that is placed higher than the ram pump provides potential energy to power the pump. Realistically, as the water is directed down from the header tank to the pump (c) through the drive pipe (b), it experiences considerable head losses. This driving head
 
 **OUTLINE: Concept and structure of a conventional ram pump**
 - Review of underlying hydraulic concepts (fluid mechanics)
@@ -92,7 +92,7 @@ During the Spring 2018 semester, the team set up a system to find the forces emp
 
 ### Lab Setup
 
-A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 4). The electric sump pump, in red in Figure 4, provides a continuous source of water for the head tank and a desired constant watertable. This means that we can simulate accur. **[Please make it obvious to the reader that you are referring to Figure 4 (i.e. "The electric sump pump, in red in Figure 4...")]** The drive pipe **[Did you mean the drive pipe? If so, please don't change naming conventions without explaining what is being referred to.]** is where falling water enters the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber will allow for headloss measurements, which indicate **[Consider changing to "which indicate" rather than "which will indicate".]** the efficiency of the ram pump. The headloss indicates how high the ram pump can pump water up. Water that exits the ram pump as "waste" is the treated water that would be returned to the distribution tank.
+A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 4). The electric sump pump, in red in Figure 4, provides a continuous source of water for the head tank and a desired constant watertable. **[Please make it obvious to the reader that you are referring to Figure 4 (i.e. "The electric sump pump, in red in Figure 4...")]** The drive pipe **[Did you mean the drive pipe? If so, please don't change naming conventions without explaining what is being referred to.]** is where water with elevation head enters the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber will allow for headloss measurements, which indicate **[Consider changing to "which indicate" rather than "which will indicate".]** the efficiency of the ram pump. The headloss indicates how high the ram pump can pump water up. Water that exits the ram pump as "waste" is the treated water that would be returned to the distribution tank.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ram%20pump%20setup.jpeg" height=400>
@@ -162,7 +162,8 @@ Thus, by finding the mass needed to keep the check valve open, $F_{water}$ can b
 ## Fabrication Details
 The ACVRP was fabricated using the following materials:
 - Bluh
-- bluh
+- Two check valves of 1"
+- Threaded rod of
 - Spring of chosen length and k constant
 
 The OnShape design for the completed ACVRP can be found [here](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/b1fce2711ababb74de1425e3).
