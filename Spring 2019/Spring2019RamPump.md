@@ -151,9 +151,11 @@ The ACVRP was fabricated using the following materials:
 - Two check valves of 1" pipe size
 - Threaded rod of length 7.5"
 - Spring of chosen length and k constant
-- Two stoppers of hexagon shape
+- Two hexagonal stoppers
 
-The OnShape design for the components of the ACVRP can be found here at [Plate and spring](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/b1fce2711ababb74de1425e3) and [Check valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb).
+The OnShape design for the components of the ACVRP can be found here:
+- [Plate and Spring](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/b1fce2711ababb74de1425e3)
+- [Check Valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb)
 
 ## Methods
 ### Experimental Apparatus
@@ -236,13 +238,12 @@ plt.xlabel('Time')
 plt.ylabel('Pressure (cm)')
 plt.legend()
 plt.show()
+
+plt.clf()
+plt.savefig('pressure_trace_initialpressure1.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 ```
 
 ```python
-from aguaclara_research import ProCoDA_Parser as pp
-from aguaclara.core.units import unit_registry as u
-import matplotlib.pyplot as plt
-import numpy as np
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pitrial2.xls'
 pp.notes(url)
 start = 4454 #should be more than 'start'
@@ -259,30 +260,38 @@ plt.xlabel('Time')
 plt.ylabel('Pressure (cm)')
 plt.legend()
 plt.show()
+plt.clf()
+plt.savefig('pressure_trace_initialpressure2.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+
 ```
 
-### Figure requirements
- - Create the graph using python (not Excel)
- - If the x axis is time then make zero time reflect the beginning of the test.
- - Use a white background for all graphs.
- - Most data will have both x and y values and thus should be presented using an xy scatter plot.
- - Label all axes and include units where appropriate.
- - Axis scale labels should be in the margin of the graph and not inside the graph border.
- - Eliminate parts of the range in both x and y axis that aren't used or that aren't meaningful.
- - Place a caption with a brief description below the graph. Add this caption using the wiki formatting, not in your graphing software.
- - Use data symbols to show data points unless there is so much data that the symbols overlap. If the data symbols overlap it is better to connect the data points with a line and not show the data symbols.
- - When presenting multiple plots on a single graph make sure that it is easy to distinguish the plots using the legend.
- - If curve fitting is used explain why and include the equation (elsewhere in the report).
- - If a model or theoretical curve is presented it should be a smooth curve without data points.
- - Use the same font in the graphs as you use in the text of the report.
- - Insert the graph in your report after the first reference to it in the text. Inserted the graph after the next paragraph break
- - Scale the size of the graph so it is large enough to see the data and read the text without having to follow a link to see a larger image. Avoid using hyperlinks on images because that causes the export to Microsoft Word option to not include the image.
+put graph analyzing one cycle
 
-After describing a particular result, within a paragraph, go on to connect your work to fundamental physics/chemistry/statics/fluid mechanics, or whatever field is appropriate. Analyze your results and compare with theoretical expectations; or, if you have not yet done the experiments, describe your expectations based on established knowledge. Include implications of your results. How will your results influence the design of AguaClara plants? If possible provide clear recommendations for design changes that should be adopted. Show your experimental data in a professional way using the following guidelines:
-* Why did you get those results/data?
-* Did these results line up with expectations?
-* What went wrong?
-* If the data do not support your hypothesis, is there another hypothesis that describes your new data?
+```python
+url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pitrial2.xls'
+pp.notes(url)
+start = 4454 #should be more than 'start'
+end = 22416 #should be less than 'stop'
+
+x = (pp.ftime(url,start,end)).to(u.s)
+pressure = pp.column_of_data(url, start, 1, end, 'cm')
+airchamber = pp.column_of_data(url, start, 2, end, 'cm')
+
+plt.clf()
+plt.plot(x,pressure,'-', label = 'Waste Valve')
+plt.plot(x,airchamber,'-', label='Air Chamber')
+plt.xlabel('Time')
+plt.ylabel('Pressure (cm)')
+plt.legend()
+plt.show()
+plt.clf()
+plt.savefig('pressure_trace_initialpressure2.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+
+```
+
+measure pressure difference in air chamber
+use equations to figure out force to close valve
+
 
 ## Conclusions
 Explain what you have learned and how that influences your next steps. Why does what you discovered matter to AguaClara?
