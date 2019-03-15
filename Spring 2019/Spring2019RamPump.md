@@ -292,6 +292,26 @@ plt.savefig('pressure_trace_initialpressure2.jpg', dpi=200, facecolor='w', edgec
 measure pressure difference in air chamber
 use equations to figure out force to close valve
 
+###Force Analysis
+```Python
+
+#Weight of content in the bottle at the instance that the plate opens
+p_open = [1261.5, 1277.9, 1262.5, 1254.2, 1269.4] #in grams
+#Filling the water bottle until the plate opens, and then transfer the water in the bottle to another empty beaker until the plate closes
+
+#Mass of contents in bottle: 743.2 g
+#Mass of contents in beaker: 639.5 - 71.12 g = 568.38 g
+#Plate open content: 568.38 g + 743.2 = 1311.58 g
+#Mass of plate + rod + hook = 105.9 g
+
+#Weight of bottle = tension
+#Tension = Weight of water + Weight of Rod
+#Force of water = Weight of Bottle -Weight of rod
+
+
+
+```
+
 
 ## Conclusions
 Explain what you have learned and how that influences your next steps. Why does what you discovered matter to AguaClara?
@@ -303,9 +323,15 @@ Make sure that you defend your conclusions with facts and results.
 ## Future Work
 Describe your plan of action for the next several weeks of research. Detail the next steps for this team. How can AguaClara use what you discovered for future projects? Your suggestions for challenges for future teams are most welcome. Should research in this area continue?
 
+Over the span of Spring 2019, the team was able to experimentally and theoretically calculate the
+
+Although the team collected relevant data concerning the force of water on the plate of the drive pipe, the experimental values are prone to inaccuracy because several components in the current experimental ram pump setup are rusted. The rusting of the pump pieces most probably plays a significant role in skewing the weight measurements.
 * Build another experimental ram pump
   - Reasons: Several components in the current system are rusted and are difficult to replace in between experimental trials.
-* Further research is recommende in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe
+
+Further research in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe is yet to be explored. Optimizing this ratio between the diameters of the two pipes will help improve the efficiency of the ram pump.
+
+
 * Strive to test ram pump prototype in Ithaca water treatment plant
 
 
