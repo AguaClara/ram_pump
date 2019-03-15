@@ -16,6 +16,6 @@ plt.plot(x,airchamber,'-', label='Air Chamber')
 plt.xlabel('time')
 plt.ylabel('pressure (200kPa)(cm)')
 plt.legend()
-#plt.show()
-plt.savefig('pressure_trace_initialpressure1.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+plt.show()
+#plt.savefig('pressure_trace_initialpressure1.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 ```
