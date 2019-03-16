@@ -38,44 +38,11 @@ Many water supply plants used electrically-powered ram pumps to redirect water f
 
 In conventional ram pump systems, the header tank (a) was placed higher than the ram pump in order to provide potential energy to power the pump. Realistically, as the water was directed down from the header tank to the pump (c) through the drive pipe (b), it experienced considerable head losses. This driving head was directed through the inlet valve of the pump and was expelled through the waste valve (c) until the velocity of the water provides enough force to shut the waste valve. Once the waste valve was shut, the water was redirected and stored into the air chamber (d) that was charged with air. The air pressure inside this chamber pushed the water up through the delivery pipe (e).
 
-<<<<<<< HEAD
-In the context of AguaClara plants, conventional ram pumps require tanks to be built around the waste water valve to guide the expelled water into the distribution system. This installment is more costly and highly inconvenient for the existing AguaClara plants due to the space constraints. In order to eliminate such inefficiencies,
-
-=======
 In the context of AguaClara plants, conventional ram pumps required tanks to be built around the waste water valve to guide the expelled water into the distribution system. This installment was more costly and highly inconvenient for the existing AguaClara plants due to the spatial constraints. In order to reduce such inefficiencies, our team redesigned the system and incorporated a vertical component to the pump to create the ACVRP.
 
 The ACVRP aligned the head tank, the drive pipe, the pump, and the waste valve along one vertical axis. The vertical configuration required minimum space and eliminated the need for a tank around the waste valve because the water was expelled downwards into the distribution system. As opposed to conventional ramp pumps, this condensed design allows for easier installation into existing plants as it was more compact and versatile and also reduced labor in transporting treated water to the chemical stock tank.
->>>>>>> 65659b3b3d8619cb3e5459959a79d6e840d60676
 
-
-**OUTLINE: Concept and structure of a conventional ram pump**
-- Compare to ACVRP
-  - Differences:
-    - Improved space, cost, and mechanical efficiency by using vertical ram pump
-    - Vertical component removes the need to create a tank around the pump to preserve the waste water. It prevents the treated water from being wasted and is cost efficient.
-    - Easier to install vertical ram pumps into existing plants → versatile
-  - Importance
-    - Reduces labor in transporting treated water to the chemical stock tank
-
-
-**PUT THIS STUFF IN PREVIOUS WORK**
-Also, include this image and explain parts
-
-<<<<<<< HEAD
-<p align="center">
-  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/Ram%20pump%20structure.png?raw=True" height=300>
-</p>
-<p align="center">
-
-**Figure 2:**  Diagram of valve cycle from [Storch & Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md)
-</p>
-
-
-**[It may be worthwhile to flesh out your explanation of what a conventional ram pump is and compare it to the ACVRP so that the reader knows why and how specifically the ACVRP is different/why it is important & innovative.]**
-The past teams have adopted many of these elements of a traditional ram pump system and have been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consists of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allows for the water that flows down through the drive pipe to pass by the effluent pipe and goes into waste. When enough force from the water flowing through the drive pipe overcomes the spring force and the plate closes, the water is redirected up through the effluent pipe. Constantly alternating between these two states, open and closed, allows for the water to be pumped up (Figure 3).
-=======
 The previous teams had adopted many of the elements of a conventional ram pump system and had been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consisted of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allowed for the water that flowed down through the drive pipe to pass by the effluent pipe and goes into waste. When enough force from the water flowing through the drive pipe overcame the spring force and the plate closed, the water was redirected up through the effluent pipe. Constantly alternating between these two states, open and closed, which allowed for the water to be pumped up (Figure 3).
->>>>>>> 65659b3b3d8619cb3e5459959a79d6e840d60676
 
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/valve_cycle.png?raw=True" height=300>
@@ -87,19 +54,9 @@ The previous teams had adopted many of the elements of a conventional ram pump s
 </p>
 
 
-<<<<<<< HEAD
-
-**[This entire paragraph seems like it would fit in Previous Work more.]**
-
-## Previous Work
-Previous teams worked on creating a mathematical model to calculate the necessary forces to open and close the check valve. The check valve is used to prevent backflow in a piping system. In the valve of the ramp pump, the direction of the flow depends on the water force coming from the drive pipe. **[I know what the check valve is, but the reader may not. Please define terms you use so it is clear to your audience.]** These forces dictate whether water entering the drive pipe exits at the bottom as waste or if it is driven through the effluent pipe. Once these forces are calculated, they can be used to design a toggle mechanism to open and close the check valve at optimal times that will maximize the efficiency of the pump. The current mechanism used for such movement is a spring. Thus, by finding a spring with an ideal spring constant, a more efficient ram pump can be designed.
-
- A concern that the team has while working on developing the ACVRP is prolonging the time that the plate is closed to allow a higher volume of water to travel up through the effluent valve. **[This isn't a "concern of ACVRP" but a concern that the team has while working on developing the ACVRP.]** The Spring 2018 team worked on optimizing the output of water through the effluent pump by experimenting with springs that control the opening and closing of the plate. The energy efficiency of the ram pump was tested with a pulley system designed to calculate the minimum spring constant for the spring inside the pump. The current team is continuing the data collection of the force of water on the plate using a modified version of the pulley system from Fall 2018 to find the most efficient spring constant. Each spring performed a different resistance force to open the plate once it has been closed, the time that the valve is closed and water is pumped up depends on this resistance force. With the calculation of the most efficient spring constant, the team hopes to extend the time that the plate is closed throughout a long period in order to maximize the water flow up through the effluent valve. **[This is repetitive. You said the exact same thing in the first sentence. Could you explain more why the spring force matters in extending the time the plate is closed instead?]**
-=======
 Previous teams worked on creating a mathematical model to calculate the necessary forces to open and close the check valve, which is a one-way valve that allowed the water to flow in only one direction. These forces dictated whether water entering the drive pipe exited at the bottom as waste or if it was driven through the effluent pipe. Once these forces were calculated, they could be used to design a toggle mechanism to open and close the check valve at optimal times that will maximize the efficiency of the pump. The current mechanism used for such movement was a spring. Thus, by finding a spring with an ideal spring constant, a more efficient ram pump could be designed.
 
 The main concern regarding the ACVRP was prolonging the time that the plate was closed to allow a higher volume of water to travel up through the effluent valve. The Spring 2018 team worked on optimizing the output of water through the effluent pump by experimenting with springs that controlled the opening and closing of the plate. The energy efficiency of the ram pump was tested with a pulley system designed to calculate the minimum spring constant for the spring inside the pump. The current team was continuing the data collection of the force of water on the plate using a modified version of the pulley system from Fall 2018 to find the most efficient spring constant. In the past, the spring force had either been too large that it overcame the downward force from the water in the driving pipe too quickly, or too weak that the plate closed up too quickly. Therefore, by obtaining the optimal spring constant, the time that the plate was closed can be maximized, meaning the more water could be pumped through the effluent line. Thus, an optimal cycle which pumped water through the effluent for a maximum amount of time consistently could be obtained.
->>>>>>> 65659b3b3d8619cb3e5459959a79d6e840d60676
 
 ### Lab Setup
 
@@ -114,9 +71,6 @@ A lab apparatus was constructed to simulate conditions in an AguaClara plant (Fi
 <p align="center">
 
 
-<<<<<<< HEAD
-The ram pump itself is composed of 2 check valves
-=======
 The ram pump itself is composed of two metal check valves that are connected by a metal fitting. The upper check valve receives the influent flow from the head tank and allows the flow to exit through an effluent pipe. The bottom pipe is only for “waste” water. In the interior of the ram pump, there is a plate that connects with a threaded metal rod. The rod fits into the two valves allowing only two positions for the plate (open and close). If the force of the water was not able to shrink the spring, the valve would remain open and “waste” water can flow to exit the system. When the water force was higher than the one produced by the spring, the valve would be closed and water would be pumped up through the effluent pipe.
 
 <p align="center">
@@ -124,7 +78,6 @@ The ram pump itself is composed of two metal check valves that are connected by 
 
   **Figure 5:** The internal components of the ACVRP includes two check valves, a rod, and a plate. More details are included below in the Fabrication and Methods section.
 
->>>>>>> 65659b3b3d8619cb3e5459959a79d6e840d60676
 </p>
 <p align="center">
 
@@ -161,7 +114,8 @@ where k is the spring constant, a material property of the spring, and x is the 
 ### Finding Forces Empirically
 
 The Fall 2018 team ran experiments to find the force that the moving water in the drive pipe exerted on the plate when it was open ([Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md)). The team implemented a pulley system to find the force empirically. Since the valve has a unique geometry, the team found that it was easier to find the force through experimentation, and so the team threaded a string through the drive pipe and a pulley system as shown in figure 6. One end of the string was attached to the metal plate in the valve, while the other end was attached to a water bottle suspended in air on the other end of the pulley as a counterweight. The bottle was filled with water initially to keep the plate opened with the pump running, and after that, the water in the bottle was emptied gradually until the plate was not longer held opened. Since the point that the team would like to obtain was right before the plate was closed, the team then used a pipette to gradually add water back until the plate was held opened again. The weight of the bottle at this point was taken, and a simple force balance was applied to find the force:  
-$$F_{water}+W_{rod}=W_{bottle}$$ $$F_{water}=W_{bottle}-W_{rod}$$
+$$F_{water}+W_{rod}=W_{bottle}$$
+$$F_{water}=W_{bottle}-W_{rod}$$
 
 where:
 
@@ -192,7 +146,7 @@ The ACVRP was fabricated using the following materials:
 - Spring of chosen length and k constant
 - Two stoppers of hexagon
 
-The OnShape design for the components of the ACVRP can be found [here](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/b1fce2711ababb74de1425e3).
+The OnShape design for the components of the ACVRP can be found here for [metal plate and rod](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/9bef45d7eddc1444e77d6a46) and [check valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb).
 
 ## Methods
 ### Experimental Apparatus
@@ -229,9 +183,6 @@ The Spring 2019 team followed a similar procedure to the Fall 2018 team to exper
 3. Turn on the electric sump pump, following the procedure from above. When the water in the head tank reaches the line, begin running experiments.
 4. Measure the initial mass of the empty bottle.
 5. Attach the empty bottle to the free end of the string.
-<<<<<<< HEAD
-6. Gradually add water to the bottle
-=======
 6. Gradually add water and other weights, if necessary, to the bottle until the check valve opens, allowing water to flow out of the waste valve.
 7. Remove the bottle from the string, and measure the mass of the contents of the bottle.
 
@@ -243,17 +194,11 @@ The change in pressure for each cycle was observed by manually opening and closi
 3. Pull on the string to open the valve for a few seconds.
 4. Release the string to close the valve for a few seconds.
 5. Graph the data using the Python code detailed below in the Results and Analysis section.
->>>>>>> 65659b3b3d8619cb3e5459959a79d6e840d60676
 
 ## Results and Analysis
 Present an observation (results), then explain what happened (analysis).  Each paragraph should focus on one aspect of your results. In that same paragraph, you should interpret that result.  
 In other words, there should not be two distinct paragraphs, but instead one paragraph containing one result and the interpretation and analysis of this result. Here are some guiding questions for results and analysis:
 
-<<<<<<< HEAD
-When describing your results, present your data, using the guidelines below:
-* What happened? What did you find?
-* Show your experimental data in a professional way.
-=======
 The pressure cycles were analyzed to determine the volume of water pumped during each cycle. The ideal gas law was used to calculate the change in volume of air with each pressure cycle. As the ram pump pumps water at its effluent to the air chamber, the air in it is compressed. Thus, the change in air volume is equal to the change in water volume that is pumped into the air chamber. The ideal gas law can be rearranged as follows:
 
 $$ PV = nRT $$
@@ -267,32 +212,11 @@ where:
 - $\Delta P$: change in pressure in the air chamber during each cycle (opening and closing the valve once), measured experimentally
 
 The following Python code graphs the pressure data to obtain the graphs below (Figures 8, 9, & 10):
->>>>>>> 65659b3b3d8619cb3e5459959a79d6e840d60676
 
 ```python
 import aguaclara.research.procoda_parser as pp
 import matplotlib.pyplot as plt
 import numpy as np
-<<<<<<< HEAD
-
-time, influent_turbidity, effluent_turbidity = pp.get_data_by_time(
-      path="Data", columns=[0, 3, 4], start_date="6-14-2018",
-      start_time="15:40", end_time="23:30")
-elapsed_time = (np.array(time)-time[0])*24
-
-fig, ax1 = plt.subplots()
-ax1.set_xlabel("Time (hours)")
-ax1.set_ylabel("Effluent Turbidity (NTU)")
-line1, = ax1.plot(elapsed_time, effluent_turbidity, color="blue")
-
-ax2 = ax1.twinx()
-ax2.set_ylabel("Influent Turbidity (NTU)")
-ax2.set_ylim(60,120)
-line2, = ax2.plot(elapsed_time, influent_turbidity, color="green")
-
-plt.legend((line1, line2), ("Effluent", "Influent"))
-plt.savefig("Turbidity.png")
-=======
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pi.xls'
 pp.notes(url)
 start = 40683 #should be more than 'start'
@@ -464,69 +388,29 @@ print('The weight of the contents of the bottle is ' + str(F_open))
 
 F_water=(F_open-w_rod).to(u.N)
 print('The force required to open the valve is ' + str(F_water))
->>>>>>> 65659b3b3d8619cb3e5459959a79d6e840d60676
 ```
-<p align="center">
-  <img src="/Images/Turbidity.png">
-</p>
-<p align="center">
-  Figure 3. Descriptive captions are very important for figures. Rather than including a title above your figure, write a caption below.
-</p>
 
-<<<<<<< HEAD
-### Figure requirements
- - Create the graph using python (not Excel)
- - If the x axis is time then make zero time reflect the beginning of the test.
- - Use a white background for all graphs.
- - Most data will have both x and y values and thus should be presented using an xy scatter plot.
- - Label all axes and include units where appropriate.
- - Axis scale labels should be in the margin of the graph and not inside the graph border.
- - Eliminate parts of the range in both x and y axis that aren't used or that aren't meaningful.
- - Place a caption with a brief description below the graph. Add this caption using the wiki formatting, not in your graphing software.
- - Use data symbols to show data points unless there is so much data that the symbols overlap. If the data symbols overlap it is better to connect the data points with a line and not show the data symbols.
- - When presenting multiple plots on a single graph make sure that it is easy to distinguish the plots using the legend.
- - If curve fitting is used explain why and include the equation (elsewhere in the report).
- - If a model or theoretical curve is presented it should be a smooth curve without data points.
- - Use the same font in the graphs as you use in the text of the report.
- - Insert the graph in your report after the first reference to it in the text. Inserted the graph after the next paragraph break
- - Scale the size of the graph so it is large enough to see the data and read the text without having to follow a link to see a larger image. Avoid using hyperlinks on images because that causes the export to Microsoft Word option to not include the image.
-
-After describing a particular result, within a paragraph, go on to connect your work to fundamental physics/chemistry/statics/fluid mechanics, or whatever field is appropriate. Analyze your results and compare with theoretical expectations; or, if you have not yet done the experiments, describe your expectations based on established knowledge. Include implications of your results. How will your results influence the design of AguaClara plants? If possible provide clear recommendations for design changes that should be adopted. Show your experimental data in a professional way using the following guidelines:
-* Why did you get those results/data?
-* Did these results line up with expectations?
-* What went wrong?
-* If the data do not support your hypothesis, is there another hypothesis that describes your new data?
-
-## Conclusions
-Explain what you have learned and how that influences your next steps. Why does what you discovered matter to AguaClara?
-
-Make sure that you defend your conclusions with facts and results.
-=======
 The force required to open the valve is 11.82 newtons. Using this, the required spring force can be calculated.
 
 
 ## Conclusions
 
 From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law (F=kx). The use of the ideal spring increased the amount of water driven up through the effluent pipe.
->>>>>>> 65659b3b3d8619cb3e5459959a79d6e840d60676
 
 ## Future Work
 
-<<<<<<< HEAD
-=======
-Over the span of Spring 2019, the team was able to experimentally and theoretically calculate the force of the water on the plate. With this data, we were able to calculate the most effective spring constant, but there are still other variables to be accounted for to optimize the efficiency of the system.
+Over the span of Spring 2019, the team was able to experimentally and theoretically calculate the force of the water on the plate. With this data, we were able to calculate the most effective spring constant, but there were still other variables to be accounted for to optimize the efficiency of the system.
 
 In other words, although the team collected relevant data concerning the force of water on the plate of the drive pipe, the experimental values were prone to inaccuracy because several components in the current experimental ram pump setup were rusted. The rusting of the pump pieces most probably played a significant role in skewing the weight measurements.
 
-In order to prevent such skewed data, the team recommends the building of another experimental ram pump. Not only will the remodeling account for inaccurate measurements but also it should allow for easier interchanging of parts in between testing. The Spring 2019 team found that the orientation of the
+In order to prevent such skewed data, the team recommended the fabrication of another experimental ram pump. Not only would the remodeling account for inaccurate measurements but also it should allowed for easier interchanging of parts in between testing. The Spring 2019 team found that the orientation of the pipes between head tank and collection buckets were rigid and not interchangeable, making the set up difficult to make adjustments.
 
-Further research in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe is yet to be explored. Optimizing this ratio between the diameters of the two pipes will help improve the efficiency of the ram pump.
+Further research in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe had yet to be explored. Optimizing this ratio between the diameters of the two pipes would help improve the efficiency of the ram pump.
 
-Regarding long-term goals, the team plans test ram pump prototype in Ithaca water treatment plant before extending the ACVRP design to existing AguaClara plants.
+Regarding long-term goals, the team planned to test ram pump prototype in Ithaca water treatment plant before extending the ACVRP design to existing AguaClara plants.
 
 
 
->>>>>>> 65659b3b3d8619cb3e5459959a79d6e840d60676
 ## Bibliography
 Adelman, M. J., Weber-Shirk, M. L., Will, J. C., Cordero, A. N., Maher, W. J., Lion, L. W. (2013). "[Novel Fluidic Control System for Stacked Rapid Sand Filters](https://ascelibrary.org/doi/10.1061/%28ASCE%29EE.1943-7870.0000700).” Journal of Environmental Engineering 139 (7)939-946.
 
