@@ -146,7 +146,9 @@ The ACVRP was fabricated using the following materials:
 - Spring of chosen length and k constant
 - Two stoppers of hexagon
 
-The OnShape design for the components of the ACVRP can be found here for [metal plate and rod](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/9bef45d7eddc1444e77d6a46) and [check valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb).
+The OnShape design for the components of the ACVRP can be found here:
+- [Metal Plate and Rod](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/9bef45d7eddc1444e77d6a46)
+- [Check Valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb).
 
 ## Methods
 ### Experimental Apparatus
