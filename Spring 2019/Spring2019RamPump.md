@@ -338,7 +338,7 @@ plt.plot(x,airchamber,'-', label='Air Chamber')
 plt.xlabel('Time')
 plt.ylabel('Pressure (cm)')
 plt.legend()
-#plt.show()
+#plt.show() 
 
 plt.savefig('one_cycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
