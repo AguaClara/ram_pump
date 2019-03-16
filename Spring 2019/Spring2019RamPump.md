@@ -366,7 +366,7 @@ deltaV = (n*R*T)/(deltaP).to(u.Pa)
 
 Thus, the volume of water pumped in each cycle was ???
 
-###Force Analysis
+### Force Analysis
 
 The force required to open the valve was calculated using the following Python code, based on the equations detailed in Figure 6:
 
