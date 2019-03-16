@@ -219,13 +219,15 @@ The following Python code graphs the pressure data to obtain the graphs below (F
 import aguaclara.research.procoda_parser as pp
 import matplotlib.pyplot as plt
 import numpy as np
+
+
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pi.xls'
 pp.notes(url)
 start = 40683 #should be more than 'start'
 end = 62529 #should be less than 'stop'
 
 x = (pp.ftime(url,start,end)).to(u.s)
-pressure = pp.column_of_data(url, start, 1, end, 'cm')
+pressure = -pp.column_of_data(url, start, 1, end, 'cm')
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
 plt.clf()
@@ -253,7 +255,7 @@ start = 4454 #should be more than 'start'
 end = 22416 #should be less than 'stop'
 
 x = (pp.ftime(url,start,end)).to(u.s)
-pressure = pp.column_of_data(url, start, 1, end, 'cm')
+pressure = -pp.column_of_data(url, start, 1, end, 'cm')
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
 plt.clf()
@@ -285,7 +287,7 @@ start = 7000 #should be more than 'start'
 end = 10000 #should be less than 'stop'
 
 x = (pp.ftime(url,start,end)).to(u.s)
-pressure = pp.column_of_data(url, start, 1, end, 'cm')
+pressure = -pp.column_of_data(url, start, 1, end, 'cm')
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
 plt.clf()
