@@ -8,7 +8,7 @@ The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water 
 
 ## Introduction
 
-The purpose of a hydraulic ram pump is to pump water from a lower elevation to a higher elevation using only the energy of the falling water to drive the water up ([bin Mohammad Ali, 2011](https://www.scribd.com/doc/76535229/Hydraulic-Ramp-Pump-Hydram)). In an AguaClara plant, flow through a plant is driven solely by gravity, so treated water exited the plant at the lowest point of the plant. Thus, in order to fill chemical stock tanks with treated water, operators must carry up buckets of water from the outlet at the lowest point of the plant to manually fill tanks. The AguaClara Vertical Ram Pump (ACVRP) solves this issue by allowing treated water to be pumped from the outlet of the plant to where it is needed at higher elevations in the plant, all without using electricity ([Martinez et. al, 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view?usp=sharing)). In addition, this allows the treated water to be pumped for utilization in the plant's plumbing system, which includes the plant's sinks and toilets.
+The purpose of a hydraulic ram pump is to pump water from a lower elevation to a higher elevation using only the energy of the falling water to drive the water up ([bin Mohammad Ali, 2011](https://www.scribd.com/doc/76535229/Hydraulic-Ramp-Pump-Hydram)). In an AguaClara plant, flow through a plant is driven solely by gravity, so treated water exits the plant at the lowest point of the plant. Thus, in order to fill chemical stock tanks with treated water, operators must carry up buckets of water from the outlet at the lowest point of the plant to manually fill tanks. The AguaClara Vertical Ram Pump (ACVRP) solves this issue by allowing treated water to be pumped from the outlet of the plant to where it is needed at higher elevations in the plant, all without using electricity ([Martinez et. al, 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view?usp=sharing)). In addition, this allows the treated water to be pumped for utilization in the plant's plumbing system, which includes the plant's sinks and toilets.
 
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/AC_plant.png?raw=True" height=300>
@@ -199,6 +199,46 @@ The change in pressure for each cycle was observed by manually opening and closi
 
 ## Results and Analysis
 
+### Force Analysis
+
+The force required to open the valve was calculated using the following Python code, based on the equations detailed in Figure 6:
+
+```Python
+from aguaclara.core.units import unit_registry as u
+import numpy as np
+import aguaclara.core.physchem as pc
+import aguaclara.core.constants as c
+
+#Weight of content in the bottle at the instance that the plate opens
+#force to just open the plate= 1261.5, 1277.9, 1262.5, 1254.2, 1269.4; #in grams
+#Filling the water bottle until the plate opens, and then transfer the water in the bottle to another empty beaker until the plate closes
+
+#Mass of contents in bottle: 743.2 g
+#Mass of contents in beaker: 639.5 - 71.12 g = 568.38 g
+#Plate open content: 568.38 g + 743.2 = 1311.58 g
+#Mass of plate + rod + hook = 105.9 g
+
+#Weight of bottle = tension
+#Tension = Weight of water + Weight of Rod
+#Force of water = Weight of Bottle -Weight of rod
+
+G=c.GRAVITY
+mass_rod = 105.9*u.g
+w_rod = (mass_rod*G).to(u.N)
+print('The weight of the rod is '+ str(w_rod))
+
+p_open = 1311.58*u.g
+F_open = (G*p_open).to(u.N) #F in Newtons
+print('The weight of the contents of the bottle is ' + str(F_open))
+
+F_water=(F_open-w_rod).to(u.N)
+print('The force required to open the valve is ' + str(F_water))
+```
+
+The force required to open the valve is 11.82 newtons. Using this, the required spring force can be calculated.
+
+### Pressure Cycles Analysis
+
 The pressure cycles were analyzed to determine the volume of water pumped during each cycle. The ideal gas law was used to calculate the change in volume of air with each pressure cycle. As the ram pump pumps water at its effluent to the air chamber, the air in it is compressed. Thus, the change in air volume is equal to the change in water volume that is pumped into the air chamber. The ideal gas law can be rearranged as follows:
 
 $$ PV = nRT $$
@@ -246,6 +286,11 @@ plt.savefig('pressure_trace_initialpressure1.jpg', dpi=200, facecolor='w', edgec
 **Figure 8:** The pressure was recorded as the valve was manually opened and closed using the pulley system (Trial 1).
 
 ```python
+import aguaclara.research.procoda_parser as pp
+import matplotlib.pyplot as plt
+import numpy as np
+from aguaclara.core.units import unit_registry as u
+
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pitrial2.xls'
 pp.notes(url)
 start = 4454 #should be more than 'start'
@@ -288,7 +333,7 @@ pressure = pp.column_of_data(url, start, 1, end, 'cm')
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
 plt.clf()
-plt.plot(x,pressure,'-', label = 'Waste Valve')
+plt.plot(x,-pressure,'-', label = 'Waste Valve')
 plt.plot(x,airchamber,'-', label='Air Chamber')
 plt.xlabel('Time')
 plt.ylabel('Pressure (cm)')
@@ -310,7 +355,6 @@ Based on the one cycle observed in Figure 10, the difference in pressure was 16.
 ```Python
 
 import aguaclara.core.physchem as pc
-import aguaclara.core.constants as c
 
 #find volume of air using ideal gas law
 #deltaV = nRT/deltaP
@@ -333,7 +377,7 @@ height_ac = 26.5*u.inch #height of air chamber
 vol_airchamber = (pc.area_circle(diam)*height_ac).to(u.m**3)
 
 init_vol = vol_airchamber - vol_water #initial volume of air in air chamber
-air_density = 1.204*(u.kg/u.m**3)
+air_density = 1.225*(u.kg/u.m**3)
 mass = (air_density*init_vol).to(u.kg)
 mol_mass = 28.97*u.g/u.mol
 
@@ -354,46 +398,7 @@ print('The volume of water pumped per cycle is ' + str(deltaV))
 
 ```
 
-Thus, the volume of water pumped per cycle is 0.02033 cubic meters.
-
-### Force Analysis
-
-The force required to open the valve was calculated using the following Python code, based on the equations detailed in Figure 6:
-
-```Python
-from aguaclara.core.units import unit_registry as u
-import numpy as np
-import aguaclara.core.physchem as pc
-import aguaclara.core.constants as c
-
-#Weight of content in the bottle at the instance that the plate opens
-#force to just open the plate= 1261.5, 1277.9, 1262.5, 1254.2, 1269.4; #in grams
-#Filling the water bottle until the plate opens, and then transfer the water in the bottle to another empty beaker until the plate closes
-
-#Mass of contents in bottle: 743.2 g
-#Mass of contents in beaker: 639.5 - 71.12 g = 568.38 g
-#Plate open content: 568.38 g + 743.2 = 1311.58 g
-#Mass of plate + rod + hook = 105.9 g
-
-#Weight of bottle = tension
-#Tension = Weight of water + Weight of Rod
-#Force of water = Weight of Bottle -Weight of rod
-
-G=c.GRAVITY
-mass_rod = 105.9*u.g
-w_rod = (mass_rod*G).to(u.N)
-print('The weight of the rod is '+ str(w_rod))
-
-p_open = 1311.58*u.g
-F_open = (G*p_open).to(u.N) #F in Newtons
-print('The weight of the contents of the bottle is ' + str(F_open))
-
-F_water=(F_open-w_rod).to(u.N)
-print('The force required to open the valve is ' + str(F_water))
-```
-
-The force required to open the valve is 11.82 newtons. Using this, the required spring force can be calculated.
-
+Thus, the volume of water pumped per cycle is 0.02068 cubic meters.
 
 ## Conclusions
 
