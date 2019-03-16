@@ -314,8 +314,8 @@ import aguaclara.core.constants as c
 
 #find volume of air using ideal gas law
 #deltaV = nRT/deltaP
-
 #pressure difference, deltaP (measured as difference in pressure in air chamber)
+
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pitrial2.xls'
 
 start = 7000 #should be more than 'start'
@@ -333,7 +333,8 @@ height_ac = 26.5*u.inch #height of air chamber
 vol_airchamber = (pc.area_circle(diam)*height_ac).to(u.m**3)
 
 init_vol = vol_airchamber - vol_water #initial volume of air in air chamber
-mass = (c.AIR_DENSITY*init_vol).to(u.kg)
+air_density = 1.204*(u.kg/u.m**3)
+mass = (air_density*init_vol).to(u.kg)
 mol_mass = 28.97*u.g/u.mol
 
 n = (mass/mol_mass).to(u.mol)
@@ -345,15 +346,15 @@ R = 8.314 * u.J/(u.mol*u.K)
 T = 293*u.K
 
 #convert head to pressure
-deltaP = pc.density_water(T)*c.GRAVITY*head
+deltaP = (pc.density_water(T)*c.GRAVITY*head).to(u.Pa)
 
 #calculate change in volume of air, which is equal to the volume of water pumped
-deltaV = (n*R*T)/(deltaP).to(u.Pa)
+deltaV = ((n*R*T)/(deltaP)).to(u.m**3)
+print('The volume of water pumped per cycle is ' + str(deltaV))
 
 ```
-*There is an error in this code, so we were unable to calculate the volume of water pumped at the moment, but we will get this fixed soon.*
 
-Thus, the volume of water pumped in each cycle was ???
+Thus, the volume of water pumped per cycle is 0.02033 cubic meters.
 
 ### Force Analysis
 
