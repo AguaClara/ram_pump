@@ -2,13 +2,9 @@
 #### Ching Pang, Cheer Tsang, Alyssa Ju, Iñigo Cabrera
 #### March 15, 2019
 
-**[Sidney: Hey Ram Pump! I'll be making comments on your report in these square brackets.]**
-
 
 ## Abstract
 The AguaClara Vertical Ram Pump (ACVRP) was an innovation that will enable water to be pumped from lower elevations to higher elevations using the driving force of falling water. The ACVRP improved on a conventional ram pump design by increasing its space efficiency and decreasing its capital cost. Although a prototype had been built, it had not reached the target pumping efficiency. The goal of this semester was to optimize the ram pump efficiency by finding the necessary forces to open and close the valve at the ideal times.
-
-**[Nice work! This is a very succinct abstract. An overall comment for the manual: Please remember to write in past tense as it would be someone in the ~future~ reading your final manual. Refer to Will's Technical Writing Presentation or our team's Grammar Guidelines on Confluence.]**
 
 ## Introduction
 
@@ -61,15 +57,13 @@ The previous teams had adopted many of the elements of a conventional ram pump s
 </p>
 
 
-Previous teams worked on creating a mathematical model to calculate the necessary forces to open and close the check valve, which was a one-way valve that allowed the water to flow in only one direction. **[I know what the check valve is, but the reader may not. Please define terms you use so it is clear to your audience.]** **[Addressed]** These forces dictated whether water entering the drive pipe exited at the bottom as waste or if it was driven through the effluent pipe. Once these forces were calculated, they could be used to design a toggle mechanism to open and close the check valve at optimal times that will maximize the efficiency of the pump. The current mechanism used for such movement was a spring. Thus, by finding a spring with an ideal spring constant, a more efficient ram pump could be designed.
+Previous teams worked on creating a mathematical model to calculate the necessary forces to open and close the check valve, which is a one-way valve that allowed the water to flow in only one direction. These forces dictated whether water entering the drive pipe exited at the bottom as waste or if it was driven through the effluent pipe. Once these forces were calculated, they could be used to design a toggle mechanism to open and close the check valve at optimal times that will maximize the efficiency of the pump. The current mechanism used for such movement was a spring. Thus, by finding a spring with an ideal spring constant, a more efficient ram pump could be designed.
 
-The main concern regarding the ACVRP was prolonging the time that the plate was closed to allow a higher volume of water to travel up through the effluent valve. The Spring 2018 team worked on optimizing the output of water through the effluent pump by experimenting with springs that controlled the opening and closing of the plate. The energy efficiency of the ram pump was tested with a pulley system designed to calculate the minimum spring constant for the spring inside the pump. The current team was continuing the data collection of the force of water on the plate using a modified version of the pulley system from Fall 2018 to find the most efficient spring constant. In the past, the spring force had either been too large that it overcame the downward force from the water in the driving pipe too quickly, or too weak that the plate closed up too quickly. Therefore, by obtaining the optimal spring constant, the time that the plate was closed can be maximized, meaning the more water could be pumped through the effluent line. Thus, an optimal cycle which pumped water through the effluent for a maximum amount of time consistently could be obtained. **[This is repetitive. You said the exact same thing in the first sentence. Could you explain more why the spring force matters in extending the time the plate is closed instead?]** **[Addressed]**
-
-
+The main concern regarding the ACVRP was prolonging the time that the plate was closed to allow a higher volume of water to travel up through the effluent valve. The Spring 2018 team worked on optimizing the output of water through the effluent pump by experimenting with springs that controlled the opening and closing of the plate. The energy efficiency of the ram pump was tested with a pulley system designed to calculate the minimum spring constant for the spring inside the pump. The current team was continuing the data collection of the force of water on the plate using a modified version of the pulley system from Fall 2018 to find the most efficient spring constant. In the past, the spring force had either been too large that it overcame the downward force from the water in the driving pipe too quickly, or too weak that the plate closed up too quickly. Therefore, by obtaining the optimal spring constant, the time that the plate was closed can be maximized, meaning the more water could be pumped through the effluent line. Thus, an optimal cycle which pumped water through the effluent for a maximum amount of time consistently could be obtained.
 
 ### Lab Setup
 
-A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 4). The electric sump pump, highlighted in red in Figure 4, provides a continuous source of water for the head tank. It also provides a constant water level because the water that is going through the overflow funnel is pumped up again by the electric pump. **[Please make it obvious to the reader that you are referring to Figure 4 (i.e. "The electric sump pump, in red in Figure 4...")]** The drive pipe **[Did you mean the drive pipe? If so, please don't change naming conventions without explaining what is being referred to.]** is where water with elevation head enters the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber indicates the water pressure that exits the valve, which indicates **[Consider changing to "which indicate" rather than "which will indicate".]** the efficiency of the ram pump. This pressure can then be converted to an elevation head to see how high the effluent can be pumped to. Water that exits the ram pump as "waste" is the treated water that flow into the tank which contains the ramp pump. And Finally, it would be returned to the distribution tank (the tank which contains the electric pump).
+A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 4). The electric sump pump, highlighted in red in Figure 4, provides a continuous source of water for the head tank. It also provides a constant water level because the water that is going through the overflow funnel is pumped up again by the electric pump. The drive pipe is where water with elevation head enters the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber indicates the water pressure that exits the valve, which indicates the efficiency of the ram pump. This pressure can then be converted to an elevation head to see how high the effluent can be pumped to. Water that exits the ram pump as "waste" is the treated water that flow into the tank which contains the ramp pump. And Finally, it would be returned to the distribution tank (the tank which contains the electric pump).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ram%20pump%20setup.jpeg" height=400>
@@ -83,7 +77,8 @@ The ram pump itself is composed of two metal check valves that are connected by 
 </p>
 
 <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/Ram%20pump%20structure.png">
-**Figure -:** Components of the Ram Pump
+
+**Figure 5:** The internal components of the ACVRP includes two check valves, a rod, and a plate. More details are included below in the Fabrication and Methods section.
 
 
 ### Water Velocity in Drive Pipe
@@ -95,7 +90,7 @@ The opening and closing of the check valve should be timed precisely so that the
 </p>
 <p align="center">
 
-**Figure 5:** This was a graph of ideal velocity cycle from [McCann et. al, 2018](https://github.com/AguaClara/ram_pump/blob/master/Spring%202018/FinalFabricationManualRamPump.md#figure-6-equation-for-verminal-velocity-from-which-the-team-extracted-a-constant-for-head-loss). **[Fragment. Please change to a proper sentence.]** The red line shows the increasing velocity of the water in the drive pipe until it reaches its terminal velocity. The intersection of the red and blue lines indicate the point in time when the check valve closes, causing the water to decelerate rapidly.
+**Figure 5:** The graph of ideal velocity cycle and time shows the volume of water pumped over time ([McCann et. al, 2018](https://github.com/AguaClara/ram_pump/blob/master/Spring%202018/FinalFabricationManualRamPump.md#figure-6-equation-for-verminal-velocity-from-which-the-team-extracted-a-constant-for-head-loss)). The red line shows the increasing velocity of the water in the drive pipe until it reaches its terminal velocity. The intersection of the red and blue lines indicate the point in time when the check valve closes, causing the water to decelerate rapidly.
 
 </p>
 
@@ -116,8 +111,15 @@ where k is the spring constant, a material property of the spring, and x is the 
 
 ### Finding Forces Empirically
 
-The Fall 2018 team ran experiments to find the force that the moving water in the drive pipe exerted on the plate when it was open ([Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md)). The team implemented a pulley system to find the force empirically. Since the valve has a unique geometry, the team found that it was easier to find the force through experimentation, and so the team threaded a string through the drive pipe and a pulley system as shown in figure 6. One end of the string was attached to the metal plate in the valve, while the other end was attached to a water bottle suspended in air on the other end of the pulley as a counterweight. The bottle was filled with water initially to keep the plate opened with the pump running, and after that, the water in the bottle was emptied gradually until the plate was not longer held opened. Since the point that the team would like to obtain was right before the plate was closed, the team then used a pipette to gradually add water back until the plate was held opened again. The weight of the bottle at this point was taken, and a simple force balance was applied to find the force:  $$F_{water}+W_{rod}=W_{bottle}$$ $$F_{water}=W_{bottle}-W_{rod}$$ where $W_{rod}$ is the weight of the plate and rod in water. **[I know you define the other two terms in the figure later on, but it would be good to define all terms in the equation here when they are first used.]**
+The Fall 2018 team ran experiments to find the force that the moving water in the drive pipe exerted on the plate when it was open ([Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md)). The team implemented a pulley system to find the force empirically. Since the valve has a unique geometry, the team found that it was easier to find the force through experimentation, and so the team threaded a string through the drive pipe and a pulley system as shown in figure 6. One end of the string was attached to the metal plate in the valve, while the other end was attached to a water bottle suspended in air on the other end of the pulley as a counterweight. The bottle was filled with water initially to keep the plate opened with the pump running, and after that, the water in the bottle was emptied gradually until the plate was not longer held opened. Since the point that the team would like to obtain was right before the plate was closed, the team then used a pipette to gradually add water back until the plate was held opened again. The weight of the bottle at this point was taken, and a simple force balance was applied to find the force:  
+$$F_{water}+W_{rod}=W_{bottle}$$ $$F_{water}=W_{bottle}-W_{rod}$$
 
+where:
+
+- $W_{rod}$ is the weight of the plate and rod in water
+- $W_{bottle}$ is the weight of the bottle, which is used to experimentally determine the force required to lift and open the check valve.
+- T is the tension force of the pulley string
+- $F_{water}$ is the force of falling water in the drive pipe
 
 
 <p align="center">
@@ -126,10 +128,6 @@ The Fall 2018 team ran experiments to find the force that the moving water in th
 <p align="center">
 
 **Figure 6:** Free body diagram of forces acting on the check valve in the ram pump from [Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md).
-
-- $W_{bottle}$ is the weight of the bottle, which is used to experimentally determine the force required to lift and open the check valve.
-- T is the tension force of the pulley string
-- $F_{water}$ is the force of falling water in the drive pipe
 
 Thus, by finding the mass needed to keep the check valve open, $F_{water}$ can be solved for. This can be set equal to the spring force, $F = -kx$, which will allow the spring constant, k, to be solved for. This will give the optimal spring constant needed to keep the valve open. The Fall 2018 team found that the minimum spring constant (k) was 256 N/m.
 
@@ -247,11 +245,11 @@ plt.savefig('pressure_trace_initialpressure1.jpg', dpi=200, facecolor='w', edgec
 ```
 
 <p align="center">
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/ProCoDA_pressure.PNG?raw=True" height=400>
+  <img src="https://github.com/AguaClara/ram_pump/blob/master/pressure_trace_initialpressure1.jpg?raw=True" height=400>
 </p>
 <p align="center">
 
-**Figure 8:** ggh
+**Figure 8:** The pressure was recorded as the valve was manually opened and closed using the pulley system (Trial 1).
 
 ```python
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pitrial2.xls'
@@ -274,7 +272,16 @@ plt.savefig('pressure_trace_initialpressure2.jpg', dpi=200, facecolor='w', edgec
 
 ```
 
-put graph analyzing one cycle
+<p align="center">
+  <img src="https://github.com/AguaClara/ram_pump/blob/master/pressure_trace_initialpressure2.jpg?raw=True" height=400>
+</p>
+<p align="center">
+
+**Figure 9:** The pressure was recorded as the valve was manually opened and closed using the pulley system (Trial 2).
+
+The air pressure in the air chamber increased with each cycle, as more water was pumped into the air chamber, compressing the air.
+
+The following Python code graphs the pressure of the waste valve and air chamber at one cycle, so that the pressure difference in the air chamber can be observed, which can be used to calculate the volume of water that the ram pump pumps during each cycle:
 
 ```python
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pitrial2.xls'
@@ -292,13 +299,19 @@ plt.plot(x,airchamber,'-', label='Air Chamber')
 plt.xlabel('Time')
 plt.ylabel('Pressure (cm)')
 plt.legend()
-plt.show()
-plt.clf()
-plt.savefig('pressure_trace_initialpressure2.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+#plt.show()
+
+plt.savefig('one_cycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
 ```
+<p align="center">
+  <img src="https://github.com/AguaClara/ram_pump/blob/master/one_cycle.jpg?raw=True" height=400>
+</p>
+<p align="center">
 
-measure pressure difference in air chamber
+**Figure 10:** The pressure of the air chamber was observed as the valve was opened and closed. The pressure difference was then used to calculate the volume of water pumped by the ram pump.
+
+Based on the one cycle observed in Figure 10, the difference in pressure was 16.4 centimeters. Using the ideal gas law, the volume of water pumped during each cycle was calculated:
 
 ```Python
 
@@ -341,9 +354,14 @@ T = 293*u.K
 deltaV = (n*R*T)/(deltaP).to(u.Pa)
 
 ```
+*There is an error in this code, so we were unable to calculate the volume of water pumped at the moment, but we will get this fixed soon.*
 
+Thus, the volume of water pumped in each cycle was ???
 
 ###Force Analysis
+
+The force required to open the valve was calculated using the following Python code, based on the equations detailed in Figure 6:
+
 ```Python
 from aguaclara.core.units import unit_registry as u
 import numpy as np
@@ -376,27 +394,24 @@ F_water=(F_open-w_rod).to(u.N)
 print('The force required to open the valve is ' + str(F_water))
 ```
 
+The force required to open the valve is 11.82 newtons. Using this, the required spring force can be calculated.
+
 
 ## Conclusions
-Explain what you have learned and how that influences your next steps. Why does what you discovered matter to AguaClara?
 
-
-
-Make sure that you defend your conclusions with facts and results.
+From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law (F=kx). The use of the ideal spring increased the amount of water driven up through the effluent pipe.
 
 ## Future Work
-Describe your plan of action for the next several weeks of research. Detail the next steps for this team. How can AguaClara use what you discovered for future projects? Your suggestions for challenges for future teams are most welcome. Should research in this area continue?
 
-Over the span of Spring 2019, the team was able to experimentally and theoretically calculate the
+Over the span of Spring 2019, the team was able to experimentally and theoretically calculate the force of the water on the plate. With this data, we were able to calculate the most effective spring constant, but there are still other variables to be accounted for to optimize the efficiency of the system.
 
-Although the team collected relevant data concerning the force of water on the plate of the drive pipe, the experimental values are prone to inaccuracy because several components in the current experimental ram pump setup are rusted. The rusting of the pump pieces most probably plays a significant role in skewing the weight measurements.
-* Build another experimental ram pump
-  - Reasons: Several components in the current system are rusted and are difficult to replace in between experimental trials.
+In other words, although the team collected relevant data concerning the force of water on the plate of the drive pipe, the experimental values were prone to inaccuracy because several components in the current experimental ram pump setup were rusted. The rusting of the pump pieces most probably played a significant role in skewing the weight measurements.
+
+In order to prevent such skewed data, the team recommends the building of another experimental ram pump. Not only will the remodeling account for inaccurate measurements but also it should allow for easier interchanging of parts in between testing. The Spring 2019 team found that the orientation of the
 
 Further research in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe is yet to be explored. Optimizing this ratio between the diameters of the two pipes will help improve the efficiency of the ram pump.
 
-
-* Strive to test ram pump prototype in Ithaca water treatment plant
+Regarding long-term goals, the team plans test ram pump prototype in Ithaca water treatment plant before extending the ACVRP design to existing AguaClara plants.
 
 
 
@@ -414,71 +429,6 @@ McCann, M., Lopez, W., Lopez, S. (Spring 2018). Ram Pump Operation and Testing M
 Storch, A., Snyder, M. (Fall 2018). Ram Pump, Fall 2018. Retrieved from https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md.
 
 Young, B. W. (1995). Design of Hydraulic Ram Pump Systems. Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy, 209(4), 313–322. Retreived from https://doi.org/10.1243/PIME_PROC_1995_209_010_01.
-
-# Manual
-The goal of this section is to provide all of the guidance that would be necessary for a future team to pick up your work where you left off. Please try to be thorough and put yourselves in the shoes of a newcomer to the project. Below are some recommended sections, but the manual will likely take a slightly different form for each team.
-
-## Fabrication Details
-Include any information related to the fabrication of equipment, experimental apparatuses, or technologies. Include the purpose of each step and the fabrication methods used. Reference appropriate safety precautions.
-
-Metal Plate and Metal Rod: https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/b1fce2711ababb74de1425e3
-
-## Special Components
-If your subteam uses a particular part that is unique and you could foresee a future subteam needing to order it or learn more about it, please include basic information like the vendor where it was purchased, catalog/item number, and a link to any documentation.
-
-## Experimental Methods
-### Set-up
-Step 1.
-* Put tasks in a sequential order.
-* It is okay to have sub-lists.
-  - Like this.
-
-### Experiment
-Step 1.
-
-### Cleaning Procedure
-Step 1.
-
-## Experimental Checklist
-Another potential section could include a list of things that you need to check before running an experiment.
-
-## ProCoDA Method File
-Use this section to explain your method file. This could be broken up into several components as shown below:
-
-### States
-Here, you should describe the function of each state in your method file, both in terms of its overall purpose and also in terms of the details that make it distinct from other states. For example:
-\begin{itemize}
-\item \underline{OFF} - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
-\end{itemize}
-
-### Set Points
-Here, you should list the set points used in your method file and explain their use as well as how each was calculated.
-
-## Python Code
-
-### Variables
-$g$: gravity
-$\sigma$: dispersion
-$a$: amplitude
-$h$: water depth
-$H$: distance from wave crest to trough (2$a$)
-$T$: wave period
-$\lambda$: wavelength
-$k$: wavenumber
-$c_p$: celerity (wave phase speed)
-$P$: pressure
-$F$: force
-$u$, $w$: x-velocity, z-velocity components
-
-```python
-# Comment
-```
-
-# Add/Delete/Change this Template as you see Fit
-When using this template keep in mind that this serves three purposes. The first is to provide your team feedback on your progress, assumptions, and conclusions. The second is to keep your team focused on what you are learning and doing for AguaClara. Another is to educate future teams on what you've learned and done. This document should be comprehensive, consistent, and well-written. With that in mind, add, subtract, or move sections. Reach out to the RAs and graders for help with figuring out what should or shouldn't include. Focus on how wonderful a reference you are making through this and work hard on communicating amongst yourselves and with future teammates. (Delete this section before submitting)
-
-
-
 
 ```python
 # To convert the document from markdown to pdf
