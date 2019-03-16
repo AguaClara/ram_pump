@@ -226,7 +226,7 @@ start = 40683 #should be more than 'start'
 end = 62529 #should be less than 'stop'
 
 x = (pp.ftime(url,start,end)).to(u.s)
-pressure = pp.column_of_data(url, start, 1, end, 'cm')
+pressure = -pp.column_of_data(url, start, 1, end, 'cm')
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
 plt.clf()
