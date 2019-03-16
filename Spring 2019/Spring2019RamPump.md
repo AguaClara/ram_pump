@@ -270,7 +270,7 @@ airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 plt.clf()
 plt.plot(x,pressure,'-', label = 'Waste Valve')
 plt.plot(x,airchamber,'-', label='Air Chamber')
-plt.xlabel('Time')
+plt.xlabel('Time (s)')
 plt.ylabel('Pressure (cm)')
 plt.legend()
 #plt.show()
@@ -329,7 +329,7 @@ start = 7000 #should be more than 'start'
 end = 10000 #should be less than 'stop'
 
 x = (pp.column_of_time(url,start,end)).to(u.s)
-pressure = pp.column_of_data(url, start, 1, end, 'cm')
+pressure = -pp.column_of_data(url, start, 1, end, 'cm')
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
 plt.clf()
