@@ -21,7 +21,7 @@ The ram pump then pumps the treated water upwards to the chemical stock tanks. I
 </p>
 
 
-The ACVRP was an innovation that improves upon the conventional ram pump by making it easier to fabricate and more cost efficient. Conventional ram pumps that were used in previous AguaClara plants required an additional tank to be built to collect the water discharged from the ram pump and return it to the distribution tank, adding to the capital cost of the plant. The tank was cumbersome, and it was difficult to incorporate the tank in the pipe gallery at the basement of the plant ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
+The ACVRP was an innovation that improved upon the conventional ram pump by making fabrication easier and more cost efficient. Conventional ram pumps that were used in previous AguaClara plants required an additional tank to be built to collect the water discharged from the ram pump and return it to the distribution tank, adding to the capital cost of the plant. The tank was cumbersome, and it was difficult to incorporate the tank in the pipe gallery at the basement of the plant ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
 
 The ACVRP was an inline ram pump, which eliminated the need for a collection tank. The ideal design would be able to be easily installed in new plants as well as incorporated in previously built AguaClara plants. The simple design would also make it easy to fabricate and repair, which would empower the community and advance sustainability. The vision was that the ACVRP will relieve some of the burden of the plant operators, which would further increase their pride in their role of providing safe water to their communities ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
 
@@ -38,11 +38,11 @@ Many water supply plants used electrically-powered ram pumps to redirect water f
 
 In conventional ram pump systems, the header tank (a) was placed higher than the ram pump in order to provide potential energy to power the pump. Realistically, as the water was directed down from the header tank to the pump (c) through the drive pipe (b), it experienced considerable head losses. This driving head was directed through the inlet valve of the pump and was expelled through the waste valve (c) until the velocity of the water provides enough force to shut the waste valve. Once the waste valve was shut, the water was redirected and stored into the air chamber (d) that was charged with air. The air pressure inside this chamber pushed the water up through the delivery pipe (e).
 
-In the context of AguaClara plants, conventional ram pumps required tanks to be built around the waste water valve to guide the expelled water into the distribution system. This installment was more costly and highly inconvenient for the existing AguaClara plants due to the spatial constraints. In order to reduce such inefficiencies, our team redesigned the system and incorporated a vertical component to the pump to create the ACVRP.
+In the context of AguaClara plants, conventional ram pumps required tanks to be built around the waste water valve to guide the expelled water into the distribution system. This installment was more costly and highly inconvenient for existing AguaClara plants due to spatial constraints. In order to reduce such inefficiencies, our team redesigned the system, and incorporated a vertical component to the pump to create the ACVRP.
 
-The ACVRP aligned the head tank, the drive pipe, the pump, and the waste valve along one vertical axis. The vertical configuration required minimum space and eliminated the need for a tank around the waste valve because the water was expelled downwards into the distribution system. As opposed to conventional ramp pumps, this condensed design allows for easier installation into existing plants as it was more compact and versatile and also reduced labor in transporting treated water to the chemical stock tank.
+The ACVRP aligned the head tank, the drive pipe, the pump, and the waste valve along one vertical axis. The vertical configuration required minimum space and eliminated the need for a tank around the waste valve, because water was expelled downwards into the distribution system. As opposed to conventional ramp pumps, this condensed design allowed for easier installation into existing plants as it was more compact and versatile, and also reduced labor in transporting treated water to the chemical stock tank.
 
-The previous teams had adopted many of the elements of a conventional ram pump system and had been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consisted of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allowed for the water that flowed down through the drive pipe to pass by the effluent pipe and goes into waste. When enough force from the water flowing through the drive pipe overcame the spring force and the plate closed, the water was redirected up through the effluent pipe. Constantly alternating between these two states, open and closed, which allowed for the water to be pumped up (Figure 3).
+The previous teams had adopted many of the elements of a conventional ram pump system and had been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consisted of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allowed for the water that flowed down through the drive pipe to pass by the effluent pipe and goes into waste. When enough force from the water flowing through the drive pipe overcame the spring force and the plate closed, the water was redirected up through the effluent pipe. Constantly alternating between these two states, open and closed allowed for the water to be pumped up (Figure 3).
 
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/valve_cycle.png?raw=True" height=300>
@@ -60,7 +60,7 @@ The main concern regarding the ACVRP was prolonging the time that the plate was 
 
 ### Lab Setup
 
-A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 4). The electric sump pump, highlighted in red in Figure 4, provides a continuous source of water for the head tank. It also provides a constant water level because the water that is going through the overflow funnel is pumped up again by the electric pump. The drive pipe is where water with elevation head enters the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber indicates the water pressure that exits the valve, which indicates the efficiency of the ram pump. This pressure can then be converted to an elevation head to see how high the effluent can be pumped to. Water that exits the ram pump as "waste" is the treated water that flow into the tank which contains the ramp pump. And Finally, it would be returned to the distribution tank (the tank which contains the electric pump).
+A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 4). The electric sump pump, highlighted in red in Figure 4, provided a continuous source of water for the head tank. It also provided a constant water level, because the water that was going through the overflow funnel was pumped up again by the electric pump. The drive pipe was where water with elevation head entered the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber indicates the water pressure that exited the valve, which indicated the efficiency of the ram pump. This pressure was then converted to an elevation head to see how high the effluent could be pumped to. Water that exited the ram pump as "waste" is the treated water that flow into the tank which contains the ramp pump. And Finally, it would be returned to the distribution tank (the tank which contains the electric pump).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ram%20pump%20setup.jpeg" height=400>
@@ -71,12 +71,12 @@ A lab apparatus was constructed to simulate conditions in an AguaClara plant (Fi
 <p align="center">
 
 
-The ram pump itself is composed of two metal check valves that are connected by a metal fitting. The upper check valve receives the influent flow from the head tank and allows the flow to exit through an effluent pipe. The bottom pipe is only for “waste” water. In the interior of the ram pump, there is a plate that connects with a threaded metal rod. The rod fits into the two valves allowing only two positions for the plate (open and close). If the force of the water was not able to shrink the spring, the valve would remain open and “waste” water can flow to exit the system. When the water force was higher than the one produced by the spring, the valve would be closed and water would be pumped up through the effluent pipe.
+The ram pump itself was composed of two metal check valves that were connected by a metal fitting. The upper check valve received the influent flow from the head tank and allows the flow to exit through an effluent pipe. The bottom pipe was only for “waste” water. In the interior of the ram pump, there was a plate that connects with a threaded metal rod. The rod with stoppers was fitted into the two valves, allowing only two positions for the plate (open and close). If the force of the water was not able to shrink the spring, the valve would remain open and “waste” water can flow to exit the system. When the water force was higher than the one produced by the spring, the valve would be closed and water would be pumped up through the effluent pipe.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/Ram%20pump%20structure.png?raw=True" height=400>
 
-  **Figure 5:** The internal components of the ACVRP includes two check valves, a rod, and a plate. More details are included below in the Fabrication and Methods section.
+  **Figure 5:** The internal components of the ACVRP included two check valves, a rod, and a plate. More details are included below in the Fabrication and Methods section.
 
 </p>
 <p align="center">
@@ -85,7 +85,7 @@ The ram pump itself is composed of two metal check valves that are connected by 
 
 ### Water Velocity in Drive Pipe
 
-The opening and closing of the check valve should be timed precisely so that the maximum amount of water is pumped in each cycle, maximizing the area under the curve in the graph below (Figure 5). Previous research found that under ideal conditions, the "terminal velocity of water in the drive pipe was 0.35 m/s" ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)). Thus, using this benchmark, the target maximum velocity to trigger the valve to close should be less than the terminal velocity because the water accelerates towards terminal velocity asymptotically. An arbitrary velocity of 1/2 the terminal velocity was chosen as the target ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)).
+The opening and closing of the check valve should be timed precisely so that the maximum amount of water is pumped in each cycle, maximizing the area under the curve in the graph below (Figure 5). Previous research found that under ideal conditions, the "terminal velocity of water in the drive pipe was 0.35 m/s" ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)). Thus, using this benchmark, the target maximum velocity to trigger the valve to close should be less than the terminal velocity because the water accelerated towards terminal velocity asymptotically. An arbitrary velocity of 1/2 the terminal velocity was chosen as the target ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ideal%20Velocity%20graph.png" height=400>
@@ -100,11 +100,11 @@ The opening and closing of the check valve should be timed precisely so that the
 
 ### Force Analysis
 
-The main forces to design for are: 1) the force to close the check valve and 2) the force to open the check valve.
+The main forces to design for were: 1) the force to close the check valve and 2) the force to open the check valve.
 
-The force to close the check valve is supplied by the force of the falling water in the drive pipe. The force to open the check valve is supplied by a spring. The spring force must be greater than the combined downward forces of the weight of the water in the drive pipe and the weight of the check valve plate.
+The force to close the check valve was supplied by the force of the falling water in the drive pipe. The force to open the check valve was supplied by a spring. The spring force must be greater than the combined downward forces of the weight of the water in the drive pipe and the weight of the check valve plate.
 
-The formula for spring force is given by:
+The formula for spring force was given by:
 
 $$F = -kx$$
 
@@ -113,16 +113,16 @@ where k is the spring constant, a material property of the spring, and x is the 
 
 ### Finding Forces Empirically
 
-The Fall 2018 team ran experiments to find the force that the moving water in the drive pipe exerted on the plate when it was open ([Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md)). The team implemented a pulley system to find the force empirically. Since the valve has a unique geometry, the team found that it was easier to find the force through experimentation, and so the team threaded a string through the drive pipe and a pulley system as shown in figure 6. One end of the string was attached to the metal plate in the valve, while the other end was attached to a water bottle suspended in air on the other end of the pulley as a counterweight. The bottle was filled with water initially to keep the plate opened with the pump running, and after that, the water in the bottle was emptied gradually until the plate was not longer held opened. Since the point that the team would like to obtain was right before the plate was closed, the team then used a pipette to gradually add water back until the plate was held opened again. The weight of the bottle at this point was taken, and a simple force balance was applied to find the force:  
+The Fall 2018 team ran experiments to find the force that the moving water in the drive pipe exerted on the plate when it was open ([Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md)). The team implemented a pulley system to find the force empirically. Since the valve had a unique geometry, the team found that it was easier to find the force through experimentation, and so the team threaded a string through the drive pipe and a pulley system as shown in figure 6. One end of the string was attached to the metal plate in the valve, while the other end was attached to a water bottle suspended in air on the other end of the pulley as a counterweight. The bottle was filled with water initially to keep the plate opened with the pump running, and after that, the water in the bottle was emptied gradually until the plate was not longer held opened. Since the point that the team would like to obtain was right before the plate was closed, the team then used a pipette to gradually add water back until the plate was held opened again. The weight of the bottle at this point was taken, and a simple force balance was applied to find the force:  
 $$F_{water}+W_{rod}=W_{bottle}$$
 $$F_{water}=W_{bottle}-W_{rod}$$
 
 where:
 
-- $W_{rod}$ is the weight of the plate and rod in water
-- $W_{bottle}$ is the weight of the bottle, which is used to experimentally determine the force required to lift and open the check valve.
-- T is the tension force of the pulley string
-- $F_{water}$ is the force of falling water in the drive pipe
+- $W_{rod}$ was the weight of the plate and rod in water
+- $W_{bottle}$ was the weight of the bottle, which is used to experimentally determine the force required to lift and open the check valve.
+- T was the tension force of the pulley string
+- $F_{water}$ was the force of falling water in the drive pipe
 
 
 <p align="center">
@@ -132,7 +132,7 @@ where:
 
 **Figure 6:** Free body diagram of forces acting on the check valve in the ram pump from [Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md).
 
-Thus, by finding the mass needed to keep the check valve open, $F_{water}$ can be solved for. This can be set equal to the spring force, $F = -kx$, which will allow the spring constant, k, to be solved for. This will give the optimal spring constant needed to keep the valve open. The Fall 2018 team found that the minimum spring constant (k) was 256 N/m.
+Thus, by finding the mass needed to keep the check valve open, $F_{water}$ could be solved for. This was set equal to the spring force, $F = -kx$, which would allow the spring constant, k, to be solved for. This would then give the optimal spring constant needed to keep the valve open. The Fall 2018 team found that the minimum spring constant (k) was 256 N/m.
 
 
 # Manual
@@ -152,7 +152,7 @@ The OnShape design for the components of the ACVRP can be found here:
 
 ## Methods
 ### Experimental Apparatus
-Figure 4 details the current experimental apparatus, which is the same setup from [Galantino et al., 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view).
+Figure 4 detailed the current experimental apparatus, which wa the same setup from [Galantino et al., 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view).
 
 ### Procedure
 
@@ -213,12 +213,13 @@ where:
 - $T:$ standard air temperature, 293 K
 - $\Delta P$: change in pressure in the air chamber during each cycle (opening and closing the valve once), measured experimentally
 
-The following Python code graphs the pressure data to obtain the graphs below (Figures 8, 9, & 10):
+The following Python code graphed the pressure data to obtain the graphs below (Figures 8, 9, & 10):
 
 ```python
 import aguaclara.research.procoda_parser as pp
 import matplotlib.pyplot as plt
 import numpy as np
+from aguaclara.core.units import unit_registry as u
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pi.xls'
 pp.notes(url)
 start = 40683 #should be more than 'start'
@@ -253,7 +254,7 @@ start = 4454 #should be more than 'start'
 end = 22416 #should be less than 'stop'
 
 x = (pp.ftime(url,start,end)).to(u.s)
-pressure = pp.column_of_data(url, start, 1, end, 'cm')
+pressure = -pp.column_of_data(url, start, 1, end, 'cm')
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
 plt.clf()
