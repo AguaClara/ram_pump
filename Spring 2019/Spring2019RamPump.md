@@ -367,7 +367,7 @@ import aguaclara.core.physchem as pc
 import aguaclara.core.constants as c
 
 #Weight of content in the bottle at the instance that the plate opens
-#force to just open the plate= 1261.5, 1277.9, 1262.5, 1254.2, 1269.4]); #in grams
+#force to just open the plate= 1261.5, 1277.9, 1262.5, 1254.2, 1269.4; #in grams
 #Filling the water bottle until the plate opens, and then transfer the water in the bottle to another empty beaker until the plate closes
 
 #Mass of contents in bottle: 743.2 g
