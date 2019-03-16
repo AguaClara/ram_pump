@@ -34,7 +34,7 @@ Many water supply plants used electrically-powered ram pumps to redirect water f
 <p align="center">
 
 
-**Figure 2:** Common ram pump systems include “(a) the header tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” (Young, 1995, p. 313).
+**Figure 2:** Common ram pump systems include “(a) the header tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” ([Young, 1995](https://doi.org/10.1243/PIME_PROC_1995_209_010_01)).
 
 In conventional ram pump systems, the header tank (a) was placed higher than the ram pump in order to provide potential energy to power the pump. Realistically, as the water was directed down from the header tank to the pump (c) through the drive pipe (b), it experienced considerable head losses. This driving head was directed through the inlet valve of the pump and was expelled through the waste valve (c) until the velocity of the water provides enough force to shut the waste valve. Once the waste valve was shut, the water was redirected and stored into the air chamber (d) that was charged with air. The air pressure inside this chamber pushed the water up through the delivery pipe (e).
 
