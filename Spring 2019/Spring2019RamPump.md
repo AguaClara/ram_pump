@@ -67,18 +67,23 @@ A lab apparatus was constructed to simulate conditions in an AguaClara plant (Fi
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ram%20pump%20setup.jpeg" height=400>
+
+  **Figure 4:** Schematic of ram pump lab setup from [Galantino et al., 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view).
+
 </p>
 <p align="center">
 
-**Figure 4:** Schematic of ram pump lab setup from [Galantino et al., 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view).
 
 The ram pump itself is composed of two metal check valves that are connected by a metal fitting. The upper check valve receives the influent flow from the head tank and allows the flow to exit through an effluent pipe. The bottom pipe is only for “waste” water. In the interior of the ram pump, there is a plate that connects with a threaded metal rod. The rod fits into the two valves allowing only two positions for the plate (open and close). If the force of the water was not able to shrink the spring, the valve would remain open and “waste” water can flow to exit the system. When the water force was higher than the one produced by the spring, the valve would be closed and water would be pumped up through the effluent pipe.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/Ram%20pump%20structure.png?raw=True" height=400>
+
+  **Figure 5:** The internal components of the ACVRP includes two check valves, a rod, and a plate. More details are included below in the Fabrication and Methods section.
+
 </p>
+<p align="center">
 
-<img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/Ram%20pump%20structure.png">
-
-**Figure 5:** The internal components of the ACVRP includes two check valves, a rod, and a plate. More details are included below in the Fabrication and Methods section.
 
 
 ### Water Velocity in Drive Pipe
