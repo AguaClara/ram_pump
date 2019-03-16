@@ -355,6 +355,9 @@ R = 8.314 * u.J/(u.mol*u.K)
 #standard temp
 T = 293*u.K
 
+#convert head to pressure
+deltaP = pc.density_water(T)*c.GRAVITY*head
+
 #calculate change in volume of air, which is equal to the volume of water pumped
 deltaV = (n*R*T)/(deltaP).to(u.Pa)
 
