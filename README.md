@@ -10,7 +10,7 @@ The purpose of the Ram Pump team is to design and develop an efficient hydraulic
 
 ## Reports and Presentations:
 * Spring 2019
-  - Spring 2019 Symposium
+  - [Spring 2019 Symposium](https://docs.google.com/presentation/d/19q1i_l3YYJKl5zQqCVidEQOdI2u5rMGSeoI-LPZ3JbM/edit?usp=sharing)
   - Spring 2019 Final Presentation
   - [Spring 2019 Manual](https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Spring2019RamPump.md)
 
