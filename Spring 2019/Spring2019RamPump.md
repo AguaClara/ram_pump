@@ -201,7 +201,19 @@ The change in pressure for each cycle was observed by manually opening and closi
 
 ### Force Analysis
 
-The force required to open the valve was calculated using the following Python code, based on the equations detailed in Figure 6:
+Several trials were run to calculate the force required to lift the plate to open the check valve (Table 1). The mass of the empty bottle was 114.7 g.
+
+**Table 1:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve. The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
+
+| Trial | Mass of Bottle Contents (g) | Force of Water (N) |
+|-------|-----------------------------|--------------------|
+| 1     | 1261.5                      | 12.46              |
+| 2     | 1277.9                      | 12.62              |
+| 3     | 1262.5                      | 12.47              |
+| 4     | 1254.2                      | 12.39              |
+| 5     | 1269.4                      | 12.53              |
+
+The force required to open the valve ($F_{water}$) was calculated using the following Python code, based on the equations detailed in Figure 6.
 
 ```Python
 from aguaclara.core.units import unit_registry as u
@@ -213,9 +225,6 @@ import aguaclara.core.constants as c
 #force to just open the plate= 1261.5, 1277.9, 1262.5, 1254.2, 1269.4; #in grams
 #Filling the water bottle until the plate opens, and then transfer the water in the bottle to another empty beaker until the plate closes
 
-#Mass of contents in bottle: 743.2 g
-#Mass of contents in beaker: 639.5 - 71.12 g = 568.38 g
-#Plate open content: 568.38 g + 743.2 = 1311.58 g
 #Mass of plate + rod + hook = 105.9 g
 
 #Weight of bottle = tension
@@ -227,15 +236,22 @@ mass_rod = 105.9*u.g
 w_rod = (mass_rod*G).to(u.N)
 print('The weight of the rod is '+ str(w_rod))
 
-p_open = 1311.58*u.g
-F_open = (G*p_open).to(u.N) #F in Newtons
-print('The weight of the contents of the bottle is ' + str(F_open))
+w_bottle = 114.7*u.g
+contents = [1261.5, 1277.9, 1262.5, 1254.2, 1269.4]*u.g
+tot_weight = []
+#the mass of the empty bottle was added to the mass of the bottle contents because both contribute to total force acting up on the check valve plate
 
-F_water=(F_open-w_rod).to(u.N)
-print('The force required to open the valve is ' + str(F_water))
+F_water = []
+
+for i in range(0, (len(contents))):
+  tot_weight.append((contents[i] + w_bottle)*G)
+  F_water.append((tot_weight[i]-w_rod).to(u.N))
+  print('The force of water is ' + str(F_water[i]))
+
+
 ```
 
-The force required to open the valve is 11.82 newtons. Using this, the required spring force can be calculated.
+The average force required to open the valve is 12.49 newtons. Using this, the required spring force can be calculated.
 
 ### Pressure Cycles Analysis
 
