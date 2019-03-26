@@ -10,8 +10,8 @@ import aguaclara.core.constants as c
 
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor1.xls'
 pp.notes(url)
-start = 39411 #should be more than 'start'
-end = 68017 #should be less than 'stop'
+start = 3137 #should be more than 'start'
+end = 37947 #should be less than 'stop'
 
 x = (pp.column_of_time(url,start,end)).to(u.s)
 pressure = pp.column_of_data(url, start, 1, end, 'cm')
@@ -24,7 +24,7 @@ plt.xlabel('Time (s)')
 plt.ylabel('Pressure (cm)')
 plt.legend()
 #plt.show()
-plt.savefig('pressure_trace_initialpressure0325_new.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+plt.savefig('pressure_trace_initialpressure0325_new1.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
 ```
 
@@ -38,7 +38,7 @@ from aguaclara.core.units import unit_registry as u
 import aguaclara.core.constants as c
 import aguaclara.core.physchem as pc
 
-url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
+url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor1.xls'
 
 #find volume of air using ideal gas law
 #deltaV = nRT/deltaP
@@ -47,8 +47,8 @@ url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019
 #url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pitrial2.xls'
 
 
-start = 39411 #should be more than 'start'
-end = 68017 #should be less than 'stop'
+start = 3137 #should be more than 'start'
+end = 37947 #should be less than 'stop'
 
 x = (pp.column_of_time(url,start,end)).to(u.s)
 pressure = pp.column_of_data(url, start, 1, end, 'cm')
@@ -66,7 +66,7 @@ head = airchamber[-1]-airchamber[0]
 
 #n, initial number of moles of air
 diam = 1*u.inch
-height_water = (26.5*u.inch)- (9*u.cm) #initial height of water in air chamber
+height_water = (26.5*u.inch)- (7*u.cm) #initial height of water in air chamber
 vol_water = (pc.area_circle(diam)*height_water).to(u.m**3) #initial volume of water in air chamber
 height_ac = 26.5*u.inch #height of air chamber
 vol_airchamber = (pc.area_circle(diam)*height_ac).to(u.m**3)
