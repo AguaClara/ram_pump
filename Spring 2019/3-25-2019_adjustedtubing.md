@@ -8,7 +8,7 @@ import numpy as np
 from aguaclara.core.units import unit_registry as u
 import aguaclara.core.constants as c
 
-url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
+url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor1.xls'
 pp.notes(url)
 start = 39411 #should be more than 'start'
 end = 68017 #should be less than 'stop'
