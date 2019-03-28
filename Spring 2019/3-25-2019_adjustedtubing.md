@@ -8,10 +8,10 @@ import numpy as np
 from aguaclara.core.units import unit_registry as u
 import aguaclara.core.constants as c
 
-url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor1.xls'
+url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 pp.notes(url)
-start = 3137 #should be more than 'start'
-end = 37947 #should be less than 'stop'
+start = 39411 #should be more than 'start'
+end = 42000 #should be less than 'stop'
 
 x = (pp.column_of_time(url,start,end)).to(u.s)
 pressure = pp.column_of_data(url, start, 1, end, 'cm')
@@ -24,7 +24,7 @@ plt.xlabel('Time (s)')
 plt.ylabel('Pressure (cm)')
 plt.legend()
 #plt.show()
-plt.savefig('pressure_trace_initialpressure0325_new1.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+plt.savefig('pressure_trace_initialpressure0325_onecycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
 ```
 
@@ -38,17 +38,15 @@ from aguaclara.core.units import unit_registry as u
 import aguaclara.core.constants as c
 import aguaclara.core.physchem as pc
 
-url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor1.xls'
+url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 
 #find volume of air using ideal gas law
 #deltaV = nRT/deltaP
 #pressure difference, deltaP (measured as difference in pressure in air chamber)
 
-#url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pitrial2.xls'
 
-
-start = 3137 #should be more than 'start'
-end = 37947 #should be less than 'stop'
+start = 40750 #should be more than 'start'
+end = 40850 #should be less than 'stop'
 
 x = (pp.column_of_time(url,start,end)).to(u.s)
 pressure = pp.column_of_data(url, start, 1, end, 'cm')
@@ -64,31 +62,47 @@ plt.show()
 
 head = airchamber[-1]-airchamber[0]
 
+print(airchamber[-1])
+print(airchamber[0])
+print(head)
 #n, initial number of moles of air
 diam = 1*u.inch
-height_water = (26.5*u.inch)- (7*u.cm) #initial height of water in air chamber
-vol_water = (pc.area_circle(diam)*height_water).to(u.m**3) #initial volume of water in air chamber
+height_water = (26.5*u.inch)- (9*u.cm) #initial height of water in air chamber
+print(height_water)
+vol_water = (pc.area_circle(diam)*height_water).to(u.L) #initial volume of water in air chamber
+print(vol_water)
 height_ac = 26.5*u.inch #height of air chamber
-vol_airchamber = (pc.area_circle(diam)*height_ac).to(u.m**3)
-
+vol_airchamber = (pc.area_circle(diam)*height_ac).to(u.L)
+print(vol_airchamber)
 init_vol = vol_airchamber - vol_water #initial volume of air in air chamber
+print(init_vol)
 air_density = 1.225*(u.kg/u.m**3)
 mass = (air_density*init_vol).to(u.kg)
+print(mass)
 mol_mass = 28.97*u.g/u.mol
 
-n = (mass/mol_mass).to(u.mol)
-
-#gas constant
-R = 8.314 * u.J/(u.mol*u.K)
-
 #standard temp
-T = 293*u.K
+T = 293*u.kelvin
 
+init_P=(airchamber[0]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)
+print(init_P)
+init_n = (init_P*init_vol/(u.R*T)).to(u.mol)#initial mole of water in the air chamber
+print(init_n)
+
+final_P=((airchamber[-1]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)).to(u.kPa)
+print(final_P)
 #convert head to pressure
-deltaP = (pc.density_water(T)*c.GRAVITY*head).to(u.Pa)
-
+deltaP = final_P-init_P
+print(c.GRAVITY)
+print(head)
+print(deltaP)
+print(pc.density_water(T))
 #calculate change in volume of air, which is equal to the volume of water pumped
-deltaV = ((n*R*T)/(deltaP)).to(u.L)
-print('The volume of water pumped per 16 cycles is ' + str(deltaV))
+final_vol_air= ((init_n*u.R*T)/(final_P)).to(u.L)#final volume of air
+final_vol=vol_airchamber-final_vol_air;
+print(final_vol)
+
+deltaV=(final_vol-vol_water).to(u.mL);
+print('The volume of water pumped per 1 cycle is ' + str(deltaV))
 
 ```
