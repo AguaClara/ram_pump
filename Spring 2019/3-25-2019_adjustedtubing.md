@@ -1,3 +1,7 @@
+#Experimental Calculations
+
+The following code is used to calculate the experiment volume of water pumped per cycle.
+
 Graph pressure traces.
 
 ```Python
@@ -104,5 +108,13 @@ print(final_vol)
 
 deltaV=(final_vol-vol_water).to(u.mL);
 print('The volume of water pumped per 1 cycle is ' + str(deltaV))
+
+```
+
+#Theoretical Calculations
+Using the experimentally determined terminal velocity and the time between opening and closing the valve, the theoretical volume of water pumped per cycle was calculated.
+
+```Python
+v_f =
 
 ```

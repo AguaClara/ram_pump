@@ -6,6 +6,8 @@
 # k = constant for major and minor loss coefficients
 import scipy.integrate as integrate
 import aguaclara.core.physchem as pc
+import numpy as np
+
 t = np.linspace(0, .2, 500) # 500 seconds, 4 intervals
 H = 5  # Height of drive pipe.
 L = 12  # Length of effluent pipe.
