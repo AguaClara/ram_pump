@@ -115,6 +115,10 @@ print('The volume of water pumped per 1 cycle is ' + str(deltaV))
 Using the experimentally determined terminal velocity and the time between opening and closing the valve, the theoretical volume of water pumped per cycle was calculated.
 
 ```Python
-v_f =
+v_f = 2.26*u.m/u.s #terminal velocity, experimentally determined
+area = pc.area_circle(.02372*u.m) #area of drive pipe
+volume = 0.5*area*v_f*
+
+
 
 ```
