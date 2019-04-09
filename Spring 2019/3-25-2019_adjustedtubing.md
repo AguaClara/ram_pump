@@ -15,7 +15,7 @@ import aguaclara.core.constants as c
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 pp.notes(url)
 start = 39411 #should be more than 'start'
-end = 42000 #should be less than 'stop'
+end = 41600 #should be less than 'stop'
 
 x = (pp.column_of_time(url,start,end)).to(u.s)
 pressure = pp.column_of_data(url, start, 1, end, 'cm')
@@ -115,9 +115,16 @@ print('The volume of water pumped per 1 cycle is ' + str(deltaV))
 Using the experimentally determined terminal velocity and the time between opening and closing the valve, the theoretical volume of water pumped per cycle was calculated.
 
 ```Python
-v_f = 2.26*u.m/u.s #terminal velocity, experimentally determined
+v_t = 2.26*u.m/u.s #terminal velocity, experimentally determined
 area = pc.area_circle(.02372*u.m) #area of drive pipe
-volume = 0.5*area*v_f*
+
+#find index of min and max of effluent valve pressure
+valve_close = max(pressure)
+valve_open = min(pressure)
+
+delta_t =
+
+volume = 0.5*area*v_t*delta_t
 
 
 
