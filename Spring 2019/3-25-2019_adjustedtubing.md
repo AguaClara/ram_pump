@@ -14,7 +14,7 @@ import aguaclara.core.constants as c
 
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 pp.notes(url)
-start = 39411 #should be more than 'start'
+start = 39416 #should be more than 'start'
 end = 41600 #should be less than 'stop'
 
 x = (pp.column_of_time(url,start,end)).to(u.s)
@@ -27,8 +27,8 @@ plt.plot(x,airchamber,'-', label='Air Chamber')
 plt.xlabel('Time (s)')
 plt.ylabel('Pressure (cm)')
 plt.legend()
-#plt.show()
-plt.savefig('pressure_trace_initialpressure0325_onecycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+plt.show()
+#plt.savefig('pressure_trace_initialpressure0325_onecycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
 ```
 
@@ -62,7 +62,8 @@ plt.plot(x,airchamber,'-', label='Air Chamber')
 plt.xlabel('Time (s)')
 plt.ylabel('Pressure (cm)')
 plt.legend()
-plt.show()
+#plt.show()
+plt.savefig('water_pumped_closeup.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
 head = airchamber[-1]-airchamber[0]
 
@@ -119,9 +120,16 @@ v_t = 2.26*u.m/u.s #terminal velocity, experimentally determined
 area = pc.area_circle(.02372*u.m) #area of drive pipe
 
 #find index of min and max of effluent valve pressure
-valve_close = max(pressure)
-valve_open = min(pressure)
+valve_close = np.argmin(pressure)
+valve_open = np.argmax(pressure)
 
+pressure[valve_close]
+pressure[valve_open]
+
+min_pressure = min(pressure)
+max_pressure = max(pressure)
+
+#find corresponding time interval between open and close
 delta_t =
 
 volume = 0.5*area*v_t*delta_t
