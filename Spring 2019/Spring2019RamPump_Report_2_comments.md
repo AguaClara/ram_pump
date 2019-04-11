@@ -216,7 +216,8 @@ The terminal velocity of the driving head of 2.2557 m/s was calculated by measur
 | 4     | 3.565                        | 3.60                 |
 | 5     | 3.790                        | 3.83                 |
 
-The average of the terminal velocity from these five trials was calculated by first calculating the average of the volume/time.
+The average of the terminal velocity from these five trials was calculated by first calculating the average of the volume/time ($Q$) and then .
+
 
 
 ## Results and Analysis

@@ -271,6 +271,8 @@ $$a = \frac{dv}{dt} = \frac{v_f-v_o}{dt} = \frac{v_f}{\Delta t}$$
 where:
 - $v_f$: terminal velocity of water in drive pipe
 - $v_o$: initial velocity of water ($v_o$ is zero in the head tank)
+- $\Delta t$: time period in which water is being pumped into the air chamber (waste valve pressure exceeds air chamber pressure)
+
 
 ### Pressure Cycles Analysis
 
