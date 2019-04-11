@@ -130,7 +130,7 @@ min_pressure = min(pressure)
 max_pressure = max(pressure)
 
 #find corresponding time interval between open and close
-delta_t =
+delta_t = x[valve_open]-x[valve_close]
 
 volume = 0.5*area*v_t*delta_t
 
