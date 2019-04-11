@@ -8,7 +8,7 @@ The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water 
 
 ## Introduction
 
-The purpose of a hydraulic ram pump is to pump water from a lower elevation to a higher elevation using only the energy of the falling water to drive the water up ([bin Mohammad Ali, 2011](https://www.scribd.com/doc/76535229/Hydraulic-Ramp-Pump-Hydram)). In an AguaClara plant, flow through a plant is driven solely by gravity, so treated water exits the plant at the lowest point of the plant. Thus, in order to fill chemical stock tanks with treated water, operators must carry up buckets of water from the outlet at the lowest point of the plant to manually fill tanks. The AguaClara Vertical Ram Pump (ACVRP) solves this issue by allowing treated water to be pumped from the outlet of the plant to where it is needed at higher elevations in the plant, all without using electricity ([Martinez et. al, 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view?usp=sharing)). In addition, this allows the treated water to be pumped for utilization in the plant's plumbing system, which includes the plant's sinks and toilets.
+The purpose of a hydraulic ram pump is to pump water from a lower elevation to a higher elevation using only the energy of the falling water to drive the water up ([bin Mohammad Ali, 2011](https://www.scribd.com/doc/76535229/Hydraulic-Ramp-Pump-Hydram)). In an AguaClara plant, flow through a plant is driven solely by gravity, so treated water exits the plant at the lowest point of the plant. Thus, in order to fill chemical stock tanks with treated water, operators must carry up buckets of water from the outlet at the lowest point of the plant to manually fill tanks. The AguaClara Vertical Ram Pump (ACVRP) solves this issue by allowing treated water to be pumped from the outlet of the plant to higher elevations where it is needed **[consider switching order to "..plant to higher elevations where it is needed.."]**, all without using electricity ([Martinez et. al, 2016](https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view?usp=sharing)). In addition, this allows the treated water to be pumped for utilization in the plant's plumbing system, which includes the plant's sinks and toilets.
 
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/AC_plant.png?raw=True" height=300>
@@ -21,9 +21,9 @@ The ram pump then pumps the treated water upwards to the chemical stock tanks. I
 </p>
 
 
-The ACVRP is an innovation that improves upon the conventional ram pump by making fabrication easier and more cost efficient. Conventional ram pumps that were used in previous AguaClara plants required an additional tank to be built to collect the water discharged from the ram pump and return it to the distribution tank, adding to the capital cost of the plant. The tank was cumbersome, and it was difficult to incorporate the tank in the pipe gallery at the basement of the plant ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
+The ACVRP is an innovation that improves upon the conventional ram pump by making fabrication easier and more cost efficient. Conventional ram pumps that were used in previous AguaClara plants required an additional **[collection]** collection tank for the water discharged from the ram pump and return it to the distribution tank, adding to the capital cost of the plant. The tank was cumbersome, and it was difficult to incorporate the tank in the pipe gallery at the basement of the plant ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
 
-The ACVRP is an inline ram pump, which eliminates the need for a collection tank. The ideal design would be able to be easily installed in new plants as well as incorporated in previously built AguaClara plants. The simple design would also make it easy to fabricate and repair, which would empower the community and advance sustainability. The vision is that the ACVRP will relieve some of the burden of the plant operators, which would further increase their pride in their role of providing safe water to their communities ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
+The ACVRP is an inline ram pump, which eliminates the need for a collection tank. The ideal design would be able to be easily installed in new plants as well as incorporated in previously built AguaClara plants. The simple design would also make it easy to fabricate and repair, which would empower communities and advance sustainability. The vision is that the ACVRP will relieve some of the burden of the plant operators, which would further increase their pride in their role of providing safe water to their communities ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
 
 ## Literature Review
 Many water supply plants use horizontal ram pumps to redirect water from a lower to higher elevation (Figure 2).
@@ -144,11 +144,20 @@ The ACVRP was fabricated using the following materials:
 - Two check valves of 1" pipe size
 - Threaded rod of length 7.5 cm
 - Spring of chosen length and k constant
-- Two hexagonal stoppers
+- Two hex nuts of length 1-1/8", diameter of 3/8" and thread size of 16
+- Four brass jam nuts of diameter 3/8" and thread size of 16
 
 The OnShape design for the components of the ACVRP can be found here:
 - [Metal Plate and Rod](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/9bef45d7eddc1444e77d6a46)
 - [Check Valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb)
+
+where each component can be purchased
+Metal plate comes with check valve
+Strataflo or https://www.mcmaster.com/4753k44 or https://www.mcmaster.com/7746k831
+Check valves
+hex nuts
+https://www.mcmaster.com/90264A213
+brass jam nuts
 
 ## Methods
 ### Experimental Apparatus
@@ -252,6 +261,16 @@ for i in range(0, (len(contents))):
 ```
 
 The average force required to open the valve is 12.49 newtons. Using this, the required spring force can be calculated.
+
+### Theoretical Volume of Water Pumped per Cycle
+
+In order to calculate the theoretical volume of water pumped per cycle, the deceleration rate of water in the drive pipe as the plate closes, $a$, was calculated:
+
+$$a = \frac{dv}{dt} = \frac{v_f-v_o}{dt} = \frac{v_f}{\Delta t}$$
+
+where:
+- $v_f$: terminal velocity of water in drive pipe
+- $v_o$: initial velocity of water ($v_o$ is zero in the head tank)
 
 ### Pressure Cycles Analysis
 
@@ -430,10 +449,6 @@ In order to prevent such skewed data, the team recommended the fabrication of an
 
 Further research in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe had yet to be explored. Optimizing this ratio between the diameters of the two pipes would help improve the efficiency of the ram pump.
 
-Regarding long-term goals, the team planned to test ram pump prototype in Ithaca water treatment plant before extending the ACVRP design to existing AguaClara plants.
-
-
-
 ## Bibliography
 Adelman, M. J., Weber-Shirk, M. L., Will, J. C., Cordero, A. N., Maher, W. J., Lion, L. W. (2013). "[Novel Fluidic Control System for Stacked Rapid Sand Filters](https://ascelibrary.org/doi/10.1061/%28ASCE%29EE.1943-7870.0000700).” Journal of Environmental Engineering 139 (7)939-946.
 
@@ -451,5 +466,5 @@ Young, B. W. (1995). Design of Hydraulic Ram Pump Systems. Proceedings of the In
 
 ```python
 # To convert the document from markdown to pdf
-pandoc Name_of_this_file.md -o TeamName_Research_Report.pdf
+pandoc Spring2019RamPump.md -o RamPump_Research_Report.pdf
 ```
