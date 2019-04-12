@@ -116,7 +116,7 @@ print('The volume of water pumped per 1 cycle is ' + str(deltaV))
 Using the experimentally determined terminal velocity and the time between opening and closing the valve, the theoretical volume of water pumped per cycle was calculated.
 
 ```Python
-v_t = 2.26*u.m/u.s #terminal velocity, experimentally determined
+v_f = 2.26*u.m/u.s #terminal velocity, experimentally determined
 area = pc.area_circle(.02372*u.m) #area of drive pipe
 
 #height of the drive pipe
@@ -125,11 +125,13 @@ h = 1.74*u.m
 #height difference between height we want to pump water and water level of head tank
 h1 = 2.06*u.m #height from bottom of drive pipe to top of water level in head tank
 h2 = airchamber[0] #around 600 cm, make sure you run airchamber from first cell
-deltaH = (h2 - h1).to(u.m)
+delta_h = (h2 - h1).to(u.m)
 
-volume = (0.5*(area*v_t**2*h)/(c.GRAVITY*deltaH)).to(u.milliliter)
+delta_t = (v_f*h)/(c.GRAVITY*delta_h)
+print('The theoretical time period in which water is being pumped into the air chamber is ' + str(delta_t))
+
+volume = (0.5*area*v_f*delta_t).to(u.milliliter)
 
 print('The theoretical amount of water pumped is: ' + str(volume))
-
 
 ```
