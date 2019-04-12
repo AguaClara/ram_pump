@@ -45,7 +45,7 @@ In the context of AguaClara plants, conventional ram pumps required tanks to be 
 The ACVRP aligned the head tank, the drive pipe, the pump, and the waste valve along one vertical axis. The vertical configuration required minimum space and eliminated the need for a tank around the waste valve because water was expelled downwards into the distribution system. Unlike the conventional ramp pump design, this condensed design allowed for easier installation into existing plants as it was more compact and interchangeable, and also reduced labor by directly transporting treated water to the chemical stock tank.
 
 
-The previous teams had adopted many of the elements of a conventional ram pump system and had been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consisted of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allowed for the water that flowed down through the drive pipe to pass by the effluent pipe and goes into waste; its acceleration created enough force to overcome the spring force and to close the plate. This closed state built high pressure in the region of the plate and the effluent valve, and as a result, the water was redirected up through the effluent pipe. The headloss during this transfer of water through the effluent pipe decreased the velocity of water and the pressure, which allowed the spring force to overcome the water force and the plate to open. The difference in pressure due to constantly alternating between these two states, open and closed, allowed for the water to be pumped up (Figure 3).
+The previous teams had adopted many of the elements of a conventional ram pump system and had been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consisted of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allowed for the water that flowed down through the drive pipe to pass by the effluent pipe and goes into waste; its acceleration created enough force to overcome the spring force and to close the plate. This closed state built high pressure in the region of the plate and the effluent valve, and as a result of this pressure difference, the water was redirected up through the effluent pipe. The headloss during this transfer of water through the effluent pipe decreased the velocity of water and the pressure, which allowed the spring force to overcome the water force and the plate to open. The difference in pressure due to constantly alternating between these two states, open and closed, allowed for the water to be pumped up (Figure 3).
 
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/valve_cycle.png?raw=True" height=300>
@@ -295,7 +295,34 @@ The average force required to open the valve is 12.49 newtons. Using this, the r
 
 ### Theoretical Volume of Water Pumped per Cycle
 
-In order to calculate the theoretical volume of water pumped per cycle, the deceleration rate of water in the drive pipe as the plate closes, $a$, was calculated:
+In order to calculate the theoretical volume of water pumped per cycle, the deceleration rate of water in the drive pipe as the plate closes, $a$, was calculated using the difference between the static pressure in the drive pipe (when water is not flowing) and the pressure in the high pressure system (the pressure in the air chamber):
+
+$$P_{air chamber} - \rho gh = p = \rho g \Delta h $$
+where:
+- $p$: the difference in pressure between the air chamber and the static pressure in the drive pipe
+- $\Delta h$: the height difference between the water level in the head tank and the height that water will be pumped to
+
+Using the relationship, $F=ma$ and $F = pA$, the following equation was derived for deceleration rate in the drive pipe when the plate closes:
+
+$$pA = ma$$
+$$\rho g \Delta h A = ma$$
+$$a = \frac{\rho g \Delta h A}{m}$$
+
+where:
+- $A$: cross-sectional area of drive pipe
+- $m$: mass of water in drive pipe
+
+Using the density relationship, $\rho = \frac{m}{V}$, the deceleration expression can be rewritten as:
+$$m = V \rho$$
+$$a = \frac{g \Delta h A}{V} $$
+
+where $V$ is the volume of water in the drive pipe.
+
+In addition, $V=Ah$, where $A$ is the cross-sectional area of the drive pipe and $h$ is the height of the drive pipe. Thus:
+
+$$a = \frac{g \Delta h}{h} $$
+
+The deceleration rate, $a$, is defined as the change in velocity over the change in time:
 
 $$a = \frac{dv}{dt} = \frac{v_f-v_o}{dt} = \frac{v_f}{\Delta t}$$
 
@@ -304,8 +331,25 @@ where:
 - $v_o$: initial velocity of water ($v_o$ is zero in the head tank)
 - $\Delta t$: time period in which water is being pumped into the air chamber (waste valve pressure exceeds air chamber pressure)
 
+In order to find $\Delta t$, the time period during which water is being pumped into the air chamber, the two expressions for $a$ can be set equal to each other and solved for $\Delta t$:
 
-### Pressure Cycles Analysis
+$$a = \frac{g \Delta h}{h} = \frac{v_f}{\Delta t} $$
+
+$$\Delta t = \frac{v_f h}{g \Delta h}$$
+
+Using $\Delta t$, the volume of water pumped per each cycle of the ram pump can be calculated. The distance that water travels in the drive pipe is given by:
+
+$$d = \bar v \Delta t$$
+
+where $\bar v$ is the average velocity, equal to 0.5 times the terminal velocity: $\bar v = \frac{1}{2} v_f $. Since the volume of water pumped per cycle is given by $V_{cycle} = Ad$, by plugging in the equation for the distance, the following equation is obtained:
+
+$$V_{cycle} = A*\frac{1}{2} v_f \Delta t$$
+
+Then, plugging in the expression obtained for $\Delta t$ above:
+
+$$V_{cycle} = A*\frac{1}{2} \frac{v_f^2 h}{g \Delta h}$$
+
+### Experimental Volume of Water Pumped per Cycle
 
 The pressure cycles were analyzed to determine the volume of water pumped during each cycle. The ideal gas law was used to calculate the change in volume of air with each pressure cycle. As the ram pump pumps water at its effluent to the air chamber, the air in it is compressed. Thus, the change in air volume is equal to the change in water volume that is pumped into the air chamber. The ideal gas law can be rearranged as follows:
 
@@ -468,11 +512,15 @@ print('The volume of water pumped per cycle is ' + str(deltaV))
 
 Thus, the volume of water pumped per cycle is 0.02068 cubic meters.
 
+### Efficiency of Ram Pump
+
+efficiency calculations
+
 ## Conclusions
 
 From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law (F=kx). The use of the ideal spring increased the amount of water driven up through the effluent pipe.
 
-In addition, we were able to calculate the terminal velocity experimentally.The average value calculated is equal to 2.55 metres/second.
+From additional analysis, the team was able to calculate the average value for terminal velocity calculated experimentally was 2.56 m/s. The terminal velocity was obtained collecting and measuring the volume of water which pass through the ram pump when the plate is open a certain amount of time. With the calculation of the terminal velocity the was able to calculate the volume of pumped water during a cycle.
 
 ## Future Work
 
