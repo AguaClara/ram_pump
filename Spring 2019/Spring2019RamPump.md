@@ -23,7 +23,7 @@ The ram pump then pumps the treated water upwards to the chemical stock tanks. I
 
 The ACVRP is an innovation that improves upon the conventional ram pump by making fabrication easier and more cost efficient. Conventional ram pumps that were used in previous AguaClara plants required an additional **[collection]** collection tank for the water discharged from the ram pump and return it to the distribution tank, adding to the capital cost of the plant. The tank was cumbersome, and it was difficult to incorporate the tank in the pipe gallery at the basement of the plant ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
 
-The ACVRP is an inline ram pump, which eliminates the need for a collection tank. The ideal design would be able to be easily installed in new plants as well as incorporated in previously built AguaClara plants. The simple design would also make it easy to fabricate and repair, which would empower communities and advance sustainability. The vision is that the ACVRP will relieve some of the burden of the plant operators, which would further increase their pride in their role of providing safe water to their communities ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
+The ACVRP is an inline ram pump, which eliminates the need for a collection tank. The ideal design would be able to be easily installed in new plants as well as incorporated in previously built AguaClara plants. The simple design would also make it easy to fabricate and repair, which would empower communities **[communities]** and advance sustainability. The vision is that the ACVRP will relieve some of the burden of the plant operators, which would further increase their pride in their role of providing safe water to their communities ([Project Description Ram Pump](https://docs.google.com/document/d/1g4uX_CjjWllurb4KftwjLmaFy6Au-42kGi5e5m47YEI/edit#)).
 
 ## Literature Review
 Many water supply plants use horizontal ram pumps to redirect water from a lower to higher elevation (Figure 2).
@@ -63,7 +63,7 @@ The main concern regarding the ACVRP was prolonging the time that the plate was 
 
 ### Lab Setup
 
-A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 4). The electric sump pump, highlighted in red in Figure 4, provided a continuous source of water for the head tank. It also provided a constant water level, because the water that went through the overflow funnel was pumped up again by the electric pump. The drive pipe was where water with elevation head entered the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber  measures **[measures]** the water pressure that exited the valve, which indicated the efficiency of the ram pump. This pressure was then converted to an elevation head to see how high the effluent could be pumped. Water that exited the ram pump as "waste" was the treated water that flowed into the bucket containing the ram pump. The water was then returned to the distribution tank (the tank which containing the electric sump pump).
+A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 4). The electric sump pump, highlighted in red in Figure 4, provided a continuous source of water for the head tank. It also provided a constant water level, because the water that went through the overflow funnel was pumped up again by the electric pump. The drive pipe was where water with elevation head entered the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber  measures **[measures]** the water pressure that exited the valve, which indicated the efficiency of the ram pump. This pressure was then converted to an elevation head to see how high the effluent could be pumped. Water that exited as "waste" at the bottom of the ram pump **[through the pump effluent]** was the treated water that flowed into the bucket containing the ram pump. The water was then returned to the distribution tank (the tank which containing the electric sump pump).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ram%20pump%20setup.jpeg" height=400>
@@ -95,7 +95,7 @@ The opening and closing of the check valve should be timed precisely so that the
 </p>
 <p align="center">
 
-**Figure 5:** The graph of ideal velocity cycle and time shows the volume of water pumped over time ([McCann et. al, 2018](https://github.com/AguaClara/ram_pump/blob/master/Spring%202018/FinalFabricationManualRamPump.md#figure-6-equation-for-verminal-velocity-from-which-the-team-extracted-a-constant-for-head-loss)). The red line shows the increasing velocity of the water in the drive pipe until it reaches its terminal velocity. The intersection of the red and blue lines indicate the point in time when the check valve closes, causing the water to decelerate rapidly.
+**Figure 6:** The graph of ideal velocity cycle and time shows the volume of water pumped over time ([McCann et. al, 2018](https://github.com/AguaClara/ram_pump/blob/master/Spring%202018/FinalFabricationManualRamPump.md#figure-6-equation-for-verminal-velocity-from-which-the-team-extracted-a-constant-for-head-loss)). The red line shows the increasing velocity of the water in the drive pipe until it reaches its terminal velocity. The intersection of the red and blue lines indicate the point in time when the check valve closes, causing the water to decelerate rapidly.
 
 </p>
 
@@ -116,7 +116,7 @@ where k was the spring constant, a material property of the spring, and x was th
 
 ### Finding Forces Empirically
 
-The Fall 2018 team ran experiments to find the force that the moving water in the drive pipe exerted on the plate when it was open ([Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md)). The team implemented a pulley system to find the force empirically. Since the valve had a unique geometry, the team found that it was easier to find the force through experimentation, and so the team threaded a string through the drive pipe and a pulley system as shown in figure 6. One end of the string was attached to the metal plate in the valve, while the other end was attached to a water bottle suspended in air on the other end of the pulley as a counterweight. The bottle was filled with water initially to keep the plate opened with the pump running, and after that, the water in the bottle was emptied gradually until the plate was not longer held opened. Since the point that the team would like to obtain was right before the plate was closed, the team then used a pipette to gradually add water back until the plate was held opened again. The weight of the bottle at this point was taken, and a simple force balance was applied to find the force:  
+The Fall 2018 team ran experiments to find the force that the moving water in the drive pipe exerted on the plate when it was open ([Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md)). The team implemented a pulley system to find the force empirically. Since the valve had a unique geometry, the team found that it was easier to find the force through experimentation, and so the team threaded a string through the drive pipe and a pulley system as shown in figure 7. One end of the string was attached to the metal plate in the valve, while the other end was attached to a water bottle suspended in air on the other end of the pulley as a counterweight. The bottle was filled with water initially to keep the plate opened with the pump running, and after that, the water in the bottle was emptied gradually until the plate was not longer held opened. Since the point that the team would like to obtain was right before the plate was closed, the team then used a pipette to gradually add water back until the plate was held opened again. The weight of the bottle at this point was taken, and a simple force balance was applied to find the force:  
 $$F_{water}+W_{rod}=W_{bottle}$$
 $$F_{water}=W_{bottle}-W_{rod}$$
 
@@ -133,7 +133,7 @@ where:
 </p>
 <p align="center">
 
-**Figure 6:** Free body diagram of forces acting on the check valve in the ram pump from [Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md).
+**Figure 7:** Free body diagram of forces acting on the check valve in the ram pump from [Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md).
 
 Thus, by finding the mass needed to keep the check valve open, $F_{water}$ could be solved for. This was set equal to the spring force, $F = -kx$, which would allow the spring constant, k, to be solved for. This would then give the optimal spring constant needed to keep the valve open. The Fall 2018 team found that the minimum spring constant (k) was 256 N/m.
 
@@ -191,7 +191,7 @@ The steps for running the ACVRP system are as follows:
 
 ### Experimental Methods
 
-The Spring 2019 team followed a similar procedure to the Fall 2018 team to experimentally determine the force required to open the check valve (see Figure 6 for details) ([Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md)).
+The Spring 2019 team followed a similar procedure to the Fall 2018 team to experimentally determine the force required to open the check valve (see Figure 7 for details) ([Storch and Snyder, 2018](https://github.com/AguaClara/ram_pump/blob/master/Fall%202018/Manual.md)).
 1. Attach the end of the string hanging from the drive pipe to the hook located on the plate within the check valve of the ACVRP. (insert picture)
 2. Screw on the ram pump to the drive pipe. Open the ball valve at the bottom of the ram pump.
 3. Turn on the electric sump pump, following the procedure from above. When the water in the head tank reaches the line, begin running experiments.
