@@ -34,15 +34,18 @@ Many water supply plants use horizontal ram pumps to redirect water from a lower
 <p align="center">
 
 
-**Figure 2:** Common ram pump systems include “(a) the header tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” ([Young, 1995](https://doi.org/10.1243/PIME_PROC_1995_209_010_01)).
+**Figure 2:** Common ram pump systems include “(a) the [head] tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” ([Young, 1995](https://doi.org/10.1243/PIME_PROC_1995_209_010_01)).
 
-In conventional ram pump systems, the header tank (a) is placed higher than the ram pump in order to provide potential energy to power the pump. As the water is directed down from the header tank to the pump (c) through the drive pipe (b), it experiences considerable head losses. This driving head is directed through the inlet valve of the pump and is expelled through the waste valve (c) until the velocity of the water provides enough force to shut the waste valve. Once the waste valve is shut, the water is redirected and stored into the air chamber (d) that was charged with air. The air pressure inside this chamber pushes the water up through the delivery pipe (e).
+In conventional ram pump systems, the head tank (a) is placed higher than the ram pump in order to provide potential energy to power the pump. As the water is directed down from the header tank to the pump (c) through the drive pipe (b), it experiences considerable head losses: major and minor losses. These losses are formed by shear frictional force and flow reduction, a result of water flowing from a pipe of larger diameter to that of a smaller diameter, respectively.
 
-In the context of AguaClara plants, conventional ram pumps required tanks to be built around the waste water valve to guide the expelled water into the distribution system. This installment was more costly and highly inconvenient for existing AguaClara plants due to spatial constraints. In order to reduce such inefficiencies, our team redesigned the system, and incorporated a vertical component to the pump to create the ACVRP.
+This driving head is directed through the inlet valve of the pump and is expelled through the waste valve (c) until the velocity of the water provides enough force to shut the waste valve. Once the waste valve is shut, the water is redirected and stored into the air chamber (d) that was charged with air. The air pressure inside this chamber pushes the water up through the delivery pipe (e).
 
-The ACVRP aligned the head tank, the drive pipe, the pump, and the waste valve along one vertical axis. The vertical configuration required minimum space and eliminated the need for a tank around the waste valve because water was expelled downwards into the distribution system. As opposed to conventional ramp pumps, this condensed design allowed for easier installation into existing plants as it was more compact and versatile, and also reduced labor in transporting treated water to the chemical stock tank.
+In the context of AguaClara plants, conventional ram pumps required tanks to be built to enclose the waste water valve to guide the expelled water into the distribution system. This installment was more costly and highly inconvenient for existing AguaClara plants due to spatial constraints. In order to reduce such inefficiencies, our team redesigned the system, and incorporated a vertical component to the pump to create the ACVRP.
 
-The previous teams had adopted many of the elements of a conventional ram pump system and had been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consisted of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allowed for the water that flowed down through the drive pipe to pass by the effluent pipe and goes into waste. When enough force from the water flowing through the drive pipe overcame the spring force and the plate closed, the water was redirected up through the effluent pipe. Constantly alternating between these two states, open and closed, allowed for the water to be pumped up (Figure 3).
+The ACVRP aligned the head tank, the drive pipe, the pump, and the waste valve along one vertical axis. The vertical configuration required minimum space and eliminated the need for a tank around the waste valve because water was expelled downwards into the distribution system. Unlike the conventional ramp pump design, this condensed design allowed for easier installation into existing plants as it was more compact and interchangeable, and also reduced labor by directly transporting treated water to the chemical stock tank.
+
+
+The previous teams had adopted many of the elements of a conventional ram pump system and had been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consisted of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allowed for the water that flowed down through the drive pipe to pass by the effluent pipe and goes into waste; its acceleration created enough force to overcome the spring force and to close the plate. This closed state built high pressure in the region of the plate and the effluent valve, and as a result, the water was redirected up through the effluent pipe. The headloss during this transfer of water through the effluent pipe decreased the velocity of water and the pressure, which allowed the spring force to overcome the water force and the plate to open. The difference in pressure due to constantly alternating between these two states, open and closed, allowed for the water to be pumped up (Figure 3).
 
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/valve_cycle.png?raw=True" height=300>
@@ -197,6 +200,18 @@ The Spring 2019 team followed a similar procedure to the Fall 2018 team to exper
 6. Gradually add water and other weights, if necessary, to the bottle until the check valve opens, allowing water to flow out of the waste valve.
 7. Remove the bottle from the string, and measure the mass of the contents of the bottle.
 
+#### Measuring Flow Rate of Driving head
+
+To calculate the terminal velocity of water right above the plate, flow rate was measured by collecting data on the volume of water discharged per second. While the ACVRP system was running and the ball valve at the bottom of the ram pump was closed, a measuring bucket was placed directly under the pump.
+
+From the above state, the steps for measuring the flow rate are as follows:
+
+1. Open the ball valve fully and start timer simultaneously.
+2. Collect water in the bucket until it fills up approximately 4 L.
+3. Close the ball valve quickly and stop the timer simultaneously.
+
+Note that the ball valve must be quickly opened and closed all the way. Any gradual closing and opening of the valve will skew the measurement of flow rate.
+
 #### Observing Pressure Cycles
 The change in pressure for each cycle was observed by manually opening and closing the check valve. The pressure at the waste valve and the air chamber was recorded.  
 
@@ -208,11 +223,27 @@ The change in pressure for each cycle was observed by manually opening and closi
 
 ## Results and Analysis
 
+### Calculating Terminal Velocity of Driving Head
+
+The terminal velocity of the driving head of 2.2557 m/s was calculated by measuring the volume of water expelled at the waste valve in a given amount of time.
+
+**Table 1:** Water in the drive pipe was expelled from the waste valve and collected into a bucket with volumetric measurements. The recorded initial time correlated with the manual opening of the ball valve right above the pump, and the final time correlated with the manual closing of the same valve. The time difference is listed below with respect to the volume of water expelled.
+
+| Trial | Volume of Water Expelled (L) | Duration of Time (s) |
+| ----- | ---------------------------- | -------------------- |
+| 1     | 4.055                        | 3.98                 |
+| 2     | 4.670                        | 4.68                 |
+| 3     | 3.880                        | 3.93                 |
+| 4     | 3.565                        | 3.60                 |
+| 5     | 3.790                        | 3.83                 |
+
+The average of the terminal velocity from these five trials was calculated by first calculating the average flow rate, $Q$ (L/s), and then dividing $Q$ by the cross sectional area of the drive pipe.
+
 ### Force Analysis
 
-Several trials were run to calculate the force required to lift the plate to open the check valve (Table 1). The mass of the empty bottle was 114.7 g.
+Several trials were run to calculate the force required to lift the plate to open the check valve (Table 2). The mass of the empty bottle was 114.7 g.
 
-**Table 1:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve. The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
+**Table 2:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve. The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
 
 | Trial | Mass of Bottle Contents (g) | Force of Water (N) |
 |-------|-----------------------------|--------------------|
