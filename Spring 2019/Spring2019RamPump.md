@@ -418,8 +418,8 @@ plt.plot(x,airchamber,'-', label='Air Chamber')
 plt.xlabel('Time (s)')
 plt.ylabel('Pressure (cm)')
 plt.legend()
-#plt.show()
-plt.savefig('pressure_trace_initialpressure2.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+plt.show()
+#plt.savefig('pressure_trace_initialpressure2.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
 ```
 
@@ -500,7 +500,7 @@ mol_mass = 28.97*u.g/u.mol
 n = (mass/mol_mass).to(u.mol)
 
 #standard temp
-T = 293*u.kelvin
+T = 297*u.kelvin
 
 init_P=(airchamber[0]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)
 init_n = (init_P*init_vol/(u.R*T)).to(u.mol)#initial mole of water in the air chamber

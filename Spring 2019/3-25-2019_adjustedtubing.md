@@ -40,45 +40,38 @@ import aguaclara.core.physchem as pc
 
 head = airchamber[-1]-airchamber[0]
 
-print(airchamber[-1])
-print(airchamber[0])
-print(head)
 #n, initial number of moles of air
 diam = 1*u.inch
 height_water = (26.5*u.inch)- (9*u.cm) #initial height of water in air chamber
-print(height_water)
+
 vol_water = (pc.area_circle(diam)*height_water).to(u.L) #initial volume of water in air chamber
-print(vol_water)
+
 height_ac = 26.5*u.inch #height of air chamber
 vol_airchamber = (pc.area_circle(diam)*height_ac).to(u.L)
-print(vol_airchamber)
+
 init_vol = vol_airchamber - vol_water #initial volume of air in air chamber
-print(init_vol)
+
 air_density = 1.225*(u.kg/u.m**3)
 mass = (air_density*init_vol).to(u.kg)
-print(mass)
+
 mol_mass = 28.97*u.g/u.mol
 
 #standard temp
-T = 293*u.kelvin
+T = 297*u.kelvin
 
 init_P=(airchamber[0]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)
-print(init_P)
+
 init_n = (init_P*init_vol/(u.R*T)).to(u.mol)#initial mole of water in the air chamber
-print(init_n)
+
 
 final_P=((airchamber[-1]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)).to(u.kPa)
-print(final_P)
+
 #convert head to pressure
 deltaP = final_P-init_P
-print(c.GRAVITY)
-print(head)
-print(deltaP)
-print(pc.density_water(T))
+
 #calculate change in volume of air, which is equal to the volume of water pumped
 final_vol_air= ((init_n*u.R*T)/(final_P)).to(u.L)#final volume of air
 final_vol=vol_airchamber-final_vol_air
-print(final_vol)
 
 deltaV=(final_vol-vol_water).to(u.mL)
 print('The volume of water pumped per 1 cycle is ' + str(deltaV))
@@ -92,13 +85,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from aguaclara.core.units import unit_registry as u
 
-
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 
 #find volume of air using ideal gas law
 #deltaV = nRT/deltaP
 #pressure difference, deltaP (measured as difference in pressure in air chamber)
-
 
 start2 = 40750 #should be more than 'start'
 end2 = 40850 #should be less than 'stop'
