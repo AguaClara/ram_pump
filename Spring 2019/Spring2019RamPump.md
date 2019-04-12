@@ -472,7 +472,7 @@ Thus, the volume of water pumped per cycle is 0.02068 cubic meters.
 
 From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law (F=kx). The use of the ideal spring increased the amount of water driven up through the effluent pipe.
 
-In addition, we were able to calculate the terminal velocity experimentally.
+In addition, we were able to calculate the terminal velocity experimentally.The average value calculated is equal to 2.55 metres/second.
 
 ## Future Work
 
