@@ -389,25 +389,30 @@ plt.savefig('pressure_trace_initialpressure0325_multcycle.jpg', dpi=200, facecol
 ```
 
 <p align="center">
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/pressure_trace_initialpressure1.jpg?raw=True" height=400>
+  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/Images_Diagrams/pressure_trace_initialpressure0325_multcycle.jpg" height=400>
 </p>
 <p align="center">
 
-**Figure 8:** The pressure was recorded as the valve was manually opened and closed using the pulley system (Trial 1).
+**Figure 8:** The pressure was recorded as the valve was manually opened and closed using the pulley system.
+
+The air pressure in the air chamber increased with each cycle, as more water was pumped into the air chamber, compressing the air.
+
+The following Python code graphs the pressure of the waste valve and air chamber at one cycle, so that the pressure difference in the air chamber can be observed, which can be used to calculate the volume of water that the ram pump pumps during each cycle:
 
 ```python
 import aguaclara.research.procoda_parser as pp
 import matplotlib.pyplot as plt
 import numpy as np
 from aguaclara.core.units import unit_registry as u
+import aguaclara.core.constants as c
 
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 pp.notes(url)
-start = 4454 #should be more than 'start'
-end = 22416 #should be less than 'stop'
+start = 39416 #should be more than 'start'
+end = 41600 #should be less than 'stop'
 
 x = (pp.column_of_time(url,start,end)).to(u.s)
-pressure = -pp.column_of_data(url, start, 1, end, 'cm')
+pressure = pp.column_of_data(url, start, 1, end, 'cm')
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
 plt.clf()
@@ -417,44 +422,10 @@ plt.xlabel('Time (s)')
 plt.ylabel('Pressure (cm)')
 plt.legend()
 plt.show()
-#plt.savefig('pressure_trace_initialpressure2.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
-
-```
-
-<p align="center">
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/pressure_trace_initialpressure2.jpg?raw=True" height=400>
-</p>
-<p align="center">
-
-**Figure 9:** The pressure was recorded as the valve was manually opened and closed using the pulley system (Trial 2).
-
-The air pressure in the air chamber increased with each cycle, as more water was pumped into the air chamber, compressing the air.
-
-The following Python code graphs the pressure of the waste valve and air chamber at one cycle, so that the pressure difference in the air chamber can be observed, which can be used to calculate the volume of water that the ram pump pumps during each cycle:
-
-```python
-url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pitrial2.xls'
-pp.notes(url)
-start = 7000 #should be more than 'start'
-end = 10000 #should be less than 'stop'
-
-x = (pp.column_of_time(url,start,end)).to(u.s)
-pressure = pp.column_of_data(url, start, 1, end, 'cm')
-airchamber = pp.column_of_data(url, start, 2, end, 'cm')
-
-plt.clf()
-plt.plot(x,-pressure,'-', label = 'Waste Valve')
-plt.plot(x,airchamber,'-', label='Air Chamber')
-plt.xlabel('Time (s)')
-plt.ylabel('Pressure (cm)')
-plt.legend()
-#plt.show()
-
-plt.savefig('one_cycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
-
+#plt.savefig('pressure_trace_initialpressure0325_onecycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 ```
 <p align="center">
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/one_cycle.jpg?raw=True" height=400>
+  <img src="https://github.com/AguaClara/ram_pump/blob/master/pressure_trace_initialpressure0325_onecycle.jpg?raw=True" height=400>
 </p>
 <p align="center">
 
