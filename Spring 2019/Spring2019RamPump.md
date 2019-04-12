@@ -1,6 +1,7 @@
 # Ram Pump, Spring 2019
 #### Ching Pang, Cheer Tsang, Alyssa Ju, Iñigo Cabrera
-#### March 15, 2019
+#### April 12, 2019
+
 
 
 ## Abstract
@@ -156,12 +157,10 @@ The OnShape design for the components of the ACVRP can be found here:
 
 For purchasing components:
 - Check valve can be ordered directly from Strataflo or https://www.mcmaster.com/7746k831
-where each component can be purchased
-- Metal plate comes with the
-Check valves
-hex nuts
-https://www.mcmaster.com/90264A213
-brass jam nuts
+- Metal plates come with the check valves and cannot be ordered individually
+- Hex nut can be ordered here: https://www.mcmaster.com/90264A213
+- Brass jam nuts can be ordered here: https://www.mcmaster.com/92174a031
+- Partially threaded rod (we are still in the process of finding out where to order)
 
 ## Methods
 ### Experimental Apparatus
@@ -466,17 +465,21 @@ plt.savefig('one_cycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='
 Based on the one cycle observed in Figure 10, the difference in pressure was 16.4 centimeters. Using the ideal gas law, the volume of water pumped during each cycle was calculated:
 
 ```Python
-
 import aguaclara.core.physchem as pc
+import aguaclara.research.procoda_parser as pp
+import matplotlib.pyplot as plt
+import numpy as np
+from aguaclara.core.units import unit_registry as u
+import aguaclara.core.constants as c
 
 #find volume of air using ideal gas law
 #deltaV = nRT/deltaP
 #pressure difference, deltaP (measured as difference in pressure in air chamber)
 
-url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-7-19_manual_operationwith650Pitrial2.xls'
-
-start = 7000 #should be more than 'start'
-end = 10000 #should be less than 'stop'
+url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
+pp.notes(url)
+start = 39416 #should be more than 'start'
+end = 41600 #should be less than 'stop'
 
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
@@ -496,26 +499,32 @@ mol_mass = 28.97*u.g/u.mol
 
 n = (mass/mol_mass).to(u.mol)
 
-#gas constant
-R = 8.314 * u.J/(u.mol*u.K)
-
 #standard temp
-T = 293*u.K
+T = 293*u.kelvin
+
+init_P=(airchamber[0]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)
+init_n = (init_P*init_vol/(u.R*T)).to(u.mol)#initial mole of water in the air chamber
+
+final_P=((airchamber[-1]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)).to(u.kPa)
 
 #convert head to pressure
-deltaP = (pc.density_water(T)*c.GRAVITY*head).to(u.Pa)
-
+deltaP = final_P-init_P
 #calculate change in volume of air, which is equal to the volume of water pumped
-deltaV = ((n*R*T)/(deltaP)).to(u.m**3)
-print('The volume of water pumped per cycle is ' + str(deltaV))
+final_vol_air= ((init_n*u.R*T)/(final_P)).to(u.L)#final volume of air
+final_vol=vol_airchamber-final_vol_air
+
+deltaV=(final_vol-vol_water).to(u.mL)
+print('The volume of water pumped per 1 cycle is ' + str(deltaV))
 
 ```
 
-Thus, the volume of water pumped per cycle is 0.02068 cubic meters.
+Thus, the volume of water pumped per cycle is 2.898 milliliter.
 
 ### Efficiency of Ram Pump
 
-efficiency calculations
+The efficiency of the ram pump was calculated by the following equation:
+
+$$Efficiency = \frac{\mid experimental- theoretical \mid}{theoretical} $$
 
 ## Conclusions
 
