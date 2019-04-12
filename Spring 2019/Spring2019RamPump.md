@@ -145,7 +145,7 @@ Thus, by finding the mass needed to keep the check valve open, $F_{water}$ could
 The ACVRP was fabricated using the following materials:
 - Metal plate with diameter of 1"
 - Two check valves of 1" pipe size
-- Threaded rod of length 7.5 cm
+- Threaded rod of length 7.5 inches
 - Spring of chosen length and k constant
 - Two hex nuts of length 1-1/8", diameter of 3/8" and thread size of 16
 - Four brass jam nuts of diameter 3/8" and thread size of 16
@@ -155,7 +155,7 @@ The OnShape design for the components of the ACVRP can be found here:
 - [Check Valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb)
 
 For purchasing components:
-Check valve can be ordered directly from Strataflo
+Check valve can be ordered directly from Strataflo or through mcmaster
 where each component can be purchased
 Metal plate comes with check valve
 Strataflo or https://www.mcmaster.com/4753k44 or https://www.mcmaster.com/7746k831
