@@ -35,35 +35,8 @@ plt.show()
 Calculate volume of water pumped per cycle.
 
 ```python
-import aguaclara.research.procoda_parser as pp
-import matplotlib.pyplot as plt
-import numpy as np
-from aguaclara.core.units import unit_registry as u
 import aguaclara.core.constants as c
 import aguaclara.core.physchem as pc
-
-url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
-
-#find volume of air using ideal gas law
-#deltaV = nRT/deltaP
-#pressure difference, deltaP (measured as difference in pressure in air chamber)
-
-
-start = 40750 #should be more than 'start'
-end = 40850 #should be less than 'stop'
-
-x = (pp.column_of_time(url,start,end)).to(u.s)
-pressure = pp.column_of_data(url, start, 1, end, 'cm')
-airchamber = pp.column_of_data(url, start, 2, end, 'cm')
-
-plt.clf()
-plt.plot(x,pressure,'-', label = 'Waste Valve')
-plt.plot(x,airchamber,'-', label='Air Chamber')
-plt.xlabel('Time (s)')
-plt.ylabel('Pressure (cm)')
-plt.legend()
-#plt.show()
-plt.savefig('water_pumped_closeup.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
 head = airchamber[-1]-airchamber[0]
 
@@ -109,6 +82,40 @@ print(final_vol)
 
 deltaV=(final_vol-vol_water).to(u.mL)
 print('The volume of water pumped per 1 cycle is ' + str(deltaV))
+```
+
+Graph close-up of pressure cycle.
+
+```python
+import aguaclara.research.procoda_parser as pp
+import matplotlib.pyplot as plt
+import numpy as np
+from aguaclara.core.units import unit_registry as u
+
+
+url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
+
+#find volume of air using ideal gas law
+#deltaV = nRT/deltaP
+#pressure difference, deltaP (measured as difference in pressure in air chamber)
+
+
+start2 = 40750 #should be more than 'start'
+end2 = 40850 #should be less than 'stop'
+
+x2 = (pp.column_of_time(url,start2,end2)).to(u.s)
+pressure2 = pp.column_of_data(url, start2, 1, end2, 'cm')
+airchamber2 = pp.column_of_data(url, start2, 2, end2, 'cm')
+
+plt.clf()
+plt.plot(x2,pressure2,'-', label = 'Waste Valve')
+plt.plot(x2,airchamber2,'-', label='Air Chamber')
+plt.xlabel('Time (s)')
+plt.ylabel('Pressure (cm)')
+plt.legend()
+#plt.show()
+plt.savefig('water_pumped_closeup.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+
 
 ```
 
@@ -133,5 +140,11 @@ print('The theoretical time period in which water is being pumped into the air c
 volume = (0.5*area*v_f*delta_t).to(u.milliliter)
 
 print('The theoretical amount of water pumped is: ' + str(volume))
+
+```
+
+#Efficiency calculations
+
+```
 
 ```
