@@ -34,9 +34,9 @@ Many water supply plants use horizontal ram pumps to redirect water from a lower
 <p align="center">
 
 
-**Figure 2:** Common ram pump systems include “(a) the [head] tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” ([Young, 1995](https://doi.org/10.1243/PIME_PROC_1995_209_010_01)).
+**Figure 2:** Common ram pump systems include “(a) the head tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” ([Young, 1995](https://doi.org/10.1243/PIME_PROC_1995_209_010_01)).
 
-In conventional ram pump systems, the head tank (a) is placed higher than the ram pump in order to provide potential energy to power the pump. As the water is directed down from the header tank to the pump (c) through the drive pipe (b), it experiences considerable head losses: major and minor losses. These losses are formed by shear frictional force and flow reduction, a result of water flowing from a pipe of larger diameter to that of a smaller diameter, respectively.
+In conventional ram pump systems, the head tank (a) is placed higher than the ram pump in order to provide potential energy to power the pump. As the water is directed down from the head tank to the pump (c) through the drive pipe (b), it experiences considerable head losses: major and minor losses. These losses are formed by shear frictional force and flow reduction, a result of water flowing from a pipe of larger diameter to that of a smaller diameter, respectively.
 
 This driving head is directed through the inlet valve of the pump and is expelled through the waste valve (c) until the velocity of the water provides enough force to shut the waste valve. Once the waste valve is shut, the water is redirected and stored into the air chamber (d) that was charged with air. The air pressure inside this chamber pushes the water up through the delivery pipe (e).
 
@@ -471,6 +471,8 @@ Thus, the volume of water pumped per cycle is 0.02068 cubic meters.
 ## Conclusions
 
 From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law (F=kx). The use of the ideal spring increased the amount of water driven up through the effluent pipe.
+
+In addition, we were able to calculate the terminal velocity experimentally.
 
 ## Future Work
 
