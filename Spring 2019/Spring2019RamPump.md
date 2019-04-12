@@ -354,7 +354,7 @@ $$V_{cycle} = A*\frac{1}{2} \frac{v_f^2 h}{g \Delta h}$$
 The pressure cycles were analyzed to determine the volume of water pumped during each cycle. The ideal gas law was used to calculate the change in volume of air with each pressure cycle. As the ram pump pumps water at its effluent to the air chamber, the air in it is compressed. Thus, the change in air volume is equal to the change in water volume that is pumped into the air chamber. The ideal gas law can be rearranged as follows:
 
 $$ PV = nRT $$
-$$ \Delta V = \frac{nRT}{\Delta P} $$
+$$ \Delta V = nRT \frac{1}{P_{final}}-\frac{1}{P_{initial}}$$
 
 where:
 - $\Delta V:$ the change in air volume (equal to the change in water volume)

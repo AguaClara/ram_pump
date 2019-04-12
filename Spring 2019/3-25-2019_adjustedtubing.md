@@ -119,21 +119,17 @@ Using the experimentally determined terminal velocity and the time between openi
 v_t = 2.26*u.m/u.s #terminal velocity, experimentally determined
 area = pc.area_circle(.02372*u.m) #area of drive pipe
 
-#find index of min and max of effluent valve pressure
-valve_close = np.argmin(pressure)
-valve_open = np.argmax(pressure)
+#height of the drive pipe
+h = 1.74*u.m
 
-pressure[valve_close]
-pressure[valve_open]
+#height difference between height we want to pump water and water level of head tank
+h1 = 2.06*u.m #height from bottom of drive pipe to top of water level in head tank
+h2 = airchamber[0] #around 600 cm, make sure you run airchamber from first cell
+deltaH = (h2 - h1).to(u.m)
 
-min_pressure = min(pressure)
-max_pressure = max(pressure)
+volume = (0.5*(area*v_t**2*h)/(c.GRAVITY*deltaH)).to(u.milliliter)
 
-#find corresponding time interval between open and close
-delta_t = x[valve_open]-x[valve_close]
-
-volume = 0.5*area*v_t*delta_t
-
+print('The theoretical amount of water pumped is: ' + str(volume))
 
 
 ```
