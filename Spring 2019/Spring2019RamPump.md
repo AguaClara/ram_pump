@@ -155,10 +155,9 @@ The OnShape design for the components of the ACVRP can be found here:
 - [Check Valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb)
 
 For purchasing components:
-Check valve can be ordered directly from Strataflo or through mcmaster
+- Check valve can be ordered directly from Strataflo or https://www.mcmaster.com/7746k831
 where each component can be purchased
-Metal plate comes with check valve
-Strataflo or https://www.mcmaster.com/4753k44 or https://www.mcmaster.com/7746k831
+- Metal plate comes with the
 Check valves
 hex nuts
 https://www.mcmaster.com/90264A213
