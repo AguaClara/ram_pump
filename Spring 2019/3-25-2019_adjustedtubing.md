@@ -113,8 +113,8 @@ plt.plot(x2,airchamber2,'-', label='Air Chamber')
 plt.xlabel('Time (s)')
 plt.ylabel('Pressure (cm)')
 plt.legend()
-#plt.show()
-plt.savefig('water_pumped_closeup.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+plt.show()
+#plt.savefig('water_pumped_closeup.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
 
 ```
