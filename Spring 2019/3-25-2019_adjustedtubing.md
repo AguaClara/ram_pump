@@ -104,10 +104,10 @@ print(deltaP)
 print(pc.density_water(T))
 #calculate change in volume of air, which is equal to the volume of water pumped
 final_vol_air= ((init_n*u.R*T)/(final_P)).to(u.L)#final volume of air
-final_vol=vol_airchamber-final_vol_air;
+final_vol=vol_airchamber-final_vol_air
 print(final_vol)
 
-deltaV=(final_vol-vol_water).to(u.mL);
+deltaV=(final_vol-vol_water).to(u.mL)
 print('The volume of water pumped per 1 cycle is ' + str(deltaV))
 
 ```
