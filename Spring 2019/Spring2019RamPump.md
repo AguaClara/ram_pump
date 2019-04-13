@@ -552,6 +552,7 @@ The efficiency of the ram pump was calculated by the following equation:
 
 $$Efficiency = \frac{\mid experimental- theoretical \mid}{theoretical} $$
 
+$$Efficiency =\frac{|4.195-48.82|}{48.82} = 0.91468\% $$
 
 
 ## Conclusions
