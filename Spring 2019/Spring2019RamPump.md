@@ -429,9 +429,48 @@ plt.show()
 </p>
 <p align="center">
 
-**Figure 10:** The pressure of the air chamber was observed as the valve was opened and closed. The pressure difference was then used to calculate the volume of water pumped by the ram pump.
+**Figure 9:** The pressure of the air chamber was observed as the valve was opened and closed. The pressure difference was then used to calculate the volume of water pumped by the ram pump.
 
-Based on the one cycle observed in Figure 10, the difference in pressure was 16.4 centimeters. Using the ideal gas law, the volume of water pumped during each cycle was calculated:
+Based on the one cycle observed in Figure 9, the difference in pressure was 16.4 centimeters. Using the ideal gas law, the volume of water pumped during each cycle was calculated:
+
+The following code shows a close-up of one cycle:
+
+
+```python
+import aguaclara.research.procoda_parser as pp
+import matplotlib.pyplot as plt
+import numpy as np
+from aguaclara.core.units import unit_registry as u
+
+url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
+
+#find volume of air using ideal gas law
+#deltaV = nRT/deltaP
+#pressure difference, deltaP (measured as difference in pressure in air chamber)
+
+start2 = 40750 #should be more than 'start'
+end2 = 40850 #should be less than 'stop'
+
+x2 = (pp.column_of_time(url,start2,end2)).to(u.s)
+pressure2 = pp.column_of_data(url, start2, 1, end2, 'cm')
+airchamber2 = pp.column_of_data(url, start2, 2, end2, 'cm')
+
+plt.clf()
+plt.plot(x2,pressure2,'-', label = 'Waste Valve')
+plt.plot(x2,airchamber2,'-', label='Air Chamber')
+plt.xlabel('Time (s)')
+plt.ylabel('Pressure (cm)')
+plt.legend()
+plt.show()
+#plt.savefig('water_pumped_closeup.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+
+```
+<p align="center">
+  <img src="https://github.com/AguaClara/ram_pump/blob/master/water_pumped_closeup.jpg?raw=True" height=400>
+</p>
+<p align="center">
+
+**Figure 10:** This graph shows a close up of the cycle as shown in figure 9
 
 ```Python
 import aguaclara.core.physchem as pc
