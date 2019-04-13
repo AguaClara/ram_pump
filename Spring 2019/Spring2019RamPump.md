@@ -223,6 +223,19 @@ The change in pressure for each cycle was observed by manually opening and closi
 
 ## Results and Analysis
 
+### Import Statements
+
+Run these import statements before running any of the cells below:
+
+```Python
+import aguaclara.research.procoda_parser as pp
+import matplotlib.pyplot as plt
+import numpy as np
+from aguaclara.core.units import unit_registry as u
+import aguaclara.core.constants as c
+import aguaclara.core.physchem as pc
+```
+
 ### Calculating Terminal Velocity of Driving Head
 
 The terminal velocity of the driving head of 2.2557 m/s was calculated by measuring the volume of water expelled at the waste valve in a given amount of time.
@@ -256,11 +269,6 @@ Several trials were run to calculate the force required to lift the plate to ope
 The force required to open the valve ($F_{water}$) was calculated using the following Python code, based on the equations detailed in Figure 6.
 
 ```Python
-from aguaclara.core.units import unit_registry as u
-import numpy as np
-import aguaclara.core.physchem as pc
-import aguaclara.core.constants as c
-
 #Weight of content in the bottle at the instance that the plate opens
 #force to just open the plate= 1261.5, 1277.9, 1262.5, 1254.2, 1269.4; #in grams
 #Filling the water bottle until the plate opens, and then transfer the water in the bottle to another empty beaker until the plate closes
@@ -347,12 +355,42 @@ Then, plugging in the expression obtained for $\Delta t$ above:
 
 $$V_{cycle} = A*\frac{1}{2} \frac{v_f^2 h}{g \Delta h}$$
 
+The following Python code uses the equations derived above to calculate the theoretical volume of water pumped per cycle of the ram pump in its current setup:
+
+```python
+url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
+pp.notes(url)
+start = 39416 #should be more than 'start'
+end = 41600 #should be less than 'stop'
+airchamber = pp.column_of_data(url, start, 2, end, 'cm')
+
+v_f = 2.26*u.m/u.s #terminal velocity, experimentally determined
+area = pc.area_circle(.02372*u.m) #area of drive pipe
+
+#height of the drive pipe
+h = 1.74*u.m
+
+#height difference between height we want to pump water and water level of head tank
+h1 = 2.06*u.m #height from bottom of drive pipe to top of water level in head tank
+h2 = airchamber[0] #around 600 cm, make sure you run airchamber from first cell
+delta_h = (h2 - h1).to(u.m)
+
+delta_t = (v_f*h)/(c.GRAVITY*delta_h)
+print('The theoretical time period in which water is being pumped into the air chamber is ' + str(delta_t))
+
+volume_theoretical = (0.5*area*v_f*delta_t).to(u.milliliter)
+
+print('The theoretical amount of water pumped is: ' + str(volume_theoretical))
+```
+
+The theoretical time period in which water is being pumped into the air chamber is 0.09777 seconds. The theoretical amount of water pumped is 48.82 milliliters.
+
 ### Experimental Volume of Water Pumped per Cycle
 
 The pressure cycles were analyzed to determine the volume of water pumped during each cycle. The ideal gas law was used to calculate the change in volume of air with each pressure cycle. As the ram pump pumps water at its effluent to the air chamber, the air in it is compressed. Thus, the change in air volume is equal to the change in water volume that is pumped into the air chamber. The ideal gas law can be rearranged as follows:
 
 $$ PV = nRT $$
-$$ \Delta V = nRT \frac{1}{P_{final}}-\frac{1}{P_{initial}}$$
+$$ \Delta V = nRT (\frac{1}{P_{final}}-\frac{1}{P_{initial}})$$
 
 where:
 - $\Delta V:$ the change in air volume (equal to the change in water volume)
@@ -364,10 +402,6 @@ where:
 The following Python code graphed the pressure data to obtain the graphs below (Figures 8, 9, & 10):
 
 ```python
-import aguaclara.research.procoda_parser as pp
-import matplotlib.pyplot as plt
-import numpy as np
-from aguaclara.core.units import unit_registry as u
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 pp.notes(url)
 start = 39416 #should be more than 'start'
@@ -400,12 +434,6 @@ The air pressure in the air chamber increased with each cycle, as more water was
 The following Python code graphs the pressure of the waste valve and air chamber at one cycle, so that the pressure difference in the air chamber can be observed, which can be used to calculate the volume of water that the ram pump pumps during each cycle:
 
 ```python
-import aguaclara.research.procoda_parser as pp
-import matplotlib.pyplot as plt
-import numpy as np
-from aguaclara.core.units import unit_registry as u
-import aguaclara.core.constants as c
-
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 pp.notes(url)
 start = 39416 #should be more than 'start'
@@ -437,11 +465,6 @@ The following code shows a close-up of one cycle:
 
 
 ```python
-import aguaclara.research.procoda_parser as pp
-import matplotlib.pyplot as plt
-import numpy as np
-from aguaclara.core.units import unit_registry as u
-
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 
 #find volume of air using ideal gas law
@@ -470,16 +493,11 @@ plt.show()
 </p>
 <p align="center">
 
-**Figure 10:** This graph shows a close up of the cycle as shown in figure 9
+**Figure 10:** This graph shows a close up of the cycle as shown in Figure 9. The time period in which the pressure in the waste valve exceeds the pressure in the air chamber indicates when water is being pumped into the air chamber.
+
+The following Python code calculates the actual volume of water pumped per cycle:
 
 ```Python
-import aguaclara.core.physchem as pc
-import aguaclara.research.procoda_parser as pp
-import matplotlib.pyplot as plt
-import numpy as np
-from aguaclara.core.units import unit_registry as u
-import aguaclara.core.constants as c
-
 #find volume of air using ideal gas law
 #deltaV = nRT/deltaP
 #pressure difference, deltaP (measured as difference in pressure in air chamber)
@@ -534,11 +552,13 @@ The efficiency of the ram pump was calculated by the following equation:
 
 $$Efficiency = \frac{\mid experimental- theoretical \mid}{theoretical} $$
 
+
+
 ## Conclusions
 
-From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law (F=kx). The use of the ideal spring increased the amount of water driven up through the effluent pipe.
+From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law ($F=kx$). The use of the ideal spring increased the amount of water driven up through the effluent pipe.
 
-From additional analysis, the team was able to calculate the average value for terminal velocity calculated experimentally was 2.56 m/s. The terminal velocity was obtained collecting and measuring the volume of water which pass through the ram pump when the plate is open a certain amount of time. With the calculation of the terminal velocity the was able to calculate the volume of pumped water during a cycle.
+From additional analysis, the team was able to calculate that the average value for terminal velocity calculated experimentally was 2.56 m/s. The terminal velocity was obtained collecting and measuring the volume of water which pass through the ram pump when the plate is open a certain amount of time. With the calculation of the terminal velocity the was able to calculate the volume of pumped water during a cycle.
 
 ## Future Work
 
