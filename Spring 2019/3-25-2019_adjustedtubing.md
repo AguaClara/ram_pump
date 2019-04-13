@@ -1,3 +1,16 @@
+### Import Statements
+
+Run these import statements before running any of the cells below:
+
+```Python
+import aguaclara.research.procoda_parser as pp
+import matplotlib.pyplot as plt
+import numpy as np
+from aguaclara.core.units import unit_registry as u
+import aguaclara.core.constants as c
+import aguaclara.core.physchem as pc
+```
+
 #Experimental Calculations
 
 The following code is used to calculate the experiment volume of water pumped per cycle.
@@ -5,13 +18,6 @@ The following code is used to calculate the experiment volume of water pumped pe
 Graph pressure traces.
 
 ```Python
-
-import aguaclara.research.procoda_parser as pp
-import matplotlib.pyplot as plt
-import numpy as np
-from aguaclara.core.units import unit_registry as u
-import aguaclara.core.constants as c
-
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 pp.notes(url)
 start = 39416 #should be more than 'start'
@@ -35,9 +41,6 @@ plt.show()
 Calculate volume of water pumped per cycle.
 
 ```python
-import aguaclara.core.constants as c
-import aguaclara.core.physchem as pc
-
 head = airchamber[-1]-airchamber[0]
 
 #n, initial number of moles of air
@@ -80,12 +83,7 @@ print('The volume of water pumped per 1 cycle is ' + str(deltaV))
 Graph close-up of pressure cycle.
 
 ```python
-import aguaclara.research.procoda_parser as pp
-import matplotlib.pyplot as plt
-import numpy as np
-from aguaclara.core.units import unit_registry as u
-
-url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
+url2 = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 
 #find volume of air using ideal gas law
 #deltaV = nRT/deltaP
@@ -94,9 +92,9 @@ url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019
 start2 = 40750 #should be more than 'start'
 end2 = 40850 #should be less than 'stop'
 
-x2 = (pp.column_of_time(url,start2,end2)).to(u.s)
-pressure2 = pp.column_of_data(url, start2, 1, end2, 'cm')
-airchamber2 = pp.column_of_data(url, start2, 2, end2, 'cm')
+x2 = (pp.column_of_time(url2,start2,end2)).to(u.s)
+pressure2 = pp.column_of_data(url2, start2, 1, end2, 'cm')
+airchamber2 = pp.column_of_data(url2, start2, 2, end2, 'cm')
 
 plt.clf()
 plt.plot(x2,pressure2,'-', label = 'Waste Valve')
