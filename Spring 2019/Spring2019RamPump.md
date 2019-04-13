@@ -417,9 +417,9 @@ plt.plot(x,airchamber,'-', label='Air Chamber')
 plt.xlabel('Time (s)')
 plt.ylabel('Pressure (cm)')
 plt.legend()
-#plt.show()
+plt.show()
 
-plt.savefig('pressure_trace_initialpressure0325_multcycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+#plt.savefig('pressure_trace_initialpressure0325_multcycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 ```
 
 <p align="center">
@@ -544,7 +544,7 @@ print('The volume of water pumped per 1 cycle is ' + str(deltaV))
 
 ```
 
-Thus, the volume of water pumped per cycle is 2.898 milliliter.
+Thus, the volume of water pumped per cycle is 4.195 milliliter.
 
 ### Efficiency of Ram Pump
 
