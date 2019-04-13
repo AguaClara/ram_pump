@@ -558,13 +558,15 @@ $$Efficiency = \frac{\mid experimental- theoretical \mid}{theoretical} $$
 
 From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law ($F=kx$). The use of the ideal spring increased the amount of water driven up through the effluent pipe.
 
-From additional analysis, the team was able to calculate that the average value for terminal velocity calculated experimentally was 2.56 m/s. The terminal velocity was obtained collecting and measuring the volume of water which pass through the ram pump when the plate is open a certain amount of time. With the calculation of the terminal velocity the was able to calculate the volume of pumped water during a cycle.
+The terminal velocity was calculated in order to calculate the theoretical volume of water pumped. By experimentation, the team found that the average value for terminal velocity was 2.56 m/s. The terminal velocity was obtained collecting and measuring the volume of water which pass through the ram pump when the plate is open a certain amount of time. The theoretical volume of water pumped was 48.73 milliliters.
+
+The theoretical volume of water pumped was compared to the experimental volume, which was found by measuring the pressure in the air chamber and using the ideal gas law.  The experimental volume of water pumped was 4.195 milliliters. Comparing the theoretical and experimental volumes, it is clear that the ram pump is very inefficient.
 
 ## Future Work
 
-Over the span of Spring 2019, the team was able to experimentally and theoretically calculate the force of the water on the plate. With this data, we were able to calculate the most effective spring constant, but there were still other variables to be accounted for to optimize the efficiency of the system.
+Over the span of Spring 2019, the team was able to experimentally and theoretically calculate the force of the water on the plate. With this data, the team was able to calculate the most effective spring constant, but there were still other variables to be accounted for to optimize the efficiency of the system.
 
-In other words, although the team collected relevant data concerning the force of water on the plate of the drive pipe, the experimental values were prone to inaccuracy because several components in the current experimental ram pump setup were rusted. The rusting of the pump pieces most probably played a significant role in skewing the weight measurements.
+Although the team collected relevant data concerning the force of water on the plate of the drive pipe, the experimental values were prone to inaccuracy because several components in the current experimental ram pump setup were rusted. The rusting of the pump pieces most probably played a significant role in skewing the weight measurements.
 
 In order to prevent such skewed data, the team recommended the fabrication of another experimental ram pump. Not only would the remodeling account for inaccurate measurements but also it should allowed for easier interchanging of parts in between testing. The Spring 2019 team found that the orientation of the pipes between head tank and collection buckets were rigid and not interchangeable, making the set up difficult to make adjustments.
 
