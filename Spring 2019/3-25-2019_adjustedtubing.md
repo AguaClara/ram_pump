@@ -66,7 +66,6 @@ init_P=(airchamber[0]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)
 
 init_n = (init_P*init_vol/(u.R*T)).to(u.mol)#initial mole of water in the air chamber
 
-
 final_P=((airchamber[-1]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)).to(u.kPa)
 
 #convert head to pressure
