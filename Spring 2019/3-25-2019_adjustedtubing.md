@@ -128,14 +128,20 @@ delta_h = (h2 - h1).to(u.m)
 delta_t = (v_f*h)/(c.GRAVITY*delta_h)
 print('The theoretical time period in which water is being pumped into the air chamber is ' + str(delta_t))
 
-volume = (0.5*area*v_f*delta_t).to(u.milliliter)
+volume_theoretical = (0.5*area*v_f*delta_t).to(u.milliliter)
 
-print('The theoretical amount of water pumped is: ' + str(volume))
+print('The theoretical amount of water pumped is: ' + str(volume_theoretical))
 
 ```
 
 #Efficiency calculations
 
-```
+```python
+vol_exp = deltaV
+vol_th = volume_theoretical
+
+eff = abs(vol_exp - vol_th)/vol_th
+
+print('The efficiency of the ram pump is ' + str(eff))
 
 ```
