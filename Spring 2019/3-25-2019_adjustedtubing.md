@@ -83,7 +83,7 @@ print('The volume of water pumped per 1 cycle is ' + str(deltaV))
 Graph close-up of pressure cycle.
 
 ```python
-url2 = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
+url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 
 #find volume of air using ideal gas law
 #deltaV = nRT/deltaP
