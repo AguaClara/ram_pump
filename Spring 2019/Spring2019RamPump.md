@@ -64,7 +64,7 @@ The main concern regarding the ACVRP was prolonging the time that the plate was 
 
 ### Lab Setup
 
-A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 4). The electric sump pump, highlighted in red in Figure 4, provided a continuous source of water for the head tank. It also provided a constant water level, because the water that went through the overflow funnel was pumped up again by the electric pump. The drive pipe was where water with elevation head entered the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber  measures **[measures]** the water pressure that exited the valve, which indicated the efficiency of the ram pump. This pressure was then converted to an elevation head to see how high the effluent could be pumped. Water that exited as "waste" at the bottom of the ram pump **[through the pump effluent]** was the treated water that flowed into the bucket containing the ram pump. The water was then returned to the distribution tank (the tank which containing the electric sump pump).
+A lab apparatus was constructed to simulate conditions in an AguaClara plant (Figure 4). The electric sump pump, highlighted in red in Figure 4, provided a continuous source of water for the head tank. It also provided a constant water level, because the water that went through the overflow funnel was pumped up again by the electric pump. The drive pipe was where water with elevation head entered the ram pump, providing the driving energy needed for the ram pump to pump water up through the effluent valve. A pressure sensor located at the top of the sealed air chamber  measures **[measures]** the water pressure that exited the valve, which indicated the efficiency of the ram pump. This pressure was then converted to an elevation head to see how high the effluent could be pumped. Water that exited as "waste" at the bottom of the ram pump **[through the pump effluent]** **[addressing comment: this is not actually the pump effluent but the pump waste line]** was the treated water that flowed into the bucket containing the ram pump. The water was then returned to the distribution tank (the tank which containing the electric sump pump).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ram%20pump%20setup.jpeg" height=400>
@@ -80,7 +80,7 @@ The ram pump itself comprised of two metal check valves that were connected by a
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Fall%202018/Pictures/Ram%20pump%20structure.png?raw=True" height=400>
 
-  **Figure 5:** The internal components of the ACVRP included two check valves, a rod, and a plate. More details are included below in the Fabrication and Methods section.
+  **Figure 5:** The internal components of the ACVRP included two check valves, a rod, and a plate. More details are included below in the Fabrication and Methods section. The rod assembly on the left is contained in the two check valves.
 
 </p>
 <p align="center">
