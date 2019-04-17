@@ -22,10 +22,10 @@ The following code is used to calculate the experiment volume of water pumped pe
 Graph pressure traces.
 
 ```Python
-url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
+url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/4-16-19_shortsensor2.xls'
 pp.notes(url)
-start = 39416 #should be more than 'start'
-end = 41600 #should be less than 'stop'
+start = 5400 #should be more than 'start'
+end = 7400 #should be less than 'stop'
 
 x = (pp.column_of_time(url,start,end)).to(u.s)
 pressure = pp.column_of_data(url, start, 1, end, 'cm')
@@ -51,7 +51,7 @@ head = airchamber[-1]-airchamber[0]
 #n, initial number of moles of air
 diam = 1*u.inch
 height_ac = 26.5*u.inch #height of air chamber
-height_water = height_ac- (9*u.cm) #initial height of water in air chamber
+height_water = height_ac- (6*u.cm) #initial height of water in air chamber
 
 vol_water = (pc.area_circle(diam)*height_water).to(u.L) #initial volume of water in air chamber
 
@@ -86,14 +86,14 @@ print('The volume of water pumped per 1 cycle is ' + str(deltaV))
 Graph close-up of pressure cycle.
 
 ```python
-url2 = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
+url2 = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/4-16-19_shortsensor2.xls'
 
 #find volume of air using ideal gas law
 #deltaV = nRT/deltaP
 #pressure difference, deltaP (measured as difference in pressure in air chamber)
 
-start2 = 40750 #should be more than 'start'
-end2 = 40850 #should be less than 'stop'
+start2 = 6200 #should be more than 'start'
+end2 = 6350 #should be less than 'stop'
 
 x2 = (pp.column_of_time(url2,start2,end2)).to(u.s)
 pressure2 = pp.column_of_data(url2, start2, 1, end2, 'cm')
