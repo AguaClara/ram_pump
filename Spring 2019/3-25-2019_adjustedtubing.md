@@ -27,6 +27,7 @@ x = (pp.column_of_time(url,start,end)).to(u.s)
 pressure = pp.column_of_data(url, start, 1, end, 'cm')
 airchamber = pp.column_of_data(url, start, 2, end, 'cm')
 
+
 plt.clf()
 plt.plot(x,pressure,'-', label = 'Waste Valve')
 plt.plot(x,airchamber,'-', label='Air Chamber')
@@ -45,11 +46,11 @@ head = airchamber[-1]-airchamber[0]
 
 #n, initial number of moles of air
 diam = 1*u.inch
-height_water = (26.5*u.inch)- (9*u.cm) #initial height of water in air chamber
+height_ac = 26.5*u.inch #height of air chamber
+height_water = height_ac- (9*u.cm) #initial height of water in air chamber
 
 vol_water = (pc.area_circle(diam)*height_water).to(u.L) #initial volume of water in air chamber
 
-height_ac = 26.5*u.inch #height of air chamber
 vol_airchamber = (pc.area_circle(diam)*height_ac).to(u.L)
 
 init_vol = vol_airchamber - vol_water #initial volume of air in air chamber
@@ -66,9 +67,8 @@ init_P=(airchamber[0]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)
 
 init_n = (init_P*init_vol/(u.R*T)).to(u.mol)#initial mole of water in the air chamber
 
-final_P=((airchamber[-1]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)).to(u.kPa)
+final_P=((airchamber[-1]*pc.density_water(T)*c.GRAVITY).to(u.Pa)+(1*u.atm)).to(u.Pa)
 
-#convert head to pressure
 deltaP = final_P-init_P
 
 #calculate change in volume of air, which is equal to the volume of water pumped
@@ -82,7 +82,7 @@ print('The volume of water pumped per 1 cycle is ' + str(deltaV))
 Graph close-up of pressure cycle.
 
 ```python
-url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
+url2 = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
 
 #find volume of air using ideal gas law
 #deltaV = nRT/deltaP
