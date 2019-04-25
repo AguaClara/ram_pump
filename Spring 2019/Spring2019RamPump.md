@@ -254,9 +254,11 @@ The average of the terminal velocity from these five trials was calculated by fi
 
 ### Force Analysis
 
+#### Force to Open Valve
+
 Several trials were run to calculate the force required to lift the plate to open the check valve (Table 2). The mass of the empty bottle was 114.7 g.
 
-**Table 2:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve. The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
+**Table 2:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve (opened valve). The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
 
 | Trial | Mass of Bottle Contents (g) | Force of Water (N) |
 |-------|-----------------------------|--------------------|
@@ -297,7 +299,52 @@ for i in range(0, (len(contents))):
   print('The force of water is ' + str(F_water[i]))
 ```
 
-The average force required to open the valve is 12.49 newtons. Using this, the required spring force can be calculated.
+The average force required to open the valve is 12.49 newtons.
+
+This calculated force was then verified by replicating the experiment:
+
+**Table 3:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve (opened valve). The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
+
+| Trial | Mass of Bottle Contents (g) | Force of Water (N) |
+|-------|-----------------------------|--------------------|
+| 1     | 1340.4                      | 13.24              |
+| 2     | 1353.7                      | 13.37              |
+| 3     | 1355.3                      | 13.37              |
+| 4     | 1346.1                      | 13.30              |
+| 5     | 1362.0                      | 13.45              |
+
+The force required to open the valve ($F_{water}$) was calculated using the following Python code, based on the equations detailed in Figure 6.
+
+```Python
+G=c.GRAVITY
+mass_rod = 105.9*u.g
+w_rod = (mass_rod*G).to(u.N)
+print('The weight of the rod is '+ str(w_rod))
+
+w_bottle = 115.9*u.g
+contents = [1340.4, 1353.7, 1353.7, 1346.1, 1362.0]*u.g
+tot_weight = []
+#the mass of the empty bottle was added to the mass of the bottle contents because both contribute to total force acting up on the check valve plate
+
+F_water = []
+
+for i in range(0, (len(contents))):
+  tot_weight.append((contents[i] + w_bottle)*G)
+  F_water.append((tot_weight[i]-w_rod).to(u.N))
+  print('The force of water is ' + str(F_water[i]))
+```
+
+The average force required to open the valve is 13.35 newtons. This calculated force was similar to the average force calculated previously (12.49 N).
+
+#### Force to Close Valve
+
+In order to calculate the force required to close the valve, experiments were run as described in the previous section. Water was slowly added to a container on the end of the pulley until the check valve opened and water flowed out of the waste valve of the ram pump. The mass of the container was measured to calculate the force required to open the valve as before. Then, with the check valve open, water was gradually removed from the container with a syringe until the valve closed again. The mass of the container was then measured again. The mass difference between  
+
+An open container was used instead of a bottle to allow
+
+```Python
+
+```
 
 ### Theoretical Volume of Water Pumped per Cycle
 
