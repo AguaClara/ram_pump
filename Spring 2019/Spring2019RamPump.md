@@ -37,7 +37,7 @@ Many water supply plants use horizontal ram pumps to redirect water from a lower
 
 **Figure 2:** Common ram pump systems include “(a) the head tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” ([Young, 1995](https://doi.org/10.1243/PIME_PROC_1995_209_010_01)).
 
-**[Refer to your figure here! :)]** In conventional ram pump systems, the head tank (a) is placed higher than the ram pump in order to provide potential energy to power the pump. As the water is directed down from the head tank to the pump (c) through the drive pipe (b), it experiences considerable head losses: major and minor losses **[You can just say it experiences considerable major and minor losses instead of using the colon.]**. These losses are formed by shear frictional force and flow reduction, a result of water flowing from a pipe of larger diameter to that of a smaller diameter, respectively.
+**[Refer to your figure here! :)]** In conventional ram pump systems (Figure 2), the head tank (a) is placed higher than the ram pump in order to provide potential energy to power the pump. As the water is directed down from the head tank to the pump (c) through the drive pipe (b), it experiences considerable major and minor losses. **[You can just say it experiences considerable major and minor losses instead of using the colon.]** These losses are formed by shear frictional force and flow reduction, a result of water flowing from a pipe of larger diameter to that of a smaller diameter, respectively.
 
 This driving head is directed through the inlet valve of the pump and is expelled through the waste valve (c) until the velocity of the water provides enough force to shut the waste valve. Once the waste valve is shut, the water is redirected and stored into the air chamber (d) that was charged with air. The air pressure inside this chamber pushes the water up through the delivery pipe (e).
 
@@ -46,7 +46,7 @@ In the context of AguaClara plants, conventional ram pumps required tanks to be 
 The ACVRP aligned the head tank, the drive pipe, the pump, and the waste valve along one vertical axis. The vertical configuration required minimum space and eliminated the need for a tank around the waste valve because water was expelled downwards into the distribution system. Unlike the conventional ramp pump design, this condensed design allowed for easier installation into existing plants as it was more compact and interchangeable, and also reduced labor by directly transporting treated water to the chemical stock tank.
 
 
-The previous teams had adopted many of the elements of a conventional ram pump system and had been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consisted of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allowed for the water that flowed down through the drive pipe to pass by the effluent pipe and goes into waste; its acceleration created enough force to overcome the spring force and to close the plate. This closed state built high pressure in the region of the plate and the effluent valve, and as a result of this pressure difference, the water was redirected up through the effluent pipe. The headloss during this transfer of water through the effluent pipe decreased the velocity of water and the pressure, which allowed the spring force to overcome the water force and the plate to open. The difference in pressure due to constantly alternating between these two states, open and closed, allowed for the water to be pumped up (Figure 3).
+The previous teams had adopted many of the elements of a conventional ram pump system and had been modifying this mechanism to satisfy the team’s gravity-powered water filtration design. The current AguaClara ram pump design consisted of a plate attached to a rod loaded with a spring that opens and closes. The naturally open state of the plate allowed for the water that flowed down through the drive pipe to pass by the effluent pipe and goes into waste; its acceleration created enough drag force to overcome the spring force and to close the plate. This closed state built high pressure in the region of the plate and the effluent valve, and as a result of this pressure difference, the water was redirected up through the effluent pipe. The headloss during this transfer of water through the effluent pipe decreased the velocity of water and the pressure, which allowed the spring force to overcome the water force and the plate to open. The difference in pressure due to constantly alternating between these two states, open and closed, allowed for the water to be pumped up (Figure 3).
 
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/valve_cycle.png?raw=True" height=300>
@@ -210,7 +210,7 @@ From the above state, the steps for measuring the flow rate are as follows:
 2. Collect water in the bucket until it fills up approximately 4 L.
 3. Close the ball valve quickly and stop the timer simultaneously.
 
-Note that the ball valve must be quickly opened and closed all the way. Any gradual closing and opening of the valve will skew the measurement of flow rate.
+Note that the ball valve must be quickly opened and closed all the way. Any gradual closing and opening of the valve will skew the measurement of flow rate. Also note that this method has a significant level of inaccuracy due to human error and errors of precision with the measuring instruments used. In order to account for this inaccuracy, it is crucial that the measurement is taken repeatedly to verify consistent results.
 
 #### Observing Pressure Cycles
 The change in pressure for each cycle was observed by manually opening and closing the check valve. The pressure at the waste valve and the air chamber was recorded.  
@@ -338,9 +338,13 @@ The average force required to open the valve is 13.35 newtons. This calculated f
 
 #### Force to Close Valve
 
+<<<<<<< HEAD
 In order to calculate the force required to close the valve, experiments were run as described in the previous section. Water was slowly added to a container on the end of the pulley until the check valve opened and water flowed out of the waste valve of the ram pump. The mass of the container was measured to calculate the force required to open the valve as before. Then, with the check valve open, water was gradually removed from the container with a syringe until the valve closed again. The mass of the container was then measured again. The mass difference between the
+=======
+In order to calculate the force required to close the valve, experiments were run as described in the previous section. Water was slowly added to a container on the end of the pulley until the check valve opened and water flowed out of the waste valve of the ram pump. The mass of the container was measured to calculate the force required to open the valve as before. Then, with the check valve open, water was gradually removed from the container with a syringe until the valve closed again. An open container was used instead of a bottle to allow for easier removal of water. The mass of the container was then measured again. The mass was taken at the point at which the valve began to cycle (when the valve begin opening and closing by itself).  The mass difference between the mass of the container when the valve opened and when the valve closed was then calculated to find
 
-An open container was used instead of a bottle to allow
+>>>>>>> 2e38751ca21ce94d77d252371ad80b6b93515340
+
 
 ```Python
 
@@ -601,6 +605,17 @@ $$Efficiency = \frac{\mid experimental- theoretical \mid}{theoretical} $$
 
 $$Efficiency =\frac{|4.195-48.82|}{48.82} = 0.91468\% $$
 
+
+### Hypotheses for the Cause of Inefficiency
+
+**[Type this out into sentences/paragraphs]**
+
+- Inaccurate pressure readings because the current pressure sensors have a low proof pressure range.
+  - Mention breaking several pressure sensors (our current 30 psi range pressure sensor has a proof pressure of up to 60 psi -- want to switch to pressure sensor with 100 psi range which would have a proof pressure of up to 200 psi)
+  - The pressure from the water driven through the waste valve seems to exceed the pressure range of the sensor, and the sensor cannot accurately read the spikes in pressure changes between the closing and opening of the valve.
+- The diameter of the effluent check valve is too small relative to the diameter of the drive pipe which may create a large amount of headloss that causes much of the inefficiency of the system.
+  - Making the side check valve as big as the valve in the drive pipe may reduce a significant portion of the headloss due to the effluent valve.
+  - Can s
 
 ## Conclusions
 
