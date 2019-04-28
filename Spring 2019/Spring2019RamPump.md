@@ -144,6 +144,14 @@ Thus, by finding the mass needed to keep the check valve open, $F_{water}$ could
 
 ## Fabrication Details
 The ACVRP was fabricated using the following materials:
+| Parts | Dimension | Source |
+|:------------- |:--------- | ------ |
+| Brass Check Valve    | 1" diameter  | Strataflo or [McMaster](https://www.mcmaster.com/7746k831)       |
+|Metal Plate| 1" diameter|Came with check valve|
+| Hex Nuts |           |        |
+| Brass Check Valve |           |        |
+
+
 - Metal plate with diameter of 1"
 - Two check valves of 1" pipe size
 - Threaded rod of length 7.5 inches
@@ -156,8 +164,7 @@ The OnShape design for the components of the ACVRP can be found here:
 - [Check Valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb)
 
 For purchasing components:
-- Check valve can be ordered directly from Strataflo or https://www.mcmaster.com/7746k831
-- Metal plates come with the check valves and cannot be ordered individually
+
 - Hex nut can be ordered here: https://www.mcmaster.com/90264A213
 - Brass jam nuts can be ordered here: https://www.mcmaster.com/92174a031
 - Partially threaded rod (we are still in the process of finding out where to order)
@@ -260,7 +267,7 @@ Several trials were run to calculate the force required to lift the plate to ope
 
 **Table 2:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve (opened valve). The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
 
-| Trial | Mass of Bottle Contents (g) | Force of Water (N) |
+| Trial | Mass of Bottle Contents (g) | Force to Open Valve (N) |
 |-------|-----------------------------|--------------------|
 | 1     | 1261.5                      | 12.46              |
 | 2     | 1277.9                      | 12.62              |
@@ -305,7 +312,7 @@ This calculated force was then verified by replicating the experiment:
 
 **Table 3:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve (opened valve). The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
 
-| Trial | Mass of Bottle Contents (g) | Force of Water (N) |
+| Trial | Mass of Bottle Contents (g) | Force to Open Valve (N) |
 |-------|-----------------------------|--------------------|
 | 1     | 1340.4                      | 13.24              |
 | 2     | 1353.7                      | 13.37              |
@@ -338,16 +345,36 @@ The average force required to open the valve is 13.35 newtons. This calculated f
 
 #### Force to Close Valve
 
-<<<<<<< HEAD
-In order to calculate the force required to close the valve, experiments were run as described in the previous section. Water was slowly added to a container on the end of the pulley until the check valve opened and water flowed out of the waste valve of the ram pump. The mass of the container was measured to calculate the force required to open the valve as before. Then, with the check valve open, water was gradually removed from the container with a syringe until the valve closed again. The mass of the container was then measured again. The mass difference between the
-=======
-In order to calculate the force required to close the valve, experiments were run as described in the previous section. Water was slowly added to a container on the end of the pulley until the check valve opened and water flowed out of the waste valve of the ram pump. The mass of the container was measured to calculate the force required to open the valve as before. Then, with the check valve open, water was gradually removed from the container with a syringe until the valve closed again. An open container was used instead of a bottle to allow for easier removal of water. The mass of the container was then measured again. The mass was taken at the point at which the valve began to cycle (when the valve begin opening and closing by itself).  The mass difference between the mass of the container when the valve opened and when the valve closed was then calculated to find
+In order to calculate the force required to close the valve, experiments were run as described in the previous section. Water was slowly added to a container on the end of the pulley until the check valve opened and water flowed out of the waste valve of the ram pump. The mass of the container was measured to calculate the force required to open the valve as before. Then, with the check valve open, water was gradually removed from the container with a syringe until the valve closed again. An open container was used instead of a bottle to allow for easier removal of water. The mass of the container was then measured again. The mass was taken at the point at which the valve began to cycle (when the valve begin opening and closing by itself).  The mass difference between the mass of the container when the valve opened and when the valve closed was then calculated to find the force required to close the valve:
 
->>>>>>> 2e38751ca21ce94d77d252371ad80b6b93515340
+$$\Delta m = m_{open} - m_{close}$$
+$$F_{close} = (\Delta m - m_{rod})g$$
 
+where:
+- $\Delta m$: mass difference between the mass of the container when the valve opened and when the valve closed
+- $m_{open}$: mass of container when plate was lifted and valve opened, allowing water to flow out of waste valve
+- $m_{close}$: mass of container when plate was closed, allowing water to flow into effluent
+- $F_{close}$: force required to close the valve
+- $m_{rod}$: mass of plate and rod
+- $g$: gravitational constant
 
 ```Python
+G=c.GRAVITY
+mass_rod = 105.9*u.g
+w_rod = (mass_rod*G).to(u.N)
+print('The weight of the rod is '+ str(w_rod))
 
+w_bottle = 115.9*u.g
+contents = [1340.4, 1353.7, 1353.7, 1346.1, 1362.0]*u.g
+tot_weight = []
+#the mass of the empty bottle was added to the mass of the bottle contents because both contribute to total force acting up on the check valve plate
+
+F_water = []
+
+for i in range(0, (len(contents))):
+  tot_weight.append((contents[i] + w_bottle)*G)
+  F_water.append((tot_weight[i]-w_rod).to(u.N))
+  print('The force of water is ' + str(F_water[i]))
 ```
 
 ### Theoretical Volume of Water Pumped per Cycle
@@ -606,17 +633,6 @@ $$Efficiency = \frac{\mid experimental- theoretical \mid}{theoretical} $$
 $$Efficiency =\frac{|4.195-48.82|}{48.82} = 0.91468\% $$
 
 
-### Hypotheses for the Cause of Inefficiency
-
-**[Type this out into sentences/paragraphs]**
-
-- Inaccurate pressure readings because the current pressure sensors have a low proof pressure range.
-  - Mention breaking several pressure sensors (our current 30 psi range pressure sensor has a proof pressure of up to 60 psi -- want to switch to pressure sensor with 100 psi range which would have a proof pressure of up to 200 psi)
-  - The pressure from the water driven through the waste valve seems to exceed the pressure range of the sensor, and the sensor cannot accurately read the spikes in pressure changes between the closing and opening of the valve.
-- The diameter of the effluent check valve is too small relative to the diameter of the drive pipe which may create a large amount of headloss that causes much of the inefficiency of the system.
-  - Making the side check valve as big as the valve in the drive pipe may reduce a significant portion of the headloss due to the effluent valve.
-  - Can s
-
 ## Conclusions
 
 From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law ($F=kx$). The use of the ideal spring increased the amount of water driven up through the effluent pipe.
@@ -631,9 +647,12 @@ Over the span of Spring 2019, the team was able to experimentally and theoretica
 
 Although the team collected relevant data concerning the force of water on the plate of the drive pipe, the experimental values were prone to inaccuracy because several components in the current experimental ram pump setup were rusted. The rusting of the pump pieces most probably played a significant role in skewing the weight measurements.
 
-In order to prevent such skewed data, the team recommended the fabrication of another experimental ram pump. Not only would the remodeling account for inaccurate measurements but also it should allowed for easier interchanging of parts in between testing. The Spring 2019 team found that the orientation of the pipes between head tank and collection buckets were rigid and not interchangeable, making the set up difficult to make adjustments.
+In order to prevent such skewed data, the team recommended the fabrication of another experimental ram pump. Not only would the remodeling account for inaccurate measurements but also it should allow for easier interchanging of parts in between testing. The Spring 2019 team found that the orientation of the pipes between head tank and collection buckets were rigid and not interchangeable, making the set up difficult to make adjustments.
 
-Further research in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe had yet to be explored. Optimizing this ratio between the diameters of the two pipes would help improve the efficiency of the ram pump.
+The pressure sensor attached to the ram pump across from the effluent valve should also be reevaluated. The currently installed, 30 psi range pressure sensor repeatedly broke during the pressure cycle readings. The current pressure sensors have a relatively low proof pressure range, meaning that the pressure around the plate most likely exceeded the upper pressure limit of the sensor. This consistent breakage was hypothesized to have been caused by pressure spikes in the cycle. The pressure from the water driven through the waste valve seemed to exceed the pressure range of the sensor, meaning the sensor could not accurately read the spikes. Measurements of the pressure cycle with a pressure sensor of higher pressure range (e.g. [-100 to 100 psi](https://www.omega.com/en-us/sensors-and-sensing-equipment/pressure-and-strain/pressure-transducers/px26/p/PX26-100DV)) should be taken to verify that there exists a pressure spike per cycle that exceeds the sensor's proof pressure.
+
+Further research in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe had yet to be explored. The diameter of the effluent check valve seems to be too small relative to the diameter of the drive pipe which may create a large amount of headloss that causes much of the inefficiency of the system. Making the side check valve as wide as the valve in the drive pipe may reduce a significant portion of the headloss due to the effluent valve. Optimizing this ratio between the diameters of the two pipes would help improve the efficiency of the ram pump.
+
 
 ## Bibliography
 Adelman, M. J., Weber-Shirk, M. L., Will, J. C., Cordero, A. N., Maher, W. J., Lion, L. W. (2013). "[Novel Fluidic Control System for Stacked Rapid Sand Filters](https://ascelibrary.org/doi/10.1061/%28ASCE%29EE.1943-7870.0000700).” Journal of Environmental Engineering 139 (7)939-946.
