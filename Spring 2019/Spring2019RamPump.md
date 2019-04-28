@@ -144,14 +144,6 @@ Thus, by finding the mass needed to keep the check valve open, $F_{water}$ could
 
 ## Fabrication Details
 The ACVRP was fabricated using the following materials:
-| Parts | Dimension | Source |
-|:------------- |:--------- | ------ |
-| Brass Check Valve    | 1" diameter  | Strataflo or [McMaster](https://www.mcmaster.com/7746k831)       |
-|Metal Plate| 1" diameter|Came with check valve|
-| Hex Nuts |           |        |
-| Brass Check Valve |           |        |
-
-
 - Metal plate with diameter of 1"
 - Two check valves of 1" pipe size
 - Threaded rod of length 7.5 inches
@@ -163,11 +155,13 @@ The OnShape design for the components of the ACVRP can be found here:
 - [Metal Plate and Rod](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/9bef45d7eddc1444e77d6a46)
 - [Check Valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb)
 
-For purchasing components:
-
-- Hex nut can be ordered here: https://www.mcmaster.com/90264A213
-- Brass jam nuts can be ordered here: https://www.mcmaster.com/92174a031
-- Partially threaded rod (we are still in the process of finding out where to order)
+| Parts | Dimension | Source |
+|:------------- |:--------- | ------ |
+| Brass Check Valve    | 1" diameter  | Strataflo or [McMaster](https://www.mcmaster.com/7746k831)       |
+|Metal Plate| 1" diameter|Came with check valve|
+| Hex Nuts |3/8"-16 Thread Size, 1-1/8" Long|[McMaster](https://www.mcmaster.com/90264A213)|
+| Brass jam nuts |3/8"-16 Thread Size|[McMaster](https://www.mcmaster.com/92174a031)|
+|Partially Threaded Rod|3/8"-16 Thread Size, 8" Long|[McMaster](https://www.mcmaster.com/98750a458) (Fully threaded but will be fabricated to partially threaded)|
 
 ## Methods
 ### Experimental Apparatus
