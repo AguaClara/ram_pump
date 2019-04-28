@@ -338,7 +338,7 @@ The average force required to open the valve is 13.35 newtons. This calculated f
 
 #### Force to Close Valve
 
-In order to calculate the force required to close the valve, experiments were run as described in the previous section. Water was slowly added to a container on the end of the pulley until the check valve opened and water flowed out of the waste valve of the ram pump. The mass of the container was measured to calculate the force required to open the valve as before. Then, with the check valve open, water was gradually removed from the container with a syringe until the valve closed again. The mass of the container was then measured again. The mass difference between  
+In order to calculate the force required to close the valve, experiments were run as described in the previous section. Water was slowly added to a container on the end of the pulley until the check valve opened and water flowed out of the waste valve of the ram pump. The mass of the container was measured to calculate the force required to open the valve as before. Then, with the check valve open, water was gradually removed from the container with a syringe until the valve closed again. The mass of the container was then measured again. The mass difference between the
 
 An open container was used instead of a bottle to allow
 
