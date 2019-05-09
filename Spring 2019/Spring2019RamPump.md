@@ -231,6 +231,9 @@ import numpy as np
 from aguaclara.core.units import unit_registry as u
 import aguaclara.core.constants as c
 import aguaclara.core.physchem as pc
+import aguaclara.core.head_loss as hl
+import aguaclara.core.materials as mats
+
 ```
 
 ### Calculating Terminal Velocity of Driving Head
@@ -662,7 +665,12 @@ where:
 Since minor losses dominate in the effluent pipe, the major loss term was deemed negligible and assumed to be zero. The minor loss coefficients were obtained from the equations found in the AguaClara package [head_loss.py](https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/head_loss.py).
 
 ```Python
+#Q = terminal velocity * A
+Q = v_f*area
+
 #sudden contraction
+k_contraction = hl.k_value_reduction(ent_pipe_id=1*u.inch, exit_pipe_id=0.25*u.inch, q=Q, fitting_angle=180, rounded=True, nu=c.WATER_NU, pipe_rough=mats.PVC_PIPE_ROUGH)
+
 
 #elbow, 90 degree
 
