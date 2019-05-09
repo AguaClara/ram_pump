@@ -630,9 +630,11 @@ Thus, the volume of water pumped per cycle is 4.195 milliliter.
 
 The efficiency of the ram pump was calculated by the following equation:
 
-$$Efficiency = \frac{\mid experimental- theoretical \mid}{theoretical} $$
+$$Error = \frac{\mid experimental- theoretical \mid}{theoretical} $$
 
-$$Efficiency =\frac{|4.195-48.82|}{48.82} = 0.91468\% $$
+$$Percet Error =\frac{|4.195-48.82|}{48.82} * 100\% = 91.468\% $$
+
+$$Efficiency = 100\% - 91.468\% = 8.592\% $$
 
 
 ## Conclusions
@@ -641,19 +643,34 @@ From extensive data collection and analysis, the team calculated that the force 
 
 The terminal velocity was calculated in order to calculate the theoretical volume of water pumped. By experimentation, the team found that the average value for terminal velocity was 2.56 m/s. The terminal velocity was obtained collecting and measuring the volume of water which pass through the ram pump when the plate is open a certain amount of time. The theoretical volume of water pumped was 48.73 milliliters.
 
-The theoretical volume of water pumped was compared to the experimental volume, which was found by measuring the pressure in the air chamber and using the ideal gas law.  The experimental volume of water pumped was 4.195 milliliters. Comparing the theoretical and experimental volumes, it is clear that the ram pump is very inefficient (0.91468\% efficiency).
+The theoretical volume of water pumped was compared to the experimental volume, which was found by measuring the pressure in the air chamber and using the ideal gas law.  The experimental volume of water pumped was 4.195 milliliters. Comparing the theoretical and experimental volumes, it is clear that the ram pump is very inefficient (8.592\% efficiency).
 
 ## Future Work
 
 Over the span of Spring 2019, the team was able to experimentally and theoretically calculate the force of the water on the plate. With this data, the team was able to calculate the most effective spring constant, but there were still other variables to be accounted for to optimize the efficiency of the system.
 
+#### Reduction of Headloss
+Further research in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe had yet to be explored. The diameter of the effluent check valve seems to be too small relative to the diameter of the drive pipe which may create a large amount of headloss that causes much of the inefficiency of the system. Making the side check valve as wide as the valve in the drive pipe may reduce a significant portion of the headloss due to the effluent valve. Optimizing this ratio between the diameters of the two pipes would help improve the efficiency of the ram pump.
+
+#### Pressure Sensors
+The pressure sensor attached to the ram pump across from the effluent valve should also be reevaluated. The currently installed, 30 psi range pressure sensor repeatedly broke during the pressure cycle readings. The current pressure sensors have a relatively low proof pressure range, meaning that the pressure around the plate most likely exceeded the upper pressure limit of the sensor. This consistent breakage was hypothesized to have been caused by pressure spikes in the cycle. The pressure from the water driven through the waste valve seemed to exceed the pressure range of the sensor, meaning the sensor could not accurately read the spikes. Measurements of the pressure cycle with a pressure sensor of higher pressure range (e.g. [-100 to 100 psi](https://www.omega.com/en-us/sensors-and-sensing-equipment/pressure-and-strain/pressure-transducers/px26/p/PX26-100DV)) should be taken to verify that there exists a pressure spike per cycle that exceeds the sensor's proof pressure.
+
+#### Fabrication of a Modified Ram Pump Setup
 Although the team collected relevant data concerning the force of water on the plate of the drive pipe, the experimental values were prone to inaccuracy because several components in the current experimental ram pump setup were rusted. The rusting of the pump pieces most probably played a significant role in skewing the weight measurements.
 
 In order to prevent such skewed data, the team recommended the fabrication of another experimental ram pump. Not only would the remodeling account for inaccurate measurements but also it should allow for easier interchanging of parts in between testing. The Spring 2019 team found that the orientation of the pipes between head tank and collection buckets were rigid and not interchangeable, making the set up difficult to make adjustments.
 
-The pressure sensor attached to the ram pump across from the effluent valve should also be reevaluated. The currently installed, 30 psi range pressure sensor repeatedly broke during the pressure cycle readings. The current pressure sensors have a relatively low proof pressure range, meaning that the pressure around the plate most likely exceeded the upper pressure limit of the sensor. This consistent breakage was hypothesized to have been caused by pressure spikes in the cycle. The pressure from the water driven through the waste valve seemed to exceed the pressure range of the sensor, meaning the sensor could not accurately read the spikes. Measurements of the pressure cycle with a pressure sensor of higher pressure range (e.g. [-100 to 100 psi](https://www.omega.com/en-us/sensors-and-sensing-equipment/pressure-and-strain/pressure-transducers/px26/p/PX26-100DV)) should be taken to verify that there exists a pressure spike per cycle that exceeds the sensor's proof pressure.
+The modified experimental ram pump system will account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. **[Should I rephrase this because we don't know if the new ram pump will actually resolve these issues?]** The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements.
 
-Further research in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe had yet to be explored. The diameter of the effluent check valve seems to be too small relative to the diameter of the drive pipe which may create a large amount of headloss that causes much of the inefficiency of the system. Making the side check valve as wide as the valve in the drive pipe may reduce a significant portion of the headloss due to the effluent valve. Optimizing this ratio between the diameters of the two pipes would help improve the efficiency of the ram pump.
+#### Modified Hooke's Law equation
+$$F = kx$$
+$$k' = kL$$
+$$F = \frac{k'x}{L} $$
+$$F_{open} = \frac{k'x_{1}}{L} $$
+$$F_{close} = \frac{k'x_{2}}{L} $$
+$$F_{o} - F_{c} =  $$
+$$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$
+$$k' = 2.6197L  $$
 
 
 ## Bibliography
