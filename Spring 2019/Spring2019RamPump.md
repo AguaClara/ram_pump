@@ -664,18 +664,21 @@ In order to prevent such skewed data, the team recommended the fabrication of an
 The modified experimental ram pump system will hopefully account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. **[Should I rephrase this because we don't know if the new ram pump will actually resolve these issues?]** The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements.
 
 #### Modified Hooke's Law equation
+As mentioned before on the report, we used Hooke's Law for spring in order to obtain the optimal spring constant.
 $$F = kx$$
+The inconvenient of Hooke's Law was that we were not able to design for an specific spring strength and length because it is in term of the compression length x. We defined k’ as a new intrinsic material property that depends on the spring constant and length. Thus, we implemented into the Hooke's Law:
+
 $$k' = kL$$
 
 $$F = \frac{k'x}{L} $$
 $$F_{open} = \frac{k'x_{1}}{L} $$
 
-$$F_{close} = \frac{k'x_{2}}{L} $$
+$$F_{close} = \frac{k'x_{2}}{L} $$We included the last two equations in one so we could solve for k':
 $$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
 
 $$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$
 
-$$k' = 2.6197L  $$
+$$k' = 2.6197L  $$ k’ allows us to change the length of the spring to obtain the k constant we want.
 
 
 ## Bibliography
