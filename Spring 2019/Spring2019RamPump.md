@@ -1,6 +1,6 @@
 # Ram Pump, Spring 2019
 #### Ching Pang, Cheer Tsang, Alyssa Ju, Iñigo Cabrera
-#### April 12, 2019
+#### May 10, 2019
 
 **[Overall: Your report looks awesome guys!! I made some small comments, but I'm so happy with your report!!!!]**
 
@@ -632,14 +632,15 @@ The efficiency of the ram pump was calculated by the following equation:
 
 $$Error = \frac{\mid experimental- theoretical \mid}{theoretical} $$
 
-$$Percet Error =\frac{|4.195-48.82|}{48.82} * 100\% = 91.468\% $$
+$$Percent Error =\frac{|4.195-48.82|}{48.82} * 100\% = 91.468\% $$
 
 $$Efficiency = 100\% - 91.468\% = 8.592\% $$
 
+Thus, the efficiency of the current ram pump design is 8.592%.
 
 ## Conclusions
 
-From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law ($F=kx$). The use of the ideal spring increased the amount of water driven up through the effluent pipe.
+From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law ($F=kx$). The use of the ideal spring increased the amount of water driven up through the effluent pipe. **[Should this previous sentence be included?]** Hooke's Law depends on the compression length of the spring and does not account for the material property of the spring (e.g., the natural length of spring).
 
 The terminal velocity was calculated in order to calculate the theoretical volume of water pumped. By experimentation, the team found that the average value for terminal velocity was 2.56 m/s. The terminal velocity was obtained collecting and measuring the volume of water which pass through the ram pump when the plate is open a certain amount of time. The theoretical volume of water pumped was 48.73 milliliters.
 
@@ -660,16 +661,20 @@ Although the team collected relevant data concerning the force of water on the p
 
 In order to prevent such skewed data, the team recommended the fabrication of another experimental ram pump. Not only would the remodeling account for inaccurate measurements but also it should allow for easier interchanging of parts in between testing. The Spring 2019 team found that the orientation of the pipes between head tank and collection buckets were rigid and not interchangeable, making the set up difficult to make adjustments.
 
-The modified experimental ram pump system will account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. **[Should I rephrase this because we don't know if the new ram pump will actually resolve these issues?]** The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements.
+The modified experimental ram pump system will hopefully account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. **[Should I rephrase this because we don't know if the new ram pump will actually resolve these issues?]** The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements.
 
 #### Modified Hooke's Law equation
 $$F = kx$$
 $$k' = kL$$
+
 $$F = \frac{k'x}{L} $$
 $$F_{open} = \frac{k'x_{1}}{L} $$
+
 $$F_{close} = \frac{k'x_{2}}{L} $$
-$$F_{o} - F_{c} =  $$
+$$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
+
 $$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$
+
 $$k' = 2.6197L  $$
 
 
