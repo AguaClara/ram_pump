@@ -640,7 +640,16 @@ Thus, the current ram pump design pumps only 8.592% of the volume it should be p
 
 ### Headloss through Effluent
 
-It was hypothesized that the reason the ram pump was so inefficient is due to the small diameter of the effluent pipe, which creates a very high headloss that prevents water from being pumped into the air chamber. In order to verify this hypothesis, the headloss through the effluent was calculated. The equation for headloss through a pipe is as follows:
+It was hypothesized that the reason the ram pump was so inefficient is due to the small diameter of the effluent pipe, which creates a very high headloss that prevents water from being pumped into the air chamber. In order to verify this hypothesis, the headloss through the effluent was calculated. Figure 11 shows where minor loss occurs as water is pumped from the effluent into the air chamber.
+
+<p align="center">
+  <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/headloss_schematic.png?raw=True" height=400>
+</p>
+<p align="center">
+
+**Figure 11:** Minor loss occurs in three locations as water is pumped from the effluent of the ram pump into the air chamber: 1) sudden flow contraction from drive pipe to effluent pipe, 2) as water flows around the 90 degree elbow, 3) as flow expands from the effluent pipe into the air chamber.
+
+The equation for headloss through a pipe is as follows:
 
 $$h_L =(\Sigma K + f \frac{L}{D}) \frac{Q^2}{A^2 2g} $$
 
@@ -650,7 +659,17 @@ where:
 - $Q$: flow rate in drive pipe (cubic meters)
 - $A$: cross-sectional area of effluent pipe
 
-Since minor losses dominate in the effluent pipe,
+Since minor losses dominate in the effluent pipe, the major loss term was deemed negligible and assumed to be zero. The minor loss coefficients were obtained from the equations found in the AguaClara package [head_loss.py](https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/head_loss.py).
+
+```Python
+#sudden contraction
+
+#elbow, 90 degree
+
+#sudden expansion
+
+
+```
 
 
 ## Conclusions
@@ -713,16 +732,18 @@ $$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
  <p align="center">
 
  $$k' = 2.6197L  $$
-
-10.3 cm - 3.9 cm= 6.4 cm
+The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance the bottom stopper and stopping part of the bottom empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. In the table below showed the springs options, we considered that a spring which was less than 1 inch (2.5 cm) was ridiculous tiny.
 
 | Trial | Spring length (cm) | Intrinsic Spring constant (N) |
 |-------|-----------------------------|--------------------|
-| 1     | 0.5                      | 1.31            |
-| 2     | 1.0                   | 2.62             |
-| 3     | 1.5                     |              |
-| 4     | 2.0                      | 13.30              |
-| 5     | 2.5                    | 13.45              |
+| 1     | 3.0                      | 7.85            |
+| 2     | 3.5                   | 9.16             |
+| 3     | 4.0                     | 10.4             |
+| 4     | 4.5                      | 11.8              |
+| 5     | 5.0                    | 13.1             |
+| 6     | 5.5                    | 14.4             |
+| 7     | 6.0                    | 15.7             |
+| 8     | 6.4                    | 16.8             |
 
 ## Bibliography
 Adelman, M. J., Weber-Shirk, M. L., Will, J. C., Cordero, A. N., Maher, W. J., Lion, L. W. (2013). "[Novel Fluidic Control System for Stacked Rapid Sand Filters](https://ascelibrary.org/doi/10.1061/%28ASCE%29EE.1943-7870.0000700).” Journal of Environmental Engineering 139 (7)939-946.
