@@ -636,7 +636,22 @@ $$Percent Error =\frac{|4.195-48.82|}{48.82} * 100\% = 91.468\% $$
 
 $$Efficiency = 100\% - 91.468\% = 8.592\% $$
 
-Thus, the efficiency of the current ram pump design is 8.592%.
+Thus, the current ram pump design pumps only 8.592% of the volume it should be pumping, which indicates that the ram pump is very inefficient.
+
+### Headloss through Effluent
+
+It was hypothesized that the reason the ram pump was so inefficient is due to the small diameter of the effluent pipe, which creates a very high headloss that prevents water from being pumped into the air chamber. In order to verify this hypothesis, the headloss through the effluent was calculated. The equation for headloss through a pipe is as follows:
+
+$$h_L =(\Sigma K + f \frac{L}{D}) \frac{Q^2}{A^2 2g} $$
+
+where:
+- $\Sigma K $: minor loss coefficient
+- $f \frac{L}{D}$: major loss coefficient; negligible compared to minor loss
+- $Q$: flow rate in drive pipe (cubic meters)
+- $A$: cross-sectional area of effluent pipe
+
+Since minor losses dominate in the effluent pipe,
+
 
 ## Conclusions
 
@@ -670,16 +685,44 @@ The inconvenient of Hooke's Law was that we were not able to design for an speci
 
 $$k' = kL$$
 
-$$F = \frac{k'x}{L} $$
+$$F = \frac{k'x}{L} $$We defined this last equation for the two states in the valve: when the valve was closed, we found the force required to open and when the valve is open, we found the force required to close.
 $$F_{open} = \frac{k'x_{1}}{L} $$
 
-$$F_{close} = \frac{k'x_{2}}{L} $$We included the last two equations in one so we could solve for k':
+$$F_{close} = \frac{k'x_{2}}{L}$$Where:
+
+- $F_{open}$: mass of container when plate was lifted and valve opened, allowing water to flow out of waste valve
+- $F_{close}$: force required to close the valve
+- $x_{1}$: Compression length when the valve was closed
+- $x_{2}$: Compression length when the valve was open
+- $k'$: Intrinsic material property of the spring that is defined by $L$ and $k$
+- $L$: Length of the spring
+
+ We included the last two equations in one so we could solve for k':
 $$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
 
-$$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$
+$$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
 
-$$k' = 2.6197L  $$ k’ allows us to change the length of the spring to obtain the k constant we want.
+- $F_{open} = 13.35$  $N$
+- $F_{close} = 4.181$ $N$
+- $\Delta x = 3.5 $ $cm$. Compression length difference between open and close
 
+ k’ allows us to change the length of the spring to obtain the k constant we want.
+ <p align="center">
+   <img src="https://github.com/AguaClara/ram_pump/blob/master/spring_constant.jpg?raw=True" height=400>
+ </p>
+ <p align="center">
+
+ $$k' = 2.6197L  $$
+
+10.3 cm - 3.9 cm= 6.4 cm
+
+| Trial | Spring length (cm) | Intrinsic Spring constant (N) |
+|-------|-----------------------------|--------------------|
+| 1     | 0.5                      | 1.31            |
+| 2     | 1.0                   | 2.62             |
+| 3     | 1.5                     |              |
+| 4     | 2.0                      | 13.30              |
+| 5     | 2.5                    | 13.45              |
 
 ## Bibliography
 Adelman, M. J., Weber-Shirk, M. L., Will, J. C., Cordero, A. N., Maher, W. J., Lion, L. W. (2013). "[Novel Fluidic Control System for Stacked Rapid Sand Filters](https://ascelibrary.org/doi/10.1061/%28ASCE%29EE.1943-7870.0000700).” Journal of Environmental Engineering 139 (7)939-946.
