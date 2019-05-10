@@ -682,9 +682,11 @@ k_contraction = hl.k_value_reduction(ent_pipe_id=1*u.inch, exit_pipe_id=0.25*u.i
 
 ## Conclusions
 
-From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team tried to determine the ideal spring constant using Hooke's Law ($F=kx$).
+#### Finding the Ideal Spring Constant
+From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team tried to determine the ideal spring constant using Hooke's Law ($F=kx$). However, the calculated ideal spring constant was inaccurate because of the lack of consideration for the material properties of the spring as a result of using the Hooke's Law which only depends on the compression length.
 
-The terminal velocity was calculated in order to calculate the theoretical volume of water pumped. By experimentation, the team found that the average value for terminal velocity was 2.56 m/s. The terminal velocity was obtained collecting and measuring the volume of water which pass through the ram pump when the plate is open a certain amount of time. The theoretical volume of water pumped was 48.73 milliliters.
+#### Volumetric Output of Water
+The terminal velocity was also calculated in order to calculate the theoretical volume of water pumped. By experimentation, the team found that the average value for terminal velocity was 2.56 m/s. The terminal velocity was obtained collecting and measuring the volume of water which pass through the ram pump when the plate is open a certain amount of time. The theoretical volume of water pumped was 48.73 milliliters.
 
 The theoretical volume of water pumped was compared to the experimental volume, which was found by measuring the pressure in the air chamber and using the ideal gas law.  The experimental volume of water pumped was 4.195 milliliters. Comparing the theoretical and experimental volumes, it is clear that the ram pump is very inefficient (8.592\% efficiency).
 
