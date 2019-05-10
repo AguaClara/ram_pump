@@ -705,14 +705,17 @@ In order to prevent such skewed data, the team recommended the fabrication of an
 
 The modified experimental ram pump system will hopefully account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements.
 
-#### Modified Hooke's Law equation
-As mentioned before, Hooke's Law was used in order to obtain the optimal spring constant for the spring.
+#### Modified Hooke's Law Equation
+As previously stated, Hooke's Law was used in order to obtain the optimal spring constant for the spring.
 $$F = kx$$
 Because Hooke's Law solely depends on the compression length x, the equation was unhelpful for designing a specific spring strength and length. To bypass the limitations of Hooke's Law, the team defined k' as a new intrinsic material property that depends on the spring constant and length. Thus, we implemented into the Hooke's Law:
 
 $$k' = kL$$
 
-$$F = \frac{k'x}{L} $$We defined this last equation for the two states in the valve: when the valve was closed, we found the force required to open and when the valve is open, we found the force required to close.
+$$F = \frac{k'x}{L} $$
+
+We defined this last equation for the two states in the valve: when the valve was closed, we found the force required to open and when the valve is open, we found the force required to close
+
 $$F_{open} = \frac{k'x_{1}}{L} $$
 
 $$F_{close} = \frac{k'x_{2}}{L}$$Where:
@@ -733,14 +736,14 @@ $$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
 - $F_{close} = 4.181$ $N$
 - $\Delta x = 3.5 $ $cm$. Compression length difference between open and close
 
- The k’ allowed us to change the length of the spring to obtain the k constant desired.
+ The k’ allowed us to change the length of the spring to obtain the desired k constant.
  <p align="center">
    <img src="https://github.com/AguaClara/ram_pump/blob/master/spring_constant.jpg?raw=True" height=400>
  </p>
  <p align="center">
 
  $$k' = 2.6197L  $$
-The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance the bottom stopper and stopping part of the bottom empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. In the table below showed the springs options, we considered that a spring which was less than 1 inch (2.5 cm) was ridiculous tiny.
+The range of possible spring length as graphically represented above was reduced because of the constraint of the maximum length of spring that could fit in the ram pump. The maximum distance between the bottom stopper and the stopping part of the bottom empty check valve is 6.4 cm. This value is the maximum allowed natural length of the spring. The following table represents the intrinsic properties of various spring options. The range of spring lengths begins with 3.0 cm, since any smaller value would be considered too physically small to manufacture.
 
 | Trial | Spring length (cm) | Intrinsic Spring constant (N) |
 |-------|-----------------------------|--------------------|
