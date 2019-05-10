@@ -708,7 +708,7 @@ The modified experimental ram pump system will hopefully account for the aforeme
 #### Modified Hooke's Law equation
 As mentioned before on the report, we used Hooke's Law for spring in order to obtain the optimal spring constant.
 $$F = kx$$
-The inconvenient of Hooke's Law was that we were not able to design for an specific spring strength and length because it is in term of the compression length x. We defined k’ as a new intrinsic material property that depends on the spring constant and length. Thus, we implemented into the Hooke's Law:
+The inconvenient of Hooke's Law was that we were not able to design for an specific spring constant and length because it is in term of the compression length x. We defined k’ as a new intrinsic material property that depends on the spring constant and length. Thus, we implemented into the Hooke's Law:
 
 $$k' = kL$$
 
@@ -740,7 +740,7 @@ $$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
  <p align="center">
 
  $$k' = 2.6197L  $$
-The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance the bottom stopper and stopping part of the bottom empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. In the table below showed the springs options, we considered that a spring which was less than 1 inch (2.5 cm) was ridiculous tiny.
+The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. In the table below is showed the different spring options. We considered that a spring which was less than 1 inch (2.5 cm) was ridiculously tiny.
 
 | Spring | Spring length (cm) | Intrinsic Spring constant (N) |
 |-------|-----------------------------|--------------------|
