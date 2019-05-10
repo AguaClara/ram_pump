@@ -442,7 +442,7 @@ The linear relationship between the length of the spring, $L$, and the intrinsic
 
 $$k' = 2.6197L  $$
 
-The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. Table 7 showed the different spring options. We considered that a spring which was less than 1 inch (2.5 cm) was ridiculously tiny.
+In order to define a practical range of springs, the maximum length of spring that could fit into the rod was measured. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm, which represents the maximum length a spring could be without an initial compression. Table 6 shows possible options for different lengths of springs.
 
 **Table 6:** Springs of different natural lengths
 
@@ -456,60 +456,6 @@ The range of spring length we could choose was reduced because we measured the m
 | 6     | 5.5                    | 14.4             |
 | 7     | 6.0                    | 15.7             |
 | 8     | 6.4                    | 16.8             |
-
-#### Modified Hooke's Law Equation
-As previously stated, Hooke's Law was used in order to obtain the optimal spring constant for the spring.
-$$F = kx$$
-Because Hooke's Law solely depends on the compression length x, the equation was unhelpful for designing a specific spring strength and length. To bypass the limitations of Hooke's Law, the team defined k' as a new intrinsic material property that depends on the spring constant and length. Thus, we implemented into the Hooke's Law:
-
-$$k' = kL$$
-
-$$F = \frac{k'x}{L} $$
-
-We defined this last equation for the two states in the valve: when the valve was closed, we found the force required to open and when the valve is open, we found the force required to close
-
-$$F_{open} = \frac{k'x_{1}}{L} $$
-
-$$F_{close} = \frac{k'x_{2}}{L}$$Where:
-
-- $F_{open}$: mass of container when plate was lifted and valve opened, allowing water to flow out of waste valve
-- $F_{close}$: force required to close the valve
-- $x_{1}$: Compression length when the valve was closed
-- $x_{2}$: Compression length when the valve was open
-- $k'$: Intrinsic material property of the spring that is defined by $L$ and $k$
-- $L$: Length of the spring
-
- The last two equations ($F_{open}$, $F_{close}$) were combined to solve for k':
-$$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
-
-$$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
-
-- $F_{open} = 13.35$  $N$
-- $F_{close} = 4.181$ $N$
-- $\Delta x = 3.5 $ $cm$. Compression length difference between open and close
-
- The k’ allowed us to change the length of the spring to obtain the desired k constant.
- <p align="center">
-   <img src="https://github.com/AguaClara/ram_pump/blob/master/spring_constant.jpg?raw=True" height=400>
- </p>
- <p align="center">
-
- $$k' = 2.6197L  $$
-The range of possible spring length as graphically represented above was reduced because of the constraint of the maximum length of spring that could fit in the ram pump. The maximum distance between the bottom stopper and the stopping part of the bottom empty check valve is 6.4 cm. This value is the maximum allowed natural length of the spring. The following table represents the intrinsic properties of various spring options. The range of spring lengths begins with 3.0 cm, since any smaller value would be considered too physically small to manufacture.
-
-
-**Table 8:**
-| Trial | Spring length (cm) | Intrinsic Spring constant (N) |
-|-------|-----------------------------|--------------------|
-| 1     | 3.0                      | 7.85            |
-| 2     | 3.5                   | 9.16             |
-| 3     | 4.0                     | 10.4             |
-| 4     | 4.5                      | 11.8              |
-| 5     | 5.0                    | 13.1             |
-| 6     | 5.5                    | 14.4             |
-| 7     | 6.0                    | 15.7             |
-| 8     | 6.4                    | 16.8             |
-
 
 ### Theoretical Volume of Water Pumped per Cycle
 
@@ -611,7 +557,7 @@ where:
 - $T:$ standard air temperature, 293 K
 - $\Delta P$: change in pressure in the air chamber during each cycle (opening and closing the valve once), measured experimentally
 
-The following Python code graphed the pressure data to obtain the graphs below (Figures 10, 11, & 12):
+The following Python code graphed the pressure data to obtain the graphs below (Figures 11, 12, & 13):
 
 ```python
 url = 'https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/3-25-2019_shortsensor0.xls'
@@ -639,7 +585,7 @@ plt.show()
 </p>
 <p align="center">
 
-**Figure 10:** The pressure was recorded as the valve was manually opened and closed using the pulley system.
+**Figure 11:** The pressure was recorded as the valve was manually opened and closed using the pulley system.
 
 The air pressure in the air chamber increased with each cycle, as more water was pumped into the air chamber, compressing the air.
 
@@ -669,9 +615,9 @@ plt.show()
 </p>
 <p align="center">
 
-**Figure 11:** The pressure of the air chamber was observed as the valve was opened and closed. The pressure difference was then used to calculate the volume of water pumped by the ram pump.
+**Figure 12:** The pressure of the air chamber was observed as the valve was opened and closed. The pressure difference was then used to calculate the volume of water pumped by the ram pump.
 
-Based on the one cycle observed in Figure 11, the difference in pressure was 16.4 centimeters. Using the ideal gas law, the volume of water pumped during each cycle was calculated:
+Based on the one cycle observed in Figure 12, the difference in pressure was 16.4 centimeters. Using the ideal gas law, the volume of water pumped during each cycle was calculated:
 
 The following code shows a close-up of one cycle:
 
@@ -705,7 +651,7 @@ plt.show()
 </p>
 <p align="center">
 
-**Figure 12:** This graph shows a close up of the cycle as shown in Figure 2. The time period in which the pressure in the waste valve exceeds the pressure in the air chamber indicates when water is being pumped into the air chamber.
+**Figure 13:** This graph shows a close up of the cycle as shown in Figure 2. The time period in which the pressure in the waste valve exceeds the pressure in the air chamber indicates when water is being pumped into the air chamber.
 
 The following Python code calculates the actual volume of water pumped per cycle:
 
@@ -825,7 +771,8 @@ The minor headloss in the effluent pipe is 0.7852 meters; this is the amount of 
 ## Conclusions
 
 #### Finding the Ideal Spring Constant
-From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law ($F=kx$). Hooke's Law depends on the compression length of the spring and does not account for the material property of the spring (e.g., the natural length of spring).
+
+From extensive data collection and analysis, the team calculated that the force required to open the valve was 12.49 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. The force to close the valve was 4.181 newtons. With these values, the team was able to determine a range of ideal spring constants using Hooke's Law ($F=kx$). Hooke's Law depends on the compression length of the spring and does not account for the material property of the spring (e.g., the natural length of spring), so the variable, $k'$ was defined, allowing a relationship between $k'$ and the length of the spring, $L$ to be established.
 
 #### Volumetric Output of Water
 The terminal velocity was also calculated in order to calculate the theoretical volume of water pumped. By experimentation, the team found that the average value for terminal velocity was 2.56 m/s. The terminal velocity was obtained collecting and measuring the volume of water which pass through the ram pump when the plate is open a certain amount of time. The theoretical volume of water pumped was 48.73 milliliters.
@@ -837,36 +784,38 @@ The theoretical volume of water pumped was compared to the experimental volume, 
 Over the span of Spring 2019, the team experimentally and theoretically calculated the force of the water on the plate. With this data, the team was able to calculate the most effective spring constant, but there were still other variables to be accounted for to optimize the efficiency of the system.
 
 #### Reduction of Headloss
-Further research in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe had yet to be explored. The diameter of the effluent check valve seems to be too small relative to the diameter of the drive pipe which may create a large amount of headloss that causes much of the inefficiency of the system. Making the side check valve as wide as the valve in the drive pipe may reduce a significant portion of the headloss due to the effluent valve. Optimizing this ratio between the diameters of the two pipes would help improve the efficiency of the ram pump.
+Further research in the reduction of headloss by varying the ratio between the diameter of the drive pipe and the diameter of the effluent pipe had yet to be explored. The diameter of the effluent check valve appears to be too small relative to the diameter of the drive pipe which may create a large amount of headloss that causes much of the inefficiency of the system. Making the diameter of the side check valve as large as the valve in the drive pipe may reduce a significant portion of the headloss due to the effluent valve. Optimizing this ratio between the diameters of the two pipes would help improve the efficiency of the ram pump.
 
 #### Pressure Sensors
-The pressure sensor attached to the ram pump across from the effluent valve should also be reevaluated. The currently installed, 30 psi range pressure sensor repeatedly broke during the pressure cycle readings. The current pressure sensors have a relatively low proof pressure range, meaning that the pressure around the plate most likely exceeded the upper pressure limit of the sensor. This consistent breakage was hypothesized to have been caused by pressure spikes in the cycle. The pressure from the water driven through the waste valve seemed to exceed the pressure range of the sensor, meaning the sensor could not accurately read the spikes. Measurements of the pressure cycle with a pressure sensor of higher pressure range (e.g. [-100 to 100 psi](https://www.omega.com/en-us/sensors-and-sensing-equipment/pressure-and-strain/pressure-transducers/px26/p/PX26-100DV)) should be taken to verify that there exists a pressure spike per cycle that exceeds the sensor's proof pressure.
+The pressure sensor attached to the ram pump across from the effluent valve should also be reevaluated. The currently installed, 30 psi range pressure sensor repeatedly broke during the pressure cycle readings. The current pressure sensors have a relatively low-proof pressure range, meaning that the pressure around the plate most likely exceeded the upper pressure limit of the sensor. This consistent breakage was hypothesized to have been caused by pressure spikes in the cycle. The pressure from the water driven through the waste valve seemed to exceed the pressure range of the sensor, meaning the sensor could not accurately read the spikes. Measurements of the pressure cycle with a pressure sensor of higher pressure range (e.g. [-100 to 100 psi](https://www.omega.com/en-us/sensors-and-sensing-equipment/pressure-and-strain/pressure-transducers/px26/p/PX26-100DV)) should be taken to verify that there exists a pressure spike per cycle that exceeds the sensor's proof pressure.
 
 #### Fabrication of a Modified Ram Pump Setup
 
-Although the team collected relevant data concerning the force of water on the plate of the drive pipe, the experimental values were prone to inaccuracy because several components in the current experimental ram pump setup were rusted. The rusting of the pump pieces most probably played a significant role in skewing the weight measurements.
+Although the team collected relevant data concerning the force of water on the plate of the drive pipe, the experimental values were prone to inaccuracy because several components in the current experimental ram pump setup were rusted. The rusting of the pump pieces may have played a significant role in skewing the weight measurements.
 
 In order to prevent such skewed data, the team recommended the fabrication of another experimental ram pump. Not only would the remodeling account for inaccurate measurements but also it should allow for easier interchanging of parts in between testing. The Spring 2019 team found that the orientation of the pipes between head tank and collection buckets were rigid and not interchangeable, making the set up difficult to make adjustments.
 
 <p align="center">
 
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/rampumpsp19design.png?raw=True">
-  Figure 14: The modified design of ram pump consisted of a T-connector so that the diameter of the effluent valve can be increased to be the same as that of the drive pipe.
+
+  **Figure 14:** The modified design of ram pump consisted of a T-connector so that the diameter of the effluent valve can be increased to be the same as that of the drive pipe.
 </p>
 <p align="center">
 
-The modified experimental ram pump system in figure 14 was designed to account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements. The Onshape model can be viewed [here](https://cad.onshape.com/documents/d729d0b40b3687f6da716557/w/152bf5eb1d252b4f41d65a41/e/d018f8ec8e610a6d69e3ebeb).
+The modified experimental ram pump system in Figure 14 was designed to account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements. The Onshape model can be viewed [here](https://cad.onshape.com/documents/d729d0b40b3687f6da716557/w/152bf5eb1d252b4f41d65a41/e/d018f8ec8e610a6d69e3ebeb).
 
-In the modified design of ram pump (figure 14), the diameter of the effluent pipe was increased from 1/4 inch to 1 inch using a check valve as the effluent valve. This would reduce the headloss from drive pipe to effluent pipe and thus improve the efficiency of ram pump. This design also used a straight union to connect the two check valves instead of just a brass nipple. The use of union would also ensure that each assembling of ram pump has a consistent magnitude of opening and closing of the metal plate, as limited by the threading distance of the union. Thus, a consistent result could be obtained in experiments with springs of different compression lengths and k-constants.
+In the modified design of ram pump (Figure 14), the diameter of the effluent pipe was increased from 1/4 inch to 1 inch using a check valve as the effluent valve. This would reduce the headloss from drive pipe to effluent pipe and thus improve the efficiency of ram pump. This design also used a straight union to connect the two check valves instead of just a brass nipple. The use of union would also ensure that each assembling of ram pump has a consistent magnitude of opening and closing of the metal plate, as limited by the threading distance of the union. Thus, a consistent result could be obtained in experiments with springs of different compression lengths and k-constants.
 
 <p align="center">
 
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/rampumpsp19design_section.png?raw=True">
-  Figure 15: The sectioned view of the modified design of ram pump showed that the movement of the plate would still be limited by the two check valves, but the connection was changed to a union so that the magnitude of movement would be consistent.
+
+  **Figure 15:** The sectioned view of the modified design of ram pump showed that the movement of the plate would still be limited by the two check valves, but the connection was changed to a union so that the magnitude of movement would be consistent.
 </p>
 <p align="center">
 
-**Table 8:** The modified ACVRP was fabricated using the following materials:
+**Table 7:** The modified ACVRP was fabricated using the following materials:
 
 | Parts                  | Quantity | Dimension                             | Source                                                                                                               |
 |:---------------------- |:-------- |:------------------------------------- |:-------------------------------------------------------------------------------------------------------------------- |
