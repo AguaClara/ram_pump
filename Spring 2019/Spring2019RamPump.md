@@ -742,7 +742,7 @@ $$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
  $$k' = 2.6197L  $$
 The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance the bottom stopper and stopping part of the bottom empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. In the table below showed the springs options, we considered that a spring which was less than 1 inch (2.5 cm) was ridiculous tiny.
 
-| Trial | Spring length (cm) | Intrinsic Spring constant (N) |
+| Spring | Spring length (cm) | Intrinsic Spring constant (N) |
 |-------|-----------------------------|--------------------|
 | 1     | 3.0                      | 7.85            |
 | 2     | 3.5                   | 9.16             |
