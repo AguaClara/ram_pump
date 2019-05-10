@@ -147,19 +147,6 @@ Thus, by finding the mass needed to keep the check valve open, $F_{water}$ could
 The OnShape design for the components of the ACVRP can be found here:
 - [Metal Plate and Rod](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/9bef45d7eddc1444e77d6a46)
 - [Check Valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb)
-<p align="center">
-
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/currentrampumpside.PNG?raw=True">
-  Figure 8: The current design of ram pump consisted of two check valves and a metal rod.
-</p>
-<p align="center">
-
-<p align="center">
-
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/rampumpsp19designold_section.png?raw=True">
-  Figure 9: The sectioned view of current design showed that the distance between plate opening and closing was limited by the position of the hex nuts on the rod and the stopper inside the check valves.
-</p>
-<p align="center">
 
 The ACVRP was fabricated using the following materials:
 
@@ -168,10 +155,9 @@ The ACVRP was fabricated using the following materials:
 | Brass Check Valve      | 2        | 1" pipe size                     | Strataflo or [McMaster](https://www.mcmaster.com/7746k831)                                                           |
 | Metal Plate            | 2        | 1" diameter                      | Came with check valve                                                                                                |
 | Hex Nuts               | 2        | 3/8"-16 Thread Size, 1-1/8" Long | [McMaster](https://www.mcmaster.com/90264A213)                                                                       |
-| Brass Jam Nuts         | 2        | 3/8"-16 Thread Size              | [McMaster](https://www.mcmaster.com/92174a031)                                                                       |
+| Brass jam nuts         | 2        | 3/8"-16 Thread Size              | [McMaster](https://www.mcmaster.com/92174a031)                                                                       |
 | Partially Threaded Rod | 1        | 3/8"-16 Thread Size, 8" Long     | [McMaster](https://www.mcmaster.com/98750a458) (Fully threaded but will be fabricated to partially threaded to 7.5") |
-| Spring                 | 1        | Varied length and k constant     | Mcmaster                                                                                                             |
-| Brass Nipple                       |   1       | Threaded on Both Ends, 1 NPT, 4" Long |   [McMaster](https://www.mcmaster.com/4568k226)                                                                                                                   |
+| Spring     | 1| Varied length and k constant | Mcmaster  |
 
 ## Methods
 ### Experimental Apparatus
@@ -394,59 +380,7 @@ print('The average force to close the valve is ' + str(avg_force))
 
 The average force to close the valve is 4.181 newtons.
 
-### Calculating Spring Constants
-Using the experimentally determined forces to open and close the valve, a range of ideal spring constants was determined. Hooke's Law was used to obtain the optimal spring constant from the force and compression length:
-
-$$F = k \Delta x$$
-
-The inconvenience of Hooke's Law is that it is dependent on the compression length $\Delta x$. To circumvent this issue, $k’$ was defined as an intrinsic material property of the spring dependent on the actual length of the spring rather than its compression length, such that Hooke's Law could be written as:
-
-$$k' = kL$$
-
-$$F = \frac{k'x}{L} $$
-
-We defined this last equation for the two states in the valve: when the valve was closed, we found the force required to open and when the valve is open, we found the force required to close.
-$$F_{open} = \frac{k'x_{1}}{L} $$
-
-$$F_{close} = \frac{k'x_{2}}{L}$$Where:
-
-- $F_{open}$: mass of container when plate was lifted and valve opened, allowing water to flow out of waste valve
-- $F_{close}$: force required to close the valve
-- $x_{1}$: Compression length when the valve was closed
-- $x_{2}$: Compression length when the valve was open
-- $k'$: Intrinsic material property of the spring that is defined by $L$ and $k$
-- $L$: Length of the spring
-
- We included the last two equations in one so we could solve for k':
-$$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
-
-$$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
-
-- $F_{open} = 13.35$  $N$
-- $F_{close} = 4.181$ $N$
-- $\Delta x = 3.5 $ $cm$. Compression length difference between open and close
-
- k’ allows us to change the length of the spring to obtain the k constant we want.
- <p align="center">
-   <img src="https://github.com/AguaClara/ram_pump/blob/master/spring_constant.jpg?raw=True" height=400>
- </p>
- <p align="center">
-
- $$k' = 2.6197L  $$
-The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. In the table below is showed the different spring options. We considered that a spring which was less than 1 inch (2.5 cm) was ridiculously tiny.
-
-| Spring | Spring length (cm) | Intrinsic Spring constant (N) |
-|-------|-----------------------------|--------------------|
-| 1     | 3.0                      | 7.85            |
-| 2     | 3.5                   | 9.16             |
-| 3     | 4.0                     | 10.4             |
-| 4     | 4.5                      | 11.8              |
-| 5     | 5.0                    | 13.1             |
-| 6     | 5.5                    | 14.4             |
-| 7     | 6.0                    | 15.7             |
-| 8     | 6.4                    | 16.8             |
-
-
+    (Need to calculate spring force from these two forces - force to open and close? Set an fixed spring length)
 
 ### Theoretical Volume of Water Pumped per Cycle
 
@@ -576,7 +510,7 @@ plt.show()
 </p>
 <p align="center">
 
-**Figure 10:** The pressure was recorded as the valve was manually opened and closed using the pulley system.
+**Figure 8:** The pressure was recorded as the valve was manually opened and closed using the pulley system.
 
 The air pressure in the air chamber increased with each cycle, as more water was pumped into the air chamber, compressing the air.
 
@@ -606,9 +540,9 @@ plt.show()
 </p>
 <p align="center">
 
-**Figure 11:** The pressure of the air chamber was observed as the valve was opened and closed. The pressure difference was then used to calculate the volume of water pumped by the ram pump.
+**Figure 9:** The pressure of the air chamber was observed as the valve was opened and closed. The pressure difference was then used to calculate the volume of water pumped by the ram pump.
 
-Based on the one cycle observed in Figure 11, the difference in pressure was 16.4 centimeters. Using the ideal gas law, the volume of water pumped during each cycle was calculated:
+Based on the one cycle observed in Figure 9, the difference in pressure was 16.4 centimeters. Using the ideal gas law, the volume of water pumped during each cycle was calculated:
 
 The following code shows a close-up of one cycle:
 
@@ -642,7 +576,7 @@ plt.show()
 </p>
 <p align="center">
 
-**Figure 12:** This graph shows a close up of the cycle as shown in Figure 11. The time period in which the pressure in the waste valve exceeds the pressure in the air chamber indicates when water is being pumped into the air chamber.
+**Figure 10:** This graph shows a close up of the cycle as shown in Figure 9. The time period in which the pressure in the waste valve exceeds the pressure in the air chamber indicates when water is being pumped into the air chamber.
 
 The following Python code calculates the actual volume of water pumped per cycle:
 
@@ -709,14 +643,14 @@ Thus, the current ram pump design pumps only 8.592% of the volume it should be p
 
 ### Headloss through Effluent
 
-It was hypothesized that the reason the ram pump was so inefficient is due to the small diameter of the effluent pipe, which creates a very high headloss that prevents water from being pumped into the air chamber. In order to verify this hypothesis, the headloss through the effluent was calculated. Figure 13 shows where minor loss occurs as water is pumped from the effluent into the air chamber.
+It was hypothesized that the reason the ram pump was so inefficient is due to the small diameter of the effluent pipe, which creates a very high headloss that prevents water from being pumped into the air chamber. In order to verify this hypothesis, the headloss through the effluent was calculated. Figure 11 shows where minor loss occurs as water is pumped from the effluent into the air chamber.
 
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/headloss_schematic.png?raw=True" height=400>
 </p>
 <p align="center">
 
-**Figure 13:** Minor loss occurs in three locations as water is pumped from the effluent of the ram pump into the air chamber: 1) sudden flow contraction from drive pipe to effluent pipe, 2) as water flows around the 90 degree elbow, 3) as flow expands from the effluent pipe into the air chamber.
+**Figure 11:** Minor loss occurs in three locations as water is pumped from the effluent of the ram pump into the air chamber: 1) sudden flow contraction from drive pipe to effluent pipe, 2) as water flows around the 90 degree elbow, 3) as flow expands from the effluent pipe into the air chamber.
 
 The equation for headloss through a pipe is as follows:
 
@@ -734,39 +668,21 @@ Since minor losses dominate in the effluent pipe, the major loss term was deemed
 #Q = terminal velocity * A
 Q = v_f*area
 
-A_small = 0.25*u.inch
-A_large = 1*u.inch
-B=A_small/A_large
-
 #sudden contraction
-#k_contraction = hl.k_value_reduction(ent_pipe_id=1*u.inch, exit_pipe_id=0.25*u.inch, q=Q, fitting_angle=180, rounded=True, nu=c.WATER_NU, pipe_rough=mats.PVC_PIPE_ROUGH)
-k_contraction = 0.45*(1-B)
+k_contraction = hl.k_value_reduction(ent_pipe_id=1*u.inch, exit_pipe_id=0.25*u.inch, q=Q, fitting_angle=180, rounded=True, nu=c.WATER_NU, pipe_rough=mats.PVC_PIPE_ROUGH)
+
 
 #elbow, 90 degree
-k_elbow = hl.EL90_K_MINOR
 
 #sudden expansion
-#ent_pipe_id=0.25*u.inch
-#exit_pipe_id=1*u.inch
-#k_expansion = hl.k_value_expansion(ent_pipe_id, exit_pipe_id, q=Q ,fitting_angle=180, rounded=True, nu=c.WATER_NU, pipe_rough=mats.PVC_PIPE_ROUGH)
-k_expansion = (1/(B-1))**2
-
-k_tot = k_contraction + k_elbow + k_expansion
-
-#calculate headloss
-hl = (k_tot*(Q**2))/((area**2)*2*c.GRAVITY)
-
-print('The minor headloss in the effluent pipe is ' + str(hl))
-
-percent_hl = (hl/delta_h)*100
 
 
 ```
-The minor headloss in the effluent pipe is 0.7852 meters; this is the amount of energy lost due to minor headloss. Thus, the ram pump could potentially pump water 0.7852 meters higher if minor losses were minimized. Reducing minor losses can be accomplished by increasing the diameter of the effluent pipe, thus providing the rationale for the ram pump design change.
+
 
 ## Conclusions
 
-From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team was able to determine the ideal spring constant using Hooke's Law ($F=kx$). The use of the ideal spring increased the amount of water driven up through the effluent pipe. **[Should this previous sentence be included?]** Hooke's Law depends on the compression length of the spring and does not account for the material property of the spring (e.g., the natural length of spring).
+From extensive data collection and analysis, the team calculated that the force required to open the valve was 11.82 N; this force was determined by a force analysis of water being added to the bottle until the valve opened. With this calculation, the team tried to determine the ideal spring constant using Hooke's Law ($F=kx$).
 
 The terminal velocity was calculated in order to calculate the theoretical volume of water pumped. By experimentation, the team found that the average value for terminal velocity was 2.56 m/s. The terminal velocity was obtained collecting and measuring the volume of water which pass through the ram pump when the plate is open a certain amount of time. The theoretical volume of water pumped was 48.73 milliliters.
 
@@ -787,40 +703,55 @@ Although the team collected relevant data concerning the force of water on the p
 
 In order to prevent such skewed data, the team recommended the fabrication of another experimental ram pump. Not only would the remodeling account for inaccurate measurements but also it should allow for easier interchanging of parts in between testing. The Spring 2019 team found that the orientation of the pipes between head tank and collection buckets were rigid and not interchangeable, making the set up difficult to make adjustments.
 
-The modified experimental ram pump system was designed to account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements.
+The modified experimental ram pump system will hopefully account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements.
 
-The modified design of ram pump in figure 14 shows that the diameter of the effluent pipe was increased from 1/4 inch to 1 inch using a check valve as the effluent valve. This would reduce the headloss from drive pipe to effluent pipe and potentially increase the efficiency of ram pump. This design also used a straight union to connect the two check valves instead of just a brass nipple. The use of union would also ensure that each assembling of ram pump has a consistent magnitude of opening and closing of the metal plate, as limited by the threading distance of the union. Thus, a consistent result could be obtained in experiments with springs of different compression lengths and k-constants.
+#### Modified Hooke's Law equation
+As mentioned before, Hooke's Law was used in order to obtain the optimal spring constant for the spring.
+$$F = kx$$
+Because Hooke's Law solely depends on the compression length x, the equation was unhelpful for designing a specific spring strength and length. To bypass the limitations of Hooke's Law, the team defined k' as a new intrinsic material property that depends on the spring constant and length. Thus, we implemented into the Hooke's Law:
 
-<p align="center">
+$$k' = kL$$
 
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/rampumpsp19design.png?raw=True">
-  Figure 14: The modified design of ram pump consisted of a T-connector so that the diameter of the effluent valve can be increased to be the same as that of the drive pipe.
-</p>
-<p align="center">
+$$F = \frac{k'x}{L} $$We defined this last equation for the two states in the valve: when the valve was closed, we found the force required to open and when the valve is open, we found the force required to close.
+$$F_{open} = \frac{k'x_{1}}{L} $$
 
-<p align="center">
+$$F_{close} = \frac{k'x_{2}}{L}$$Where:
 
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/rampumpsp19design_section.png?raw=True">
-  Figure 15: The sectioned view of the modified design of ram pump showed that the movement of the plate would still be limited by the two check valves, but the connection was changed to a union so that the magnitude of movement would be consistent.
-</p>
-<p align="center">
+- $F_{open}$: mass of container when plate was lifted and valve opened, allowing water to flow out of waste valve
+- $F_{close}$: force required to close the valve
+- $x_{1}$: Compression length when the valve was closed
+- $x_{2}$: Compression length when the valve was open
+- $k'$: Intrinsic material property of the spring that is defined by $L$ and $k$
+- $L$: Length of the spring
 
-The modified ACVRP was fabricated using the following materials:
+ The last two equations ($F_{open}$, $F_{close}$) were combined to solve for k':
+$$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
 
-| Parts                  | Quantity | Dimension                             | Source                                                                                                               |
-|:---------------------- |:-------- |:------------------------------------- |:-------------------------------------------------------------------------------------------------------------------- |
-| Brass Check Valve      | 3        | 1" pipe size                          | Strataflo or [McMaster](https://www.mcmaster.com/7746k831)                                                           |
-| Metal Plate            | 1        | 1" diameter                           | Came with check valve                                                                                                |
-| Hex Nuts               | 2        | 3/8"-16 Thread Size, 1-1/8" Long      | [McMaster](https://www.mcmaster.com/90264A213)                                                                       |
-| Brass Jam Nuts         | 2        | 3/8"-16 Thread Size                   | [McMaster](https://www.mcmaster.com/92174a031)                                                                       |
-| Partially Threaded Rod | 1        | 3/8"-16 Thread Size, 8" Long          | [McMaster](https://www.mcmaster.com/98750a458) (Fully threaded but will be fabricated to partially threaded to 7.5") |
-| Spring                 | 1        | Varied length and k constant          | Mcmaster                                                                                                             |
-| Brass Threaded Pipe Nipple | 5        |Fully Threaded, 1 NPT, 1-1/2" Long | [McMaster](https://www.mcmaster.com/9176k116)                                                                        |
-|Brass Pipe Fitting Union Straight Connector|   1       |      1 NPT Female                                |       [McMaster](https://www.mcmaster.com/9162k476)                                                                                                               |
-|PVC Pipe Fitting for Water, T-Connector |  1        | 1 NPT Female |[McMaster](https://www.mcmaster.com/4596k340)     |
-|PVC Pipe Fitting 90 Degree Elbow Adapter|1      |  1 Socket Female x 1 NPT Female                |    [McMaster](https://www.mcmaster.com/4596k624)                                                                         |
+$$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
 
-Since the modified design included a T-connector between the drive pipe and effluent, the pressure sensor to observe pressure trace of the ram pump was installed at the T-connector using a drill bit of  7/16 inches and a tap of 1/4 in- 18.
+- $F_{open} = 13.35$  $N$
+- $F_{close} = 4.181$ $N$
+- $\Delta x = 3.5 $ $cm$. Compression length difference between open and close
+
+ The k’ allowed us to change the length of the spring to obtain the k constant desired.
+ <p align="center">
+   <img src="https://github.com/AguaClara/ram_pump/blob/master/spring_constant.jpg?raw=True" height=400>
+ </p>
+ <p align="center">
+
+ $$k' = 2.6197L  $$
+The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance the bottom stopper and stopping part of the bottom empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. In the table below showed the springs options, we considered that a spring which was less than 1 inch (2.5 cm) was ridiculous tiny.
+
+| Trial | Spring length (cm) | Intrinsic Spring constant (N) |
+|-------|-----------------------------|--------------------|
+| 1     | 3.0                      | 7.85            |
+| 2     | 3.5                   | 9.16             |
+| 3     | 4.0                     | 10.4             |
+| 4     | 4.5                      | 11.8              |
+| 5     | 5.0                    | 13.1             |
+| 6     | 5.5                    | 14.4             |
+| 7     | 6.0                    | 15.7             |
+| 8     | 6.4                    | 16.8             |
 
 ## Bibliography
 Adelman, M. J., Weber-Shirk, M. L., Will, J. C., Cordero, A. N., Maher, W. J., Lion, L. W. (2013). "[Novel Fluidic Control System for Stacked Rapid Sand Filters](https://ascelibrary.org/doi/10.1061/%28ASCE%29EE.1943-7870.0000700).” Journal of Environmental Engineering 139 (7)939-946.
