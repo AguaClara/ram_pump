@@ -856,7 +856,7 @@ In the modified design of ram pump (figure 14), the diameter of the effluent pip
 </p>
 <p align="center">
 
-**Table 9:** The modified ACVRP was fabricated using the following materials:
+**Table 8:** The modified ACVRP was fabricated using the following materials:
 
 | Parts                  | Quantity | Dimension                             | Source                                                                                                               |
 |:---------------------- |:-------- |:------------------------------------- |:-------------------------------------------------------------------------------------------------------------------- |
