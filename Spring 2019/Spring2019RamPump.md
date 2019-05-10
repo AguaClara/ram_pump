@@ -444,7 +444,7 @@ $$k' = 2.6197L  $$
 
 In order to define a practical range of springs, the maximum length of spring that could fit into the rod was measured. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm, which represents the maximum length a spring could be without an initial compression. Table 6 shows possible options for different lengths of springs.
 
-**Table 6:** Springs of different natural lengths
+**Table 6:** Various springs of different lengths that satisfy the required $k$ constant for optimal performance of the ram pump. 
 
 | Spring | Spring length (cm) | Intrinsic Spring constant (N) |
 |-------|-----------------------------|--------------------|
@@ -718,14 +718,14 @@ Thus, the current ram pump design pumps only 8.592% of the volume it should be p
 
 ### Headloss through Effluent
 
-It was hypothesized that the reason the ram pump was so inefficient is due to the small diameter of the effluent pipe, which creates a very high headloss that prevents water from being pumped into the air chamber. In order to verify this hypothesis, the headloss through the effluent was calculated. Figure 13 shows where minor loss occurs as water is pumped from the effluent into the air chamber.
+It was hypothesized that the reason the ram pump was so inefficient is due to the small diameter of the effluent pipe, which creates a very high headloss that prevents water from being pumped into the air chamber. In order to verify this hypothesis, the headloss through the effluent was calculated. Figure 14 shows where minor loss occurs as water is pumped from the effluent into the air chamber.
 
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/headloss_schematic.png?raw=True" height=400>
 </p>
 <p align="center">
 
-**Figure 13:** Minor loss occurs in three locations as water is pumped from the effluent of the ram pump into the air chamber: 1) sudden flow contraction from drive pipe to effluent pipe, 2) as water flows around the 90 degree elbow, 3) as flow expands from the effluent pipe into the air chamber.
+**Figure 14:** Minor loss occurs in three locations as water is pumped from the effluent of the ram pump into the air chamber: 1) sudden flow contraction from drive pipe to effluent pipe, 2) as water flows around the 90 degree elbow, 3) as flow expands from the effluent pipe into the air chamber.
 
 The equation for headloss through a pipe is as follows:
 
@@ -795,23 +795,24 @@ Although the team collected relevant data concerning the force of water on the p
 
 In order to prevent such skewed data, the team recommended the fabrication of another experimental ram pump. Not only would the remodeling account for inaccurate measurements but also it should allow for easier interchanging of parts in between testing. The Spring 2019 team found that the orientation of the pipes between head tank and collection buckets were rigid and not interchangeable, making the set up difficult to make adjustments.
 
+The modified experimental ram pump system in Figure 15 was designed to account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements. The Onshape model can be viewed [here](https://cad.onshape.com/documents/d729d0b40b3687f6da716557/w/152bf5eb1d252b4f41d65a41/e/d018f8ec8e610a6d69e3ebeb).
+
 <p align="center">
 
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/rampumpsp19design.png?raw=True">
 
-  **Figure 14:** The modified design of ram pump consisted of a T-connector so that the diameter of the effluent valve can be increased to be the same as that of the drive pipe.
+  **Figure 15:** The modified design of ram pump consisted of a T-connector so that the diameter of the effluent valve can be increased to be the same as that of the drive pipe.
 </p>
 <p align="center">
 
-The modified experimental ram pump system in Figure 14 was designed to account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements. The Onshape model can be viewed [here](https://cad.onshape.com/documents/d729d0b40b3687f6da716557/w/152bf5eb1d252b4f41d65a41/e/d018f8ec8e610a6d69e3ebeb).
 
-In the modified design of ram pump (Figure 14), the diameter of the effluent pipe was increased from 1/4 inch to 1 inch using a check valve as the effluent valve. This would reduce the headloss from drive pipe to effluent pipe and thus improve the efficiency of ram pump. This design also used a straight union to connect the two check valves instead of just a brass nipple. The use of union would also ensure that each assembling of ram pump has a consistent magnitude of opening and closing of the metal plate, as limited by the threading distance of the union. Thus, a consistent result could be obtained in experiments with springs of different compression lengths and k-constants.
+In the modified design of ram pump (Figure 15), the diameter of the effluent pipe was increased from 1/4 inch to 1 inch using a check valve as the effluent valve. This would reduce the headloss from drive pipe to effluent pipe and thus improve the efficiency of ram pump. This design also used a straight union to connect the two check valves instead of just a brass nipple (Figure 16). The use of union would also ensure that each assembling of ram pump has a consistent magnitude of opening and closing of the metal plate, as limited by the threading distance of the union. Thus, a consistent result could be obtained in experiments with springs of different compression lengths and k-constants.
 
 <p align="center">
 
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/rampumpsp19design_section.png?raw=True">
 
-  **Figure 15:** The sectioned view of the modified design of ram pump showed that the movement of the plate would still be limited by the two check valves, but the connection was changed to a union so that the magnitude of movement would be consistent.
+  **Figure 16:** The sectioned view of the modified design of ram pump showed that the movement of the plate would still be limited by the two check valves, but the connection was changed to a union so that the magnitude of movement would be consistent.
 </p>
 <p align="center">
 
