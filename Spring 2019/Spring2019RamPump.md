@@ -380,7 +380,59 @@ print('The average force to close the valve is ' + str(avg_force))
 
 The average force to close the valve is 4.181 newtons.
 
-    (Need to calculate spring force from these two forces - force to open and close? Set an fixed spring length)
+### Calculating Spring Constants
+Using the experimentally determined forces to open and close the valve, a range of ideal spring constants was determined. Hooke's Law was used to obtain the optimal spring constant from the force and compression length:
+
+$$F = k \Delta x$$
+
+The inconvenience of Hooke's Law is that it is dependent on the compression length $\Delta x$. To circumvent this issue, $k’$ was defined as an intrinsic material property of the spring dependent on the actual length of the spring rather than its compression length, such that Hooke's Law could be written as:
+
+$$k' = kL$$
+
+$$F = \frac{k'x}{L} $$
+
+We defined this last equation for the two states in the valve: when the valve was closed, we found the force required to open and when the valve is open, we found the force required to close.
+$$F_{open} = \frac{k'x_{1}}{L} $$
+
+$$F_{close} = \frac{k'x_{2}}{L}$$Where:
+
+- $F_{open}$: mass of container when plate was lifted and valve opened, allowing water to flow out of waste valve
+- $F_{close}$: force required to close the valve
+- $x_{1}$: Compression length when the valve was closed
+- $x_{2}$: Compression length when the valve was open
+- $k'$: Intrinsic material property of the spring that is defined by $L$ and $k$
+- $L$: Length of the spring
+
+ We included the last two equations in one so we could solve for k':
+$$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
+
+$$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
+
+- $F_{open} = 13.35$  $N$
+- $F_{close} = 4.181$ $N$
+- $\Delta x = 3.5 $ $cm$. Compression length difference between open and close
+
+ k’ allows us to change the length of the spring to obtain the k constant we want.
+ <p align="center">
+   <img src="https://github.com/AguaClara/ram_pump/blob/master/spring_constant.jpg?raw=True" height=400>
+ </p>
+ <p align="center">
+
+ $$k' = 2.6197L  $$
+The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. In the table below is showed the different spring options. We considered that a spring which was less than 1 inch (2.5 cm) was ridiculously tiny.
+
+| Spring | Spring length (cm) | Intrinsic Spring constant (N) |
+|-------|-----------------------------|--------------------|
+| 1     | 3.0                      | 7.85            |
+| 2     | 3.5                   | 9.16             |
+| 3     | 4.0                     | 10.4             |
+| 4     | 4.5                      | 11.8              |
+| 5     | 5.0                    | 13.1             |
+| 6     | 5.5                    | 14.4             |
+| 7     | 6.0                    | 15.7             |
+| 8     | 6.4                    | 16.8             |
+
+
 
 ### Theoretical Volume of Water Pumped per Cycle
 
@@ -668,17 +720,35 @@ Since minor losses dominate in the effluent pipe, the major loss term was deemed
 #Q = terminal velocity * A
 Q = v_f*area
 
-#sudden contraction
-k_contraction = hl.k_value_reduction(ent_pipe_id=1*u.inch, exit_pipe_id=0.25*u.inch, q=Q, fitting_angle=180, rounded=True, nu=c.WATER_NU, pipe_rough=mats.PVC_PIPE_ROUGH)
+A_small = 0.25*u.inch
+A_large = 1*u.inch
+B=A_small/A_large
 
+#sudden contraction
+#k_contraction = hl.k_value_reduction(ent_pipe_id=1*u.inch, exit_pipe_id=0.25*u.inch, q=Q, fitting_angle=180, rounded=True, nu=c.WATER_NU, pipe_rough=mats.PVC_PIPE_ROUGH)
+k_contraction = 0.45*(1-B)
 
 #elbow, 90 degree
+k_elbow = hl.EL90_K_MINOR
 
 #sudden expansion
+#ent_pipe_id=0.25*u.inch
+#exit_pipe_id=1*u.inch
+#k_expansion = hl.k_value_expansion(ent_pipe_id, exit_pipe_id, q=Q ,fitting_angle=180, rounded=True, nu=c.WATER_NU, pipe_rough=mats.PVC_PIPE_ROUGH)
+k_expansion = (1/(B-1))**2
+
+k_tot = k_contraction + k_elbow + k_expansion
+
+#calculate headloss
+hl = (k_tot*(Q**2))/((area**2)*2*c.GRAVITY)
+
+print('The minor headloss in the effluent pipe is ' + str(hl))
+
+percent_hl = (hl/delta_h)*100
 
 
 ```
-
+The minor headloss in the effluent pipe is 0.7852 meters; this is the amount of energy lost due to minor headloss. Thus, the ram pump could potentially pump water 0.7852 meters higher if minor losses were minimized. Reducing minor losses can be accomplished by increasing the diameter of the effluent pipe, thus providing the rationale for the ram pump design change.
 
 ## Conclusions
 
@@ -705,53 +775,6 @@ In order to prevent such skewed data, the team recommended the fabrication of an
 
 The modified experimental ram pump system will hopefully account for the aforementioned ergonomic issues as well as the inefficiency of the ram pump. **[Should I rephrase this because we don't know if the new ram pump will actually resolve these issues?]** The new setup should reduce the amount of headloss around the effluent valve and allow for a more accurate pressure measurements.
 
-#### Modified Hooke's Law equation
-As mentioned before on the report, we used Hooke's Law for spring in order to obtain the optimal spring constant.
-$$F = kx$$
-The inconvenient of Hooke's Law was that we were not able to design for an specific spring constant and length because it is in term of the compression length x. We defined k’ as a new intrinsic material property that depends on the spring constant and length. Thus, we implemented into the Hooke's Law:
-
-$$k' = kL$$
-
-$$F = \frac{k'x}{L} $$We defined this last equation for the two states in the valve: when the valve was closed, we found the force required to open and when the valve is open, we found the force required to close.
-$$F_{open} = \frac{k'x_{1}}{L} $$
-
-$$F_{close} = \frac{k'x_{2}}{L}$$Where:
-
-- $F_{open}$: mass of container when plate was lifted and valve opened, allowing water to flow out of waste valve
-- $F_{close}$: force required to close the valve
-- $x_{1}$: Compression length when the valve was closed
-- $x_{2}$: Compression length when the valve was open
-- $k'$: Intrinsic material property of the spring that is defined by $L$ and $k$
-- $L$: Length of the spring
-
- We included the last two equations in one so we could solve for k':
-$$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
-
-$$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
-
-- $F_{open} = 13.35$  $N$
-- $F_{close} = 4.181$ $N$
-- $\Delta x = 3.5 $ $cm$. Compression length difference between open and close
-
- k’ allows us to change the length of the spring to obtain the k constant we want.
- <p align="center">
-   <img src="https://github.com/AguaClara/ram_pump/blob/master/spring_constant.jpg?raw=True" height=400>
- </p>
- <p align="center">
-
- $$k' = 2.6197L  $$
-The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. In the table below is showed the different spring options. We considered that a spring which was less than 1 inch (2.5 cm) was ridiculously tiny.
-
-| Spring | Spring length (cm) | Intrinsic Spring constant (N) |
-|-------|-----------------------------|--------------------|
-| 1     | 3.0                      | 7.85            |
-| 2     | 3.5                   | 9.16             |
-| 3     | 4.0                     | 10.4             |
-| 4     | 4.5                      | 11.8              |
-| 5     | 5.0                    | 13.1             |
-| 6     | 5.5                    | 14.4             |
-| 7     | 6.0                    | 15.7             |
-| 8     | 6.4                    | 16.8             |
 
 ## Bibliography
 Adelman, M. J., Weber-Shirk, M. L., Will, J. C., Cordero, A. N., Maher, W. J., Lion, L. W. (2013). "[Novel Fluidic Control System for Stacked Rapid Sand Filters](https://ascelibrary.org/doi/10.1061/%28ASCE%29EE.1943-7870.0000700).” Journal of Environmental Engineering 139 (7)939-946.
