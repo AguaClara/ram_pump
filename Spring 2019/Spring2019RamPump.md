@@ -2,7 +2,6 @@
 #### Ching Pang, Cheer Tsang, Alyssa Ju, Iñigo Cabrera
 #### May 10, 2019
 
-
 ## Abstract
 The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water to be pumped from lower elevations to higher elevations using the driving force of falling water. The ACVRP improves on a conventional ram pump design by increasing its space efficiency and decreasing its capital cost. Although a prototype had been built, it did not reach its target pumping efficiency. The goal of this semester was to optimize the ram pump efficiency by finding the necessary forces to open and close the valve at the ideal times.
 
@@ -149,18 +148,22 @@ The OnShape design for the components of the ACVRP can be found here:
 <p align="center">
 
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/currentrampumpside.PNG?raw=True">
-  Figure 8: The current design of ram pump consisted of two check valves and a metal rod.
+
+  **Figure 8:** The current design of ram pump consisted of two check valves and a metal rod.
+
 </p>
 <p align="center">
 
 <p align="center">
 
   <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/rampumpsp19designold_section.png?raw=True">
-  Figure 9: The sectioned view of current design showed that the distance between plate opening and closing was limited by the position of the hex nuts on the rod and the stopper inside the check valves.
+
+  **Figure 9:** The sectioned view of current design showed that the distance between plate opening and closing was limited by the position of the hex nuts on the rod and the stopper inside the check valves.
+
 </p>
 <p align="center">
 
-Table 1: The ACVRP was fabricated using the following materials.
+**Table 1:** The ACVRP was fabricated using the following materials.
 
 | Parts                  | Quantity | Dimension                        | Source                                                                                                               |
 |:---------------------- |:-------- |:-------------------------------- |:-------------------------------------------------------------------------------------------------------------------- |
@@ -404,7 +407,8 @@ $$k' = kL$$
 
 $$F = \frac{k'x}{L} $$
 
-We defined this last equation for the two states in the valve: when the valve was closed, we found the force required to open and when the valve is open, we found the force required to close.
+Using the above equation, equations were derived for the two states in the valve:
+
 $$F_{open} = \frac{k'x_{1}}{L} $$
 
 $$F_{close} = \frac{k'x_{2}}{L}$$Where:
@@ -416,25 +420,31 @@ $$F_{close} = \frac{k'x_{2}}{L}$$Where:
 - $k'$: Intrinsic material property of the spring that is defined by $L$ and $k$
 - $L$: Length of the spring
 
- We included the last two equations in one so we could solve for k':
+Combining the last two equations, an equation for $k'$ in terms of the spring length, $L$ was derived:
 $$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
 
 $$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
 
 - $F_{open} = 13.35$  $N$
 - $F_{close} = 4.181$ $N$
-- $\Delta x = 3.5 $ $cm$. Compression length difference between open and close
+- $\Delta x = 3.5 $ cm (Compression length difference between open and closed states)
 
- k’ allows us to change the length of the spring to obtain the k constant we want.
+Using $k’$ allows us to modify the length of the spring to obtain the $k$ constant desired.
+
  <p align="center">
    <img src="https://github.com/AguaClara/ram_pump/blob/master/spring_constant.jpg?raw=True" height=400>
  </p>
  <p align="center">
 
- $$k' = 2.6197L  $$
+**Figure 10:** Linear relationship between the length of the spring, $L$, and the intrinsic spring constant, $k'$.
+
+The linear relationship between the length of the spring, $L$, and the intrinsic spring constant, $k'$ was defined by the following equation:
+
+$$k' = 2.6197L  $$
+
 The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. Table 7 showed the different spring options. We considered that a spring which was less than 1 inch (2.5 cm) was ridiculously tiny.
 
-**Table 7:** Springs of different natural lengths
+**Table 6:** Springs of different natural lengths
 
 | Spring | Spring length (cm) | Intrinsic Spring constant (N) |
 |-------|-----------------------------|--------------------|
