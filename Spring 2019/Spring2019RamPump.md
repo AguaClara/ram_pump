@@ -147,6 +147,19 @@ Thus, by finding the mass needed to keep the check valve open, $F_{water}$ could
 The OnShape design for the components of the ACVRP can be found here:
 - [Metal Plate and Rod](https://cad.onshape.com/documents/4e73b2e01f40050da6dc53e5/w/505d309a289216ef94331ebd/e/9bef45d7eddc1444e77d6a46)
 - [Check Valves](https://cad.onshape.com/documents/9268b604d6ced6c7f52b783c/w/49e0393fad2ca8fed995e1f5/e/83d112abae6ce4cc4505adeb)
+<p align="center">
+
+  <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/currentrampumpside.PNG?raw=True">
+  Figure: The current design of ram pump consisted of two check valves and a metal rod
+</p>
+<p align="center">
+
+<p align="center">
+
+  <img src="https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Images_Diagrams/rampumpsp19designold_section.png?raw=True">
+  Figure: The sectioned view of current design showed that the distance between plate opening and closing was limited by the position of the hex nuts on the rod and the stopper inside the check valves.
+</p>
+<p align="center">
 
 The ACVRP was fabricated using the following materials:
 
