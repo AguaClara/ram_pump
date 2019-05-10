@@ -2,7 +2,6 @@
 #### Ching Pang, Cheer Tsang, Alyssa Ju, Iñigo Cabrera
 #### May 10, 2019
 
-**[Overall: Your report looks awesome guys!! I made some small comments, but I'm so happy with your report!!!!]**
 
 ## Abstract
 The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water to be pumped from lower elevations to higher elevations using the driving force of falling water. The ACVRP improves on a conventional ram pump design by increasing its space efficiency and decreasing its capital cost. Although a prototype had been built, it did not reach its target pumping efficiency. The goal of this semester was to optimize the ram pump efficiency by finding the necessary forces to open and close the valve at the ideal times.
@@ -37,7 +36,7 @@ Many water supply plants use horizontal ram pumps to redirect water from a lower
 
 **Figure 2:** Common ram pump systems include “(a) the head tank, (b) the drive pipe, (c) the pump with impulse and delivery valves, (d) the air chamber and (e) the delivery pipe” ([Young, 1995](https://doi.org/10.1243/PIME_PROC_1995_209_010_01)).
 
-**[Refer to your figure here! :)]** In conventional ram pump systems (Figure 2), the head tank (a) is placed higher than the ram pump in order to provide potential energy to power the pump. As the water is directed down from the head tank to the pump (c) through the drive pipe (b), it experiences considerable major and minor losses. **[You can just say it experiences considerable major and minor losses instead of using the colon.]** These losses are formed by shear frictional force and flow reduction, a result of water flowing from a pipe of larger diameter to that of a smaller diameter, respectively.
+ In conventional ram pump systems (Figure 2), the head tank (a) is placed higher than the ram pump in order to provide potential energy to power the pump. As the water is directed down from the head tank to the pump (c) through the drive pipe (b), it experiences considerable major and minor losses. These losses are formed by shear frictional force and flow reduction, a result of water flowing from a pipe of larger diameter to that of a smaller diameter, respectively.
 
 This driving head is directed through the inlet valve of the pump and is expelled through the waste valve (c) until the velocity of the water provides enough force to shut the waste valve. Once the waste valve is shut, the water is redirected and stored into the air chamber (d) that was charged with air. The air pressure inside this chamber pushes the water up through the delivery pipe (e).
 
@@ -89,7 +88,7 @@ The ram pump itself comprised of two metal check valves that were connected by a
 
 ### Water Velocity in Drive Pipe
 
-The opening and closing of the check valve should be timed precisely so that the maximum amount of water is pumped in each cycle, maximizing the area under the curve in the graph below (Figure 5). Previous research found that under ideal conditions, the "terminal velocity of water in the drive pipe was 0.35 m/s" ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)). Thus, using this benchmark, the target maximum velocity to trigger the valve to close should be less than the terminal velocity because the water accelerated towards terminal velocity asymptotically. An arbitrary velocity of 1/2 the terminal velocity was chosen as the target ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)).
+The opening and closing of the check valve should be timed precisely so that the maximum amount of water is pumped in each cycle, maximizing the area under the curve in the graph below (Figure 5). Previous research found that under ideal conditions, the terminal velocity of water in the drive pipe was 0.35 m/s ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)). Thus, using this benchmark, the target maximum velocity to trigger the valve to close should be less than the terminal velocity because the water accelerated towards terminal velocity asymptotically. An arbitrary velocity of 1/2 the terminal velocity was chosen as the target ([Aggarwal et al., 2017](https://drive.google.com/file/d/1oVIHr27h-mA25sROwWSHHzI-v0FXReoA/view)).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202018/Pictures/Ideal%20Velocity%20graph.png" height=400>
@@ -161,12 +160,12 @@ The OnShape design for the components of the ACVRP can be found here:
 </p>
 <p align="center">
 
-The ACVRP was fabricated using the following materials:
+Table 1: The ACVRP was fabricated using the following materials.
 
 | Parts                  | Quantity | Dimension                        | Source                                                                                                               |
 |:---------------------- |:-------- |:-------------------------------- |:-------------------------------------------------------------------------------------------------------------------- |
 | Brass Check Valve      | 2        | 1" pipe size                     | Strataflo or [McMaster](https://www.mcmaster.com/7746k831)                                                           |
-| Metal Plate            | 2        | 1" diameter                      | Came with check valve                                                                                                |
+| Metal Plate            | 2        | 1" diameter                      | Detached from original check valve                                                                                                |
 | Hex Nuts               | 2        | 3/8"-16 Thread Size, 1-1/8" Long | [McMaster](https://www.mcmaster.com/90264A213)                                                                       |
 | Brass Jam Nuts         | 2        | 3/8"-16 Thread Size              | [McMaster](https://www.mcmaster.com/92174a031)                                                                       |
 | Partially Threaded Rod | 1        | 3/8"-16 Thread Size, 8" Long     | [McMaster](https://www.mcmaster.com/98750a458) (Fully threaded but will be fabricated to partially threaded to 7.5") |
@@ -254,7 +253,7 @@ import aguaclara.core.materials as mats
 
 The terminal velocity of the driving head of 2.2557 m/s was calculated by measuring the volume of water expelled at the waste valve in a given amount of time.
 
-**Table 1:** Water in the drive pipe was expelled from the waste valve and collected into a bucket with volumetric measurements. The recorded initial time correlated with the manual opening of the ball valve right above the pump, and the final time correlated with the manual closing of the same valve. The time difference is listed below with respect to the volume of water expelled.
+**Table 2:** Water in the drive pipe was expelled from the waste valve and collected into a bucket with volumetric measurements. The recorded initial time correlated with the manual opening of the ball valve right above the pump, and the final time correlated with the manual closing of the same valve. The time difference is listed below with respect to the volume of water expelled.
 
 | Trial | Volume of Water Expelled (L) | Duration of Time (s) |
 | ----- | ---------------------------- | -------------------- |
@@ -272,7 +271,7 @@ The average of the terminal velocity from these five trials was calculated by fi
 
 Several trials were run to calculate the force required to lift the plate to open the check valve (Table 2). The mass of the empty bottle was 114.7 g.
 
-**Table 2:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve (opened valve). The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
+**Table 3:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve (opened valve). The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
 
 | Trial | Mass of Bottle Contents (g) | Force to Open Valve (N) |
 |-------|-----------------------------|--------------------|
@@ -317,7 +316,7 @@ The average force required to open the valve is 12.49 newtons.
 
 This calculated force was then verified by replicating the experiment:
 
-**Table 3:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve (opened valve). The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
+**Table 4:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve (opened valve). The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
 
 | Trial | Mass of Bottle Contents (g) | Force to Open Valve (N) |
 |-------|-----------------------------|--------------------|
@@ -382,7 +381,7 @@ avg_force = np.mean(F_close)
 print('The average force to close the valve is ' + str(avg_force))
 
 ```
-**Table 4:** The minimum force required to close the valve was calculated by the difference in mass between the mass when the valve opened and when the valve began to cycle.
+**Table 5:** The minimum force required to close the valve was calculated by the difference in mass between the mass when the valve opened and when the valve began to cycle.
 
 | Trial | Mass to Open (g) | Mass for Valve to Cycle (g) | Force to Close Valve (N) |
 |-------|------------------|-----------------------------|--------------------------|
@@ -433,7 +432,9 @@ $$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
  <p align="center">
 
  $$k' = 2.6197L  $$
-The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. In the table below is showed the different spring options. We considered that a spring which was less than 1 inch (2.5 cm) was ridiculously tiny.
+The range of spring length we could choose was reduced because we measured the maximum length that the spring could have to fit into the rod. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm. That value is the maximum length the spring could be without an initial compression. Table 7 showed the different spring options. We considered that a spring which was less than 1 inch (2.5 cm) was ridiculously tiny.
+
+**Table 7:** Springs of different natural lengths
 
 | Spring | Spring length (cm) | Intrinsic Spring constant (N) |
 |-------|-----------------------------|--------------------|
@@ -445,6 +446,7 @@ The range of spring length we could choose was reduced because we measured the m
 | 6     | 5.5                    | 14.4             |
 | 7     | 6.0                    | 15.7             |
 | 8     | 6.4                    | 16.8             |
+
 #### Modified Hooke's Law Equation
 As previously stated, Hooke's Law was used in order to obtain the optimal spring constant for the spring.
 $$F = kx$$
@@ -485,6 +487,8 @@ $$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
  $$k' = 2.6197L  $$
 The range of possible spring length as graphically represented above was reduced because of the constraint of the maximum length of spring that could fit in the ram pump. The maximum distance between the bottom stopper and the stopping part of the bottom empty check valve is 6.4 cm. This value is the maximum allowed natural length of the spring. The following table represents the intrinsic properties of various spring options. The range of spring lengths begins with 3.0 cm, since any smaller value would be considered too physically small to manufacture.
 
+
+**Table 8:**
 | Trial | Spring length (cm) | Intrinsic Spring constant (N) |
 |-------|-----------------------------|--------------------|
 | 1     | 3.0                      | 7.85            |
@@ -852,7 +856,7 @@ In the modified design of ram pump (figure 14), the diameter of the effluent pip
 </p>
 <p align="center">
 
-The modified ACVRP was fabricated using the following materials:
+**Table 9:** The modified ACVRP was fabricated using the following materials:
 
 | Parts                  | Quantity | Dimension                             | Source                                                                                                               |
 |:---------------------- |:-------- |:------------------------------------- |:-------------------------------------------------------------------------------------------------------------------- |
