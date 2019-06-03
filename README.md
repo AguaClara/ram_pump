@@ -3,10 +3,8 @@
 The purpose of the Ram Pump team is to design and develop an efficient hydraulic ram pump for implementation in AguaClara plants. The Ram Pump can be used to deliver water from below the facility to higher elevations for utilization in chemical stock tanks or electricity- free plant plumbing.
 
 ## Current Members:
-- Cheer Tsang (ct542@cornell.edu)
 - Ching Pang (cp546@cornell.edu)
 - Iñigo Cabrera (ic347@cornell.edu)
-- Alyssa Ju (hj243@cornell.edu)
 
 ## Reports and Presentations:
 * Spring 2019
