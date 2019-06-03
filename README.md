@@ -4,7 +4,7 @@ The purpose of the Ram Pump team is to design and develop an efficient hydraulic
 
 ## Current Members:
 - Ching Pang (cp546@cornell.edu)
-- Iñigo Cabrera (ic347@cornell.edu)
+- Alyssa Ju (hj243@cornell.edu)
 
 ## Reports and Presentations:
 * Spring 2019
