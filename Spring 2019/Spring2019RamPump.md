@@ -444,7 +444,7 @@ $$k' = 2.6197L  $$
 
 In order to define a practical range of springs, the maximum length of spring that could fit into the rod was measured. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm, which represents the maximum length a spring could be without an initial compression. Table 6 shows possible options for different lengths of springs.
 
-**Table 6:** Various springs of different lengths that satisfy the required $k$ constant for optimal performance of the ram pump. 
+**Table 6:** Various springs of different lengths that satisfy the required $k$ constant for optimal performance of the ram pump.
 
 | Spring | Spring length (cm) | Intrinsic Spring constant (N) |
 |-------|-----------------------------|--------------------|
@@ -651,7 +651,7 @@ plt.show()
 </p>
 <p align="center">
 
-**Figure 13:** This graph shows a close up of the cycle as shown in Figure 2. The time period in which the pressure in the waste valve exceeds the pressure in the air chamber indicates when water is being pumped into the air chamber.
+**Figure 13:** This graph shows a close up of the cycle as shown in Figure 12. The time period in which the pressure in the waste valve exceeds the pressure in the air chamber indicates when water is being pumped into the air chamber.
 
 The following Python code calculates the actual volume of water pumped per cycle:
 
