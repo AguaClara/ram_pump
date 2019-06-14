@@ -577,7 +577,7 @@ plt.ylabel('Pressure (m)')
 plt.legend()
 plt.show()
 
-#plt.savefig('pressure_trace_initialpressure0325_multcycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+#plt.savefig('pressure_trace_initialpressure0325_multcycle.PNG', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 ```
 
 <p align="center">
@@ -608,7 +608,8 @@ plt.xlabel('Time (s)')
 plt.ylabel('Pressure (m)')
 plt.legend()
 plt.show()
-#plt.savefig('pressure_trace_initialpressure0325_onecycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+
+#plt.savefig('pressure_trace_initialpressure0325_onecycle.PNG', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 ```
 <p align="center">
   <img src="https://github.com/AguaClara/ram_pump/blob/master/pressure_trace_initialpressure0325_onecycle.jpg?raw=True" height=400>
@@ -643,7 +644,8 @@ plt.xlabel('Time (s)')
 plt.ylabel('Pressure (m)')
 plt.legend()
 plt.show()
-#plt.savefig('water_pumped_closeup.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+
+#plt.savefig('water_pumped_closeup.PNG', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
 ```
 <p align="center">
