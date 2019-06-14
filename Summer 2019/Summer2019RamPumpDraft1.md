@@ -581,7 +581,8 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/Images_Diagramsundefined/pressure_trace_initialpressure0325_multcycle.jpg" height=400>
+  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Summer%202019/Images_Diagrams/pressure_trace_initialpressure0325_multcycle.PNG"
+  height=350, length=400>
 </p>
 <p align="center">
 
@@ -612,7 +613,8 @@ plt.show()
 #plt.savefig('pressure_trace_initialpressure0325_onecycle.PNG', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 ```
 <p align="center">
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/pressure_trace_initialpressure0325_onecycle.jpg?raw=True" height=400>
+  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Summer%202019/Images_Diagrams/pressure_trace_initialpressure0325_onecycle.PNG"
+  height=350, length=400>
 </p>
 <p align="center">
 
@@ -649,7 +651,8 @@ plt.show()
 
 ```
 <p align="center">
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/water_pumped_closeup.jpg?raw=True" height=400>
+  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Summer%202019/Images_Diagrams/water_pumped_closeup.PNG"
+  height=350, length=400>
 </p>
 <p align="center">
 
