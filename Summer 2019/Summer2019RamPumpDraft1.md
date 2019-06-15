@@ -1,6 +1,6 @@
-# Ram Pump, Spring 2019
-#### Ching Pang, Cheer Tsang, Alyssa Ju, Iñigo Cabrera
-#### May 10, 2019
+# Ram Pump, Summer 2019
+#### Ching Pang, Alyssa Ju
+#### June 28, 2019
 
 ## Abstract
 The AguaClara Vertical Ram Pump (ACVRP) is an innovation that will enable water to be pumped from lower elevations to higher elevations using the driving force of falling water. The ACVRP improves on a conventional ram pump design by increasing its space efficiency and decreasing its capital cost. Although a prototype had been built, it did not reach its target pumping efficiency. The goal of this semester was to optimize the ram pump efficiency by finding the necessary forces to open and close the valve at the ideal times.
@@ -566,22 +566,23 @@ start = 39416 #should be more than 'start'
 end = 68010 #should be less than 'stop'
 
 x = (pp.column_of_time(url,start,end)).to(u.s)
-pressure = pp.column_of_data(url, start, 1, end, 'cm')
-airchamber = pp.column_of_data(url, start, 2, end, 'cm')
+pressure = pp.column_of_data(url, start, 1, end, 'cm').to(u.m)
+airchamber = pp.column_of_data(url, start, 2, end, 'cm').to(u.m)
 
 plt.clf()
 plt.plot(x,pressure,'-', label = 'Waste Valve')
 plt.plot(x,airchamber,'-', label='Air Chamber')
 plt.xlabel('Time (s)')
-plt.ylabel('Pressure (cm)')
+plt.ylabel('Pressure (m)')
 plt.legend()
 plt.show()
 
-#plt.savefig('pressure_trace_initialpressure0325_multcycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+#plt.savefig('pressure_trace_initialpressure0325_multcycle.PNG', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Spring%202019/Images_Diagrams/pressure_trace_initialpressure0325_multcycle.jpg" height=400>
+  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Summer%202019/Images_Diagrams/pressure_trace_initialpressure0325_multcycle.PNG"
+  height=350, length=400>
 </p>
 <p align="center">
 
@@ -598,20 +599,22 @@ start = 39416 #should be more than 'start'
 end = 41600 #should be less than 'stop'
 
 x = (pp.column_of_time(url,start,end)).to(u.s)
-pressure = pp.column_of_data(url, start, 1, end, 'cm')
-airchamber = pp.column_of_data(url, start, 2, end, 'cm')
+pressure = pp.column_of_data(url, start, 1, end, 'cm').to(u.m)
+airchamber = pp.column_of_data(url, start, 2, end, 'cm').to(u.m)
 
 plt.clf()
 plt.plot(x,pressure,'-', label = 'Waste Valve')
 plt.plot(x,airchamber,'-', label='Air Chamber')
 plt.xlabel('Time (s)')
-plt.ylabel('Pressure (cm)')
+plt.ylabel('Pressure (m)')
 plt.legend()
 plt.show()
-#plt.savefig('pressure_trace_initialpressure0325_onecycle.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+
+#plt.savefig('pressure_trace_initialpressure0325_onecycle.PNG', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 ```
 <p align="center">
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/pressure_trace_initialpressure0325_onecycle.jpg?raw=True" height=400>
+  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Summer%202019/Images_Diagrams/pressure_trace_initialpressure0325_onecycle.PNG"
+  height=350, length=400>
 </p>
 <p align="center">
 
@@ -633,21 +636,23 @@ start2 = 40750 #should be more than 'start'
 end2 = 40850 #should be less than 'stop'
 
 x2 = (pp.column_of_time(url,start2,end2)).to(u.s)
-pressure2 = pp.column_of_data(url, start2, 1, end2, 'cm')
-airchamber2 = pp.column_of_data(url, start2, 2, end2, 'cm')
+pressure2 = pp.column_of_data(url, start2, 1, end2, 'cm').to(u.m)
+airchamber2 = pp.column_of_data(url, start2, 2, end2, 'cm').to(u.m)
 
 plt.clf()
 plt.plot(x2,pressure2,'-', label = 'Waste Valve')
 plt.plot(x2,airchamber2,'-', label='Air Chamber')
 plt.xlabel('Time (s)')
-plt.ylabel('Pressure (cm)')
+plt.ylabel('Pressure (m)')
 plt.legend()
 plt.show()
-#plt.savefig('water_pumped_closeup.jpg', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
+
+#plt.savefig('water_pumped_closeup.PNG', dpi=200, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None, metadata=None)
 
 ```
 <p align="center">
-  <img src="https://github.com/AguaClara/ram_pump/blob/master/water_pumped_closeup.jpg?raw=True" height=400>
+  <img src="https://raw.githubusercontent.com/AguaClara/ram_pump/master/Summer%202019/Images_Diagrams/water_pumped_closeup.PNG"
+  height=350, length=400>
 </p>
 <p align="center">
 
@@ -839,6 +844,8 @@ Adelman, M. J., Weber-Shirk, M. L., Will, J. C., Cordero, A. N., Maher, W. J., L
 Aggarwal, P. & Guzman, J. (2016). Ram Pump, Spring 2016. Retrieved from https://confluence.cornell.edu/download/attachments/152026512/Ram%20Pump%20Final%20Report.pdf?version=1&modificationDate=1481833262000&api=v2.
 
 bin Mohammad Ali, M. D., bin Che Azih, M. K. bin Ali, M. B., bin Jasni, M. F., bin Zarmani, M.F. (2011). Hydraulic Ramp Pump (Hydram). Retrieved from www.scribd.com/doc/76535229/Hydraulic-Ramp-Pump-Hydram.
+
+Cabrera, I., Tsang, C. (Spring 2019). Ram Pump, Spring 2019. Retrieved from https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Spring2019RamPump.md.
 
 Galantino, C., Paternain Martinez, J., Oiwa, L. (2016). Ram Pump, Fall 2016. Retrieved from https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view.
 
