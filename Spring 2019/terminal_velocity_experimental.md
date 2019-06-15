@@ -11,9 +11,14 @@ Q2=4.670*u.L/(4.68*u.s)
 Q3=3.880*u.L/(3.93*u.s)
 Q4=3.565*u.L/(3.60*u.s)
 Q5=3.790*u.L/(3.83*u.s)
-
+print(Q1)
+print(Q2)
+print(Q3)
+print(Q4)
+print(Q5)
 avg_Q = (Q1+Q2+Q3+Q4+Q5)/5
+print(avg_Q)
 
 velocity2 = (avg_Q/area).to(u.m/u.s)
-
+print(velocity2)
 ```
