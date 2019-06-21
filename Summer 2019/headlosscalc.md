@@ -12,7 +12,7 @@ v_f = 2.3*u.m/u.s #terminal velocity
 d = (1*u.inch).to(u.m) #diameter of drive pipe
 L = 1.74*u.m #length of drive pipe
 
-Q = v_f * np.pi * (d/2)**2 #flow rate in drive pipe (Q = terminal velocity * cross-sectional area of drive pipe)
+Q = (1*u.liter/u.s).to(u.m**3/u.s) #steady state flow rate in drive pipe assumed to be 1.0 L/s
 
 nu = pc.viscosity_kinematic(20*u.degC)
 
