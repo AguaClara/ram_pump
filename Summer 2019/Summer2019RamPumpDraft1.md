@@ -845,7 +845,7 @@ Aggarwal, P. & Guzman, J. (2016). Ram Pump, Spring 2016. Retrieved from https://
 
 bin Mohammad Ali, M. D., bin Che Azih, M. K. bin Ali, M. B., bin Jasni, M. F., bin Zarmani, M.F. (2011). Hydraulic Ramp Pump (Hydram). Retrieved from www.scribd.com/doc/76535229/Hydraulic-Ramp-Pump-Hydram.
 
-Cabrera, I., Tsang, C. (Spring 2019). Ram Pump, Spring 2019. Retrieved from https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Spring2019RamPump.md.
+Cabrera, I., Ju, A., Pang, C., Tsang, C. (Spring 2019). Ram Pump, Spring 2019. Retrieved from https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Spring2019RamPump.md.
 
 Galantino, C., Paternain Martinez, J., Oiwa, L. (2016). Ram Pump, Fall 2016. Retrieved from https://drive.google.com/file/d/1MweG0bsgG2-wM_mkK_DgwULPSPK1G7iB/view.
 
