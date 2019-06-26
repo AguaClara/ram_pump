@@ -425,9 +425,9 @@ $$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
 
 $$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
 
-- $F_{open} = 13.35$  $N$
+- $F_{open} = 12.49$  $N$
 - $F_{close} = 4.181$ $N$
-- $\Delta x = 3.5 $ cm (Compression length difference between open and closed states)
+- $\Delta x = 1.2 $ cm (Compression length difference between open and closed states)
 
 Using $k’$ allows us to modify the length of the spring to obtain the $k$ constant desired.
 
@@ -440,22 +440,22 @@ Using $k’$ allows us to modify the length of the spring to obtain the $k$ cons
 
 The linear relationship between the length of the spring, $L$, and the intrinsic spring constant, $k'$ was defined by the following equation:
 
-$$k' = 2.6197L  $$
+$$k' = 6.924 [N/cm] L [cm]  $$
 
 In order to define a practical range of springs, the maximum length of spring that could fit into the rod was measured. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm, which represents the maximum length a spring could be without an initial compression. Table 6 shows possible options for different lengths of springs.
 
 **Table 6:** Various springs of different lengths that satisfy the required $k$ constant for optimal performance of the ram pump.
 
-| Spring | Spring length (cm) | Intrinsic Spring constant (N) |
+| Spring | Spring length L (cm) | Intrinsic Spring constant k' (N) |
 |-------|-----------------------------|--------------------|
-| 1     | 3.0                      | 7.85            |
-| 2     | 3.5                   | 9.16             |
-| 3     | 4.0                     | 10.4             |
-| 4     | 4.5                      | 11.8              |
-| 5     | 5.0                    | 13.1             |
-| 6     | 5.5                    | 14.4             |
-| 7     | 6.0                    | 15.7             |
-| 8     | 6.4                    | 16.8             |
+| 1     | 3.0                      | 20.772            |
+| 2     | 3.5                   | 24.234             |
+| 3     | 4.0                     | 27.696             |
+| 4     | 4.5                      | 31.158              |
+| 5     | 5.0                    | 34.62             |
+| 6     | 5.5                    | 38.082             |
+| 7     | 6.0                    | 41.544             |
+| 8     | 6.5                    | 45.006             |
 
 ### Theoretical Volume of Water Pumped per Cycle
 
