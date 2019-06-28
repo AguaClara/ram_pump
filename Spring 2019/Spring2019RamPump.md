@@ -272,7 +272,7 @@ The average of the terminal velocity from these five trials was calculated by fi
 
 #### Force to Open Valve
 
-Several trials were run to calculate the force required to lift the plate to open the check valve (Table 2). The mass of the empty bottle was 114.7 g.
+Several trials were run to calculate the force required to lift the plate to open the check valve (Table 2), which is the minimum force that can be applied to keep the plate valve closed. The mass of the empty bottle was 114.7 g.
 
 **Table 3:** Water and additional weights were added to the bottle at the end of the pulley until the combined weight was heavy enough to lift the plate in the check valve (opened valve). The mass of the total masses added to the empty bottle are detailed in the table below, and the resulting force ($F_{water}$) acting on the plate was calculated for each trial.
 
@@ -315,7 +315,7 @@ for i in range(0, (len(contents))):
   print('The force of water is ' + str(F_water[i]))
 ```
 
-The average force required to open the valve is 12.49 newtons.
+The average force required to open the valve (minimum force that can be applied to keep the plate valve closed) is 12.49 newtons.
 
 This calculated force was then verified by replicating the experiment:
 
@@ -340,7 +340,7 @@ print('The weight of the rod is '+ str(w_rod))
 w_bottle = 115.9*u.g
 contents = [1340.4, 1353.7, 1353.7, 1346.1, 1362.0]*u.g
 tot_weight = []
-#the mass of the empty bottle was added to the mass of the bottle contents because both contribute to total force acting up on the check valve plate
+#the weight of the empty bottle was added to the weight of the bottle contents because both contribute to total force acting up on the check valve plate
 
 F_water = []
 
@@ -350,11 +350,11 @@ for i in range(0, (len(contents))):
   print('The force of water is ' + str(F_water[i]))
 ```
 
-The average force required to open the valve is 13.35 newtons. This calculated force was similar to the average force calculated previously (12.49 N).
+The average force required to open the valve, which is the minimum force that can be applied on the plate valve to keep it closed, is 13.35 newtons. This calculated force was similar to the average force calculated previously (12.49 N).
 
 #### Force to Close Valve
 
-In order to calculate the force required to close the valve, the drag force from the falling water, experiments were run as described in the previous section. Water was slowly added to a container on the end of the pulley until the check valve opened and water flowed out of the waste valve of the ram pump. The mass of the container was measured to calculate the force required to open the valve as before. Then, with the check valve open, water was gradually removed from the container with a syringe until the valve closed again. An open container was used instead of a bottle to allow for easier removal of water. The mass of the container was then measured again. The mass was taken at the point at which the valve began to cycle (when the valve begin opening and closing by itself).  The mass was also taken at the point when the valve remained closed, but it was determined that the minimum force to close the valve depends on the mass of the container when the valve begins to cycle. The mass difference between the mass of the container when the valve opened and when the valve closed was then calculated to find the force required to close the valve:
+In order to calculate the force required to close the valve, the drag force from the falling water, which is the maximum force that can be applied to keep the plate valva opened, experiments were run as described in the previous section. Water was slowly added to a container on the end of the pulley until the check valve opened and water flowed out of the waste valve of the ram pump. The mass of the container was measured to calculate the force required to open the valve as before. Then, with the check valve open, water was gradually removed from the container with a syringe until the valve closed again. An open container was used instead of a bottle to allow for easier removal of water. The mass of the container was then measured again. The mass was taken at the point at which the valve began to cycle (when the valve begin opening and closing by itself).  The mass was also taken at the point when the valve remained closed, but it was determined that the minimum force to close the valve depends on the mass of the container when the valve begins to cycle. The mass difference between the mass of the container when the valve opened and when the valve closed was then calculated to find the force required to close the valve:
 
 $$\Delta m = m_{open} - m_{close}$$
 $$F_{close} = (\Delta m - m_{rod})g$$
@@ -394,7 +394,7 @@ print('The average force to close the valve is ' + str(avg_force))
 | 4     | 1276.3           | 766.0                       | 3.966                    |
 | 5     | 1236.3           | 707.1                       | 4.151                    |
 
-The average force to close the valve is 4.181 newtons.
+The average force to close the valve, which is the maximum force that can be applied to the plate valve to keep it opened, is 4.181 newtons.
 
 ### Calculating Spring Constants
 Using the experimentally determined forces to open and close the valve, a range of ideal spring constants was determined. Hooke's Law was used to obtain the optimal spring constant from the force and compression length:
@@ -409,12 +409,12 @@ $$F = \frac{k'x}{L} $$
 
 Using the above equation, equations were derived for the two states in the valve:
 
-$$F_{open} = \frac{k'x_{1}}{L} $$
+$$F_{closed} = \frac{k'x_{1}}{L} $$
 
-$$F_{close} = \frac{k'x_{2}}{L}$$Where:
+$$F_{opened} = \frac{k'x_{2}}{L}$$Where:
 
-- $F_{open}$: mass of container when plate was lifted and valve opened, allowing water to flow out of waste valve
-- $F_{close}$: force required to close the valve
+- $F_{closed}$: force required to open the valve, which is the minimum force that can be applied to keep the plate valve closed
+- $F_{opened}$: force required to close the valve, which is the maximum force that can be applied to keep the plate valve opened
 - $x_{1}$: Compression length when the valve was closed
 - $x_{2}$: Compression length when the valve was open
 - $k'$: Intrinsic material property of the spring that is defined by $L$ and $k$
@@ -425,8 +425,8 @@ $$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
 
 $$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
 
-- $F_{open} = 12.49$  $N$
-- $F_{close} = 4.181$ $N$
+- $F_{closed} = 12.49$ $N$
+- $F_{opened} = 4.181$ $N$
 - $\Delta x = 1.2 $ cm (Compression length difference between open and closed states)
 
 Using $k’$ allows us to modify the length of the spring to obtain the $k$ constant desired.
