@@ -415,15 +415,15 @@ $$F_{opened} = \frac{k'x_{2}}{L}$$Where:
 
 - $F_{closed}$: force required to open the valve, which is the minimum force that can be applied to keep the plate valve closed
 - $F_{opened}$: force required to close the valve, which is the maximum force that can be applied to keep the plate valve opened
-- $x_{1}$: Compression length when the valve was closed
-- $x_{2}$: Compression length when the valve was open
+- $x_{2}$: Compression length when the valve was closed
+- $x_{1}$: Compression length when the valve was opened
 - $k'$: Intrinsic material property of the spring that is defined by $L$ and $k$
 - $L$: Length of the spring
 
 Combining the last two equations, an equation for $k'$ in terms of the spring length, $L$ was derived:
-$$F_{o} - F_{c} = \frac{k'}{L}\Delta x $$
+$$F_{closed} - F_{opened} = \frac{k'}{L}\Delta x $$
 
-$$k' = (F_{o} - F_{c})\frac{L}{\Delta x} $$Where:
+$$k' = (F_{closed} - F_{opened})\frac{L}{\Delta x} $$Where:
 
 - $F_{closed} = 12.49$ $N$
 - $F_{opened} = 4.181$ $N$
