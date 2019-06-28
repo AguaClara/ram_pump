@@ -409,9 +409,9 @@ $$F = \frac{k'x}{L} $$
 
 Using the above equation, equations were derived for the two states in the valve:
 
-$$F_{closed} = \frac{k'x_{1}}{L} $$
+$$F_{closed} = \frac{k'x_{2}}{L} $$
 
-$$F_{opened} = \frac{k'x_{2}}{L}$$Where:
+$$F_{opened} = \frac{k'x_{1}}{L}$$Where:
 
 - $F_{closed}$: force required to open the valve, which is the minimum force that can be applied to keep the plate valve closed
 - $F_{opened}$: force required to close the valve, which is the maximum force that can be applied to keep the plate valve opened
@@ -421,6 +421,7 @@ $$F_{opened} = \frac{k'x_{2}}{L}$$Where:
 - $L$: Length of the spring
 
 Combining the last two equations, an equation for $k'$ in terms of the spring length, $L$ was derived:
+$$Delta x = x_{2} - x_{1} $$
 $$F_{closed} - F_{opened} = \frac{k'}{L}\Delta x $$
 
 $$k' = (F_{closed} - F_{opened})\frac{L}{\Delta x} $$Where:
