@@ -441,7 +441,7 @@ Using $k’$ allows us to modify the length of the spring to obtain the $k$ cons
 
 The linear relationship between the length of the spring, $L$, and the intrinsic spring constant, $k'$ was defined by the following equation:
 
-$$k' = 6.924 [N/cm] L [cm]  $$
+$$k'[N] = 2.4 \left[\frac{ N}{cm}\right] * L [cm]  $$
 
 In order to define a practical range of springs, the maximum length of spring that could fit into the rod was measured. The maximum distance between the bottom stopper and stopping part of the empty check valve is 6.4 cm, which represents the maximum length a spring could be without an initial compression. Table 6 shows possible options for different lengths of springs.
 
