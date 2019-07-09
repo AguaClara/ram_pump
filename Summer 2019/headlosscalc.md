@@ -37,6 +37,10 @@ k_minor = (A_out/A_in-1)**2
 
 h_eff = pc.headloss_exp(Q, d, k_minor)
 
+# Minor Headloss at Elbow Joint
+k_elbow = 0.9
+h_elbow = pc.headloss_exp(Q, d, k_elbow)
+
 # Minor Headloss at Entrance of Air Chamber
 d = (1*u.inch).to(u.m)
 A_out = np.pi*(d/2)**2 #cross-sectional area of effluent valve
@@ -47,7 +51,7 @@ k_minor = (A_out/A_in-1)**2
 h_air = pc.headloss_exp(Q, d, k_minor)
 
 # Total Minor Headloss
-h_eold = h_eff + h_air
+h_eold = h_eff + h_air + h_elbow
 
 ## NEW DESIGN (1.00in diam. effluent)_______________________________
 
@@ -57,7 +61,6 @@ d = (1*u.inch).to(u.m) #diameter of elbow joint
 A = np.pi*(d/2)**2 #cross-sectional area of elbow joint
 Q = A*v_f
 
-k_elbow = 0.9
 h_enew = pc.headloss_exp(Q, d, k_elbow) * 2 # doubled headloss because headloss due to 90 deg bends occur twice
 
 ####################################################################
