@@ -20,5 +20,8 @@ The purpose of the Ram Pump team is to design and develop an efficient hydraulic
   - [Spring 2019 Symposium](https://docs.google.com/presentation/d/19q1i_l3YYJKl5zQqCVidEQOdI2u5rMGSeoI-LPZ3JbM/edit?usp=sharing)
   - [Spring 2019 Final Presentation](https://docs.google.com/presentation/d/1N_fBzQMZ67eLk3sFCLR7PwzmIJhS_xj7ygy3AQbQ6FY/edit?usp=sharing) and [Video](https://youtu.be/nkcvHy91EzU)
   - [Spring 2019 Manual](https://github.com/AguaClara/ram_pump/blob/master/Spring%202019/Spring2019RamPump.pdf)
+* EPA P3 Funding Proposals and Reports
+  - [EPA Phase 1 Report](https://github.com/AguaClara/ram_pump/blob/master/EPA_reports/Ram%20Pump%20EPA%20Phase%20I%20Final%20Report.pdf)
+  - [EPA Phase 2 Proposal](https://github.com/AguaClara/ram_pump/blob/master/EPA_reports/EPA%20PHASE%20II%20PROJECT%20REPORT%20FINAL%20(2).pdf)
 
 Previous Reports and Presentations located [here](https://github.com/AguaClara/ram_pump/wiki/Previous-Reports-and-Presentations).
