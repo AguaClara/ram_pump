@@ -1,0 +1,14 @@
+OFF		0.000000	constant
+ON		1.000000	constant
+Target Pressure	cm	-600.000000	constant
+P Kc		1.000000	constant
+I Ti (min)		0.200000	constant
+D Td (min)		0.000000	constant
+PID Control	0 to 1	100.000000	variable
+multiplier for 600 rpm pump		6.000000	constant
+Pump Control		600.000000	variable
+pump ID 		1.000000	constant
+on states		12.000000	constant
+volume of water	mL/rev	2.800000	constant
+flow rate	mL/s	10.000000	constant
+golander pump control 		0.000000	variable
