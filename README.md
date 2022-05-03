@@ -6,6 +6,7 @@ The purpose of the Ram Pump team is to design and develop an efficient hydraulic
 * Spring 2022
   - Katie Lee (kjl84@cornell.edu)
   - Zach Marshall (zdm6@cornell.edu) 
+  - Aleksandra Marjanovic (am2445@cornell.edu)
 * Fall 2021 
   - Katie Lee (kjl84@cornell.edu)
   - Ben Knepper (bpk45@cornell.edu)
