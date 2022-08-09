@@ -27,9 +27,9 @@ The purpose of the Ram Pump team is to design and develop an efficient hydraulic
 
 ## Reports and Presentations:
 * Summer 2022
-  - [Symposium] (https://docs.google.com/presentation/d/115F6u_GbZ3tbG6mKWQAWQTF79DyavFNaeqpbZbNgrac/edit?usp=sharing)
-  - [Final Presentation] (https://docs.google.com/presentation/d/1y4xazAJKk9BxxRhce2V3IXaFtLosc2ZCqVzERAFK43M/edit?usp=sharing)
-  - [Final Report] (https://github.com/AguaClara/ram_pump/blob/784b004c7115e1040a5d5708d5d5f49921d451ec/Summer_2022_Final_Report.ipynb)
+  - [Symposium](https://docs.google.com/presentation/d/115F6u_GbZ3tbG6mKWQAWQTF79DyavFNaeqpbZbNgrac/edit?usp=sharing)
+  - [Final Presentation](https://docs.google.com/presentation/d/1y4xazAJKk9BxxRhce2V3IXaFtLosc2ZCqVzERAFK43M/edit?usp=sharing)
+  - [Final Report](https://github.com/AguaClara/ram_pump/blob/784b004c7115e1040a5d5708d5d5f49921d451ec/Summer_2022_Final_Report.ipynb)
 * Fall 2021
   - [Symposium]
   - [Final Presentation](https://docs.google.com/presentation/d/1QySW7qUupVJps2teKwTu4sadjjizfslFLi6FzUc5sCM/edit#slide=id.g1d8aa0ef8d_0_11)
