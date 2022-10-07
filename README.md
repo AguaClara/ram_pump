@@ -7,6 +7,7 @@ The purpose of the Ram Pump team is to design and develop an efficient hydraulic
   - Katie Lee (kjl84@cornell.edu)
   - Zach Marshall (zdm6@cornell.edu) 
   - Aleksandra Marjanovic (am2445@cornell.edu)
+  - Jumana Alam (ja528@cornell.edu)
 * Summer 2022
   - Sarah Bae (ssb238@cornell.edu)
   - Isabel Crovella (isc25@cornell.edu)
