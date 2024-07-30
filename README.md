@@ -7,8 +7,8 @@ The purpose of the Ram Pump team is to design and develop an efficient hydraulic
   - [MonroeEnvEng](https://monroews.github.io/EnvEngLabTextbook/) 
 ## Members:
 * Summer 2024
-  - Athavan Shanmuganathan
-  - George Zeng
+  - Athavan Shanmuganathan (as3277@cornell.edu)
+  - George Zeng (gz266@cornell.edu)
 * Spring 2024
   - Zach Marshall
   - Athavan Shanmuganathan
