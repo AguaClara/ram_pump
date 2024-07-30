@@ -6,6 +6,9 @@ The purpose of the Ram Pump team is to design and develop an efficient hydraulic
   - [AguaClara](https://aguaclara.github.io/Textbook/)
   - [MonroeEnvEng](https://monroews.github.io/EnvEngLabTextbook/) 
 ## Members:
+* Summer 2024
+  - Athavan Shanmuganathan
+  - George Zeng
 * Spring 2024
   - Zach Marshall
   - Athavan Shanmuganathan
