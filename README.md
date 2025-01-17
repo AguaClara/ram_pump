@@ -8,6 +8,7 @@ The purpose of the Ram Pump team is to design and develop an efficient hydraulic
 ## Members:
 * Fall 2024
   - Athavan Shanmuganathan (as3277@cornell.edu)
+  - Alma Meili Ren (arr254@cornell.edu)
   - George Zeng (gz266@cornell.edu)
   - Theodore Foulen (rf444@cornell.edu)
 * Summer 2024
