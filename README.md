@@ -1,5 +1,3 @@
-![Ram Pump FA 2024 Poster](https://github.com/user-attachments/assets/c1a8f8e1-ea66-42f3-a329-ea0597d0c3b0)# Ram_Pump
-
 The purpose of the Ram Pump team is to design and develop an efficient hydraulic ram pump for implementation in AguaClara plants. The Ram Pump can be used to deliver water from below the facility to higher elevations, using gravitational energy, for the formation of chemical stock or electricity- free plant plumbing.
 
 ## Textbook
