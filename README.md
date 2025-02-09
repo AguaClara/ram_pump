@@ -66,8 +66,9 @@ The purpose of the Ram Pump team is to design and develop an efficient hydraulic
 ## Reports and Presentations:
 * Fall 2024
   - [Symposium](https://docs.google.com/presentation/d/1V-_WshYhElONf4RKzA-MzxIadpAt2RPjEE_eDAuqNKk/edit?usp=sharing)
-  - [Final Poster](https://github.com/user-attachments/assets/461b2192-7557-4bd5-98f1-1ef99d0baade)
   - [Lab Manual](https://docs.google.com/document/d/1ZFOmypK-V1HY_mE2XlZnTcsXd7i6RCknV34ad4hcNZg/edit?usp=sharing)
+  - [Lab Manual, Spanish Version](https://docs.google.com/document/d/1k8fizXIU_TysqDsHZimRfYThvPDnZyL7vxeQ457-Ei4/edit?usp=sharing)
+  - [Final Poster](https://github.com/user-attachments/assets/461b2192-7557-4bd5-98f1-1ef99d0baade)
 * Fall 2023
   - [Symposium](https://docs.google.com/presentation/d/1OxTtabXtDw8QZG_HIVeZ5xFHIa5HzzA7WYuFNcaaD_s/edit?usp=sharing)
   - [Final Report](https://docs.google.com/document/d/1ouPeJRfoverK7mHhfWOq_sFSTbJCSP64AgqTCOq5JTA/edit?usp=sharing)
