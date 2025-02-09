@@ -6,13 +6,19 @@ The purpose of the Ram Pump team is to design and develop an efficient hydraulic
   - [AguaClara](https://aguaclara.github.io/Textbook/)
   - [MonroeEnvEng](https://monroews.github.io/EnvEngLabTextbook/) 
 ## Members:
+* Spring 2024
+   - Alma Meili Ren (arr254@cornell.edu)
+   - Katie Kim (kdk85@cornell.edu)
+   - Chris Miranda Soto (cm2233@cornell.edu)
+   - Sweksha Mehta (sm2593@cornell.edu)
 * Fall 2024
   - Athavan Shanmuganathan (as3277@cornell.edu)
-  - George Zeng (gz266@cornell.edu)
-  - Theodore Foulen (rf444@cornell.edu)
+  - Alma Meili Ren (arr254@cornell.edu)
+  - Katie Kim (kdk85@cornell.edu)
 * Summer 2024
   - Athavan Shanmuganathan (as3277@cornell.edu)
   - George Zeng (gz266@cornell.edu)
+  - Theodore Foulen (rf444@cornell.edu)
 * Spring 2024
   - Zach Marshall
   - Athavan Shanmuganathan
