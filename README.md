@@ -1,6 +1,8 @@
 # Ram_Pump
 
-The purpose of the Ram Pump team is to design and develop an efficient hydraulic ram pump for implementation in AguaClara plants. The Ram Pump can be used to deliver water from below the facility to higher elevations, using gravitational energy, for the formation of chemical stock or electricity- free plant plumbing.
+The purpose of the Ram Pump team is to design and develop an efficient hydraulic ram pump for implementation in AguaClara plants. The Ram Pump transports a portion of the plant's treated water from below the facility to the top of the plant, where the water will be used to dilute the chemical stock solution and supply facility plumbing. This eliminates the need for plant operators to manually carry water to the chemical storage tanks.
+
+The pump is designed to take advantage of the physical properties of fluids and the conservation of energy, ultimately resulting in a size- and cost-efficient method of sending water up an elevation without the use of electricity. Once in operation, the Ram Pump is estimated to pump water to a height of about 7 meters.
 
 ## Textbook
   - [AguaClara](https://aguaclara.github.io/Textbook/)
