@@ -8,7 +8,13 @@ The purpose of the ram pump is to transport a portion of the plant's treated wat
   - [AguaClara](https://aguaclara.github.io/Textbook/)
   - [MonroeEnvEng](https://monroews.github.io/EnvEngLabTextbook/) 
 ## Members:
-* Spring 2024
+* Fall 2025
+   - Alma Meili Ren (arr254@cornell.edu)
+   - Katie Kim (kdk85@cornell.edu)
+   - Isaac Jiang (ij53@cornell.edu)
+* Summer 2025
+   - Katie Kim (kdk85@cornell.edu)
+* Spring 2025
    - Alma Meili Ren (arr254@cornell.edu)
    - Katie Kim (kdk85@cornell.edu)
    - Chris Miranda Soto (cm2233@cornell.edu)
@@ -66,8 +72,13 @@ The purpose of the ram pump is to transport a portion of the plant's treated wat
 
 
 ## Reports and Presentations:
+* Spring 2025
+  - [Mid-Semester Symposium](https://docs.google.com/presentation/d/1qnx8JCUYQm46tHLqRYF-kelLpes4O0NUfO8xdNkBbEg/edit?usp=sharing)
+  - [Dual Support System Manual](https://docs.google.com/presentation/d/1qnx8JCUYQm46tHLqRYF-kelLpes4O0NUfO8xdNkBbEg/edit?usp=sharing)
+  - [Final Report](https://docs.google.com/document/d/1zlH7xsi56FLAr1i4EO32GFQONhIG7R9UNZeWnij9IRI/edit?usp=sharing)
+  - [Final Poster](https://www.canva.com/design/DAGzc7ZE57I/_4-iTjGjMMfBv8T_GimE2w/edit?utm_content=DAGzc7ZE57I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 * Fall 2024
-  - [Symposium](https://docs.google.com/presentation/d/1V-_WshYhElONf4RKzA-MzxIadpAt2RPjEE_eDAuqNKk/edit?usp=sharing)
+  - [Mid-Semester Symposium](https://docs.google.com/presentation/d/1V-_WshYhElONf4RKzA-MzxIadpAt2RPjEE_eDAuqNKk/edit?usp=sharing)
   - [Lab Manual](https://docs.google.com/document/d/1ZFOmypK-V1HY_mE2XlZnTcsXd7i6RCknV34ad4hcNZg/edit?usp=sharing)
   - [Lab Manual, Spanish Version](https://docs.google.com/document/d/1k8fizXIU_TysqDsHZimRfYThvPDnZyL7vxeQ457-Ei4/edit?usp=sharing)
   - [Final Poster](https://github.com/user-attachments/assets/461b2192-7557-4bd5-98f1-1ef99d0baade)
