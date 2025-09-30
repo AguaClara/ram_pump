@@ -72,6 +72,8 @@ The purpose of the ram pump is to transport a portion of the plant's treated wat
 
 
 ## Reports and Presentations:
+* Summer 2025
+  - [Summer Report](https://docs.google.com/document/d/14-tDRepa31SciwoawnHar9DXkMcQ6e5Ayc0Jr254lac/edit?usp=sharing)
 * Spring 2025
   - [Mid-Semester Symposium](https://docs.google.com/presentation/d/1qnx8JCUYQm46tHLqRYF-kelLpes4O0NUfO8xdNkBbEg/edit?usp=sharing)
   - [Dual Support System Manual](https://docs.google.com/presentation/d/1qnx8JCUYQm46tHLqRYF-kelLpes4O0NUfO8xdNkBbEg/edit?usp=sharing)
@@ -80,7 +82,7 @@ The purpose of the ram pump is to transport a portion of the plant's treated wat
 * Fall 2024
   - [Mid-Semester Symposium](https://docs.google.com/presentation/d/1V-_WshYhElONf4RKzA-MzxIadpAt2RPjEE_eDAuqNKk/edit?usp=sharing)
   - [Lab Manual](https://docs.google.com/document/d/1ZFOmypK-V1HY_mE2XlZnTcsXd7i6RCknV34ad4hcNZg/edit?usp=sharing)
-  - [Lab Manual, Spanish Version](https://docs.google.com/document/d/1k8fizXIU_TysqDsHZimRfYThvPDnZyL7vxeQ457-Ei4/edit?usp=sharing)
+  - [Lab Manual, Spanish Translation](https://docs.google.com/document/d/1k8fizXIU_TysqDsHZimRfYThvPDnZyL7vxeQ457-Ei4/edit?usp=sharing)
   - [Final Poster](https://github.com/user-attachments/assets/461b2192-7557-4bd5-98f1-1ef99d0baade)
 * Fall 2023
   - [Symposium](https://docs.google.com/presentation/d/1OxTtabXtDw8QZG_HIVeZ5xFHIa5HzzA7WYuFNcaaD_s/edit?usp=sharing)
