@@ -8,6 +8,10 @@ The purpose of the ram pump is to transport a portion of the plant's treated wat
   - [AguaClara](https://aguaclara.github.io/Textbook/)
   - [MonroeEnvEng](https://monroews.github.io/EnvEngLabTextbook/) 
 ## Members:
+* Spring 2026
+   - Katie Kim (kdk85@cornell.edu)
+   - Isaac Jiang (ij53@cornell.edu)
+   - Jesús Paz (jep377@cornell.edu)
 * Fall 2025
    - Alma Meili Ren (arr254@cornell.edu)
    - Katie Kim (kdk85@cornell.edu)
@@ -72,6 +76,11 @@ The purpose of the ram pump is to transport a portion of the plant's treated wat
 
 
 ## Reports and Presentations:
+* Fall 2025
+  - [Midterm Report] (https://docs.google.com/document/d/1yJjduwHk2InNGvfSWN3OnNB7ldr0bKCA4HQn62tB5ns/edit?usp=sharing)
+  - [Mid-Semester Symposium] (https://docs.google.com/presentation/d/1N983_ijLRuaq6bGUHnyxO8agdNG19LCe4i4cNNAp4Bo/edit?usp=sharing)
+  - [Final Report] (https://docs.google.com/document/d/1h0MfTRBt6UYLZksfVFfP3qivh-L5cSewN1GLPfwBg44/edit?usp=sharing)
+  - [Final Poster] (https://www.canva.com/design/DAG5udTJsVY/-46OqncVA5R7UdQfTKEvcw/edit?utm_content=DAG5udTJsVY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 * Summer 2025
   - [Summer Report](https://docs.google.com/document/d/14-tDRepa31SciwoawnHar9DXkMcQ6e5Ayc0Jr254lac/edit?usp=sharing)
 * Spring 2025
