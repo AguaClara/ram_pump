@@ -16,6 +16,7 @@ The purpose of the ram pump is to transport a portion of the plant's treated wat
    - Alma Meili Ren (arr254@cornell.edu)
    - Katie Kim (kdk85@cornell.edu)
    - Isaac Jiang (ij53@cornell.edu)
+   - Jesús Paz (jep377@cornell.edu)
 * Summer 2025
    - Katie Kim (kdk85@cornell.edu)
 * Spring 2025
